@@ -1,6 +1,6 @@
 import mysql.connector
 def get_employees_byLast_name():
-    sql = "SELECT name from airport"
+    sql = "SELECT name from airports"
     # sql += " WHERE Last_name='" + last_name + "'"
     print(sql)
     cursor = connection.cursor()
@@ -37,3 +37,4 @@ connection = mysql.connector.connect(
          )
 
 print(get_employees_byLast_name())
+
