@@ -39,3 +39,6 @@ git clone repo_name (when you want to copy a repo and add it your computer)
 
 # Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
+
+# Unrelated Presentation
+https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
