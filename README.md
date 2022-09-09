@@ -36,3 +36,6 @@ git status (shows your current git state)
 
 git clone repo_name (when you want to copy a repo and add it your computer)
 ```
+
+# Project Info
+https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
