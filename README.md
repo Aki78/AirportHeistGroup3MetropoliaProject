@@ -1,23 +1,29 @@
 
-# Tasks
 write report - frank
 make a diagram - kiana
 game rules - kiana
-ask teacher - 
+
+# Task Stack
+ | Task                                          | Name               | 
+ |-----------------------------------------------|--------------------|
+ | write report                                  | Frank              |
+ | make a diagram                                | Kiana              |
+ | game rules                                    | Kiana              |
+
 
 
 # Useful Git Commands
 
 ```bash
 git pull (saves to github)
+
 git add . (all files)
 git commit -m "discription of changes" (saves in local computer)
 git push (pushs to the repository)
 
-for mistakes
 git rm file_name (removes file_name)
+
 git stash (restore everythiing to last commit)
-git merge (if many changes happening at once)
 
 git status (shows your current git state)
 
