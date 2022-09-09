@@ -5,7 +5,19 @@
  | make a diagram                                | Kiana              |
  | game rules                                    | Kiana              |
 
+# Run
+If you are using Mac/Linux run
+```bash
+python3 connect_py.py
+```
 
+If you are using Windows run
+```bash
+py -3 connect_py.py
+```
+
+Make sure your local user name and password are root and root.
+Make sure the sql database name and table names match exactly.
 
 # Useful Git Commands
 
