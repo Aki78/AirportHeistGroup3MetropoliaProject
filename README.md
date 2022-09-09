@@ -1,8 +1,3 @@
-
-write report - frank
-make a diagram - kiana
-game rules - kiana
-
 # Task Stack
  | Task                                          | Name               | 
  |-----------------------------------------------|--------------------|
@@ -18,7 +13,7 @@ game rules - kiana
 git pull (saves to github)
 
 git add . (all files)
-git commit -m "discription of changes" (saves in local computer)
+git commit -m "discription of changes" (add your changes to local git history)
 git push (pushs to the repository)
 
 git rm file_name (removes file_name)
