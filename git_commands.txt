@@ -1,0 +1,46 @@
+git pull (saves to github)
+git add . (all files)
+git commit -m "discription of changes" (saves in local computer)
+git push (pushs to the repository)
+
+for mistakes
+git rm file_name (removes file_name)
+git stash (restore everythiing to last commit)
+git merge (if many changes happening at once)
+
+git clone repo_name (when you want to copy a repo and add it your computer)
+
+write report - frank
+use plain text
+make a diagram - kiana
+game rules - kiana
+ask teacher - 
+
+
+pwd 					takes you to curent directory
+cd [name] 				change directory
+cd ~ 					takes you home
+cd ~mouseless			takes the path to mouseless if its directly under your home (~this symbol is the same as writing c:/user/murph)
+ls 						list directory and files in the directory
+ls mouseless			lists files in directories in mouseless
+mkdir [name] 			makes a directory
+touch [main.py]			creates a file in the current directory 
+mv file.txt mouseless	move file to somewhere
+mv file.txt file.py		renames file from txt to py
+cd ..					.. means back one directory
+
+danger commands
+rm file.py							removes file named (only for files not directory)
+rmdir								removes and empty directory only
+rm -r open							removes directory and everything in it
+rm -rf/								DO NOT USE!!! deletes all computer remove recurssive 
+rm -rf name							remove recurssive force name of directoty
+rm *								this will delete all files only! so make sure youre in the right directory
+rm -r * 							deletes everything in directory including other directories
+rm -r *4*							deletes everything that has a 4 in it
+find . -name "*3*.py"				find files with 3 and .py in it
+find . -name "*3*.py" -delete		find files with 3 and .py in it and then deletes it
+cat main.py							will print out whats inside the file
+
+control c							stop command
+py -3 filename.py					runs python program that is in the file in your terminal
