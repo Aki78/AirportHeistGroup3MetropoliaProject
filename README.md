@@ -73,4 +73,6 @@ cat main.py							will print out whats inside the file
 control-c							stop command
 py -3 filename.py					runs python program that is in the file in your terminal (windows only)
 python3 filename.py					runs python program that is in the file in your terminal (linux/Mac)
+
+grep -r [expression]                            finds the file where the expression exists
 ```
