@@ -13,14 +13,6 @@ config_version=4
 config/name="Flight Game"
 config/icon="res://icon.png"
 
-[display]
-
-window/size/width=1920
-window/size/height=1080
-window/size/test_width=1366
-window/size/test_height=768
-window/stretch/mode="viewport"
-
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
