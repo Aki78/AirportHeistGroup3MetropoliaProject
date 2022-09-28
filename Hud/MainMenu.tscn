@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://ExitButton.gd" type="Script" id=1]
-[ext_resource path="res://StartButton.gd" type="Script" id=2]
+[ext_resource path="res://Hud/StartButton.gd" type="Script" id=1]
+[ext_resource path="res://Hud/ExitButton.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 960, 512 )
@@ -16,7 +16,7 @@ margin_top = -40.0
 margin_right = 96.0
 margin_bottom = 40.0
 text = "Start"
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [node name="SettingsButton" type="Button" parent="."]
 anchor_left = 0.5
@@ -39,7 +39,7 @@ margin_top = 176.0
 margin_right = 96.0
 margin_bottom = 256.0
 text = "Exit"
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_ExitButton_pressed"]
