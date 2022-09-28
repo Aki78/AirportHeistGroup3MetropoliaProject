@@ -8,10 +8,272 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "AnimaAnimatable",
+"class": "AnimaAccordion",
+"language": "GDScript",
+"path": "res://addons/anima/components/AnimaAccordion.gd"
+}, {
+"base": "Control",
+"class": "AnimaAnimatable",
+"language": "GDScript",
+"path": "res://addons/anima/components/Animatable.gd"
+}, {
+"base": "Reference",
+"class": "AnimaAnimationsUtils",
+"language": "GDScript",
+"path": "res://addons/anima/utils/animations.gd"
+}, {
+"base": "AnimaShape",
+"class": "AnimaArc",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Arc.gd"
+}, {
+"base": "AnimaRectangle",
+"class": "AnimaButton",
+"language": "GDScript",
+"path": "res://addons/anima/components/AnimaButton.gd"
+}, {
+"base": "VBoxContainer",
+"class": "AnimaCarousel",
+"language": "GDScript",
+"path": "res://addons/anima/components/Carousel.gd"
+}, {
+"base": "HBoxContainer",
+"class": "AnimaChars",
+"language": "GDScript",
+"path": "res://addons/anima/components/AnimaChars.gd"
+}, {
+"base": "AnimaShape",
+"class": "AnimaCircle",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Circle.gd"
+}, {
+"base": "AnimaShape",
+"class": "AnimaCubicBezier",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/CubicBezier.gd"
+}, {
+"base": "Object",
+"class": "AnimaDeclarationBase",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_base.gd"
+}, {
+"base": "AnimaDeclarationBase",
+"class": "AnimaDeclarationForAnimation",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_for_animation.gd"
+}, {
+"base": "AnimaDeclarationBase",
+"class": "AnimaDeclarationForProperty",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_for_property.gd"
+}, {
+"base": "AnimaDeclarationBase",
+"class": "AnimaDeclarationForRelativeProperty",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_for_relative_property.gd"
+}, {
+"base": "AnimaDeclarationNode",
+"class": "AnimaDeclarationGrid",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_grid.gd"
+}, {
+"base": "AnimaDeclarationNode",
+"class": "AnimaDeclarationGroup",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_group.gd"
+}, {
+"base": "Reference",
+"class": "AnimaDeclarationNode",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_node.gd"
+}, {
+"base": "Reference",
+"class": "AnimaEasing",
+"language": "GDScript",
+"path": "res://addons/anima/core/easings.gd"
+}, {
+"base": "Control",
+"class": "AnimaLabel",
+"language": "GDScript",
+"path": "res://addons/anima/components/AnimaLabel.gd"
+}, {
+"base": "AnimaShape",
+"class": "AnimaLine",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Line.gd"
+}, {
+"base": "Reference",
+"class": "AnimaNode",
+"language": "GDScript",
+"path": "res://addons/anima/core/anima_node.gd"
+}, {
+"base": "Reference",
+"class": "AnimaNodesProperties",
+"language": "GDScript",
+"path": "res://addons/anima/utils/node_properties.gd"
+}, {
+"base": "Node",
+"class": "AnimaPlayer",
+"language": "GDScript",
+"path": "res://addons/anima/core/player.gd"
+}, {
+"base": "Object",
+"class": "AnimaPropertyList",
+"language": "GDScript",
+"path": "res://addons/anima/utils/anima_properties_list.gd"
+}, {
+"base": "AnimaShape",
+"class": "AnimaRectangle",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Rectangle.gd"
+}, {
+"base": "AnimaAnimatable",
+"class": "AnimaShape",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Shape.gd"
+}, {
+"base": "Control",
+"class": "AnimaSquare",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Square.gd"
+}, {
+"base": "Reference",
+"class": "AnimaStrings",
+"language": "GDScript",
+"path": "res://addons/anima/utils/strings.gd"
+}, {
+"base": "AnimaShape",
+"class": "AnimaTriangle",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Triangle.gd"
+}, {
+"base": "Tween",
+"class": "AnimaTween",
+"language": "GDScript",
+"path": "res://addons/anima/core/tween.gd"
+}, {
+"base": "Reference",
+"class": "AnimaTweenUtils",
+"language": "GDScript",
+"path": "res://addons/anima/utils/tween_utils.gd"
+}, {
+"base": "Node",
+"class": "AnimaVisualNode",
+"language": "GDScript",
+"path": "res://addons/anima/core/visual_node.gd"
+}, {
+"base": "Reference",
+"class": "DTS",
+"language": "GDScript",
+"path": "res://addons/dialogic/Localization/translation_service.gd"
+}, {
+"base": "Node",
+"class": "Dialogic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicClass.gd"
+}, {
+"base": "Reference",
+"class": "DialogicAnimaPropertiesHelper",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/Anima/DialogicAnimaPropertiesHelper.gd"
+}, {
+"base": "Node",
+"class": "DialogicAnimaResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/Anima/DialogicAnimaResources.gd"
+}, {
+"base": "Control",
+"class": "DialogicBackgroundMusic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
+}, {
+"base": "Node",
+"class": "DialogicCustomEvents",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/DialogicCustomEvents.gd"
+}, {
+"base": "Node",
+"class": "DialogicDefinitionsUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
+}, {
+"base": "Node",
+"class": "DialogicParser",
+"language": "GDScript",
+"path": "res://addons/dialogic/Parser/DialogicParser.gd"
+}, {
+"base": "Reference",
+"class": "DialogicResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicResources.gd"
+}, {
+"base": "Reference",
+"class": "DialogicUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicUtil.gd"
+}, {
+"base": "PanelContainer",
+"class": "HistoryRow",
+"language": "GDScript",
+"path": "res://addons/dialogic/Example Assets/History/HistoryRow.gd"
+} ]
+_global_script_class_icons={
+"AnimaAccordion": "",
+"AnimaAnimatable": "",
+"AnimaAnimationsUtils": "",
+"AnimaArc": "",
+"AnimaButton": "res://addons/anima/icons/button.svg",
+"AnimaCarousel": "",
+"AnimaChars": "",
+"AnimaCircle": "",
+"AnimaCubicBezier": "",
+"AnimaDeclarationBase": "",
+"AnimaDeclarationForAnimation": "",
+"AnimaDeclarationForProperty": "",
+"AnimaDeclarationForRelativeProperty": "",
+"AnimaDeclarationGrid": "",
+"AnimaDeclarationGroup": "",
+"AnimaDeclarationNode": "",
+"AnimaEasing": "",
+"AnimaLabel": "",
+"AnimaLine": "",
+"AnimaNode": "",
+"AnimaNodesProperties": "",
+"AnimaPlayer": "",
+"AnimaPropertyList": "",
+"AnimaRectangle": "",
+"AnimaShape": "",
+"AnimaSquare": "",
+"AnimaStrings": "",
+"AnimaTriangle": "",
+"AnimaTween": "",
+"AnimaTweenUtils": "",
+"AnimaVisualNode": "",
+"DTS": "",
+"Dialogic": "",
+"DialogicAnimaPropertiesHelper": "",
+"DialogicAnimaResources": "",
+"DialogicBackgroundMusic": "",
+"DialogicCustomEvents": "",
+"DialogicDefinitionsUtil": "",
+"DialogicParser": "",
+"DialogicResources": "",
+"DialogicUtil": "",
+"HistoryRow": ""
+}
+
 [application]
 
 config/name="Flight Game"
 run/main_scene="res://Hud/MainMenu.tscn"
+
+[autoload]
+
+Anima="*res://addons/anima/core/anima.gd"
+AnimaUI="*res://addons/anima/ui/AnimaUI.gd"
+CameraScript="*res://Singletons/CameraScript.gd"
 
 [display]
 
@@ -20,6 +282,10 @@ window/size/height=1080
 window/size/test_width=1366
 window/size/test_height=768
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/anima/plugin.cfg" )
 
 [gui]
 

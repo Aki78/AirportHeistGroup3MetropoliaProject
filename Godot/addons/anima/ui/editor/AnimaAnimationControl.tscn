@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/anima/ui/property/AnimaPropertyFromTo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/anima/ui/editor/AnimaAnimationData.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/anima/ui/editor/AnimaAnimationControl.gd" type="Script" id=5]
+
+[sub_resource type="ButtonGroup" id=1]
+
+[node name="AnimationControl" type="MarginContainer"]
+anchor_right = 1.0
+mouse_filter = 1
+size_flags_horizontal = 3
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="VBoxContainer" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 1016.0
+margin_bottom = 375.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container"]
+margin_right = 1008.0
+margin_bottom = 49.0
+custom_constants/separation = 12
+
+[node name="Label2" type="Label" parent="Container/HBoxContainer"]
+margin_top = 12.0
+margin_right = 66.0
+margin_bottom = 37.0
+text = "Delay:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delay" parent="Container/HBoxContainer" instance=ExtResource( 2 )]
+margin_left = 78.0
+margin_right = 1008.0
+margin_bottom = 49.0
+label = "none"
+can_clear_custom_value = false
+show_relative_selector = false
+
+[node name="AnimationData" parent="Container" instance=ExtResource( 4 )]
+margin_top = 57.0
+margin_right = 1008.0
+margin_bottom = 367.0
+
+[node name="MarginContainer" parent="Container/AnimationData/Control" index="0"]
+margin_right = 1008.0
+
+[node name="AnimaData" parent="Container/AnimationData/Control/MarginContainer" index="0"]
+margin_right = 996.0
+
+[node name="HBoxContainer" parent="Container/AnimationData/Control/MarginContainer/AnimaData" index="0"]
+margin_right = 984.0
+
+[node name="Delay" parent="Container/AnimationData/Control/MarginContainer/AnimaData/HBoxContainer" index="1"]
+margin_right = 984.0
+
+[node name="HBoxContainer2" parent="Container/AnimationData/Control/MarginContainer/AnimaData" index="1"]
+margin_right = 984.0
+
+[node name="Delay" parent="Container/AnimationData/Control/MarginContainer/AnimaData/HBoxContainer2" index="1"]
+margin_right = 984.0
+
+[node name="HSeparator" parent="Container/AnimationData/Control/MarginContainer/AnimaData" index="2"]
+margin_right = 984.0
+
+[node name="NodeOrGroup" parent="Container/AnimationData/Control/MarginContainer/AnimaData" index="3"]
+margin_right = 984.0
+
+[node name="MarginContainer" parent="Container/AnimationData/Control/MarginContainer/AnimaData/NodeOrGroup/VBoxContainer2" index="0"]
+margin_right = 984.0
+
+[node name="GridContainer" parent="Container/AnimationData/Control/MarginContainer/AnimaData/NodeOrGroup/VBoxContainer2/MarginContainer" index="0"]
+margin_right = 972.0
+
+[node name="AnimaButton" parent="Container/AnimationData/Control/MarginContainer/AnimaData/NodeOrGroup/VBoxContainer2/MarginContainer/GridContainer" index="0"]
+margin_right = 314.0
+
+[node name="AsNode" parent="Container/AnimationData/Control/MarginContainer/AnimaData/NodeOrGroup/VBoxContainer2/MarginContainer/GridContainer" index="1"]
+margin_left = 322.0
+margin_right = 636.0
+group = SubResource( 1 )
+
+[node name="AsGroup" parent="Container/AnimationData/Control/MarginContainer/AnimaData/NodeOrGroup/VBoxContainer2/MarginContainer/GridContainer" index="2"]
+margin_left = 644.0
+margin_right = 958.0
+group = SubResource( 1 )
+
+[node name="AsGrid" parent="Container/AnimationData/Control/MarginContainer/AnimaData/NodeOrGroup/VBoxContainer2/MarginContainer/GridContainer" index="3"]
+margin_right = 314.0
+group = SubResource( 1 )
+
+[node name="AnimaButton2" parent="Container/AnimationData/Control/MarginContainer/AnimaData/NodeOrGroup/VBoxContainer2/MarginContainer/GridContainer" index="4"]
+margin_left = 322.0
+margin_right = 636.0
+
+[editable path="Container/AnimationData"]
