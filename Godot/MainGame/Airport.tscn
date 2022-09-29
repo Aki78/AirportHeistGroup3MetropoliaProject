@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/airport_icon.png" type="Texture" id=1]
+[ext_resource path="res://MainGame/AirportButton.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.025, 0.025 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "oscilate"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.48, 0.98 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.025, 0.025 ), Vector2( 0.045, 0.045 ), Vector2( 0.025, 0.025 ) ]
+}
+
+[node name="Airport" type="TextureButton"]
+margin_left = 546.908
+margin_top = -494.768
+margin_right = 1504.91
+margin_bottom = 463.232
+rect_scale = Vector2( 0.025, 0.025 )
+button_mask = 5
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -53120.0
+margin_top = -12480.0
+margin_right = -53080.0
+margin_bottom = -12440.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/oscilate = SubResource( 2 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_TextureButton_mouse_exited"]

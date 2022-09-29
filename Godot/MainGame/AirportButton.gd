@@ -6,8 +6,8 @@ var mouse_over
 onready var bubbleAnimation = $AnimationPlayer
 
 func _ready():
-	pass
-
+	rect_scale = Vector2(0.05,0.05)
+	modulate.g =255
 func _on_TextureButton_mouse_entered():
 #	bubbleAnimation.play("oscilate")
 	rect_scale = Vector2(0.1,0.1)
@@ -15,5 +15,5 @@ func _on_TextureButton_mouse_entered():
 
 func _on_TextureButton_mouse_exited():
 #	bubbleAnimation.stop(true)
-	rect_scale = Vector2(0.025,0.025)
+	rect_scale = Vector2(0.05,0.05)
 
