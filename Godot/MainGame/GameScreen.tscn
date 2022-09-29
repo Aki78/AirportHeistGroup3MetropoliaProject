@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Images/europe.png" type="Texture" id=1]
 [ext_resource path="res://MainGame/IngameGobackButton.gd" type="Script" id=2]
 [ext_resource path="res://Images/airport_icon.png" type="Texture" id=3]
 [ext_resource path="res://MainGame/AirportButton.gd" type="Script" id=4]
+[ext_resource path="res://MainGame/Europe.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -42,37 +43,40 @@ tracks/0/keys = {
 position = Vector2( 960.031, 538 )
 scale = Vector2( 0.658189, 0.472949 )
 texture = ExtResource( 1 )
+script = ExtResource( 6 )
 
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 1320.0
-margin_top = 304.0
-margin_right = 2278.0
-margin_bottom = 1262.0
+[node name="TextureButton" type="TextureButton" parent="Europe"]
+margin_left = 546.908
+margin_top = -494.768
+margin_right = 1504.91
+margin_bottom = 463.232
 rect_scale = Vector2( 0.025, 0.025 )
 button_mask = 5
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="TextureRect" type="TextureRect" parent="TextureButton"]
+[node name="TextureRect" type="TextureRect" parent="Europe/TextureButton"]
 visible = false
 margin_left = -53120.0
 margin_top = -12480.0
 margin_right = -53080.0
 margin_bottom = -12440.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureButton"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Europe/TextureButton"]
 anims/RESET = SubResource( 1 )
 anims/oscilate = SubResource( 2 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 80.0
-margin_bottom = 80.0
+[node name="Button" type="Button" parent="Europe"]
+margin_left = -1446.44
+margin_top = -1120.63
+margin_right = -1374.44
+margin_bottom = -1048.63
 text = "Back"
 script = ExtResource( 2 )
 
-[connection signal="mouse_entered" from="TextureButton" to="TextureButton" method="_on_TextureButton_mouse_entered"]
-[connection signal="mouse_exited" from="TextureButton" to="TextureButton" method="_on_TextureButton_mouse_exited"]
-[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="Europe/TextureButton" to="Europe/TextureButton" method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="Europe/TextureButton" to="Europe/TextureButton" method="_on_TextureButton_mouse_exited"]
+[connection signal="pressed" from="Europe/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Europe/Button" to="Europe" method="_on_Button_pressed"]
+[connection signal="pressed" from="Europe/Button" to="Europe/Button" method="_on_Button_pressed"]

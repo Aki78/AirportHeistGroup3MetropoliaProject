@@ -9,11 +9,11 @@ func _ready():
 	pass
 
 func _on_TextureButton_mouse_entered():
-	bubbleAnimation.play("oscilate")
-#	rect_scale = Vector2(0.035,0.035)
+#	bubbleAnimation.play("oscilate")
+	rect_scale = Vector2(0.1,0.1)
 #	rect_scale = Vector2(bubbleAnimation.osc, bubbleAnimation)
 
 func _on_TextureButton_mouse_exited():
-	bubbleAnimation.stop(true)
+#	bubbleAnimation.stop(true)
 	rect_scale = Vector2(0.025,0.025)
 
