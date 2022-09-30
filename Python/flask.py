@@ -4,13 +4,13 @@ import json
 import mysql.connector
 
 connection = mysql.connector.connect(
-         host='127.0.0.1',
-         port= 3306,
-         database='flight_game',
-         user='root',
-         password='root',
-         autocommit=True
-     )
+    host='127.0.0.1',
+    port= 3306,
+    database='flight_game',
+    user='root',
+    password='root',
+    autocommit=True
+)
 
 def find_airport_and_location_by_icao(icao):
     sql = 'SELECT airport.name, country.name from airport join country using (iso_country)'
