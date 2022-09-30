@@ -18,3 +18,12 @@ def get_airport_info():
 
 # def get_weather():
 #    pass
+
+def pull():
+    sql = "select name, municipality, ident, latitude_deg, longitude_deg from eu_airports"
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    if cursor.rowcount > 0:
+        for row in result:
+            print(f"{row[0]}, {row[1]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}")
