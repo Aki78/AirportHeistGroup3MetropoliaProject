@@ -27,3 +27,5 @@ def pull():
     if cursor.rowcount > 0:
         for row in result:
             print(f"{row[0]}, {row[1]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}")
+
+    print(result)
