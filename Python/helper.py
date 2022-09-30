@@ -32,9 +32,11 @@ def get_distances(deg1, deg2):
     distance = R * c
 
     print(f" The distance between the two airports is {distance}km.")
-    return(distance)
-    pass
+    return distance
 
 def get_possible_flights():
+    pass
+
+def deg_to_xy():
     pass
 
