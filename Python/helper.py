@@ -1,3 +1,5 @@
+from math import sin, cos, sqrt, atan2, degrees
+
 def feet_to_meters(feet):
     meters = 0.3048 * feet
     return meters
@@ -6,7 +8,6 @@ def meters_to_km():
     pass
 
 def get_distances(deg1, deg2):
-    from math import sin, cos, sqrt, atan2, degrees
     R = 6371.0
 
     lat_and_long = []
