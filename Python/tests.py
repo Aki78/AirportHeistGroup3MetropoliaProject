@@ -2,13 +2,15 @@ import mysql.connector
 from math import sin, cos, sqrt, atan2, radians
 
 connection = mysql.connector.connect(
-         host='127.0.0.1',
-         port= 3306,
-         database='eu_flight_game',
-         user='root',
-         password='root',
-         autocommit=True
-         )
+    host='127.0.0.1',
+    port= 3306,
+    database='eu_flight_game',
+    user='root',
+    password='root',
+    autocommit=True
+)
+
+
 def get_distances(deg1, deg2):
     R = 6371.0
 
