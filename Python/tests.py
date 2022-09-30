@@ -23,4 +23,3 @@ def test_get_min_max_distance():
     assert True
 
 
-print("testing started: ", helper.get_min_max_distance([(1,1), (2,2), (3,3), (4,4)]))
