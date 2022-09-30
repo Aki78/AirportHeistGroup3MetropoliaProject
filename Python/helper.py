@@ -41,5 +41,16 @@ def deg_to_xy(deg):
     x = 0.63 * 111 * deg[0]
     return(x, y)
 
-def get_min_max_distance():
-    pass
+def get_min_max_distance(airport_list):
+    my_minimum = 1000000000
+    my_maximum = -1000000000
+    for i in range(len(airport_list)):
+        for j in range(i, len(airport_list)):
+            if get_distances(airport_list[i], airport_list[j]) > my_maximum:
+                my_maximum = get_distances(airport_list[i], airport_list[j])
+            if get_distances(airport_list[i], airport_list[j]) < my_minimum:
+                my_minimum = get_distances(airport_list[i], airport_list[j])
+
+    return (my_maximum, my_minimum)
+
+
