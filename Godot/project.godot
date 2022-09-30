@@ -274,6 +274,7 @@ run/main_scene="res://Hud/MainMenu.tscn"
 Anima="*res://addons/anima/core/anima.gd"
 AnimaUI="*res://addons/anima/ui/AnimaUI.gd"
 CameraScript="*res://Singletons/CameraScript.gd"
+Http="*res://Singletons/http.gd"
 
 [display]
 
