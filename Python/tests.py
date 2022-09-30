@@ -38,7 +38,6 @@ def get_min_max_distance(airport_list):
     my_minimum = 1000000000
     my_maximum = -1000000000
     for i in range(len(airport_list)):
-        print(i)
         for j in range(i + 1, len(airport_list)):
             if get_distances(airport_list[i], airport_list[j]) > my_maximum:
                 my_maximum = get_distances(airport_list[i], airport_list[j])
@@ -60,4 +59,3 @@ if cursor.rowcount > 0:
         airport_list.append(row)
 
 print(get_min_max_distance(airport_list))
-print(airport_list)
