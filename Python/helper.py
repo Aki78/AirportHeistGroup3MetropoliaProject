@@ -7,7 +7,6 @@ def feet_to_meters(feet):
 def meters_to_km(meters):
     kilometers = 1000 * meters
     return(kilometers)
-    pass
 
 def get_distances(deg1, deg2):
     R = 6371.0
@@ -35,8 +34,11 @@ def get_distances(deg1, deg2):
     return distance
 
 def get_possible_flights():
+
     pass
 
-def deg_to_xy():
-    pass
+def deg_to_xy(deg):
+    y = 111 * deg[1]
+    x = 0.63 * 111 * deg[0]
+    return(x, y)
 
