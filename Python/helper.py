@@ -35,3 +35,6 @@ def get_distances(deg1, deg2):
 def get_possible_flights():
     pass
 
+def deg_to_xy():
+    pass
+
