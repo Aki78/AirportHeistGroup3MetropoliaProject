@@ -4,7 +4,9 @@ def feet_to_meters(feet):
     meters = 0.3048 * feet
     return meters
 
-def meters_to_km():
+def meters_to_km(meters):
+    kilometers = 1000 * meters
+    return(kilometers)
     pass
 
 def get_distances(deg1, deg2):
