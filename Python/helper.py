@@ -9,15 +9,13 @@ def get_distances(deg1, deg2):
     R = 6371.0
 
     lat_and_long = []
-    for row in result:
-        print(f"The latitude for ICAO1 is {deg1[0]} and the location is {deg1[1]}")
-        lat_and_long.append(deg1[0])
-        lat_and_long.append(deg1[1])
+    print(f"The latitude for ICAO1 is {deg1[0]} and the location is {deg1[1]}")
+    lat_and_long.append(deg1[0])
+    lat_and_long.append(deg1[1])
 
-    for row in result:
-        print(f"The latitude for ICAO1 is {deg2[0]} and the longitude is {deg2[1]}")
-        lat_and_long.append(deg2[0])
-        lat_and_long.append(deg2[1])
+    print(f"The latitude for ICAO1 is {deg2[0]} and the longitude is {deg2[1]}")
+    lat_and_long.append(deg2[0])
+    lat_and_long.append(deg2[1])
 
     lat_distance = (lat_and_long[2] - lat_and_long[0]) / 180 * 3.14
     long_distance = (lat_and_long[3] - lat_and_long[1]) / 180 * 3.14
