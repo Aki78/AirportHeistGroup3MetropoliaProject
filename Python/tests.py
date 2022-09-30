@@ -59,5 +59,5 @@ if cursor.rowcount > 0:
     for row in result:
         airport_list.append(row)
 
-get_min_max_distance(airport_list)
+print(get_min_max_distance(airport_list))
 print(airport_list)
