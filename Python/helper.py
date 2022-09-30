@@ -35,10 +35,11 @@ def get_distances(deg1, deg2):
 
 def get_possible_flights():
 
-    pass
 
 def deg_to_xy(deg):
     y = 111 * deg[1]
     x = 0.63 * 111 * deg[0]
     return(x, y)
 
+def get_min_max_distance():
+    pass
