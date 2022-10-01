@@ -1,4 +1,3 @@
-
 from flask import Flask, request
 import json
 import mysql.connector
@@ -41,6 +40,15 @@ def get_airport(icao):
         return response
     except:
         return "Airport Not Found"
+
+
+@app.route('/send', methods = ['POST'] )
+def get_airport_rec():
+    print("Recieving")
+    print(request.data)
+
+    return "A"
+
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)

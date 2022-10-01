@@ -4,7 +4,9 @@ onready var http_request = HTTPRequest.new()
 func _ready():
 	add_child(http_request)
 	http_request.connect("request_completed", self, "_on_request_completed")
-	http_request.request("http://127.0.0.1:5000/airport/00AA")
+#	http_request.request("http://127.0.0.1:5000/airport/00AA")
+	var body = to_json({"name": "Godette"})
+	var error = http_request.request("http://127.0.0.1:5000/send", [], true, HTTPClient.METHOD_POST, body)
 
 #func _on_Button_pressed():
 #	$HTTPRequest.request("http://127.0.0.1:5000/airport/00AA")
