@@ -11,17 +11,12 @@ connection = mysql.connector.connect(
     autocommit=True
 )
 
-
-# possibly make double these functions for plural
-def get_airport_info():
-    pass
-
 # def get_weather():
 #    pass
 
 data_list = []
 
-def datalist():
+def get_datalist():
     sql = "select name, municipality, ident, latitude_deg, longitude_deg from eu_airports"
     cursor = connection.cursor()
     cursor.execute(sql)

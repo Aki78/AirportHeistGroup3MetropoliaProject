@@ -19,11 +19,6 @@ def mainMenu():
         else:
             return int(userInput)
 
-
-
-
-
-
 budget = 1000000
 co2 = 100000
 player = [""]
