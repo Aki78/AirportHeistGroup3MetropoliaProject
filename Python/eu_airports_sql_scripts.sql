@@ -1,4 +1,4 @@
-#code used to create new database
+/*code used to create new database*/
 create database eu_flight_game;
 use eu_flight_game;
 
@@ -15,7 +15,7 @@ iso_region varchar(40) DEFAULT NULL,
 municipality varchar(40) DEFAULT NULL,
 PRIMARY KEY (ident));
 
-SELECT *
+select *
 from airport
 WHERE airport.continent = 'EU' AND scheduled_service = 'yes' AND TYPE = 'large_airport'
 group BY iso_country
