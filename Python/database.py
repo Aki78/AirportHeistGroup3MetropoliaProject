@@ -14,14 +14,16 @@ connection = mysql.connector.connect(
 
 # data should be a dictionary with all the info
 airports = {}
-coordinates_list = []
-data_list = []
+#coordinates_list = []
+#data_list = []
 
 def get_airport_name():
     
     return
 
 def get_coordinates():
+    coordinates_list = []
+
     sql = "select latitude_deg, longitude_deg from eu_airports"
 
     cursor = connection.cursor()
@@ -35,6 +37,8 @@ def get_coordinates():
     return coordinates_list
 
 def get_datalist():
+    data_list = []
+    
     sql = "select name, municipality, ident, latitude_deg, longitude_deg from eu_airports"
     
     cursor = connection.cursor()
