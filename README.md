@@ -1,8 +1,9 @@
 # Airport Heist
 ## Contents
     -Introduction
-    -Specifications
+    -Vision
     -Story
+    -Functional Requirements
     -Task Stack
     -Run
     -Useful Git Commands
@@ -12,19 +13,25 @@
 
 ## Introduction
 This document specifies a design for the gameplay of Airport Heist.
-The key developers of this game are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
+The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
 
 ## Vision
-Chapter 2 (Vision) describes the general idea of the flight simulator game. 
-What is the purpose of the game and how does it work? 
-The vision can be presented also as a figure that is supported by a written description. 
+Airport Heist is a single player game, where the main character aims to avoid capture as they make their way across europe.
+Players are limited by their budget but can steal their way to fortune or be ruined!
+Players start in Helsinki, Finland and the game ends when you are either caught by interpol or run out of money.
+
+
+The Purpose of Airport Heist is to produce a fun, interactive game, 
+that satisfies the guidelines provided in software1.
+
+What does this mean?
+
+The vision can be presented also as a figure that is supported by a written description.
 Here you must explain the main idea of the game in your own words: 
 how does the game proceed and what stages must the player go through?
 
-## Specifications
-Airport Heist is a single player game, where the main character aims to avoid capture as they make their way across europe.
-Players are limited by their budget but can steal their way to fortune or be ruined!
-Players start in Helsinki, Finland and the game ends when you are either caught by interpol or run our of money.
+As the game progresses the player take chances by stealing money to increase their wealth
+and then makes strategic moves to avoid arrest.
 
 ## Story
 ### Backstory
@@ -38,7 +45,20 @@ Time to make your next move before interpol gets you!
 ### Setting
 Airport Heist is set in present day Europe.
 
-###
+## Functional Requirements
+Chapter 3 (Functional requirements) discusses everything the user can do with the game. 
+The functional requirements are typically presented as user stories with a role (who), 
+action (what), and benefit (why). 
+An example of a user story would be "As a player I can choose the next airport from the cities showing on the map, 
+so that my electric airplane will move there.". 
+The example user story contains a role (player), an action (selecting the next city) 
+and a benefit the user can gain by completing the action (moving to the new location). 
+There are enough user stories when they together describe all functionality of the game. 
+For the flight simulator this probably means dozens of user stories. 
+Each user story must be unambiguous and concrete. 
+It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
+
+
 
 ## Task Stack
  | Task                                          | Name               | 
