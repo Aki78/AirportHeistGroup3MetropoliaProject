@@ -6,7 +6,7 @@ onready var airports = []
 
 
 func _ready():
-	Sound.play_placeholder1()
+	Sound.play_spy()
 	
 	randomize()
 	CameraScript.my_ease_in(self)
@@ -49,4 +49,4 @@ func _on_AnimateMe_pressed():
 
 
 func _on_Europe_tree_exiting():
-	Sound.stop_placeholder1()
+	Sound.stop_spy()
