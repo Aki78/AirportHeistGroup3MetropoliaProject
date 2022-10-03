@@ -41,7 +41,7 @@ def get_possible_flights(max_flight_distance, player_position, deg_list):
         if get_distances(player_position, deg_list[i]) <= max_flight_distance and get_distances(player_position, deg_list[i]) != 0:
             my_index.append(i)
     #print(my_index)
-
+    
     return my_index
 
 

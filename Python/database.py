@@ -17,7 +17,6 @@ airports = {}
 
 
 def get_airport_name(coordinates):
-    
     sql = "select name, latitude_deg, longitude_deg from eu_airports"
 
     cursor = connection.cursor()

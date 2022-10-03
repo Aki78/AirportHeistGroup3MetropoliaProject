@@ -97,6 +97,7 @@ def run_game(airport_data, player):
     input("Enter")
         
     
+    
     print("Budget: ", budget, "€")
     print("CO2: ", co2, "kg")
 
