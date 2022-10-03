@@ -38,15 +38,22 @@ def get_distances(deg1, deg2):
 def get_possible_flights(max_flight_distance, player_position, deg_list):
     my_index = []
     for i in range(len(deg_list)):
-        if get_distances(player_position, deg_list[i]) <= max_flight_distance:
+        if get_distances(player_position, deg_list[i]) <= max_flight_distance and get_distances(player_position, deg_list[i]) != 0:
             my_index.append(i)
-    print(my_index)
+    #print(my_index)
+
     return my_index
 
 
-def print_possible_flights(index):
-    
-    return
+def print_possible_flights(index, coordinates):
+    selection = 1
+    for i in index:
+        print(selection, "- ", end = '')
+        database.get_airport_name(coordinates[int(i)])
+        selection += 1
+        print("")
+      
+    return 
 
 
 def deg_to_xy(deg):
