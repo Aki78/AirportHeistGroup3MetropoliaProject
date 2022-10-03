@@ -13,9 +13,10 @@ def test_get_distances():
     assert  11000 > helper.get_distances((3.4, -75),(60.3, 24.9))
 
 def test_get_possible_flights():
-    result = helper.get_possible_flights(100, (2, 2), [(0,0),(100,0),(0,100),(1000,1000),(10000,10000),(0.1,0.1)])
+    result = helper.get_possible_flights(4500, (35.46, 15.06), [(49.62,6.20),(28.45,-13.86),(44.57,26.08),(53.52,-6.27),(39.52,-121.76),(29.10, -95.77)])
     print(result)
-    assert result == [0, 1, 2, 5]
+    assert result == [(49.62, 6.2), (28.45, -13.86), (44.57, 26.08), (53.52, -6.27)]
+
 def test_deg_to_xy():
     assert 111  == round(helper.deg_to_xy((0,1))[1])
     assert round(0.63*111)  == round(helper.deg_to_xy((1,0))[0])
