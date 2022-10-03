@@ -9,8 +9,8 @@ def theft_success_rate():
 
 def get_selling_price():
     distance = get_distance(deg1, deg2)
-    a = distance * 1.5
-    ticket_price = a
+    b = distance * 1.5
+    ticket_price = b
     return ticket_price
     pass
 
