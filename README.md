@@ -15,7 +15,7 @@ This document specifies a design for the gameplay of Airport Heist.
 The key developers of this game are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
 
 ## Vision
-Chapter 2 (Vision) describes the general idea of the the flight simulator game. 
+Chapter 2 (Vision) describes the general idea of the flight simulator game. 
 What is the purpose of the game and how does it work? 
 The vision can be presented also as a figure that is supported by a written description. 
 Here you must explain the main idea of the game in your own words: 
