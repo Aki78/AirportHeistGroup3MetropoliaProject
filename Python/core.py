@@ -1,4 +1,5 @@
 import os
+import string
 #import mysql.connector
 import database
 import game_functions
@@ -49,7 +50,7 @@ def print_credits():
     input("Press Enter to continue...")
     return
 
-def decision():
+def decision(): #Input
     print("1. Steal")
     print("2. Escape")
 
@@ -64,6 +65,13 @@ def decision():
 
     return userInput
 
+def print_player_position(airport_data, player):
+    for i in range(len(airport_data)):
+        if airport_data[i]["ident"] == player[1]:
+            print("You are at", airport_data[i]["name"])
+            break
+    return
+
 def money_heist():
     return
 
@@ -73,9 +81,41 @@ def escape(airport_coordinates, max_flight_distance, player):
     
     airport_coordinates.extend(database.get_coordinates())
     possible_flights_index = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
-    helper.print_possible_flights(possible_flights_index, airport_coordinates)
+    amount_of_possible_flights = helper.print_possible_flights(possible_flights_index, airport_coordinates)
     
+    player_airport_selection(possible_flights_index, airport_coordinates, amount_of_possible_flights)
+
+    input("Enter")
+
     return
+
+def player_airport_selection(index, coordinates, amount_of_possible_flights):
+    userInput = "0"
+
+    while True:
+        userInput = input("Input: ").strip()
+
+        if userInput == "" or type(int(userInput)) is not int:
+            print("Invalid input")
+        #elif 1 > int(userInput) or int(userInput) > amount_of_possible_flights + 1:
+        #    print("Invalid input")
+        else:
+            selection = int(userInput)
+            break
+
+    print_airport_details(selection, index, coordinates)
+      
+    return 
+    
+
+def print_airport_details(selection, index, coordinates):
+    for i in index:
+        print(selection, "- ", end = '')
+        database.get_airport_name(coordinates[int(i)])
+        selection += 1
+        print("")
+
+    return 
 
 def run_game(airport_data, player):
     os.system("cls")
@@ -87,25 +127,33 @@ def run_game(airport_data, player):
     max_flight_distance = 1000
 
     player.append("EFHK")
+
     for i in range(len(airport_data)):
         if airport_data[i]["ident"] == player[1]:
-            print("You are at", airport_data[i]["name"])
             player.append(airport_data[i]["deg"])
             break
+    
+    player.append(1000000)
+    player.append(10000)
+    
+    
 
-    print("Coordinates:",player[2])
-    input("Enter")
+    #print("Coordinates:",player[2])
+    #input("Enter")
         
-    
-    
-    print("Budget: ", budget, "€")
-    print("CO2: ", co2, "kg")
+    while True:
+        
+        print_player_position(airport_data, player)
 
-    userSelection = decision()
-    if userSelection == "1":
-        money_heist()
-    elif userSelection == "2":
-        escape(airport_coordinates, max_flight_distance, player)
+        print("Budget: ", player[3], "€")
+        print("CO2: ", player[4], "kg")
+
+        userSelection = decision()
+        if userSelection == "1":
+            money_heist()
+        elif userSelection == "2":
+            escape(airport_coordinates, max_flight_distance, player)
+    
 
     input("Press Enter to continue...")
 
@@ -118,7 +166,7 @@ def run_game(airport_data, player):
 #MAIN
 budget  = 1000000
 co2     = 100000
-player  = [""]
+player  = [""]  #player = ['name', 'position_code', coordinates, budget, co2]
 
 airport_data = database.get_datalist()
 
