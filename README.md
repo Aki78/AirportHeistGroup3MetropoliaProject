@@ -5,11 +5,7 @@
     -Story
     -Functional Requirements
     -Task Stack
-    -Run
-    -Useful Git Commands
-    -Project Info
-    -Unrelated Presentation
-    -Useful Bash Commands
+    -Learning Tools And Information
 
 ## Introduction
 This document specifies a design for the gameplay of Airport Heist.
