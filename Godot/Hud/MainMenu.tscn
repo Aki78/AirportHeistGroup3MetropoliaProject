@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Hud/StartButton.gd" type="Script" id=1]
 [ext_resource path="res://Hud/ExitButton.gd" type="Script" id=2]
@@ -6,11 +6,60 @@
 [ext_resource path="res://Hud/SettingsButton.gd" type="Script" id=4]
 [ext_resource path="res://Fonts/orbit.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Hud/MainMenu.gd" type="Script" id=6]
+[ext_resource path="res://Images/airplane-icon-png-2515.png" type="Texture" id=7]
+[ext_resource path="res://Images/pngkit_money-symbol-png_1071207.png" type="Texture" id=8]
+[ext_resource path="res://Hud/AirplaneIcon.gd" type="Script" id=9]
+
+[sub_resource type="Curve" id=4]
+max_value = 10.0
+bake_resolution = 10
+_data = [ Vector2( 0, 0.0613636 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -67.039, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+width = 1024
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 30.0
+gravity = Vector3( 0, 70, 0 )
+initial_velocity = 100.0
+initial_velocity_random = 1.0
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 1.0
+radial_accel_random = 1.0
+damping = 10.0
+angle_random = 1.0
+scale = 0.01
+scale_curve = SubResource( 2 )
 
 [node name="HudBackGround" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -8.0
+margin_bottom = -8.0
+color = Color( 0.87451, 0.219608, 0.219608, 1 )
 script = ExtResource( 6 )
+
+[node name="AirplaneIcon" type="Sprite" parent="."]
+position = Vector2( 1891, 1013 )
+rotation = -1.55521
+scale = Vector2( 0.575684, 0.575684 )
+texture = ExtResource( 7 )
+script = ExtResource( 9 )
+
+[node name="Particles2D" type="Particles2D" parent="AirplaneIcon"]
+position = Vector2( -422.488, -690.064 )
+rotation = 1.55521
+scale = Vector2( 1.73706, 1.73706 )
+amount = 64
+lifetime = 5.0
+process_material = SubResource( 3 )
+texture = ExtResource( 8 )
 
 [node name="Dance" type="Timer" parent="."]
 wait_time = 0.5
@@ -58,6 +107,6 @@ script = ExtResource( 2 )
 [connection signal="tree_exiting" from="HudContainer" to="HudContainer" method="_on_HudContainer_tree_exiting"]
 [connection signal="pressed" from="HudContainer/StartButton" to="HudContainer" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="HudContainer/StartButton" to="HudContainer/StartButton" method="_on_StartButton_pressed"]
-[connection signal="pressed" from="HudContainer/SettingsButton" to="HudContainer" method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="HudContainer/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="HudContainer/SettingsButton" to="HudContainer" method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="HudContainer/ExitButton" to="HudContainer/ExitButton" method="_on_ExitButton_pressed"]
