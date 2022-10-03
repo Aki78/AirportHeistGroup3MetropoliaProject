@@ -8,7 +8,7 @@
     -Learning Tools And Information
 
 ## Introduction
-This document specifies the design for the gameplay Airport Heist.
+This document specifies the design for the gameplay of Airport Heist.
 The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
 
 ## Vision
@@ -56,6 +56,8 @@ Each user story must be unambiguous and concrete.
 It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
 
 The user is able to do two things: choose where they travel to and if they wish to rob the airport they are currently in.
+Where they travel to is limited by budget and distance.
+Thievery is down to luck.
 
 ### Core Functions
     -Print main menu
