@@ -59,6 +59,13 @@ The user is able to do two things: choose where they travel to and if they wish 
 Where they travel to is limited by budget and distance.
 The success of a robbery is mostly down to luck.
 
+## Quality Requirements
+Chapter 4 defines other requirements besides the functional requirements the flight simulator has. 
+Examples of these could be performance requirements 
+("Fetching airport information from the database must take a maximum of two seconds.") 
+or usability requirements ("The user must get instant feedback from all actions they perform").
+
+
 ### Core Functions
     -Print main menu
     -Print settings
@@ -122,7 +129,7 @@ git clone repo_name (when you want to copy a repo and add it your computer)
 ### Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
 
-### English Presentation on Tesla
+### Unrelated English Presentation on Tesla
 https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
 
 
