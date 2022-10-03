@@ -65,6 +65,10 @@ Examples of these could be performance requirements
 ("Fetching airport information from the database must take a maximum of two seconds.") 
 or usability requirements ("The user must get instant feedback from all actions they perform").
 
+All functions created were ran through pytest to ensure proper working order.
+We also created a new database from the existing one. 
+This removed a lot of unnecessary information and made calling upon the database faster.
+
 
 ### Core Functions
     -Print main menu
