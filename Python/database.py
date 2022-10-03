@@ -1,5 +1,3 @@
-# data should be a dictionary with all the info
-airports = {}
 import mysql.connector
 
 connection = mysql.connector.connect(
@@ -14,6 +12,8 @@ connection = mysql.connector.connect(
 # def get_weather():
 #    pass
 
+# data should be a dictionary with all the info
+airports = {}
 data_list = []
 
 def get_datalist():
