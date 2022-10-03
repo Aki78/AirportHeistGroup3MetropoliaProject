@@ -55,6 +55,8 @@ For the flight simulator this probably means dozens of user stories.
 Each user story must be unambiguous and concrete. 
 It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
 
+The user
+
 ### Core Functions
     -Print main menu
     -Print settings
