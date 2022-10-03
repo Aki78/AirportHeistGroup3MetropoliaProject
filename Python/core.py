@@ -1,5 +1,8 @@
 import os
 import mysql.connector
+import database
+import game_functions
+import helper
 
 connection = mysql.connector.connect(
     host = '127.0.0.1',
@@ -55,33 +58,46 @@ def print_credits():
     input("Press Enter to continue...")
     return
 
-def run_game():
-    os.system("cls")
+def run_game(airport_data):
+    os.system("cls")   
+    
+    airport_coordinates = []
+    max_flight_distance = 1000
 
-    sql = "select name, municipality, ident, latitude_deg, longitude_deg from eu_airports "
-    sql += "where ident = 'EDDB'"
-    
-    cursor = connection.cursor()
-    cursor.execute(sql)
-    result = cursor.fetchall()
-    
-    print("You are at", result[0][0])
+    player.append("EFHK")
+    for i in range(len(airport_data)):
+        if airport_data[i]["ident"] == player[1]:
+            print("You are at", airport_data[i]["name"])
+            player.append(airport_data[i]["deg"])
+            break
+
+    print(player[2])
+    input("Enter")
+        
     print("Reachable airports:")
+    airport_coordinates.extend(database.get_coordinates())
 
-    print_reachable_airports()
+    possible_flights_index = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
+    helper.print_possible_flights(possible_flights_index)
+
+
 
     input("Press Enter to continue...")
+
+
+
     return
 
-def print_reachable_airports():
-    return
 
 budget = 1000000
 co2 = 100000
 player = [""]
 
+airport_data = database.get_datalist()
+
 os.system("cls")
 name = input("Input name: ")
+player[0] = name
 os.system("cls")
 
 
@@ -90,7 +106,7 @@ while True:
     print(userInput)
 
     if userInput == "1":
-        run_game()
+        run_game(airport_data)
     elif userInput == "2":
         print_settings()
     elif userInput == "3":
