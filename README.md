@@ -1,11 +1,23 @@
-# Task Stack
+# Airport Heist
+## Introduction
+This document specifies a design for the gameplay of Airport Heist.
+The key developers of this game are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
+## Specification
+Airport Heist is a single player game, where the main aim is to avoid capture as the player makes their way across europe.
+Player are limited by their budget but can steal their way to fortune or be ruined!
+Players start in Helsinki, Finland and the game ends when you are either caught by interpol or run our of money.
+
+
+
+
+## Task Stack
  | Task                                          | Name               | 
  |-----------------------------------------------|--------------------|
  | write report                                  | Frank              |
  | make a diagram                                | Kiana              |
  | game rules                                    | Kiana              |
 
-# Run
+## Run
 If you are using Mac/Linux run
 ```bash
 python3 connect_py.py
@@ -19,7 +31,7 @@ py -3 connect_py.py
 Make sure your local user name and password are root and root.
 Make sure the sql database name and table names match exactly.
 
-# Useful Git Commands
+## Useful Git Commands
 
 ```bash
 git pull (saves to github)
@@ -37,14 +49,14 @@ git status (shows your current git state)
 git clone repo_name (when you want to copy a repo and add it your computer)
 ```
 
-# Project Info
+## Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
 
-# Unrelated Presentation
+## Unrelated Presentation
 https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
 
 
-# Useful Bash Commands
+## Useful Bash Commands
 
 ```bash
 pwd 					takes you to curent directory
