@@ -1,9 +1,27 @@
 # Airport Heist
+## Contents
+    -Introduction
+    -Specifications
+    -Story
+    -Task Stack
+    -Run
+    -Useful Git Commands
+    -Project Info
+    -Unrelated Presentation
+    -Useful Bash Commands
+
 ## Introduction
 This document specifies a design for the gameplay of Airport Heist.
 The key developers of this game are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
 
-## Specification
+## Vision
+Chapter 2 (Vision) describes the general idea of the the flight simulator game. 
+What is the purpose of the game and how does it work? 
+The vision can be presented also as a figure that is supported by a written description. 
+Here you must explain the main idea of the game in your own words: 
+how does the game proceed and what stages must the player go through?
+
+## Specifications
 Airport Heist is a single player game, where the main character aims to avoid capture as they make their way across europe.
 Players are limited by their budget but can steal their way to fortune or be ruined!
 Players start in Helsinki, Finland and the game ends when you are either caught by interpol or run our of money.
@@ -18,7 +36,7 @@ Due to your expert skills you are able to steal 1000€ from the Alepa at Helsin
 Time to make your next move before interpol gets you!
 
 ### Setting
-Airport Heist is set in present day Earth.
+Airport Heist is set in present day Europe.
 
 ###
 
