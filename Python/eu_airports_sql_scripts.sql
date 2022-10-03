@@ -5,13 +5,12 @@ use eu_flight_game;
 create table eu_airports (
 id int(11) not NULL,
 ident varchar(40) DEFAULT NULL,
-type varchar(40) DEFAULT NULL,
 name varchar(40) DEFAULT NULL,
+country_name VARCHAR(40) DEFAULT NULL,
+iso_country varchar(40) DEFAULT NULL,
 latitude_deg double DEFAULT NULL,
 longitude_deg double DEFAULT NULL,
 elevation_ft int(11) DEFAULT NULL,
-iso_country varchar(40) DEFAULT NULL,
-iso_region varchar(40) DEFAULT NULL,
 municipality varchar(40) DEFAULT NULL,
 PRIMARY KEY (ident));
 
