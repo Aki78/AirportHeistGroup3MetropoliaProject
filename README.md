@@ -58,7 +58,25 @@ For the flight simulator this probably means dozens of user stories.
 Each user story must be unambiguous and concrete. 
 It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
 
+### Core Functions
+    -Print main menu
+    -Print settings
+    -Print instructions
+    -Print credits
+    -Run game
 
+### Helper Functions
+    -Convert feet to meters
+    -Convert meters to kilometers
+    -Get the distance between two lat and long co-ordinates
+    -Returns all the possible flights from a given airport
+    -Convert lat and long degrees to x and y co-ordinates
+    -Compares every airport against every airport and return a max and min distance
+
+### Other Game Functions
+    -Uses Gauss theory to predict theft success earnings
+    -Random generator to determine if the theft is successful
+    -A function that uses distance to calculate the cost of a flight
 
 ## Task Stack
  | Task                                          | Name               | 
