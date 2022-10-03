@@ -1,5 +1,6 @@
 import pytest
 import helper
+import game
 
 
 def test_feet_to_meters():
@@ -26,7 +27,7 @@ def test_get_min_max_distance():
     assert True
 
 def get_selling_price():
-    helper.get_selling_price()
+    game.get_selling_price()
 
 
 
