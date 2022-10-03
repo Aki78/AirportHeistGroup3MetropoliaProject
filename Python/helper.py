@@ -33,9 +33,6 @@ def get_distances(deg1, deg2):
 
     return distance
 
-
-deg_list : [(0,100),(1000,1000),(10000,10000),(0.1,0.1)]
-
 def get_possible_flights(max_flight_distance, player_position, deg_list):
     my_index = []
     for i in range(deg_list):
