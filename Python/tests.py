@@ -25,6 +25,10 @@ def test_get_min_max_distance():
     print("testing started: ", helper.get_min_max_distance([(1,1), (2,2), (3,3), (4,4)]))
     assert True
 
+def get_selling_price():
+    helper.get_selling_price()
+
+
 
 
 
