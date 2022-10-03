@@ -1,4 +1,5 @@
 import random
+import helper
 
 
 def theft_success_rate():
@@ -8,7 +9,7 @@ def theft_success_rate():
     pass
 
 def get_selling_price():
-    distance = get_distance(52.30, 4.76), (37.93, 23.94)
+    distance = helper.get_distances((52.30, 4.76), (37.93, 23.94))
     a = distance * 1.5
     ticket_price = a
     return ticket_price
