@@ -55,7 +55,7 @@ For the flight simulator this probably means dozens of user stories.
 Each user story must be unambiguous and concrete. 
 It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
 
-The user
+The user is able to do two things: choose where they travel to and if they wish to rob the airport they are currently in.
 
 ### Core Functions
     -Print main menu
@@ -84,7 +84,7 @@ The user
  | make a diagram                                | Kiana              |
  | game rules                                    | Kiana              |
 
-## Learning Tools/info
+## Learning Tools And information
 ### Run
 If you are using Mac/Linux run
 ```bash
