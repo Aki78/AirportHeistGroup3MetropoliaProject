@@ -26,10 +26,10 @@ def test_get_min_max_distance():
     print("testing started: ", helper.get_min_max_distance([(1,1), (2,2), (3,3), (4,4)]))
     assert True
 
-def get_ticket_price(distance):
-    helper.get_distances((52.30, 4.76), (37.93, 23.94))
-    result = game.get_ticket_price()
-    assert result == 3271.5080131806762
+def test_get_ticket_price():
+    distance = helper.get_distances((52.30, 4.76), (37.93, 23.94))
+    result = game.get_ticket_price(distance)
+    assert result == 3272
 
 
 
