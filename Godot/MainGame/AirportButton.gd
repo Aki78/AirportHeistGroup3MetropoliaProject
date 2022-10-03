@@ -28,8 +28,6 @@ func _on_TextureButton_mouse_exited():
 func add_info(name,coordinate, distance, price, co2):
 	$InfoBox.add_info(name,coordinate, distance, price, co2)
 
-
-
 func _on_Airport_pressed():
 	if own_index in Http.closest_list:
 		Http.send_move(own_index)

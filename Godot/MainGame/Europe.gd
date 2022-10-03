@@ -6,6 +6,8 @@ onready var airports = []
 
 
 func _ready():
+	Sound.play_placeholder1()
+	
 	randomize()
 	CameraScript.my_ease_in(self)
 	for i in range(5):
@@ -26,6 +28,25 @@ func _ready():
 		airport.init(i)
 		add_child(airport)
 
+
 func _on_Button_pressed():
 	var anima = CameraScript.my_ease_out(self)
 	yield(anima, "animation_completed")
+
+func start_tween(my_vec1, my_vec2):
+	$Airplain.modulate.a = 1
+	var tween = get_node("Tween")
+	tween.interpolate_property($Airplain, "position",
+			my_vec1, my_vec2, 1,
+			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
+	yield(tween,"tween_all_completed")
+	$Airplain.modulate.a = 0
+
+
+func _on_AnimateMe_pressed():
+	start_tween(Vector2(0,0), Vector2(1000,1000))
+
+
+func _on_Europe_tree_exiting():
+	Sound.stop_placeholder1()
