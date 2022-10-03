@@ -14,6 +14,7 @@ elevation_ft int(11) DEFAULT NULL,
 municipality varchar(40) DEFAULT NULL,
 PRIMARY KEY (ident));
 
+
 select *
 from airport
 WHERE airport.continent = 'EU' AND scheduled_service = 'yes' AND TYPE = 'large_airport'
