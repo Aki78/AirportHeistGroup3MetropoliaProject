@@ -3,15 +3,13 @@ import helper
 
 
 def theft_success_rate():
-    attempts = amount_robbed
-    if attempts == 5:
-        print("You have lost the game due to getting caught")
-    pass
+  pass
+
 
 def get_selling_price():
     distance = helper.get_distances()
     ticket_price = distance * 1.5
-    return ticket_price
+    return
 
 def co2_amount():
     pass
