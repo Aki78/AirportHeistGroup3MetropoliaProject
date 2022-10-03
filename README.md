@@ -27,7 +27,7 @@ What does this mean?
     -how does the game proceed and what stages must the player go through?
 
 As the game progresses the player take chances by stealing money to increase their wealth
-and then makes strategic moves to avoid arrest.
+and then making strategic moves to avoid arrest.
 
 ## Story
 ### Backstory
