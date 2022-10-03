@@ -1,11 +1,35 @@
-# Task Stack
+# Airport Heist
+## Introduction
+This document specifies a design for the gameplay of Airport Heist.
+The key developers of this game are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
+
+## Specification
+Airport Heist is a single player game, where the main character aims to avoid capture as they make their way across europe.
+Players are limited by their budget but can steal their way to fortune or be ruined!
+Players start in Helsinki, Finland and the game ends when you are either caught by interpol or run our of money.
+
+## Story
+### Backstory
+You are a master thief, captured by the Finnish authorities on a minor charge.
+They have no idea of your genius though and neglect to watch over you properly.
+You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
+You need to get out of Finland fast though as the finnish authorities will stop at nothing to save face. 
+Due to your expert skills you are able to steal 1000€ from the Alepa at Helsinki Airport without being noticed.
+Time to make your next move before interpol gets you!
+
+### Setting
+Airport Heist is set in present day Earth.
+
+###
+
+## Task Stack
  | Task                                          | Name               | 
  |-----------------------------------------------|--------------------|
  | write report                                  | Frank              |
  | make a diagram                                | Kiana              |
  | game rules                                    | Kiana              |
 
-# Run
+## Run
 If you are using Mac/Linux run
 ```bash
 python3 connect_py.py
@@ -19,7 +43,7 @@ py -3 connect_py.py
 Make sure your local user name and password are root and root.
 Make sure the sql database name and table names match exactly.
 
-# Useful Git Commands
+## Useful Git Commands
 
 ```bash
 git pull (saves to github)
@@ -37,14 +61,14 @@ git status (shows your current git state)
 git clone repo_name (when you want to copy a repo and add it your computer)
 ```
 
-# Project Info
+## Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
 
-# Unrelated Presentation
+## Unrelated Presentation
 https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
 
 
-# Useful Bash Commands
+## Useful Bash Commands
 
 ```bash
 pwd 					takes you to curent directory
