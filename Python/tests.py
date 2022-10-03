@@ -14,7 +14,7 @@ def test_get_distances():
     assert  11000 > helper.get_distances((3.4, -75),(60.3, 24.9))
 
 def test_get_possible_flights():
-    result = helper.get_possible_flights(4500, (35.46, 15.06), [(49.62,6.20),(28.45,-13.86),(44.57,26.08),(53.52,-6.27),(39.52,-121.76),(29.10, -95.77)])
+    result = helper.get_possible_flights((35.46, 15.06), [(49.62,6.20),(28.45,-13.86),(44.57,26.08),(53.52,-6.27),(39.52,-121.76),(29.10, -95.77)])
     print(result)
     assert result == [0, 1, 2, 3]
 
@@ -28,7 +28,7 @@ def test_get_min_max_distance():
 
 def test_get_ticket_price():
     distance = helper.get_distances((52.30, 4.76), (37.93, 23.94))
-    result = game.get_ticket_price(distance)
+    result = game_functions.get_ticket_price(distance)
     assert result == 3272
 
 

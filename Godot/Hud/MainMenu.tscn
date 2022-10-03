@@ -1,15 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Hud/StartButton.gd" type="Script" id=1]
 [ext_resource path="res://Hud/ExitButton.gd" type="Script" id=2]
 [ext_resource path="res://Hud/HudContainer.gd" type="Script" id=3]
 [ext_resource path="res://Hud/SettingsButton.gd" type="Script" id=4]
 [ext_resource path="res://Fonts/orbit.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Hud/MainMenu.gd" type="Script" id=6]
 
-[node name="Node2D" type="ColorRect"]
+[node name="HudBackGround" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 1, 1, 1, 0.388235 )
+script = ExtResource( 6 )
+
+[node name="Dance" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
 
 [node name="HudContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -49,6 +54,10 @@ custom_fonts/font = ExtResource( 5 )
 text = "Exit"
 script = ExtResource( 2 )
 
+[connection signal="timeout" from="Dance" to="." method="_on_Timer_timeout"]
+[connection signal="tree_exiting" from="HudContainer" to="HudContainer" method="_on_HudContainer_tree_exiting"]
 [connection signal="pressed" from="HudContainer/StartButton" to="HudContainer" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="HudContainer/StartButton" to="HudContainer/StartButton" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="HudContainer/SettingsButton" to="HudContainer" method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="HudContainer/SettingsButton" to="." method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="HudContainer/ExitButton" to="HudContainer/ExitButton" method="_on_ExitButton_pressed"]

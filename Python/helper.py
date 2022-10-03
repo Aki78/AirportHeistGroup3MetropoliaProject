@@ -1,3 +1,4 @@
+import database
 from math import sin, cos, sqrt, atan2, degrees
 
 def feet_to_meters(feet):
@@ -42,6 +43,10 @@ def get_possible_flights(max_flight_distance, player_position, deg_list):
     print(my_index)
     return my_index
 
+
+def print_possible_flights(index):
+    
+    return
 
 
 def deg_to_xy(deg):

@@ -275,6 +275,7 @@ Anima="*res://addons/anima/core/anima.gd"
 AnimaUI="*res://addons/anima/ui/AnimaUI.gd"
 CameraScript="*res://Singletons/CameraScript.gd"
 Http="*res://Singletons/http.gd"
+Sound="*res://Singletons/Sound.gd"
 
 [display]
 
