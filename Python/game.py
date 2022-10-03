@@ -8,7 +8,7 @@ def theft_success_rate():
         print("You have lost the game due to getting caught")
     pass
 
-def get_selling_price():
+def get_ticket_price():
     distance = helper.get_distances()
     ticket_price = distance * 1.5
     return ticket_price
