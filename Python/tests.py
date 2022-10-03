@@ -15,7 +15,7 @@ def test_get_distances():
 def test_get_possible_flights():
     result = helper.get_possible_flights(4500, (35.46, 15.06), [(49.62,6.20),(28.45,-13.86),(44.57,26.08),(53.52,-6.27),(39.52,-121.76),(29.10, -95.77)])
     print(result)
-    assert result == [(49.62, 6.2), (28.45, -13.86), (44.57, 26.08), (53.52, -6.27)]
+    assert result == [0, 1, 2, 3]
 
 def test_deg_to_xy():
     assert 111  == round(helper.deg_to_xy((0,1))[1])
