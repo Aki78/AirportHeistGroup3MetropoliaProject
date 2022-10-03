@@ -17,6 +17,10 @@ airports = {}
 coordinates_list = []
 data_list = []
 
+def get_airport_name():
+    
+    return
+
 def get_coordinates():
     sql = "select latitude_deg, longitude_deg from eu_airports"
 
