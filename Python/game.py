@@ -6,7 +6,7 @@ def theft_success_rate():
   pass
 
 
-def get_ticket_price():
+def get_ticket_price(distance):
     distance = helper.get_distances()
     ticket_price = distance * 1.5
     return
