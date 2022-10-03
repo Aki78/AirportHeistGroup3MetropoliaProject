@@ -2,13 +2,25 @@
 ## Introduction
 This document specifies a design for the gameplay of Airport Heist.
 The key developers of this game are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
+
 ## Specification
-Airport Heist is a single player game, where the main aim is to avoid capture as the player makes their way across europe.
-Player are limited by their budget but can steal their way to fortune or be ruined!
+Airport Heist is a single player game, where the main character aims to avoid capture as they make their way across europe.
+Players are limited by their budget but can steal their way to fortune or be ruined!
 Players start in Helsinki, Finland and the game ends when you are either caught by interpol or run our of money.
 
+## Story
+### Backstory
+You are a master thief, captured by the Finnish authorities on a minor charge.
+They have no idea of your genius though and neglect to watch over you properly.
+You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
+You need to get out of Finland fast though as the finnish authorities will stop at nothing to save face. 
+Due to your expert skills you are able to steal 1000€ from the Alepa at Helsinki Airport without being noticed.
+Time to make your next move before interpol gets you!
 
+### Setting
+Airport Heist is set in present day Earth.
 
+###
 
 ## Task Stack
  | Task                                          | Name               | 
