@@ -31,11 +31,12 @@ and then making strategic moves to avoid arrest.
 
 ## Story
 ### Backstory
-You are a master thief, captured by the Finnish authorities on a minor charge.
+You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
 They have no idea of your genius though and neglect to watch over you properly.
 You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
-You need to get out of Finland fast though as the finnish authorities will stop at nothing to save face. 
-Due to your expert skills you are able to steal 1000€ from the Alepa at Helsinki Airport without being noticed.
+You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice. 
+Due to your expert skills you are able to steal 1000€ from the Alepa at Helsinki Airport. 
+The police, however, have been alerted of your activities and are hot on your tail.
 Time to make your next move before interpol gets you!
 
 ### Setting
