@@ -13,7 +13,7 @@ The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natan
 
 ## Vision
 Airport Heist is a single player game, where the main character aims to avoid capture as they make their way across europe.
-Players are limited by their budget but can steal their way to fortune or to ruin!
+Players are limited by their budget but can steal money to survive.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
 
 
@@ -57,7 +57,7 @@ It must be possible to look back at the user stories later to determine whether 
 
 The user is able to do two things: choose where they travel to and if they wish to rob the airport they are currently in.
 Where they travel to is limited by budget and distance.
-Thievery is down to luck.
+The success of a robbery is mostly down to luck.
 
 ### Core Functions
     -Print main menu
