@@ -21,8 +21,7 @@ The Purpose of Airport Heist is to produce a fun and interactive game,
 that satisfies the guidelines provided by software1.
 
 What does this mean?
-
-The vision can be presented also as a figure that is supported by a written description.
+    -The vision can be presented also as a figure that is supported by a written description. 
 Here you must explain the main idea of the game in your own words: 
 how does the game proceed and what stages must the player go through?
 
