@@ -1,6 +1,6 @@
 import pytest
 import helper
-import game
+import game_functions
 
 
 def test_feet_to_meters():
