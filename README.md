@@ -85,7 +85,8 @@ It must be possible to look back at the user stories later to determine whether 
  | make a diagram                                | Kiana              |
  | game rules                                    | Kiana              |
 
-## Run
+## Learning Tools/info
+### Run
 If you are using Mac/Linux run
 ```bash
 python3 connect_py.py
@@ -99,7 +100,7 @@ py -3 connect_py.py
 Make sure your local user name and password are root and root.
 Make sure the sql database name and table names match exactly.
 
-## Useful Git Commands
+### Useful Git Commands
 
 ```bash
 git pull (saves to github)
@@ -117,14 +118,14 @@ git status (shows your current git state)
 git clone repo_name (when you want to copy a repo and add it your computer)
 ```
 
-## Project Info
+### Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
 
-## Unrelated Presentation
+### English Presentation on Tesla
 https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
 
 
-## Useful Bash Commands
+### Useful Bash Commands
 
 ```bash
 pwd                               takes you to curent directory
