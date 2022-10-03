@@ -9,11 +9,9 @@ def theft_success_rate():
     pass
 
 def get_selling_price():
-    distance = helper.get_distances((52.30, 4.76), (37.93, 23.94))
-    a = distance * 1.5
-    ticket_price = a
+    distance = helper.get_distances()
+    ticket_price = distance * 1.5
     return ticket_price
-    pass
 
 def co2_amount():
     pass

@@ -27,7 +27,9 @@ def test_get_min_max_distance():
     assert True
 
 def get_selling_price():
-    game.get_selling_price()
+    helper.get_distances((52.30, 4.76), (37.93, 23.94))
+    result = game.get_selling_price()
+    assert 3271.5080131806762 == result
 
 
 
