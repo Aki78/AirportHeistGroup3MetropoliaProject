@@ -1,4 +1,9 @@
-index = [3, 4, 6, 7]
+def return_sth():
+    return None
 
-for i in index:
-    print(int(i))
+sth = return_sth()
+
+if sth is None:
+    print("Got nothing")
+elif sth is not None:
+    print("Got sth")
