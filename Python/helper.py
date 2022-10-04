@@ -55,21 +55,12 @@ def print_possible_flights(name, coordinates):
     return selection
 
 
-def print_flight_details(selection, coordinates, index):
-    count = 1
-    for i in index:
-        if count == selection:
-            name = database.get_airport_name(coordinates[int(selection)])
-            print("got", name)
-            break
-        else:
-            count += 1
-
-    airport_geo_data = database.get_geo_airport_info(str(name))
-
-    print(airport_geo_data)
-    
-
+def print_flight_details(name_list, selection):
+    airport_geo_data = database.get_geo_airport_info(name_list[selection])
+    print("Airport name :", airport_geo_data[0])
+    print("City         :", airport_geo_data[1])
+    print("Country      :", airport_geo_data[2])
+    print("ICAO code    :", airport_geo_data[3])
     return
 
 def deg_to_xy(deg):

@@ -95,7 +95,7 @@ def escape(airport_coordinates, max_flight_distance, player):
 
     return
 
-def player_airport_selection(index, coordinates, amount_of_possible_flights):
+def player_airport_selection(name_list, coordinates, amount_of_possible_flights):
     userInput = "0"
 
     while True:
@@ -106,10 +106,11 @@ def player_airport_selection(index, coordinates, amount_of_possible_flights):
         #elif 1 > int(userInput) or int(userInput) > amount_of_possible_flights + 1:
         #    print("Invalid input")
         else:
-            selection = int(userInput)
+            selection = int(userInput) - 1
             break
 
-    helper.print_flight_details(selection, coordinates, index)
+    os.system("cls")
+    helper.print_flight_details(name_list, selection)
       
     return 
  
