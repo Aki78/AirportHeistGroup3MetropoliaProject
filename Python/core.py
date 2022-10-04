@@ -1,8 +1,8 @@
 import os
-import string
 import database
 import gfuncs
 import helper
+import random
 
 def print_mainmenu():
     userInput = 0
@@ -72,8 +72,43 @@ def print_player_position(airport_data, player):
             break
     return
 
-def money_heist():
-    return
+def money_heist(player):
+    os.system("cls")
+
+    print("Your are about to steal more money")
+    steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
+
+    print("Successful stealing rate: ", steal_rate * 100, "%")
+    print("1. Steal")
+    print("2. Later")
+    print("")
+
+    while True:
+        userInput = input("Input: ")
+
+        if str(userInput) != "1" and str(userInput) != "2":
+            print("Invalid input")
+        else:
+            break
+
+    if userInput == "1":
+        os.system("cls")
+        stolen_money = gfuncs.theft_success_earnings_gauss()
+        print("Got", stolen_money, "€")
+
+        true_rate = random.random()
+        #print("true rate", true_rate)
+        if true_rate <= steal_rate:
+            print("Steal successful")
+            player[3] += stolen_money
+            input("Press Enter to continue")
+        else:
+            print("You got caught")
+            print("You lost")
+            input("Press Enter to continue")
+            return player, True
+
+    return player, False
 
 def escape(airport_coordinates, max_flight_distance, player):
     os.system("cls")
@@ -86,11 +121,14 @@ def escape(airport_coordinates, max_flight_distance, player):
     
     airport_coordinates.extend(database.get_coordinates())
     
-    possible_flights_name           = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)  #Return name list of possible airports
+    #Return name list of possible airports
+    possible_flights_name           = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)  
+
+    #Check amount of possible airports (for later use)
+    amount_of_possible_flights      = helper.print_possible_flights(possible_flights_name, airport_coordinates)
     
-    amount_of_possible_flights      = helper.print_possible_flights(possible_flights_name, airport_coordinates)         #Check amount of possible airports (for later use)
-    
-    price, stamina, new_icao_code, new_coordinates = player_airport_selection(possible_flights_name, airport_coordinates, player[2], amount_of_possible_flights)    #Player choose the airport and return the icao code of destination
+    #Player choose the airport and return the icao code of destination
+    price, stamina, new_icao_code, new_coordinates = player_airport_selection(possible_flights_name, airport_coordinates, player[2], amount_of_possible_flights)
 
     if new_icao_code is not None:
         print("Waiting for new code 1", new_icao_code)
@@ -135,7 +173,6 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
     elif int(userInput) == 2:
         return 0, 0, None, (0, 0)
     
-
 def update_player(player, price, stamina, new_icao_code, new_coordinates):
     player[1] = new_icao_code
     player[2] = new_coordinates
@@ -148,6 +185,7 @@ def run_game(airport_data, player):
 
     player = [""]
     player[0] = name 
+    got_caught = False
     
     airport_coordinates = []
     max_flight_distance = 1000
@@ -171,25 +209,26 @@ def run_game(airport_data, player):
 
         userSelection = decision()
         if userSelection == "1":
-            money_heist()
+            player, got_caught = money_heist(player)
+            if got_caught == True:
+                break
         elif userSelection == "2":
             price, stamina, new_icao_code, new_coordinates = escape(airport_coordinates, max_flight_distance, player)
             if new_icao_code is not None:
                 player = update_player(player, price, stamina, new_icao_code, new_coordinates)
-                print(player)
                        
-    
-
     input("Press Enter to continue...")
 
     return
 
 
 #MAIN
+random.seed()
 budget  = 1000000
 stamina = 100000
 player  = [""]  #player = ['name', 'position_code', coordinates, budget, stamina]
 
+#Fetch all data from database
 airport_data = database.get_datalist()
 
 os.system("cls")
