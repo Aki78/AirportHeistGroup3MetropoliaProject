@@ -8,12 +8,12 @@
     -Learning Tools And Information
 
 ## Introduction
-This document specifies the design for the gameplay Airport Heist.
+This document specifies the design for the gameplay of Airport Heist.
 The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
 
 ## Vision
 Airport Heist is a single player game, where the main character aims to avoid capture as they make their way across europe.
-Players are limited by their budget but can steal their way to fortune or to ruin!
+Players are limited by their budget but can steal money to survive.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
 
 
@@ -55,7 +55,20 @@ For the flight simulator this probably means dozens of user stories.
 Each user story must be unambiguous and concrete. 
 It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
 
-The user
+The user is able to do two things: choose where they travel to and if they wish to rob the airport they are currently in.
+Where they travel to is limited by budget and distance.
+The success of a robbery is mostly down to luck.
+
+## Quality Requirements
+Chapter 4 defines other requirements besides the functional requirements the flight simulator has. 
+Examples of these could be performance requirements 
+("Fetching airport information from the database must take a maximum of two seconds.") 
+or usability requirements ("The user must get instant feedback from all actions they perform").
+
+All functions created were ran through pytest to ensure proper working order.
+We also created a new database from the existing one. 
+This removed a lot of unnecessary information and made calling upon the database faster.
+
 
 ### Core Functions
     -Print main menu
@@ -84,7 +97,7 @@ The user
  | make a diagram                                | Kiana              |
  | game rules                                    | Kiana              |
 
-## Learning Tools/info
+## Learning Tools And information
 ### Run
 If you are using Mac/Linux run
 ```bash
@@ -120,7 +133,7 @@ git clone repo_name (when you want to copy a repo and add it your computer)
 ### Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
 
-### English Presentation on Tesla
+### Unrelated English Presentation on Tesla
 https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
 
 
