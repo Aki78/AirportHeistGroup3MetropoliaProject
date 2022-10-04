@@ -8,7 +8,7 @@ def print_mainmenu():
     userInput = 0
     
     while True:
-        os.system("cls")
+        os.system("clear")
 
         print("Welcome to flight game")
         print("")
@@ -29,13 +29,13 @@ def print_mainmenu():
             return str(userInput)
 
 def print_settings():
-    os.system("cls")
+    os.system("clear")
     print("Under developments. Please come back later.")
     input("Press Enter to continue...")
     return
 
 def print_instructions():
-    os.system("cls")
+    os.system("clear")
     print("This is the instructions")
     print("1 - ")
     print("2 - ")
@@ -44,7 +44,7 @@ def print_instructions():
     return
 
 def print_credits():
-    os.system("cls")
+    os.system("clear")
     print("Under developments. Please come back later.")
     input("Press Enter to continue...")
     return
@@ -73,7 +73,7 @@ def print_player_position(airport_data, player):
     return
 
 def money_heist(player):
-    os.system("cls")
+    os.system("clear")
 
     print("Your are about to steal more money")
     steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
@@ -92,7 +92,7 @@ def money_heist(player):
             break
 
     if userInput == "1":
-        os.system("cls")
+        os.system("clear")
         stolen_money = gfuncs.theft_success_earnings_gauss()
         print("Got", stolen_money, "€")
 
@@ -111,7 +111,7 @@ def money_heist(player):
     return player, False
 
 def escape(airport_coordinates, max_flight_distance, player):
-    os.system("cls")
+    os.system("clear")
     
     airport_coordinates         = []
     possible_flights_name       = []
@@ -151,7 +151,7 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
             selection = int(userInput) - 1
             break
 
-    os.system("cls")
+    os.system("clear")
     price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
     print("1. Travel")
@@ -181,7 +181,7 @@ def update_player(player, price, stamina, new_icao_code, new_coordinates):
     return player
  
 def run_game(airport_data, player):
-    os.system("cls")
+    os.system("clear")
 
     player = [""]
     player[0] = name 
@@ -201,7 +201,7 @@ def run_game(airport_data, player):
     player.append(10000)
         
     while budget > 0 or stamina > 0:
-        os.system("cls")
+        os.system("clear")
         print_player_position(airport_data, player)
 
         print("Budget   : ", player[3], "€")
@@ -231,9 +231,9 @@ player  = [""]  #player = ['name', 'position_code', coordinates, budget, stamina
 #Fetch all data from database
 airport_data = database.get_datalist()
 
-os.system("cls")
+os.system("clear")
 name = input("Input name: ")
-os.system("cls")
+os.system("clear")
 
 
 while True:
@@ -249,6 +249,6 @@ while True:
     elif userInput == "4":
         print_credits()
     elif userInput == "5":
-        os.system("cls")
+        os.system("clear")
         input("Press Enter to exit...")
         break       

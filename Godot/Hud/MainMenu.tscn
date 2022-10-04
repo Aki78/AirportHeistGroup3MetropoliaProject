@@ -7,7 +7,7 @@
 [ext_resource path="res://Fonts/orbit.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Hud/MainMenu.gd" type="Script" id=6]
 [ext_resource path="res://Images/airplane-icon-png-2515.png" type="Texture" id=7]
-[ext_resource path="res://Images/pngkit_money-symbol-png_1071207.png" type="Texture" id=8]
+[ext_resource path="res://Images/euro_icon_white.png" type="Texture" id=8]
 [ext_resource path="res://Hud/AirplaneIcon.gd" type="Script" id=9]
 [ext_resource path="res://Videos/compass-icon-13573_outer.png" type="Texture" id=10]
 [ext_resource path="res://Videos/compass-icon-13573_inner.png" type="Texture" id=11]
@@ -278,7 +278,7 @@ radial_accel = 1.0
 radial_accel_random = 1.0
 damping = 10.0
 angle_random = 1.0
-scale = 0.01
+scale = 0.03
 scale_curve = SubResource( 2 )
 
 [sub_resource type="SpriteFrames" id=5]
@@ -368,10 +368,10 @@ texture = ExtResource( 10 )
 script = ExtResource( 13 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 368, 251 )
+position = Vector2( 368, 246 )
 scale = Vector2( 0.384533, 0.384533 )
 frames = SubResource( 5 )
-frame = 80
+frame = 225
 playing = true
 
 [connection signal="timeout" from="Dance" to="." method="_on_Timer_timeout"]
