@@ -7,8 +7,8 @@ def theft_success_earnings_gauss():
     return s[0]
 
 def theft_success_rate():
-    probibility = random.random()
-    return 0.5 > probibility
+    probability = random.random()
+    return 0.5 > probability
 
 
 def get_ticket_price(distance):

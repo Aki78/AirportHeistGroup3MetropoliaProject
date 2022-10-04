@@ -1,17 +1,8 @@
 import os
-import mysql.connector
+import string
 import database
 import game_functions
 import helper
-
-connection = mysql.connector.connect(
-    host = '127.0.0.1',
-    port = 3306,
-    database = 'eu_flight_game',
-    user = 'root',
-    password = 'root',
-    autocommit=True
-)
 
 def print_mainmenu():
     userInput = 0
@@ -58,46 +49,126 @@ def print_credits():
     input("Press Enter to continue...")
     return
 
-def run_game(airport_data):
-    os.system("cls")   
+def decision(): #Input
+    print("1. Steal")
+    print("2. Escape")
+
+    while True:
+        userInput = input("Input: ")
+
+        if str(userInput) != "1" and str(userInput) != "2":
+            print("Invalid input")
+        else:
+            break
+
+
+    return userInput
+
+def print_player_position(airport_data, player):
+    for i in range(len(airport_data)):
+        if airport_data[i]["ident"] == player[1]:
+            print("You are at", airport_data[i]["name"])
+            break
+    return
+
+def money_heist():
+    return
+
+def escape(airport_coordinates, max_flight_distance, player):
+    os.system("cls")
+    
+    airport_coordinates = []
+    possible_flights_name = []
+    amount_of_possible_flights = 0
+    
+    print("Possible airports:")
+    
+    airport_coordinates.extend(database.get_coordinates())
+    
+    possible_flights_name       = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
+    amount_of_possible_flights  = helper.print_possible_flights(possible_flights_name, airport_coordinates)
+    
+    icao_code = player_airport_selection(possible_flights_name, airport_coordinates, amount_of_possible_flights)
+
+    input("Enter")
+
+    return icao_code
+
+def player_airport_selection(name_list, coordinates, amount_of_possible_flights):
+    userInput = "0"
+
+    while True:
+        userInput = input("Input: ").strip()
+
+        if userInput == "" or type(int(userInput)) is not int:
+            print("Invalid input")
+        #elif 1 > int(userInput) or int(userInput) > amount_of_possible_flights + 1:
+        #    print("Invalid input")
+        else:
+            selection = int(userInput) - 1
+            break
+
+    os.system("cls")
+    helper.print_flight_details(name_list, selection)
+
+    #add decision here
+      
+    return #return icao_code or name -> escape
+
+def update_player(player, icao_code):
+    return
+ 
+def run_game(airport_data, player):
+    os.system("cls")
+
+    player = [""]
+    player[0] = name 
     
     airport_coordinates = []
     max_flight_distance = 1000
 
     player.append("EFHK")
+
     for i in range(len(airport_data)):
         if airport_data[i]["ident"] == player[1]:
-            print("You are at", airport_data[i]["name"])
             player.append(airport_data[i]["deg"])
             break
+    
+    player.append(1000000)
+    player.append(10000)
 
-    print(player[2])
-    input("Enter")
+    #print("Coordinates:",player[2])
+    #input("Enter")
         
-    print("Reachable airports:")
-    airport_coordinates.extend(database.get_coordinates())
+    while budget > 0 or co2 > 0:
+        os.system("cls")
+        print_player_position(airport_data, player)
 
-    possible_flights_index = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
-    helper.print_possible_flights(possible_flights_index)
+        print("Budget: ", player[3], "€")
+        print("CO2: ", player[4], "kg")
 
-
+        userSelection = decision()
+        if userSelection == "1":
+            money_heist()
+        elif userSelection == "2":
+            icao_code = escape(airport_coordinates, max_flight_distance, player)
+            update_player(player, icao_code)
+    
 
     input("Press Enter to continue...")
-
-
 
     return
 
 
-budget = 1000000
-co2 = 100000
-player = [""]
+#MAIN
+budget  = 1000000
+co2     = 100000
+player  = [""]  #player = ['name', 'position_code', coordinates, budget, co2]
 
 airport_data = database.get_datalist()
 
 os.system("cls")
 name = input("Input name: ")
-player[0] = name
 os.system("cls")
 
 
@@ -106,7 +177,7 @@ while True:
     print(userInput)
 
     if userInput == "1":
-        run_game(airport_data)
+        run_game(airport_data, player)
     elif userInput == "2":
         print_settings()
     elif userInput == "3":

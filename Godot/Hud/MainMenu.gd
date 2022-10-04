@@ -1,8 +1,8 @@
 extends ColorRect
 
 func _ready():
-	color.b = 0.2
-	color.g = 0.2
+	color.b = 0.3
+	color.g = 0.3
 #	modulate.b = 155
 #	color.r = 255
 
