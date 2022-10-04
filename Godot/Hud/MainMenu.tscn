@@ -356,7 +356,7 @@ script = ExtResource( 2 )
 position = Vector2( 258, 169 )
 scale = Vector2( 0.831252, 0.824205 )
 frames = SubResource( 5 )
-animation = "New Anim"
+frame = 30
 playing = true
 
 [node name="Compass-icon-13573" type="Sprite" parent="AnimatedSprite"]
