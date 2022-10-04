@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://Hud/StartButton.gd" type="Script" id=1]
 [ext_resource path="res://Hud/ExitButton.gd" type="Script" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://Images/airplane-icon-png-2515.png" type="Texture" id=7]
 [ext_resource path="res://Images/pngkit_money-symbol-png_1071207.png" type="Texture" id=8]
 [ext_resource path="res://Hud/AirplaneIcon.gd" type="Script" id=9]
+[ext_resource path="res://Videos/compass-icon-13573_outer.png" type="Texture" id=10]
+[ext_resource path="res://Videos/compass-icon-13573_inner.png" type="Texture" id=11]
+[ext_resource path="res://Hud/Compass_inner.gd" type="Script" id=12]
+[ext_resource path="res://Hud/Compass_outer.gd" type="Script" id=13]
 [ext_resource path="res://Images/AirportHeist/0106.png_compressed.png" type="Texture" id=37]
 [ext_resource path="res://Images/AirportHeist/0107.png_compressed.png" type="Texture" id=38]
 [ext_resource path="res://Images/AirportHeist/0108.png_compressed.png" type="Texture" id=39]
@@ -30,7 +34,6 @@
 [ext_resource path="res://Images/AirportHeist/0062.png_compressed.png" type="Texture" id=67]
 [ext_resource path="res://Images/AirportHeist/0063.png_compressed.png" type="Texture" id=68]
 [ext_resource path="res://Images/AirportHeist/0064.png_compressed.png" type="Texture" id=69]
-[ext_resource path="res://Videos/compass-icon-13573.jpg" type="Texture" id=70]
 [ext_resource path="res://Images/AirportHeist/0078.png_compressed.png" type="Texture" id=74]
 [ext_resource path="res://Images/AirportHeist/0079.png_compressed.png" type="Texture" id=75]
 [ext_resource path="res://Images/AirportHeist/0080.png_compressed.png" type="Texture" id=76]
@@ -124,7 +127,7 @@ script = ExtResource( 9 )
 position = Vector2( -422.488, -690.064 )
 rotation = 1.55521
 scale = Vector2( 1.73706, 1.73706 )
-amount = 16
+amount = 64
 lifetime = 5.0
 process_material = SubResource( 3 )
 texture = ExtResource( 8 )
@@ -171,16 +174,23 @@ custom_fonts/font = ExtResource( 5 )
 text = "Exit"
 script = ExtResource( 2 )
 
-[node name="Compass-icon-13573" type="Sprite" parent="."]
+[node name="Compass_inner" type="Sprite" parent="."]
 position = Vector2( 393, 603 )
 scale = Vector2( 0.347147, 0.344204 )
-texture = ExtResource( 70 )
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
+
+[node name="Compass_outer" type="Sprite" parent="."]
+position = Vector2( 393, 603 )
+scale = Vector2( 0.347147, 0.344204 )
+texture = ExtResource( 10 )
+script = ExtResource( 13 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 338, 45 )
 scale = Vector2( 0.686611, 0.686611 )
 frames = SubResource( 5 )
-frame = 4
+frame = 55
 playing = true
 
 [connection signal="timeout" from="Dance" to="." method="_on_Timer_timeout"]
