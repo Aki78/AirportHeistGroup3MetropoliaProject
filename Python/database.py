@@ -23,10 +23,7 @@ def get_geo_airport_info(name):
     cursor.execute(sql)
     result = cursor.fetchall()
 
-    #print(result)
-
     return result[0]
-
 
 def get_airport_name(coordinates):
     sql = "select name, latitude_deg, longitude_deg from eu_airports"

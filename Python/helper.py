@@ -34,7 +34,6 @@ def get_distances(deg1, deg2):
 
     return distance
 
-
 def get_possible_flights(max_flight_distance, player_position, deg_list):
     possible_airport_name_list = []
     
@@ -43,7 +42,6 @@ def get_possible_flights(max_flight_distance, player_position, deg_list):
             possible_airport_name_list.append(database.get_airport_name(coordinates))
 
     return possible_airport_name_list
-
 
 def print_possible_flights(name, coordinates):
     selection = 1
@@ -54,13 +52,13 @@ def print_possible_flights(name, coordinates):
       
     return selection
 
-
 def print_flight_details(name_list, selection):
     airport_geo_data = database.get_geo_airport_info(name_list[selection])
     print("Airport name :", airport_geo_data[0])
     print("City         :", airport_geo_data[1])
     print("Country      :", airport_geo_data[2])
     print("ICAO code    :", airport_geo_data[3])
+    
     return
 
 def deg_to_xy(deg):
