@@ -77,13 +77,19 @@ def money_heist():
 
 def escape(airport_coordinates, max_flight_distance, player):
     os.system("cls")
+    
+    airport_coordinates = []
+    possible_flights_name = []
+    amount_of_possible_flights = 0
+    
     print("Possible airports:")
     
     airport_coordinates.extend(database.get_coordinates())
-    possible_flights_index = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
-    amount_of_possible_flights = helper.print_possible_flights(possible_flights_index, airport_coordinates)
     
-    player_airport_selection(possible_flights_index, airport_coordinates, amount_of_possible_flights)
+    possible_flights_name       = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
+    amount_of_possible_flights  = helper.print_possible_flights(possible_flights_name, airport_coordinates)
+    
+    player_airport_selection(possible_flights_name, airport_coordinates, amount_of_possible_flights)
 
     input("Enter")
 
@@ -103,19 +109,10 @@ def player_airport_selection(index, coordinates, amount_of_possible_flights):
             selection = int(userInput)
             break
 
-    print_airport_details(selection, index, coordinates)
+    helper.print_flight_details(selection, coordinates, index)
       
     return 
-    
-
-def print_airport_details(selection, index, coordinates):
-    for i in index:
-        print(selection, "- ", end = '')
-        database.get_airport_name(coordinates[int(i)])
-        selection += 1
-        print("")
-
-    return 
+ 
 
 def run_game(airport_data, player):
     os.system("cls")
@@ -141,8 +138,8 @@ def run_game(airport_data, player):
     #print("Coordinates:",player[2])
     #input("Enter")
         
-    while True:
-        
+    while budget > 0 or co2 > 0:
+        os.system("cls")
         print_player_position(airport_data, player)
 
         print("Budget: ", player[3], "€")
