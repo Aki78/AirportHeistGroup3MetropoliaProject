@@ -175,14 +175,14 @@ text = "Exit"
 script = ExtResource( 2 )
 
 [node name="Compass_inner" type="Sprite" parent="."]
-position = Vector2( 393, 603 )
-scale = Vector2( 0.347147, 0.344204 )
+position = Vector2( -17, 1098 )
+scale = Vector2( 1.23043, 1.22 )
 texture = ExtResource( 11 )
 script = ExtResource( 12 )
 
 [node name="Compass_outer" type="Sprite" parent="."]
-position = Vector2( 393, 603 )
-scale = Vector2( 0.347147, 0.344204 )
+position = Vector2( -3, 1086 )
+scale = Vector2( 1.21623, 1.2278 )
 texture = ExtResource( 10 )
 script = ExtResource( 13 )
 
@@ -190,7 +190,7 @@ script = ExtResource( 13 )
 position = Vector2( 338, 45 )
 scale = Vector2( 0.686611, 0.686611 )
 frames = SubResource( 5 )
-frame = 55
+frame = 18
 playing = true
 
 [connection signal="timeout" from="Dance" to="." method="_on_Timer_timeout"]
