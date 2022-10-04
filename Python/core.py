@@ -90,12 +90,13 @@ def escape(airport_coordinates, max_flight_distance, player):
     
     amount_of_possible_flights      = helper.print_possible_flights(possible_flights_name, airport_coordinates)         #Check amount of possible airports (for later use)
     
-    price, stamina, new_icao_code   = player_airport_selection(possible_flights_name, airport_coordinates, player[2], amount_of_possible_flights)    #Player choose the airport and return the icao code of destination
+    price, stamina, new_icao_code, new_coordinates = player_airport_selection(possible_flights_name, airport_coordinates, player[2], amount_of_possible_flights)    #Player choose the airport and return the icao code of destination
 
     if new_icao_code is not None:
-        return price, stamina, new_icao_code
+        print("Waiting for new code 1", new_icao_code)
+        return price, stamina, new_icao_code, new_coordinates
     else:
-        return 0, 0, None
+        return 0, 0, None, (0, 0)
 
 def player_airport_selection(name_list, coordinates, player_coordinates, amount_of_possible_flights):
     userInput = "0"
@@ -113,7 +114,7 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
             break
 
     os.system("cls")
-    price, stamina, icao_code = helper.print_flight_details(name_list, selection, player_coordinates)
+    price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
     print("1. Travel")
     print("2. Stay")
@@ -129,13 +130,15 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
             break
 
     if int(userInput) == 1:
-        return price, stamina, icao_code
+        print("Waiting for new code 2", icao_code)
+        return price, stamina, icao_code, new_coordinates
     elif int(userInput) == 2:
-        return 0, 0, None
+        return 0, 0, None, (0, 0)
     
 
-def update_player(player, price, stamina, new_icao_code):
+def update_player(player, price, stamina, new_icao_code, new_coordinates):
     player[1] = new_icao_code
+    player[2] = new_coordinates
     player[3] -= price
     player[4] -= stamina
     return player
@@ -170,9 +173,9 @@ def run_game(airport_data, player):
         if userSelection == "1":
             money_heist()
         elif userSelection == "2":
-            price, stamina, new_icao_code = escape(airport_coordinates, max_flight_distance, player)
+            price, stamina, new_icao_code, new_coordinates = escape(airport_coordinates, max_flight_distance, player)
             if new_icao_code is not None:
-                player = update_player(player, price, stamina, new_icao_code)
+                player = update_player(player, price, stamina, new_icao_code, new_coordinates)
                 print(player)
                        
     

@@ -15,6 +15,16 @@ connection = mysql.connector.connect(
 # data should be a dictionary with all the info
 airports = {}
 
+def get_new_coordinates(code):
+    sql = "select latitude_deg, longitude_deg from eu_airports "
+    sql += "where ident = '" + code + "'"
+
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    result = cursor.fetchall()
+
+    return (result[0][0], result[0][1])
+
 def get_geo_airport_info(name):
     sql = "select name, municipality, country_name, ident, latitude_deg, longitude_deg from eu_airports "
     sql += "where name = '" + name + "'"

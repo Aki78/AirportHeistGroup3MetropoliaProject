@@ -58,11 +58,12 @@ def print_flight_details(name_list, selection, player_coordinates):
 
     price               = gfuncs.get_ticket_price(get_distances(player_coordinates, (airport_geo_data[4], airport_geo_data[5])))
     stamina_consumption = gfuncs.get_stamina_consumptions(get_distances(player_coordinates, (airport_geo_data[4], airport_geo_data[5])))
-    
+    new_coordinates     = database.get_new_coordinates(airport_geo_data[3])
+
     print("Price        :", price, "€")
     print("Stamina cost :", stamina_consumption)
 
-    return price, stamina_consumption, airport_geo_data[3]
+    return price, stamina_consumption, airport_geo_data[3], new_coordinates
 
 def deg_to_xy(deg):
     y = 111 * deg[1]
