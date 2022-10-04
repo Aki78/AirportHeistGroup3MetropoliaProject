@@ -1,6 +1,5 @@
 import os
 import string
-#import mysql.connector
 import database
 import game_functions
 import helper
@@ -89,11 +88,11 @@ def escape(airport_coordinates, max_flight_distance, player):
     possible_flights_name       = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
     amount_of_possible_flights  = helper.print_possible_flights(possible_flights_name, airport_coordinates)
     
-    player_airport_selection(possible_flights_name, airport_coordinates, amount_of_possible_flights)
+    icao_code = player_airport_selection(possible_flights_name, airport_coordinates, amount_of_possible_flights)
 
     input("Enter")
 
-    return
+    return icao_code
 
 def player_airport_selection(name_list, coordinates, amount_of_possible_flights):
     userInput = "0"
@@ -111,10 +110,14 @@ def player_airport_selection(name_list, coordinates, amount_of_possible_flights)
 
     os.system("cls")
     helper.print_flight_details(name_list, selection)
-      
-    return 
- 
 
+    #add decision here
+      
+    return #return icao_code or name -> escape
+
+def update_player(player, icao_code):
+    return
+ 
 def run_game(airport_data, player):
     os.system("cls")
 
@@ -133,8 +136,6 @@ def run_game(airport_data, player):
     
     player.append(1000000)
     player.append(10000)
-    
-    
 
     #print("Coordinates:",player[2])
     #input("Enter")
@@ -150,15 +151,13 @@ def run_game(airport_data, player):
         if userSelection == "1":
             money_heist()
         elif userSelection == "2":
-            escape(airport_coordinates, max_flight_distance, player)
+            icao_code = escape(airport_coordinates, max_flight_distance, player)
+            update_player(player, icao_code)
     
 
     input("Press Enter to continue...")
 
-
-
     return
-
 
 
 #MAIN
