@@ -10,7 +10,8 @@ def theft_success_rate():
     probability = random.random()
     return 0.5 > probability
 
+def get_ticket_price(distance): 
+    return round(distance * 1.5)
 
-def get_ticket_price(distance):
-    ticket_price = round(distance * 1.5)
-    return ticket_price
+def get_stamina_consumptions(distance):
+    return round(distance / 2)

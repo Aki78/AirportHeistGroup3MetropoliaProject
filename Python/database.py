@@ -16,7 +16,7 @@ connection = mysql.connector.connect(
 airports = {}
 
 def get_geo_airport_info(name):
-    sql = "select name, municipality, country_name, ident from eu_airports "
+    sql = "select name, municipality, country_name, ident, latitude_deg, longitude_deg from eu_airports "
     sql += "where name = '" + name + "'"
 
     cursor = connection.cursor()

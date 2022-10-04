@@ -1,7 +1,7 @@
 import os
 import string
 import database
-import game_functions
+import gfuncs
 import helper
 
 def print_mainmenu():
@@ -52,6 +52,7 @@ def print_credits():
 def decision(): #Input
     print("1. Steal")
     print("2. Escape")
+    print("")
 
     while True:
         userInput = input("Input: ")
@@ -77,26 +78,29 @@ def money_heist():
 def escape(airport_coordinates, max_flight_distance, player):
     os.system("cls")
     
-    airport_coordinates = []
-    possible_flights_name = []
-    amount_of_possible_flights = 0
+    airport_coordinates         = []
+    possible_flights_name       = []
+    amount_of_possible_flights  = 0
     
     print("Possible airports:")
     
     airport_coordinates.extend(database.get_coordinates())
     
-    possible_flights_name       = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
-    amount_of_possible_flights  = helper.print_possible_flights(possible_flights_name, airport_coordinates)
+    possible_flights_name           = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)  #Return name list of possible airports
     
-    icao_code = player_airport_selection(possible_flights_name, airport_coordinates, amount_of_possible_flights)
+    amount_of_possible_flights      = helper.print_possible_flights(possible_flights_name, airport_coordinates)         #Check amount of possible airports (for later use)
+    
+    price, stamina, new_icao_code   = player_airport_selection(possible_flights_name, airport_coordinates, player[2], amount_of_possible_flights)    #Player choose the airport and return the icao code of destination
 
-    input("Enter")
+    if new_icao_code is not None:
+        return price, stamina, new_icao_code
+    else:
+        return 0, 0, None
 
-    return icao_code
-
-def player_airport_selection(name_list, coordinates, amount_of_possible_flights):
+def player_airport_selection(name_list, coordinates, player_coordinates, amount_of_possible_flights):
     userInput = "0"
 
+    #Input airport decision (fix later)
     while True:
         userInput = input("Input: ").strip()
 
@@ -109,14 +113,32 @@ def player_airport_selection(name_list, coordinates, amount_of_possible_flights)
             break
 
     os.system("cls")
-    helper.print_flight_details(name_list, selection)
+    price, stamina, icao_code = helper.print_flight_details(name_list, selection, player_coordinates)
 
-    #add decision here
-      
-    return #return icao_code or name -> escape
+    print("1. Travel")
+    print("2. Stay")
+    print("")
 
-def update_player(player, icao_code):
-    return
+    #Input decision (also fix later)
+    while True:
+        userInput = input("Input: ")
+
+        if str(userInput) != "1" and str(userInput) != "2":
+            print("Invalid input")
+        else:
+            break
+
+    if int(userInput) == 1:
+        return price, stamina, icao_code
+    elif int(userInput) == 2:
+        return 0, 0, None
+    
+
+def update_player(player, price, stamina, new_icao_code):
+    player[1] = new_icao_code
+    player[3] -= price
+    player[4] -= stamina
+    return player
  
 def run_game(airport_data, player):
     os.system("cls")
@@ -136,23 +158,23 @@ def run_game(airport_data, player):
     
     player.append(1000000)
     player.append(10000)
-
-    #print("Coordinates:",player[2])
-    #input("Enter")
         
-    while budget > 0 or co2 > 0:
+    while budget > 0 or stamina > 0:
         os.system("cls")
         print_player_position(airport_data, player)
 
-        print("Budget: ", player[3], "€")
-        print("CO2: ", player[4], "kg")
+        print("Budget   : ", player[3], "€")
+        print("Stamina  : ", player[4])
 
         userSelection = decision()
         if userSelection == "1":
             money_heist()
         elif userSelection == "2":
-            icao_code = escape(airport_coordinates, max_flight_distance, player)
-            update_player(player, icao_code)
+            price, stamina, new_icao_code = escape(airport_coordinates, max_flight_distance, player)
+            if new_icao_code is not None:
+                player = update_player(player, price, stamina, new_icao_code)
+                print(player)
+                       
     
 
     input("Press Enter to continue...")
@@ -162,8 +184,8 @@ def run_game(airport_data, player):
 
 #MAIN
 budget  = 1000000
-co2     = 100000
-player  = [""]  #player = ['name', 'position_code', coordinates, budget, co2]
+stamina = 100000
+player  = [""]  #player = ['name', 'position_code', coordinates, budget, stamina]
 
 airport_data = database.get_datalist()
 
