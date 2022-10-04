@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://Hud/StartButton.gd" type="Script" id=1]
 [ext_resource path="res://Hud/ExitButton.gd" type="Script" id=2]
@@ -9,7 +9,69 @@
 [ext_resource path="res://Images/airplane-icon-png-2515.png" type="Texture" id=7]
 [ext_resource path="res://Images/pngkit_money-symbol-png_1071207.png" type="Texture" id=8]
 [ext_resource path="res://Hud/AirplaneIcon.gd" type="Script" id=9]
-[ext_resource path="res://Videos/compass-icon-13573.jpg" type="Texture" id=70]
+[ext_resource path="res://Videos/compass-icon-13573_outer.png" type="Texture" id=10]
+[ext_resource path="res://Videos/compass-icon-13573_inner.png" type="Texture" id=11]
+[ext_resource path="res://Hud/Compass_inner.gd" type="Script" id=12]
+[ext_resource path="res://Hud/Compass_outer.gd" type="Script" id=13]
+[ext_resource path="res://Images/AirportHeist/0106.png_compressed.png" type="Texture" id=37]
+[ext_resource path="res://Images/AirportHeist/0107.png_compressed.png" type="Texture" id=38]
+[ext_resource path="res://Images/AirportHeist/0108.png_compressed.png" type="Texture" id=39]
+[ext_resource path="res://Images/AirportHeist/0110.png_compressed.png" type="Texture" id=40]
+[ext_resource path="res://Images/AirportHeist/0109.png_compressed.png" type="Texture" id=41]
+[ext_resource path="res://Images/AirportHeist/0118.png_compressed.png" type="Texture" id=42]
+[ext_resource path="res://Images/AirportHeist/0119.png_compressed.png" type="Texture" id=43]
+[ext_resource path="res://Images/AirportHeist/0089.png_compressed.png" type="Texture" id=54]
+[ext_resource path="res://Images/AirportHeist/0090.png_compressed.png" type="Texture" id=55]
+[ext_resource path="res://Images/AirportHeist/0091.png_compressed.png" type="Texture" id=56]
+[ext_resource path="res://Images/AirportHeist/0092.png_compressed.png" type="Texture" id=57]
+[ext_resource path="res://Images/AirportHeist/0093.png_compressed.png" type="Texture" id=58]
+[ext_resource path="res://Images/AirportHeist/0094.png_compressed.png" type="Texture" id=59]
+[ext_resource path="res://Images/AirportHeist/0074.png_compressed.png" type="Texture" id=61]
+[ext_resource path="res://Images/AirportHeist/0075.png_compressed.png" type="Texture" id=62]
+[ext_resource path="res://Images/AirportHeist/0077.png_compressed.png" type="Texture" id=63]
+[ext_resource path="res://Images/AirportHeist/0076.png_compressed.png" type="Texture" id=64]
+[ext_resource path="res://Images/AirportHeist/0061.png_compressed.png" type="Texture" id=66]
+[ext_resource path="res://Images/AirportHeist/0062.png_compressed.png" type="Texture" id=67]
+[ext_resource path="res://Images/AirportHeist/0063.png_compressed.png" type="Texture" id=68]
+[ext_resource path="res://Images/AirportHeist/0064.png_compressed.png" type="Texture" id=69]
+[ext_resource path="res://Images/AirportHeist/0078.png_compressed.png" type="Texture" id=74]
+[ext_resource path="res://Images/AirportHeist/0079.png_compressed.png" type="Texture" id=75]
+[ext_resource path="res://Images/AirportHeist/0080.png_compressed.png" type="Texture" id=76]
+[ext_resource path="res://Images/AirportHeist/0081.png_compressed.png" type="Texture" id=77]
+[ext_resource path="res://Images/AirportHeist/0082.png_compressed.png" type="Texture" id=78]
+[ext_resource path="res://Images/AirportHeist/0083.png_compressed.png" type="Texture" id=79]
+[ext_resource path="res://Images/AirportHeist/0095.png_compressed.png" type="Texture" id=84]
+[ext_resource path="res://Images/AirportHeist/0096.png_compressed.png" type="Texture" id=85]
+[ext_resource path="res://Images/AirportHeist/0097.png_compressed.png" type="Texture" id=86]
+[ext_resource path="res://Images/AirportHeist/0098.png_compressed.png" type="Texture" id=87]
+[ext_resource path="res://Images/AirportHeist/0099.png_compressed.png" type="Texture" id=88]
+[ext_resource path="res://Images/AirportHeist/0084.png_compressed.png" type="Texture" id=90]
+[ext_resource path="res://Images/AirportHeist/0085.png_compressed.png" type="Texture" id=91]
+[ext_resource path="res://Images/AirportHeist/0086.png_compressed.png" type="Texture" id=92]
+[ext_resource path="res://Images/AirportHeist/0087.png_compressed.png" type="Texture" id=93]
+[ext_resource path="res://Images/AirportHeist/0088.png_compressed.png" type="Texture" id=94]
+[ext_resource path="res://Images/AirportHeist/0065.png_compressed.png" type="Texture" id=97]
+[ext_resource path="res://Images/AirportHeist/0066.png_compressed.png" type="Texture" id=98]
+[ext_resource path="res://Images/AirportHeist/0067.png_compressed.png" type="Texture" id=99]
+[ext_resource path="res://Images/AirportHeist/0068.png_compressed.png" type="Texture" id=100]
+[ext_resource path="res://Images/AirportHeist/0071.png_compressed.png" type="Texture" id=101]
+[ext_resource path="res://Images/AirportHeist/0070.png_compressed.png" type="Texture" id=102]
+[ext_resource path="res://Images/AirportHeist/0069.png_compressed.png" type="Texture" id=103]
+[ext_resource path="res://Images/AirportHeist/0111.png_compressed.png" type="Texture" id=110]
+[ext_resource path="res://Images/AirportHeist/0112.png_compressed.png" type="Texture" id=111]
+[ext_resource path="res://Images/AirportHeist/0113.png_compressed.png" type="Texture" id=112]
+[ext_resource path="res://Images/AirportHeist/0114.png_compressed.png" type="Texture" id=113]
+[ext_resource path="res://Images/AirportHeist/0115.png_compressed.png" type="Texture" id=114]
+[ext_resource path="res://Images/AirportHeist/0117.png_compressed.png" type="Texture" id=115]
+[ext_resource path="res://Images/AirportHeist/0116.png_compressed.png" type="Texture" id=116]
+[ext_resource path="res://Images/AirportHeist/0100.png_compressed.png" type="Texture" id=123]
+[ext_resource path="res://Images/AirportHeist/0102.png_compressed.png" type="Texture" id=124]
+[ext_resource path="res://Images/AirportHeist/0101.png_compressed.png" type="Texture" id=125]
+[ext_resource path="res://Images/AirportHeist/0103.png_compressed.png" type="Texture" id=126]
+[ext_resource path="res://Images/AirportHeist/0105.png_compressed.png" type="Texture" id=127]
+[ext_resource path="res://Images/AirportHeist/0104.png_compressed.png" type="Texture" id=128]
+[ext_resource path="res://Images/AirportHeist/0072.png_compressed.png" type="Texture" id=129]
+[ext_resource path="res://Images/AirportHeist/0073.png_compressed.png" type="Texture" id=130]
 
 [sub_resource type="Curve" id=4]
 max_value = 10.0
@@ -37,6 +99,14 @@ damping = 10.0
 angle_random = 1.0
 scale = 0.01
 scale_curve = SubResource( 2 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 123 ), ExtResource( 125 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 128 ), ExtResource( 127 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 116 ), ExtResource( 115 ), ExtResource( 42 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
 
 [node name="HudBackGround" type="ColorRect"]
 anchor_right = 1.0
@@ -104,10 +174,24 @@ custom_fonts/font = ExtResource( 5 )
 text = "Exit"
 script = ExtResource( 2 )
 
-[node name="Compass-icon-13573" type="Sprite" parent="."]
+[node name="Compass_inner" type="Sprite" parent="."]
 position = Vector2( 393, 603 )
 scale = Vector2( 0.347147, 0.344204 )
-texture = ExtResource( 70 )
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
+
+[node name="Compass_outer" type="Sprite" parent="."]
+position = Vector2( 393, 603 )
+scale = Vector2( 0.347147, 0.344204 )
+texture = ExtResource( 10 )
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 338, 45 )
+scale = Vector2( 0.686611, 0.686611 )
+frames = SubResource( 5 )
+frame = 55
+playing = true
 
 [connection signal="timeout" from="Dance" to="." method="_on_Timer_timeout"]
 [connection signal="tree_exiting" from="HudContainer" to="HudContainer" method="_on_HudContainer_tree_exiting"]
