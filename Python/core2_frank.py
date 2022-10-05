@@ -16,6 +16,7 @@ def setting_screen():
 
 while True:
     main_screen()
+    print(main_screen())
 
     #if main_screen() == "1":
 
