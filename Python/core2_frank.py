@@ -3,6 +3,9 @@ def main_screen():
     print("Welcome to airport heist!")
     print("1. Play \n2. Settings \n3. Instructions \n4. Credits \n5. Exit")
     user_input = str(input("What do you want to do: "))
+
+    if user_input == "" or int(user_input) > 5 or int(user_input) < 1:
+        print("unknown input")
     return user_input
 
 def setting_screen():
@@ -13,10 +16,6 @@ def setting_screen():
 
 while True:
     main_screen()
-
-    if main_screen() == "" or int(main_screen()) > 5 or int(main_screen()) < 1:
-        print("unknown input")
-        main_screen()
 
     #if main_screen() == "1":
 
