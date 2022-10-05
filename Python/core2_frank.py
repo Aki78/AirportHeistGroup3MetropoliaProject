@@ -19,6 +19,7 @@ def main_screen():
             credits()
         if user_input == "5":
             break
+        return
 
 def setting_screen():
     os.system('cls')
@@ -38,6 +39,7 @@ def setting_screen():
             print("Good luck!")
             time.sleep(1.5)
             main_screen()
+        return
 
 def instructions():
     os.system('cls')
@@ -50,6 +52,7 @@ def instructions():
             print("unknown input")
         else:
             main_screen()
+        return
 
 def credits():
     os.system('cls')
@@ -62,6 +65,7 @@ def credits():
             print("unknown input")
         else:
             main_screen()
+        return
 
 main_screen()
 
