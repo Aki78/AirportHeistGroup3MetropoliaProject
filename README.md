@@ -26,6 +26,7 @@ Travel
 
 Travel is possible with the purchase of a flight ticket and players 
 are restricted to airports with-in a certain distance.
+    -why is the player restricted to a certain distance(to be made up)
 
 Evading Capture
 

@@ -51,6 +51,7 @@ def instructions():
               "\nIf you like dont like your odds, you can try to escape or try to steal again with different odds."
               "\nYou can also decide to 'ESCAPE' instead."
               "\nYou will be taken to a map showing all airports you are able reach and afford to travel to."
+              "\nKeep an eye on where interpol is searching for you and avoid getting too close to them!"
               "\nChoose the airport you wish to travel to, but be aware of your stamina, as the more you travel, the more you tire.")
         instructions_input = str(input("Press 'enter' to return to the main menu:"))
 
