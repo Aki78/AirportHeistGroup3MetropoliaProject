@@ -4,7 +4,6 @@
     -Vision
     -Story
     -Functional Requirements
-    -Task Stack
     -Learning Tools And Information
 
 ## Introduction
@@ -14,11 +13,21 @@ The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natan
 ## Vision
 Airport Heist is a single player game, 
 where the main character aims to avoid capture from interpol.
-Players can fly to different cities with-in europe as long as they can afford the tickets. 
-In order to make money player steal money. 
-There is a chance of getting caught, but players are informed of the odds before they attempt to steal.
-If the player feels the risk is too high they ccan choose not to steel.
-They know where interpol is but not where interpol will go next.
+Players can fly to different cities with-in europe as long as they can afford the tickets.
+
+Stealing
+
+In order to acquire money players steal, however, there is a chance of getting caught.
+Players are informed of the odds of capture before they attempt to steal 
+and can abort if they feel the risks are too great.
+Their stolen earnings are based on gauss' theory with a set expectation value.
+
+Travel
+
+Evading Capture
+
+Players can see in which city interpol is but not where interpol will go next.
+Interpol moves from airport to airport at random. 
 They are limited by their budget and stamina but can steal money to survive.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
 
@@ -96,12 +105,6 @@ This removed a lot of unnecessary information and made calling upon the database
     -Random generator to determine if the theft is successful
     -A function that uses distance to calculate the cost of a flight
 
-## Task Stack
- | Task                                          | Name               | 
- |-----------------------------------------------|--------------------|
- | write report                                  | Frank              |
- | make a diagram                                | Kiana              |
- | game rules                                    | Kiana              |
 
 ## Learning Tools And information
 ### Run
