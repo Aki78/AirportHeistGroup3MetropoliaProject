@@ -9,7 +9,7 @@ def main_screen():
         user_input = str(input("What do you want to do: "))
 
         if user_input == "" or int(user_input) > 5 or int(user_input) < 1:
-            print("unknown input")
+            print("Unknown input, please try again.")
             main_screen()
         if user_input == "2":
             setting_screen()
@@ -29,7 +29,7 @@ def setting_screen():
         settings_input = str(input("What do you want to do: "))
 
         if settings_input == "" or int(settings_input) > 3 or int(settings_input) < 1:
-            print("unknown input")
+            print("Unknown input, please try again.")
             setting_screen()
         if settings_input == "1":
             print("Good choice!")
@@ -45,18 +45,20 @@ def instructions():
     os.system('cls')
     while True:
         print("Instructions")
-        print("The first step is to decide if you will steal(1) or escape(2)."
+        print("The first step is to decide if you will STEAL or ESCAPE."
               "\nYou can choose to STEAL money to increase your wealth."
               "\nYou will be shown the odds of your success."
               "\nIf you like dont like your odds, you can try to escape or try to steal again with different odds."
-              "\nYou can also decide to 'ESCAPE' instead."
-              "\nYou will be taken to a map showing all airports you are able reach and afford to travel to."
+              "\nYou can decide to ESCAPE instead."
+              "\nYou will be taken to a map showing all airports with-in your reach and budget."
               "\nKeep an eye on where interpol is searching for you and avoid getting too close to them!"
-              "\nChoose the airport you wish to travel to, but be aware of your stamina, as the more you travel, the more you tire.")
-        instructions_input = str(input("Press 'enter' to return to the main menu:"))
+              "\nChoose the airport you wish to travel to, but be aware of your stamina level, as the more you travel, the more you tire."
+              "\nIf you are caught, run out of stamina or run our of money, its game-over, as interpol will take you back to jail!")
+
+        instructions_input = str(input("Press 'Enter' to return to the main menu:"))
 
         if instructions_input == None:
-            print("unknown input")
+            print("Unknown input, please try again.")
         else:
             main_screen()
         return
@@ -66,10 +68,10 @@ def credits():
     while True:
         print("Credits")
         print("Airport Heist was created by the most awesome of foursomes!\nAki Morooka \nKhai cao \nKiana Aghajani \nFrancesco Natanni\nAll work is our own, so all credit goes to us.")
-        credits_input = str(input("Press 'enter' to return to the main menu:"))
+        credits_input = str(input("Press 'Enter' to return to the main menu:"))
 
         if credits_input == None:
-            print("unknown input")
+            print("Unknown input, please try again.")
         else:
             main_screen()
         return
