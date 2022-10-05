@@ -13,6 +13,8 @@ def main_screen():
             setting_screen()
         elif user_input == "3":
             instructions()
+        elif user_input == "4":
+            credits()
 
         else:
             return user_input
@@ -34,7 +36,7 @@ def instructions():
     while True:
         print("Instructions")
         print("Text")
-        instructions_input = str(input("Press any key to return to the main menu:"))
+        instructions_input = str(input("Press 'enter' to return to the main menu:"))
 
         if instructions_input == None:
             print("unknown input")
@@ -44,8 +46,8 @@ def instructions():
 def credits():
     while True:
         print("Credits")
-        print("The game was created by the most awesome of foursomes.\n Aki Morooka \nKhai cao \nKiana Aghajani \nFrancesco Natanni")
-        credits_input = str(input("Press any key to return to the main menu:"))
+        print("Airport Heist was created by the most awesome of foursomes!\nAki Morooka \nKhai cao \nKiana Aghajani \nFrancesco Natanni\nAll work is our own, so all credit goes to us.")
+        credits_input = str(input("Press 'enter' to return to the main menu:"))
 
         if credits_input == None:
             print("unknown input")
