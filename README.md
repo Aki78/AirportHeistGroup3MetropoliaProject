@@ -11,6 +11,10 @@ This document specifies the design for the gameplay of Airport Heist.
 The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
 
 ## Vision
+The Purpose of Airport Heist is to produce a fun and interactive game, 
+that satisfies the guidelines provided by software1.
+
+### How the game works
 Airport Heist is a single player game, 
 where the main character aims to avoid capture from interpol.
 Players can fly to different cities with-in europe as long as they can afford the tickets.
@@ -35,9 +39,9 @@ Interpol moves from airport to airport at random.
 Players are limited by their budget and stamina but can steal money to survive.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
 
+As the game progresses the player take chances by stealing money to increase their wealth
+and then making strategic moves to avoid arrest.
 
-The Purpose of Airport Heist is to produce a fun and interactive game, 
-that satisfies the guidelines provided by software1.
 
 What does this mean?
 
@@ -45,8 +49,6 @@ What does this mean?
     -Here you must explain the main idea of the game in your own words: 
     -how does the game proceed and what stages must the player go through?
 
-As the game progresses the player take chances by stealing money to increase their wealth
-and then making strategic moves to avoid arrest.
 
 ## Story
 ### Backstory
