@@ -104,7 +104,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/anima/shapes/Line.gd"
 }, {
-"base": "Node",
+"base": "Reference",
 "class": "AnimaNode",
 "language": "GDScript",
 "path": "res://addons/anima/core/anima_node.gd"
