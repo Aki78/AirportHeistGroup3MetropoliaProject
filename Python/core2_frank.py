@@ -45,7 +45,13 @@ def instructions():
     os.system('cls')
     while True:
         print("Instructions")
-        print("Text")
+        print("The first step is to decide if you will steal(1) or escape(2)."
+              "\nYou can choose to STEAL money to increase your wealth."
+              "\nYou will be shown the odds of your success."
+              "\nIf you like dont like your odds, you can try to escape or try to steal again with different odds."
+              "\nYou can also decide to 'ESCAPE' instead."
+              "\nYou will be taken to a map showing all airports you are able reach and afford to travel to."
+              "\nChoose the airport you wish to travel to, but be aware of your stamina, as the more you travel, the more you tire.")
         instructions_input = str(input("Press 'enter' to return to the main menu:"))
 
         if instructions_input == None:
