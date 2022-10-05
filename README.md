@@ -12,8 +12,14 @@ This document specifies the design for the gameplay of Airport Heist.
 The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
 
 ## Vision
-Airport Heist is a single player game, where the main character aims to avoid capture as they make their way across europe.
-Players are limited by their budget but can steal money to survive.
+Airport Heist is a single player game, 
+where the main character aims to avoid capture from interpol.
+Players can fly to different cities with-in europe as long as they can afford the tickets. 
+In order to make money player steal money. 
+There is a chance of getting caught, but players are informed of the odds before they attempt to steal.
+If the player feels the risk is too high they ccan choose not to steel.
+They know where interpol is but not where interpol will go next.
+They are limited by their budget and stamina but can steal money to survive.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
 
 
