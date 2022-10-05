@@ -11,17 +11,18 @@ def setting_screen():
     settings_input = str(input("What do you want to do: "))
     return settings_input
 
-main_screen()
-os.system('cls')
-if main_screen() == "" or int(main_screen()) > 5 or int(main_screen()) < 1:
-    print("unknown input")
+while True:
     main_screen()
 
-#if user_input == "1":
-
-if main_screen() == 2:
-    setting_screen()
-    if setting_screen() == "" or int(setting_screen()) > 3 or int(setting_screen() < 1):
+    if main_screen() == "" or int(main_screen()) > 5 or int(main_screen()) < 1:
         print("unknown input")
+        main_screen()
+
+    #if main_screen() == "1":
+
+    if main_screen() == 2:
         setting_screen()
+        if setting_screen() == "" or int(setting_screen()) > 3 or int(setting_screen() < 1):
+            print("unknown input")
+            setting_screen()
 
