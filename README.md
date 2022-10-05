@@ -24,6 +24,9 @@ Their stolen earnings are based on gauss' theory with a set expectation value.
 
 Travel
 
+Travel is possible with the purchase of a flight ticket and players 
+are ristricted to airports with-in a certain distance.
+
 Evading Capture
 
 Players can see in which city interpol is but not where interpol will go next.
