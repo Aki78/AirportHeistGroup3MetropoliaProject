@@ -112,7 +112,7 @@ This removed a lot of unnecessary information and made calling upon the database
     -print possible flights
     -print flight details
     -Convert lat and long degrees to x and y co-ordinates
-    -Compares every airport against every airport and return a max and min distance
+    -Compares all airport against each other, then shows a max and min distance
 
 ### Database Functions
     -Get new co-ordinates of one airport
