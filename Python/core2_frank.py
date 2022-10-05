@@ -11,6 +11,8 @@ def main_screen():
             main_screen()
         elif user_input == "2":
             setting_screen()
+        elif user_input == "3":
+            instructions()
 
         else:
             return user_input
@@ -28,6 +30,27 @@ def setting_screen():
         else:
             return settings_input
 
+def instructions():
+    while True:
+        print("Instructions")
+        print("Text")
+        instructions_input = str(input("Press any key to return to the main menu:"))
+
+        if instructions_input == None:
+            print("unknown input")
+        else:
+            main_screen()
+
+def credits():
+    while True:
+        print("Credits")
+        print("The game was created by the most awesome of foursomes.\n Aki Morooka \nKhai cao \nKiana Aghajani \nFrancesco Natanni")
+        credits_input = str(input("Press any key to return to the main menu:"))
+
+        if credits_input == None:
+            print("unknown input")
+        else:
+            main_screen()
 
 main_screen()
 
