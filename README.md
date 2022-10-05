@@ -25,13 +25,13 @@ Their stolen earnings are based on gauss' theory with a set expectation value.
 Travel
 
 Travel is possible with the purchase of a flight ticket and players 
-are ristricted to airports with-in a certain distance.
+are restricted to airports with-in a certain distance.
 
 Evading Capture
 
 Players can see in which city interpol is but not where interpol will go next.
 Interpol moves from airport to airport at random. 
-They are limited by their budget and stamina but can steal money to survive.
+Players are limited by their budget and stamina but can steal money to survive.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
 
 
