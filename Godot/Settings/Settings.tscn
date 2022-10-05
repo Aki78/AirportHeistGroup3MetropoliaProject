@@ -20,7 +20,7 @@ custom_fonts/font = ExtResource( 3 )
 text = "Back"
 script = ExtResource( 2 )
 
-[node name="HScrollBar" type="HScrollBar" parent="."]
+[node name="VolumeBar" type="HScrollBar" parent="."]
 margin_left = 705.0
 margin_top = 296.0
 margin_right = 1126.0
@@ -32,7 +32,7 @@ allow_greater = true
 allow_lesser = true
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="HScrollBar"]
+[node name="VolumeLable" type="Label" parent="VolumeBar"]
 margin_left = -260.0
 margin_top = 18.0
 margin_right = -41.0
@@ -40,7 +40,30 @@ margin_bottom = 99.0
 custom_fonts/font = ExtResource( 3 )
 text = "Volume"
 
+[node name="AIBar" type="HScrollBar" parent="."]
+margin_left = 709.0
+margin_top = 477.0
+margin_right = 1130.0
+margin_bottom = 606.0
+min_value = -30.0
+max_value = 10.0
+value = -20.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+script = ExtResource( 4 )
+
+[node name="AILable" type="Label" parent="AIBar"]
+margin_left = -360.0
+margin_top = 22.0
+margin_right = -30.0
+margin_bottom = 103.0
+custom_fonts/font = ExtResource( 3 )
+text = "AI Strength"
+
 [connection signal="pressed" from="BackSettings" to="BackSettings" method="_on_BackSettings_pressed"]
 [connection signal="tree_exited" from="BackSettings" to="BackSettings" method="_on_BackSettings_tree_exited"]
-[connection signal="scrolling" from="HScrollBar" to="HScrollBar" method="_on_HScrollBar_scrolling"]
-[connection signal="value_changed" from="HScrollBar" to="HScrollBar" method="_on_HScrollBar_value_changed"]
+[connection signal="scrolling" from="VolumeBar" to="VolumeBar" method="_on_HScrollBar_scrolling"]
+[connection signal="value_changed" from="VolumeBar" to="VolumeBar" method="_on_HScrollBar_value_changed"]
+[connection signal="scrolling" from="AIBar" to="AIBar" method="_on_HScrollBar_scrolling"]
+[connection signal="value_changed" from="AIBar" to="AIBar" method="_on_HScrollBar_value_changed"]
