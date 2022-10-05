@@ -92,10 +92,16 @@ This removed a lot of unnecessary information and made calling upon the database
 
 
 ### Core Functions
-    -Print main menu
-    -Print settings
-    -Print instructions
-    -Print credits
+    -Main menu
+    -Settings
+    -Instructions
+    -Credits
+    -Decision to steal or escape
+    -Print player position
+    -Money heist
+    -Escape
+    -Player airport selection
+    -Update player information
     -Run game
 
 ### Helper Functions
@@ -103,13 +109,23 @@ This removed a lot of unnecessary information and made calling upon the database
     -Convert meters to kilometers
     -Get the distance between two lat and long co-ordinates
     -Returns all the possible flights from a given airport
+    -print possible flights
+    -print flight details
     -Convert lat and long degrees to x and y co-ordinates
     -Compares every airport against every airport and return a max and min distance
+
+### Database Functions
+    -Get new co-ordinates of one airport
+    -Get data about one airport
+    -Get airport name
+    -Get co-ordinates of current airport
+    -Take data from database and put into list
 
 ### Other Game Functions
     -Uses Gauss theory to predict theft success earnings
     -Random generator to determine if the theft is successful
     -A function that uses distance to calculate the cost of a flight
+    -Stamina consumed function
 
 
 ## Learning Tools And information
