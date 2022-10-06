@@ -25,14 +25,17 @@ func add_sounds():
 	var sound_spy :AudioStream = preload("res://Sounds/41_Minutes_of_Spy_Music_-_Instrumental_Spy_Themes-XZBp0VvuUhQ.mp3") 
 	var sound_hud :AudioStream = preload("res://Sounds/El_Profesor_-_Bella_Ciao_(HUGEL_Remix)_[Lyric_Video]-jhgJV0Pg54Y.mp3") 
 	var sound_pink :AudioStream = preload("res://Sounds/The_Pink_Panther_Theme_Music-lp6z3s1Gig0.mp3") 
+	var sound_click :AudioStream = preload("res://Sounds/click.mp3") 
 
 	spy.set_stream(sound_spy)
 	hud.set_stream(sound_hud)
 	pink.set_stream(sound_pink)
+	click.set_stream(sound_click)
 
 	add_child(spy)
 	add_child(hud)
 	add_child(pink)
+	add_child(click)
 
 func play_spy():
 	spy.play()
@@ -48,4 +51,10 @@ func play_pink():
 	pink.play()
 func stop_pink():
 	pink.stop()
+
+
+func play_click():
+	click.play()
+func stop_click():
+	click.stop()
 

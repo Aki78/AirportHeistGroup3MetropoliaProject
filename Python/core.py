@@ -8,7 +8,7 @@ def print_mainmenu():
     userInput = 0
     
     while True:
-        os.system("clr")
+        os.system("cls")
 
         print("Welcome to flight game")
         print("")
@@ -29,13 +29,13 @@ def print_mainmenu():
             return str(userInput)
 
 def print_settings():
-    os.system("clr")
+    os.system("cls")
     print("Under developments. Please come back later.")
     input("Press Enter to continue...")
     return
 
 def print_instructions():
-    os.system("clr")
+    os.system("cls")
     print("This is the instructions")
     print("1 - ")
     print("2 - ")
@@ -44,12 +44,12 @@ def print_instructions():
     return
 
 def print_credits():
-    os.system("clr")
+    os.system("cls")
     print("Under developments. Please come back later.")
     input("Press Enter to continue...")
     return
 
-def decision(): #Input
+def decisions(): #Input
     print("1. Steal")
     print("2. Escape")
     print("")
@@ -80,18 +80,38 @@ def money_heist(player):
         print("Your are about to steal more money")
         steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
 
-        print("Successful stealing rate: ", steal_rate * 100, "%")
-        print("1. Steal")
-        print("2. Later")
-        print("")
+    print("Your are about to steal more money")
+    steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
 
-        while True:
-            userInput = input("Input: ")
+    print("Successful stealing rate: ", steal_rate * 100, "%")
+    print("1. Steal")
+    print("2. Later")
+    print("")
 
-            if str(userInput) != "1" and str(userInput) != "2":
-                print("Invalid input")
-            else:
-                break
+    while True:
+        userInput = input("Input: ")
+
+        if str(userInput) != "1" and str(userInput) != "2":
+            print("Invalid input")
+        else:
+            break
+
+    if userInput == "1":
+        os.system("cls")
+        stolen_money = gfuncs.theft_success_earnings_gauss()
+        print("Got", stolen_money, "€")
+
+        true_rate = random.uniform(rate_down, rate_up)
+        #print("true rate", true_rate)
+        if true_rate <= steal_rate:
+            print("Steal successful")
+            player[3] += stolen_money
+            input("Press Enter to continue")
+        else:
+            print("You got caught")
+            print("You lost")
+            input("Press Enter to continue")
+            return player, True
 
         if userInput == "1":
             os.system("clr")
@@ -109,7 +129,7 @@ def money_heist(player):
                 print("You lost")
                 input("Press Enter to continue")
                 return player, True
-    elif decision() == "2":
+    elif decisions() == "2":
         attempt -= 1
     else:
         print("You got caught!")
@@ -120,7 +140,7 @@ def money_heist(player):
     return player, False
 
 def escape(airport_coordinates, max_flight_distance, player):
-    os.system("clr")
+    os.system("cls")
     
     airport_coordinates         = []
     possible_flights_name       = []
@@ -160,7 +180,7 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
             selection = int(userInput) - 1
             break
 
-    os.system("clr")
+    os.system("cls")
     price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
     print("1. Travel")
@@ -190,14 +210,15 @@ def update_player(player, price, stamina, new_icao_code, new_coordinates):
     return player
  
 def run_game(airport_data, player):
-    os.system("clr")
+    os.system("cls")
 
     player = [""]
     player[0] = name 
     got_caught = False
     
     airport_coordinates = []
-    max_flight_distance = 1000
+
+    stamina, budget, rate_up, rate_down, max_flight_distance = mode()
 
     player.append("EFHK")
 
@@ -206,19 +227,19 @@ def run_game(airport_data, player):
             player.append(airport_data[i]["deg"])
             break
     
-    player.append(1000000)
-    player.append(10000)
+    player.append(budget)
+    player.append(stamina)
         
     while budget > 0 or stamina > 0:
-        os.system("clr")
+        os.system("cls")
         print_player_position(airport_data, player)
 
         print("Budget   : ", player[3], "€")
         print("Stamina  : ", player[4])
 
-        userSelection = decision()
+        userSelection = decisions()
         if userSelection == "1":
-            player, got_caught = money_heist(player)
+            player, got_caught = money_heist(player, rate_up, rate_down)
             if got_caught == True:
                 break
         elif userSelection == "2":
@@ -230,6 +251,26 @@ def run_game(airport_data, player):
 
     return
 
+def mode():
+    print("Plese select the game's mode:")
+    print("1- Easy")
+    print("2- Hard")
+    play_mode = input("Your mode's number: ")
+    if play_mode == "1":
+        stamina = 10000
+        budget = 10000
+        rate_up = 1.0
+        rate_down = 0
+        travel_distance = 7000
+    elif play_mode == "2":
+        stamina = 700
+        budget = 1000
+        rate_up = 0.5
+        rate_down = 0
+        travel_distance = 5000
+    return stamina, budget, rate_up, rate_down, travel_distance
+
+
 
 #MAIN
 random.seed()
@@ -240,9 +281,9 @@ player  = [""]  #player = ['name', 'position_code', coordinates, budget, stamina
 #Fetch all data from database
 airport_data = database.get_datalist()
 
-os.system("clr")
+os.system("cls")
 name = input("Input name: ")
-os.system("clr")
+os.system("cls")
 
 
 
@@ -260,6 +301,6 @@ while True:
     elif userInput == "4":
         print_credits()
     elif userInput == "5":
-        os.system("clr")
+        os.system("cls")
         input("Press Enter to exit...")
         break       
