@@ -50,7 +50,7 @@ def print_credits():
     return
 
 def decisions(): #Input
-    print("1. Steal")
+    print("1. Heist")
     print("2. Escape")
     print("")
 
@@ -79,13 +79,10 @@ def money_heist(player, rate_up, rate_down, attempt):
         print("Your are about to steal more money")
         steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
 
-    print("Your are about to steal more money")
-    steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
-
-    print("Successful stealing rate: ", steal_rate * 100, "%")
-    print("1. Steal")
-    print("2. Later")
-    print("")
+        print("Successful stealing rate: ", steal_rate * 100, "%")
+        print("1. Steal")
+        print("2. Later")
+        print("")
 
     while True:
         userInput = input("Input: ")
@@ -134,7 +131,6 @@ def money_heist(player, rate_up, rate_down, attempt):
         print("You got caught!")
         got_caught = True
         return player, got_caught, attempt
-    print(attempt)
     return player, False, attempt
 
 def escape(airport_coordinates, max_flight_distance, player,attempt):
