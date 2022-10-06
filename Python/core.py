@@ -75,6 +75,7 @@ def print_player_position(airport_data, player):
 def money_heist(player):
     attempt = 5
     os.system("clr")
+    print(attempt)
     if attempt > 0:
         print("Your are about to steal more money")
         steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
@@ -108,11 +109,13 @@ def money_heist(player):
                 print("You lost")
                 input("Press Enter to continue")
                 return player, True
-    if decision() == "2":
+    elif decision() == "2":
         attempt -= 1
     else:
         print("You got caught!")
         got_caught = True
+        print(attempt)
+        return player, got_caught
     print(attempt)
     return player, False
 
