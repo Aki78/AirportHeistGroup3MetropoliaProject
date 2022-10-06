@@ -8,6 +8,7 @@ def theft_success_earnings_gauss():
     if setting_screen() = "2":
         s = np.random.normal(2000, 500, 1)
     return round(s[0])
+
 def main_screen():
     os.system('clear')
     while True:

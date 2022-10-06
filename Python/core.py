@@ -236,6 +236,8 @@ name = input("Input name: ")
 os.system("clr")
 
 
+
+
 while True:
     userInput = print_mainmenu() #Print the main menu
     print(userInput)
