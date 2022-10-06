@@ -190,6 +190,8 @@ def run_game(airport_data, player):
     airport_coordinates = []
     max_flight_distance = 1000
 
+    stamina, budget, rate_up, rate_down, travel_distance = mode()
+
     player.append("EFHK")
 
     for i in range(len(airport_data)):
@@ -197,8 +199,8 @@ def run_game(airport_data, player):
             player.append(airport_data[i]["deg"])
             break
     
-    player.append(1000000)
-    player.append(10000)
+    player.append(budget)
+    player.append(stamina)
         
     while budget > 0 or stamina > 0:
         os.system("clr")
@@ -209,7 +211,7 @@ def run_game(airport_data, player):
 
         userSelection = decision()
         if userSelection == "1":
-            player, got_caught = money_heist(player)
+            player, got_caught = money_heist(player, rate_up, rate_down)
             if got_caught == True:
                 break
         elif userSelection == "2":
