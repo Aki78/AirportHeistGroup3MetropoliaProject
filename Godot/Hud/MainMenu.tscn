@@ -317,10 +317,10 @@ texture = ExtResource( 10 )
 script = ExtResource( 13 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 197, 171 )
-scale = Vector2( 1.2118, 1.38667 )
+position = Vector2( 206, 174 )
+scale = Vector2( 1.05348, 1.2055 )
 frames = SubResource( 5 )
-frame = 133
+frame = 165
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
