@@ -63,6 +63,7 @@ def decisions(): #Input
             break
 
 
+    print(userInput)
     return userInput
 
 def print_player_position(airport_data, player):
@@ -72,10 +73,8 @@ def print_player_position(airport_data, player):
             break
     return
 
-def money_heist(player):
-    attempt = 5
+def money_heist(player, rate_up, rate_down, attempt):
     os.system("clr")
-    print(attempt)
     if attempt > 0:
         print("Your are about to steal more money")
         steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
@@ -111,7 +110,7 @@ def money_heist(player):
             print("You got caught")
             print("You lost")
             input("Press Enter to continue")
-            return player, True
+            return player, True, attempt
 
         if userInput == "1":
             os.system("clr")
@@ -128,18 +127,18 @@ def money_heist(player):
                 print("You got caught")
                 print("You lost")
                 input("Press Enter to continue")
-                return player, True
-    elif decisions() == "2":
+                return player, True, attempt
+    elif userInput == "2":
         attempt -= 1
-    else:
+    if attempt == 0:
         print("You got caught!")
         got_caught = True
-        print(attempt)
-        return player, got_caught
+        return player, got_caught, attempt
     print(attempt)
-    return player, False
+    return player, False, attempt
 
-def escape(airport_coordinates, max_flight_distance, player):
+def escape(airport_coordinates, max_flight_distance, player,attempt):
+    attempt = 5
     os.system("cls")
     
     airport_coordinates         = []
@@ -161,7 +160,7 @@ def escape(airport_coordinates, max_flight_distance, player):
 
     if new_icao_code is not None:
         print("Waiting for new code 1", new_icao_code)
-        return price, stamina, new_icao_code, new_coordinates
+        return price, stamina, new_icao_code, new_coordinates, attempt
     else:
         return 0, 0, None, (0, 0)
 
@@ -210,6 +209,7 @@ def update_player(player, price, stamina, new_icao_code, new_coordinates):
     return player
  
 def run_game(airport_data, player):
+    attempt = 5
     os.system("cls")
 
     player = [""]
@@ -239,11 +239,11 @@ def run_game(airport_data, player):
 
         userSelection = decisions()
         if userSelection == "1":
-            player, got_caught = money_heist(player, rate_up, rate_down)
+            player, got_caught, attempt = money_heist(player, rate_up, rate_down,attempt)
             if got_caught == True:
                 break
         elif userSelection == "2":
-            price, stamina, new_icao_code, new_coordinates = escape(airport_coordinates, max_flight_distance, player)
+            price, stamina, new_icao_code, new_coordinates, attempt = escape(airport_coordinates, max_flight_distance, player, attempt)
             if new_icao_code is not None:
                 player = update_player(player, price, stamina, new_icao_code, new_coordinates)
                        
