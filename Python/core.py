@@ -4,7 +4,6 @@ import gfuncs
 import helper
 import random
 
-
 def print_mainmenu():
     userInput = 0
 
