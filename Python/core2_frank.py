@@ -2,12 +2,14 @@ import os
 import time
 import numpy as np
 
+setting_input = None
 def theft_success_earnings_gauss():
-    if setting_screen() = "1":
+    if "1" == setting_input:
         s = np.random.normal(3000, 500, 1)
-    if setting_screen() = "2":
+    if "2" == setting_input:
         s = np.random.normal(2000, 500, 1)
     return round(s[0])
+
 def main_screen():
     os.system('clear')
     while True:
@@ -35,6 +37,7 @@ def setting_screen():
         print("Settings")
         print("Choose the game level\n1. Easy \n2. Hard")
         settings_input = str(input("What do you want to do: "))
+
 
         if settings_input == "" or int(settings_input) > 3 or int(settings_input) < 1:
             print("Unknown input, please try again.")
