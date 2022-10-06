@@ -320,7 +320,7 @@ script = ExtResource( 13 )
 position = Vector2( 206, 174 )
 scale = Vector2( 1.05348, 1.2055 )
 frames = SubResource( 5 )
-frame = 165
+frame = 127
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -392,8 +392,12 @@ custom_fonts/font = ExtResource( 5 )
 text = "Exit"
 script = ExtResource( 2 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="timeout" from="Dance" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Noise/Timer" to="Noise" method="_on_Timer_timeout"]
+[connection signal="mouse_exited" from="HudContainer" to="." method="_on_HudContainer_mouse_exited"]
+[connection signal="tree_exited" from="HudContainer" to="HudContainer" method="_on_HudContainer_tree_exited"]
 [connection signal="tree_exiting" from="HudContainer" to="HudContainer" method="_on_HudContainer_tree_exiting"]
 [connection signal="pressed" from="HudContainer/StartButton" to="HudContainer" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="HudContainer/StartButton" to="HudContainer/StartButton" method="_on_StartButton_pressed"]

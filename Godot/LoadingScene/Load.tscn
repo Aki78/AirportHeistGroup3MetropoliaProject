@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Images/airplane-icon-png-2515.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/orbit.tres" type="DynamicFont" id=2]
+[ext_resource path="res://LoadingScene/Load.gd" type="Script" id=3]
+
+[node name="LoadImage" type="Sprite"]
+position = Vector2( 596, 362 )
+scale = Vector2( 0.309336, 0.309336 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 701.502
+margin_top = 1031.24
+margin_right = 1039.5
+margin_bottom = 1112.24
+rect_scale = Vector2( 8.78962, 8.69964 )
+custom_fonts/font = ExtResource( 2 )
+text = "Loading....."
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
