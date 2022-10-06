@@ -72,7 +72,7 @@ def print_player_position(airport_data, player):
             break
     return
 
-def money_heist(player):
+def money_heist(player, rate_up, rate_down):
     os.system("cls")
 
     print("Your are about to steal more money")
@@ -96,7 +96,7 @@ def money_heist(player):
         stolen_money = gfuncs.theft_success_earnings_gauss()
         print("Got", stolen_money, "€")
 
-        true_rate = random.random()
+        true_rate = random.uniform(rate_down, rate_up)
         #print("true rate", true_rate)
         if true_rate <= steal_rate:
             print("Steal successful")
@@ -188,9 +188,8 @@ def run_game(airport_data, player):
     got_caught = False
     
     airport_coordinates = []
-    max_flight_distance = 1000
 
-    stamina, budget, rate_up, rate_down, travel_distance = mode()
+    stamina, budget, rate_up, rate_down, max_flight_distance = mode()
 
     player.append("EFHK")
 
@@ -238,7 +237,7 @@ def mode():
         stamina = 700
         budget = 1000
         rate_up = 0.5
-        rate_down = 1.0
+        rate_down = 0
         travel_distance = 5000
     return stamina, budget, rate_up, rate_down, travel_distance
 
