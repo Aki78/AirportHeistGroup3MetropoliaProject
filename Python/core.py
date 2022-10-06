@@ -101,6 +101,8 @@ player[0] = name
 os.system("cls")
 
 
+
+
 while True:
     userInput = print_mainmenu() #Print the main menu
     print(userInput)
