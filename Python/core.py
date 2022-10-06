@@ -73,11 +73,7 @@ def decisions():  # Input
         else:
             break
 
-<<<<<<< HEAD
-=======
-
     print(userInput)
->>>>>>> 5fec28064bcfd6e3e5f71b37e5ce537d1676e3c8
     return userInput
 
 
@@ -88,17 +84,11 @@ def print_player_position(airport_data, player):
             break
     return
 
-<<<<<<< HEAD
-
-def money_heist(player, rate_up, rate_down):
-    os.system("cls")
-=======
 def money_heist(player, rate_up, rate_down, attempt):
     os.system("clr")
     if attempt > 0:
         print("Your are about to steal more money")
         steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
->>>>>>> 5fec28064bcfd6e3e5f71b37e5ce537d1676e3c8
 
     print("Your are about to steal more money")
     steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
@@ -131,14 +121,7 @@ def money_heist(player, rate_up, rate_down, attempt):
             print("You got caught")
             print("You lost")
             input("Press Enter to continue")
-<<<<<<< HEAD
-            return player, True
 
-    return player, False
-
-
-def escape(airport_coordinates, max_flight_distance, player):
-=======
             return player, True, attempt
 
         if userInput == "1":
@@ -168,7 +151,6 @@ def escape(airport_coordinates, max_flight_distance, player):
 
 def escape(airport_coordinates, max_flight_distance, player,attempt):
     attempt = 5
->>>>>>> 5fec28064bcfd6e3e5f71b37e5ce537d1676e3c8
     os.system("cls")
 
     airport_coordinates = []
