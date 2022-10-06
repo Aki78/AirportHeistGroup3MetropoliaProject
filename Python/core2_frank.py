@@ -1,7 +1,15 @@
 import os
 import time
+import numpy as np
+
+def theft_success_earnings_gauss():
+    if setting_screen() = "1":
+        s = np.random.normal(3000, 500, 1)
+    if setting_screen() = "2":
+        s = np.random.normal(2000, 500, 1)
+    return round(s[0])
 def main_screen():
-    os.system('cls')
+    os.system('clear')
     while True:
         print("Welcome to airport heist!")
         print("1. Play \n2. Settings \n3. Instructions \n4. Credits \n5. Exit")
@@ -22,7 +30,7 @@ def main_screen():
         return
 
 def setting_screen():
-    os.system('cls')
+    os.system('clear')
     while True:
         print("Settings")
         print("Choose the game level\n1. Easy \n2. Hard")
@@ -39,10 +47,10 @@ def setting_screen():
             print("Good luck!")
             time.sleep(1.5)
             main_screen()
-        return
+        return settings_input
 
 def instructions():
-    os.system('cls')
+    os.system('clear')
     while True:
         print("Instructions")
         print("The first step is to decide if you will STEAL or ESCAPE."
@@ -64,7 +72,7 @@ def instructions():
         return
 
 def credits():
-    os.system('cls')
+    os.system('clear')
     while True:
         print("Credits")
         print("Airport Heist was created by the most awesome of foursomes!\nAki Morooka \nKhai cao \nKiana Aghajani \nFrancesco Natanni\nAll work is our own, so all credit goes to us.")
@@ -75,7 +83,6 @@ def credits():
         else:
             main_screen()
         return
-
 main_screen()
 
 
