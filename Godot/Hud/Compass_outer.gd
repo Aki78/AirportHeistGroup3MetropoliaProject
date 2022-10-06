@@ -1,7 +1,7 @@
 extends Sprite
 
 
-var rot_speed = -5
+var rot_speed = -1
 
 func _ready():
 	pass
