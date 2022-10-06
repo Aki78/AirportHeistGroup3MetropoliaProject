@@ -13,3 +13,6 @@ def get_ticket_price(distance):
 
 def get_stamina_consumptions(distance):
     return round(distance / 2)
+
+def interpol_index():
+    pass
