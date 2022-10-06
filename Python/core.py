@@ -73,41 +73,47 @@ def print_player_position(airport_data, player):
     return
 
 def money_heist(player):
+    attempt = 5
     os.system("clr")
+    if attempt > 0:
+        print("Your are about to steal more money")
+        steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
 
-    print("Your are about to steal more money")
-    steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
+        print("Successful stealing rate: ", steal_rate * 100, "%")
+        print("1. Steal")
+        print("2. Later")
+        print("")
 
-    print("Successful stealing rate: ", steal_rate * 100, "%")
-    print("1. Steal")
-    print("2. Later")
-    print("")
+        while True:
+            userInput = input("Input: ")
 
-    while True:
-        userInput = input("Input: ")
+            if str(userInput) != "1" and str(userInput) != "2":
+                print("Invalid input")
+            else:
+                break
 
-        if str(userInput) != "1" and str(userInput) != "2":
-            print("Invalid input")
-        else:
-            break
+        if userInput == "1":
+            os.system("clr")
+            stolen_money = gfuncs.theft_success_earnings_gauss()
+            print("Got", stolen_money, "€")
 
-    if userInput == "1":
-        os.system("clr")
-        stolen_money = gfuncs.theft_success_earnings_gauss()
-        print("Got", stolen_money, "€")
-
-        true_rate = random.random()
-        #print("true rate", true_rate)
-        if true_rate <= steal_rate:
-            print("Steal successful")
-            player[3] += stolen_money
-            input("Press Enter to continue")
-        else:
-            print("You got caught")
-            print("You lost")
-            input("Press Enter to continue")
-            return player, True
-
+            true_rate = random.random()
+            #print("true rate", true_rate)
+            if true_rate <= steal_rate:
+                print("Steal successful")
+                player[3] += stolen_money
+                input("Press Enter to continue")
+            else:
+                print("You got caught")
+                print("You lost")
+                input("Press Enter to continue")
+                return player, True
+    if decision() == "2":
+        attempt -= 1
+    else:
+        print("You got caught!")
+        got_caught = True
+    print(attempt)
     return player, False
 
 def escape(airport_coordinates, max_flight_distance, player):
