@@ -23,14 +23,16 @@ Stealing
 
 In order to acquire money players steal, however, there is a chance of getting caught.
 Players are informed of the odds of capture before they attempt to steal 
-and can abort if they feel the risks are too great.
-Their stolen earnings are based on gauss' theory with a set expectation value.
+and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
+If you use all 5 attempts before escaping, you will be caught.
+Their stolen earnings are based on gauss' theory with a two different expectation values,
+depending on the game difficulty selected.
 
 Travel
 
-Travel is possible with the purchase of a flight ticket and players 
-are restricted to airports with-in a certain distance.
-    -why is the player restricted to a certain distance(to be made up)
+Travel is possible with the purchase of a flight ticket.
+Players are also restricted to airports with-in a certain distance.
+The distance of travel allowed is dependent on the game difficulty selected.
 
 Evading Capture
 
