@@ -25,7 +25,7 @@ def money_heist(player, rate_up, rate_down, attempt):
     os.system("cls")
     steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
     if attempt > 0:
-
+        print("Attemps remaining:", attempt - 1)
         print("Your are about to steal more money")
         print("Successful stealing rate: ", steal_rate * 100, "%")
         print("1. Steal")
@@ -59,7 +59,7 @@ def money_heist(player, rate_up, rate_down, attempt):
             return player, True, attempt
 
         if userInput == "1":
-            os.system("clr")
+            os.system("cls")
             stolen_money = gfuncs.theft_success_earnings_gauss()
             print("Got", stolen_money, "€")
 
