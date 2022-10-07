@@ -36,7 +36,8 @@ The distance of travel allowed is dependent on the game difficulty selected.
 
 Evading Capture
 
-Players can see in which city interpol is but not where interpol will go next.
+Players can see in which city interpol is but not exactly where interpol will go next.
+Players will see a choice of 3 possible airports interpol will be in next.
 Interpol moves from airport to airport at random. 
 Players are limited by their budget and stamina but can steal money to survive.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
