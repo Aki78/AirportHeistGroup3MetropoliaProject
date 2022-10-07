@@ -6,6 +6,5 @@ def print_interpol_position(airport_data, interpol):
     return
 
 def movement():
-    
     return "EFHK"
 

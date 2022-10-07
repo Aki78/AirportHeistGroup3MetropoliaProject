@@ -70,7 +70,6 @@ def run_game(airport_data):
         
         interpol_position = interpol.movement()    
 
-
     input("Press Enter to continue...")
 
     return

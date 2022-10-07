@@ -71,3 +71,4 @@ def steal_rate_and_decision(steal_rate):
     print("1. Steal")
     print("2. Later")
     print("")
+    
