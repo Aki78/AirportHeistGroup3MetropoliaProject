@@ -11,6 +11,10 @@ This document specifies the design for the gameplay of Airport Heist.
 The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
 
 ## Vision
+The Purpose of Airport Heist is to produce a fun and interactive game, 
+that satisfies the guidelines provided by software1.
+
+### How the game works
 Airport Heist is a single player game, 
 where the main character aims to avoid capture from interpol.
 Players can fly to different cities with-in europe as long as they can afford the tickets.
@@ -26,6 +30,7 @@ Travel
 
 Travel is possible with the purchase of a flight ticket and players 
 are restricted to airports with-in a certain distance.
+    -why is the player restricted to a certain distance(to be made up)
 
 Evading Capture
 
@@ -34,9 +39,9 @@ Interpol moves from airport to airport at random.
 Players are limited by their budget and stamina but can steal money to survive.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
 
+As the game progresses the player take chances by stealing money to increase their wealth
+and then making strategic moves to avoid arrest.
 
-The Purpose of Airport Heist is to produce a fun and interactive game, 
-that satisfies the guidelines provided by software1.
 
 What does this mean?
 
@@ -44,8 +49,6 @@ What does this mean?
     -Here you must explain the main idea of the game in your own words: 
     -how does the game proceed and what stages must the player go through?
 
-As the game progresses the player take chances by stealing money to increase their wealth
-and then making strategic moves to avoid arrest.
 
 ## Story
 ### Backstory
@@ -89,10 +92,16 @@ This removed a lot of unnecessary information and made calling upon the database
 
 
 ### Core Functions
-    -Print main menu
-    -Print settings
-    -Print instructions
-    -Print credits
+    -Main menu
+    -Settings
+    -Instructions
+    -Credits
+    -Decision to steal or escape
+    -Print player position
+    -Money heist
+    -Escape
+    -Player airport selection
+    -Update player information
     -Run game
 
 ### Helper Functions
@@ -100,13 +109,23 @@ This removed a lot of unnecessary information and made calling upon the database
     -Convert meters to kilometers
     -Get the distance between two lat and long co-ordinates
     -Returns all the possible flights from a given airport
+    -print possible flights
+    -print flight details
     -Convert lat and long degrees to x and y co-ordinates
-    -Compares every airport against every airport and return a max and min distance
+    -Compares all airport against each other, then shows a max and min distance
+
+### Database Functions
+    -Get new co-ordinates of one airport
+    -Get data about one airport
+    -Get airport name
+    -Get co-ordinates of current airport
+    -Take data from database and put into list
 
 ### Other Game Functions
     -Uses Gauss theory to predict theft success earnings
     -Random generator to determine if the theft is successful
     -A function that uses distance to calculate the cost of a flight
+    -Stamina consumed function
 
 
 ## Learning Tools And information

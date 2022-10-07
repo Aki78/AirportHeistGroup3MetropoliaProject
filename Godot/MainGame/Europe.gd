@@ -7,6 +7,7 @@ onready var airports = []
 
 func _ready():
 	Sound.play_spy()
+	Sound.stop_click()
 	
 	randomize()
 	CameraScript.my_ease_in(self)
