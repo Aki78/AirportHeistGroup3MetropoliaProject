@@ -319,7 +319,7 @@ script = ExtResource( 13 )
 position = Vector2( 368, 246 )
 scale = Vector2( 0.384533, 0.384533 )
 frames = SubResource( 5 )
-frame = 5
+frame = 119
 playing = true
 
 [node name="AirplaneIcon" type="Sprite" parent="."]
