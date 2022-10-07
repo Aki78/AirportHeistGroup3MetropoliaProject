@@ -1,3 +1,6 @@
+import os
+
+
 def print_start(name):
     print("Welcome to flight game")
     print("")
@@ -8,7 +11,6 @@ def print_start(name):
     print("3. Instructions")
     print("4. Credits")
     print("5. Exit")
-
 
 def print_instructions():
     os.system("cls")
@@ -21,18 +23,14 @@ def print_instructions():
     print("6 - You are restricted to airports with-in a certain distance.")
     print("7 - You will lose if you go under stamina or budget.")
 
-
     input("Press Enter to continue...")
     return
-
 
 def print_settings():
     os.system("cls")
     print("Under developments. Please come back later.")
     input("Press Enter to continue...")
     return
-
-
 
 def print_credits():
     os.system("cls")
@@ -53,7 +51,7 @@ def print_mainmenu(name):
     while True:
         os.system("cls")
 
-        prints.print_start(name)
+        print_start(name)
 
         userInput = input("Input: ")
 

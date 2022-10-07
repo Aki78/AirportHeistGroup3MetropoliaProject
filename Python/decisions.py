@@ -1,4 +1,5 @@
 import random
+import database
 import os
 import helper
 import gfuncs
@@ -22,8 +23,8 @@ def heist_decision(): #Input
 
 def money_heist(player, rate_up, rate_down, attempt):
     os.system("cls")
+    steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
     if attempt > 0:
-        steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
 
         print("Your are about to steal more money")
         print("Successful stealing rate: ", steal_rate * 100, "%")
