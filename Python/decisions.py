@@ -4,7 +4,7 @@ import helper
 import gfuncs
 
 
-def decisions(): #Input
+def heist_decision(): #Input
     print("1. Heist")
     print("2. Escape")
     print("")

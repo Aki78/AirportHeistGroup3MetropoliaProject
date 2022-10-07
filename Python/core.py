@@ -41,7 +41,7 @@ def run_game(airport_data, player):
         print("Budget   : ", player[3], "€")
         print("Stamina  : ", player[4])
 
-        userSelection = decisions.decisions()
+        userSelection = decisions.heist_decision()
         
         if userSelection == "1":
             player, got_caught, attempt = decisions.money_heist(player, rate_up, rate_down,attempt)
