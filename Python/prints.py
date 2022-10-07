@@ -41,7 +41,11 @@ def print_credits():
 def print_player_position(airport_data, player):
     for i in range(len(airport_data)):
         if airport_data[i]["ident"] == player[1]:
-            print("You are at", airport_data[i]["name"])
+            print("You are in", airport_data[i]["country"])
+            print("Airport  : ", airport_data[i]["name"])
+            print("Budget   : ", player[3], "€")
+            print("Stamina  : ", player[4])
+            print("")
             break
     return
 

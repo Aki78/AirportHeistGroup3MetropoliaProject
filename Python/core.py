@@ -4,6 +4,7 @@ import database
 import random
 import prints
 import decisions
+import interpol
 
 def update_player(player, price, stamina, new_icao_code, new_coordinates):
     player[1] = new_icao_code
@@ -12,12 +13,18 @@ def update_player(player, price, stamina, new_icao_code, new_coordinates):
     player[4] -= stamina
     return player
 
-def run_game(airport_data, player):
+def run_game(airport_data):
     os.system("cls")
 
-    player = [""]
+    player = [""]   # player = ['name', 'icao_code', coordinates, budget, stamina]
     player[0] = name
     player.append("EFHK")
+
+    
+
+    interpol_info = [""] #interpol = ['icao_code', coordinates]
+    interpol_info[0] = "LFBD"
+    interpol_info.append((44.8283, -0.715556))
     
     attempt = 5
     got_caught = False
@@ -34,12 +41,12 @@ def run_game(airport_data, player):
     player.append(budget)
     player.append(stamina)
 
-    while player[3] > 0 and player[4] > 0:
+    while player[3] > 0 and player[4] > 0 and got_caught is False:
         os.system("cls")
+        
+        interpol.print_interpol_position(airport_data, interpol_info)
+        print("")
         prints.print_player_position(airport_data, player)
-
-        print("Budget   : ", player[3], "€")
-        print("Stamina  : ", player[4])
 
         userSelection = decisions.heist_decision()
         
@@ -57,16 +64,19 @@ def run_game(airport_data, player):
             print("You lost")
             break
         elif player[4] <= 0:
-            print("YOu run out of stamina (too tired to go anywhere)")
+            print("You run out of stamina (too tired to go anywhere)")
             print("You lost")
             break
+        
+        interpol_position = interpol.movement()    
+
+
     input("Press Enter to continue...")
 
     return
 
 # MAIN
-random.seed()
-player = [""]  # player = ['name', 'position_code', coordinates, budget, stamina]
+random.seed() 
 
 # Fetch all data from database
 airport_data = database.get_datalist()
@@ -80,7 +90,7 @@ while True:
     print(userInput)
 
     if userInput == "1":
-        run_game(airport_data, player)
+        run_game(airport_data)
     elif userInput == "2":
         prints.print_settings()
     elif userInput == "3":
