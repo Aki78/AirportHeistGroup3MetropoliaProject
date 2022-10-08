@@ -66,7 +66,7 @@ def money_heist(player, rate_upper, rate_lower, attempt):
     return player, False, attempt
 
 
-def escape(airport_coordinates, max_flight_distance, player,attempt):
+def escape(airport_coordinates, max_flight_distance, player, attempt):
     attempt = 5
     os.system("clear")
 
