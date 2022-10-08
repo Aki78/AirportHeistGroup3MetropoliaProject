@@ -6,14 +6,14 @@ import gfuncs
 
 
 def heist_decision(): #Input
-    print("1. Heist")
-    print("2. Escape")
+    print("Choice> Heist")
+    print("Choice> Escape")
     print("")
 
     while True:
         userInput = input("Input: ")
 
-        if str(userInput) != "1" and str(userInput) != "2":
+        if str(userInput) != "Heist" and str(userInput) != "Escape":
             print("Invalid input")
         else:
             break
@@ -21,31 +21,31 @@ def heist_decision(): #Input
     print(userInput)
     return userInput
 
-def money_heist(player, rate_up, rate_down, attempt):
-    os.system("cls")
+def money_heist(player, rate_upper, rate_lower, attempt):
+    os.system("clear")
     steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
     if attempt > 0:
         print("Attemps remaining:", attempt - 1)
         print("Your are about to steal more money")
         print("Successful stealing rate: ", steal_rate * 100, "%")
-        print("1. Steal")
-        print("2. Later")
+        print("Choice> Steal")
+        print("Choice> Wait")
         print("")
 
     while True:
         userInput = input("Input: ")
 
-        if str(userInput) != "1" and str(userInput) != "2":
+        if str(userInput) != "Steal" and str(userInput) != "Wait":
             print("Invalid input")
         else:
             break
 
-    if userInput == "1":
-        os.system("cls")
+    if userInput == "Steal":
+        os.system("clear")
         stolen_money = gfuncs.theft_success_earnings_gauss()
         print("Got", stolen_money, "€")
 
-        true_rate = random.uniform(rate_down, rate_up)
+        true_rate = random.uniform(rate_lower, rate_upper)
         # print("true rate", true_rate)
         if true_rate <= steal_rate:
             print("Steal successful")
@@ -58,8 +58,8 @@ def money_heist(player, rate_up, rate_down, attempt):
 
             return player, True, attempt
 
-        if userInput == "1":
-            os.system("cls")
+        if userInput == "Steal":
+            os.system("clear")
             stolen_money = gfuncs.theft_success_earnings_gauss()
             print("Got", stolen_money, "€")
 
@@ -74,7 +74,7 @@ def money_heist(player, rate_up, rate_down, attempt):
                 print("You lost")
                 input("Press Enter to continue")
                 return player, True, attempt
-    elif userInput == "2":
+    elif userInput == "Wait":
         attempt -= 1
     if attempt == 0:
         print("You got caught!")
@@ -85,7 +85,7 @@ def money_heist(player, rate_up, rate_down, attempt):
 
 def escape(airport_coordinates, max_flight_distance, player,attempt):
     attempt = 5
-    os.system("cls")
+    os.system("clear")
 
     airport_coordinates = []
     possible_flights_name = []
@@ -122,30 +122,28 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
 
         if userInput == "" or type(int(userInput)) is not int:
             print("Invalid input")
-        # elif 1 > int(userInput) or int(userInput) > amount_of_possible_flights + 1:
-        #    print("Invalid input")
         else:
             selection = int(userInput) - 1
             break
 
-    os.system("cls")
+    os.system("clear")
     price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
-    print("1. Travel")
-    print("2. Stay")
+    print("Travel")
+    print("Stay")
     print("")
 
     # Input decision (also fix later)
     while True:
         userInput = input("Input: ")
 
-        if str(userInput) != "1" and str(userInput) != "2":
+        if str(userInput) != "Stravel" and str(userInput) != "Stay":
             print("Invalid input")
         else:
             break
 
-    if int(userInput) == 1:
+    if int(userInput) == "Travel":
         #print("Waiting for new code 2", icao_code)
         return price, stamina, icao_code, new_coordinates
-    elif int(userInput) == 2:
+    elif int(userInput) == "Stay":
         return 0, 0, None, (0, 0)
