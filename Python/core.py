@@ -28,6 +28,7 @@ def init_state():
     airport_data = database.get_datalist()
     lost = False
 
+
     game_state = {
                     "airport_data":airport_data,
                     "player":player,
@@ -42,13 +43,6 @@ def init_state():
                     "max_flight_distance" : max_flight_distance,
                     "lost": lost
                   }
-
-    return game_state
-
-
-def run_game():
-    game_state = init_state()
-
     for i in range(len(game_state["airport_data"])):
         if game_state["airport_data"][i]["ident"] == game_state["player"][1]:
             game_state["player"].append(game_state["airport_data"][i]["deg"])
@@ -56,6 +50,14 @@ def run_game():
 
     game_state["player"].append(game_state["budget"])
     game_state["player"].append(game_state["stamina"])
+
+    return game_state
+
+
+def run_game():
+    #init state
+    game_state = init_state()
+
 
     while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught"]is False:
         os.system("clear")
