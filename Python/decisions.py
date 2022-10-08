@@ -57,23 +57,6 @@ def money_heist(player, rate_upper, rate_lower, attempt):
             input("Press Enter to continue")
 
             return player, True, attempt
-
-        if userInput == "Steal":
-            os.system("clear")
-            stolen_money = gfuncs.theft_success_earnings_gauss()
-            print("Got", stolen_money, "€")
-
-            true_rate = random.random()
-            #print("true rate", true_rate)
-            if true_rate <= steal_rate:
-                print("Steal successful")
-                player[3] += stolen_money
-                input("Press Enter to continue")
-            else:
-                print("You got caught")
-                print("You lost")
-                input("Press Enter to continue")
-                return player, True, attempt
     elif userInput == "Wait":
         attempt -= 1
     if attempt == 0:
