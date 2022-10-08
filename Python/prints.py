@@ -13,7 +13,7 @@ def print_start(name):
 
 def print_instructions():
     os.system("clear")
-    print("This is the instructions")
+    print("These are the instructions")
     print("-- You are limited by budget and stamina.")
     print("-- You have to by tickets to travel.")
     print("-- In order to acquire money, you have to steal.")
