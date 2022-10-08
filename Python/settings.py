@@ -6,7 +6,7 @@ def mode():
     play_mode = input("Your selection: ")
 
     if play_mode == "1" or play_mode == 'Easy':
-        stamina = 1000
+        stamina = 10000
         budget = 10000
         rate_up = 1.0
         rate_down = 0
