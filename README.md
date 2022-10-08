@@ -21,18 +21,18 @@ Players can fly to different cities with-in europe as long as they can afford th
 
 Stealing
 
-In order to acquire money players steal, however, there is a chance of getting caught.
-Players are informed of the odds of capture before they attempt to steal 
+In order to acquire money to buy tickets players steal, however, there is a chance of getting caught.
+Players are informed of the odds of capture before they attempt a heist 
 and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
-If you use all 5 attempts before escaping, you will be caught.
-Their stolen earnings are based on gauss' theory with a two different expectation values,
+If they use all 5 attempts before escaping, they will be caught and the game is over.
+The players stolen earnings are based on gauss' theory with two different expectation values,
 depending on the game difficulty selected.
 
 Travel
 
 Travel is possible with the purchase of a flight ticket.
-Players are also restricted to airports with-in a certain distance.
-The distance of travel allowed is dependent on the game difficulty selected.
+Players are also restricted to airports with-in a certain distance, which is dependent on the game difficulty selected.
+Players a shown  list of countries with-in their range.
 
 Evading Capture
 
@@ -46,11 +46,7 @@ As the game progresses the player take chances by stealing money to increase the
 and then making strategic moves to avoid arrest.
 
 
-What does this mean?
-
-    -The vision can be presented also as a figure that is supported by a written description. 
-    -Here you must explain the main idea of the game in your own words: 
-    -how does the game proceed and what stages must the player go through?
+Insert picture here
 
 
 ## Story
@@ -59,7 +55,7 @@ You are a master thief, captured by the Finnish authorities on the minor charge 
 They have no idea of your genius though and neglect to watch over you properly.
 You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
 You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice. 
-Due to your expert skills you are able to steal 1000€ from the Alepa at Helsinki Airport. 
+Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport. 
 The police, however, have been alerted of your activities and are hot on your tail.
 Time to make your next move before interpol gets you!
 
