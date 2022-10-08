@@ -15,9 +15,9 @@ def init_state():
     player[0] = name
     player.append("EFHK")
 
-    interpol_info = [""] #interpol = ['icao_code', coordinates]
-    interpol_info[0] = "LFBD"
-    interpol_info.append((44.8283, -0.715556))
+    interpol = [""] #interpol = ['icao_code', coordinates]
+    interpol[0] = "LFBD"
+    interpol.append((44.8283, -0.715556))
     
     attempt_left = 5
     got_caught = False
@@ -25,10 +25,13 @@ def init_state():
     airport_coordinates = []
 
     stamina, budget, rate_upper, rate_lower, max_flight_distance = settings.mode()
+    airport_data = database.get_datalist()
+    lost = False
 
     game_state = {
+                    "airport_data":airport_data,
                     "player":player,
-                    "interpol":interpol_info,
+                    "interpol":interpol,
                     "got_caught":got_caught,
                     "attempt_left": attempt_left,
                     "airport_coordinates" : airport_coordinates,
@@ -36,46 +39,51 @@ def init_state():
                     "budget" : budget,
                     "rate_upper" : rate_upper,
                     "rate_lower" : rate_lower,
-                    "max_flight_distance" : max_flight_distance
+                    "max_flight_distance" : max_flight_distance,
+                    "lost": lost
                   }
 
     return game_state
 
 
-def run_game(airport_data):
+def run_game():
     game_state = init_state()
 
-    for i in range(len(airport_data)):
-        if airport_data[i]["ident"] == game_state["player"][1]:
-            game_state["player"].append(airport_data[i]["deg"])
+    for i in range(len(game_state["airport_data"])):
+        if game_state["airport_data"][i]["ident"] == game_state["player"][1]:
+            game_state["player"].append(game_state["airport_data"][i]["deg"])
             break
 
     game_state["player"].append(game_state["budget"])
     game_state["player"].append(game_state["stamina"])
 
-    while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught "]is False:
+    while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught"]is False:
         os.system("clear")
         
-        interpol.print_interpol_position(airport_data, game_state["interpol_info"])
+        interpol.print_interpol_position(game_state["airport_data"], game_state["interpol"])
         print("")
-        prints.print_player_position(airport_data, game_state["player"])
+        prints.print_player_position(game_state["airport_data"], game_state["player"])
 
         userSelection = decisions.heist_decision()
         
-        if userSelection == "1":
+        if userSelection == "Heist":
             game_state["player"], got_caught, game_state["attempt_left "]= decisions.money_heist(game_state["player"], game_state["rate_upper"], game_state["rate_lower"],game_state["attempt_left"])
             if got_caught == True:
                 break
-        elif userSelection == "2":
+        elif userSelection == "Escape":
             price, stamina, new_icao_code, new_coordinates, game_state["attempt_left "]= decisions.escape(game_state["airport_coordinates"], game_state["max_flight_distance"], game_state["player"], game_state["attempt_left"])
             if new_icao_code is not None:
                 game_state["player "]= gfuncs.update_player(game_state["player"], price, stamina, new_icao_code, new_coordinates)
 
         if game_state["player"][3] <= 0:
+            #send lost signal
+            game_state["lost"] = True
             print("You run out of money")
             print("You lost")
             break
         elif game_state["player"][4] <= 0:
+            #send lost signal
+            game_state["lost"] = True
             print("You run out of stamina (too tired to go anywhere)")
             print("You lost")
             break
@@ -90,7 +98,6 @@ if __name__ == "__main__":
 # MAIN
     random.seed() 
 # Fetch all data from database
-    airport_data = database.get_datalist()
 
     os.system("clear")
     name = input("Input name: ")
@@ -101,7 +108,7 @@ if __name__ == "__main__":
         print(userInput)
 
         if userInput == "Start":
-            run_game(airport_data)
+            run_game()
         elif userInput == "Settings":
             prints.print_settings()
         elif userInput == "Instructions":

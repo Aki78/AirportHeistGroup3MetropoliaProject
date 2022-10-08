@@ -137,13 +137,13 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
     while True:
         userInput = input("Input: ")
 
-        if str(userInput) != "Stravel" and str(userInput) != "Stay":
+        if str(userInput) != "Travel" and str(userInput) != "Stay":
             print("Invalid input")
         else:
             break
 
-    if int(userInput) == "Travel":
+    if userInput == "Travel":
         #print("Waiting for new code 2", icao_code)
         return price, stamina, icao_code, new_coordinates
-    elif int(userInput) == "Stay":
+    elif userInput == "Stay":
         return 0, 0, None, (0, 0)
