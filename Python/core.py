@@ -5,13 +5,8 @@ import random
 import prints
 import decisions
 import interpol
+import gfuncs
 
-def update_player(player, price, stamina, new_icao_code, new_coordinates):
-    player[1] = new_icao_code
-    player[2] = new_coordinates
-    player[3] -= price
-    player[4] -= stamina
-    return player
 
 def run_game(airport_data):
     os.system("cls")
@@ -19,8 +14,6 @@ def run_game(airport_data):
     player = [""]   # player = ['name', 'icao_code', coordinates, budget, stamina]
     player[0] = name
     player.append("EFHK")
-
-    
 
     interpol_info = [""] #interpol = ['icao_code', coordinates]
     interpol_info[0] = "LFBD"
@@ -57,7 +50,7 @@ def run_game(airport_data):
         elif userSelection == "2":
             price, stamina, new_icao_code, new_coordinates, attempt = decisions.escape(airport_coordinates, max_flight_distance, player, attempt)
             if new_icao_code is not None:
-                player = update_player(player, price, stamina, new_icao_code, new_coordinates)
+                player = gfuncs.update_player(player, price, stamina, new_icao_code, new_coordinates)
 
         if player[3] <= 0:
             print("You run out of money")

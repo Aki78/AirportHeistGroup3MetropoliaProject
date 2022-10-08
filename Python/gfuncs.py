@@ -18,3 +18,10 @@ def get_stamina_consumptions(distance):
 def interpol_index(deg_list, coordinates):
     new_list =  helper.get_possible_flights(300, coordinates, deg_list)
     return random.choice(new_list)
+
+def update_player(player, price, stamina, new_icao_code, new_coordinates):
+    player[1] = new_icao_code
+    player[2] = new_coordinates
+    player[3] -= price
+    player[4] -= stamina
+    return player
