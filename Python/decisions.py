@@ -56,7 +56,7 @@ def money_heist(player, rate_upper, rate_lower, attempt):
             print("You lost")
             input("Press Enter to continue")
 
-            return player, True, (attempt-1)
+            return player, True, attempt
     elif userInput == "Wait":
         attempt -= 1
     if attempt == 0:
