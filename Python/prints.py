@@ -15,7 +15,7 @@ def print_instructions():
     os.system("clear")
     print("These are the instructions")
     print("-- You are limited by budget and stamina.")
-    print("-- You have to by tickets to travel.")
+    print("-- You have to buy tickets to travel.")
     print("-- In order to acquire money, you have to steal.")
     print("-- You can get caught by the interpol, but you are informed of the odds.")
     print("-- You can see in which possible cities the interpol will be, but not where they will go next.")
