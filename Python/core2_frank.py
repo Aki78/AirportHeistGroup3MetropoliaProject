@@ -21,7 +21,9 @@ def main_screen():
         if user_input == "" or int(user_input) > 5 or int(user_input) < 1:
             print("Invalid input, please select one of the following options.")
             main_screen()
-        if user_input == "2":
+        if user_input == "1":
+            print("game not created yet")
+        if user_input == "2" or user_input == "Settings":
             setting_screen()
         if user_input == "3":
             instructions()
@@ -57,7 +59,7 @@ def instructions():
     while True:
         print("Instructions")
         time.sleep(1)
-        input("1 - You are limited by budget and stamina. Press 'enter'")
+        print("1 - You are limited by budget and stamina.")
         time.sleep(1.5)
         print("2 - You have to by tickets to travel.")
         time.sleep(1.5)

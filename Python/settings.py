@@ -4,6 +4,7 @@ def mode():
     print("2- Hard")
     
     play_mode = input("Your selection: ")
+
     if play_mode == "1" or play_mode == 'Easy':
         stamina = 1000
         budget = 10000
