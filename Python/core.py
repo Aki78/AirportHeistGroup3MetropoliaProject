@@ -68,7 +68,7 @@ def run_game():
         userSelection = decisions.heist_decision()
         
         if userSelection == "Heist":
-            game_state["player"], got_caught, game_state["attempt_left "]= decisions.money_heist(game_state["player"], game_state["rate_upper"], game_state["rate_lower"],game_state["attempt_left"])
+            game_state["player"], got_caught, game_state["attempt_left "] = decisions.money_heist(game_state["player"], game_state["rate_upper"], game_state["rate_lower"],game_state["attempt_left"])
             if got_caught == True:
                 break
         elif userSelection == "Escape":
@@ -96,9 +96,7 @@ def run_game():
     return
 
 if __name__ == "__main__":
-# MAIN
     random.seed() 
-# Fetch all data from database
 
     name = input("Input name: ")
 
