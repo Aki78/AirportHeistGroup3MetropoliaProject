@@ -9,10 +9,9 @@ import gfuncs
 
 
 def init_state():
-    os.system("clear")
 
     player = [""]   # player = ['name', 'icao_code', coordinates, budget, stamina]
-    player[0] = name
+    player[0] = "Aki" # Change to name input later
     player.append("EFHK")
 
     interpol = [""] #interpol = ['icao_code', coordinates]
@@ -43,6 +42,7 @@ def init_state():
                     "max_flight_distance" : max_flight_distance,
                     "lost": lost
                   }
+    
     for i in range(len(game_state["airport_data"])):
         if game_state["airport_data"][i]["ident"] == game_state["player"][1]:
             game_state["player"].append(game_state["airport_data"][i]["deg"])
@@ -50,6 +50,7 @@ def init_state():
 
     game_state["player"].append(game_state["budget"])
     game_state["player"].append(game_state["stamina"])
+    print("Returning game state:", game_state)
 
     return game_state
 
@@ -58,9 +59,7 @@ def run_game():
     #init state
     game_state = init_state()
 
-
     while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught"]is False:
-        os.system("clear")
         
         interpol.print_interpol_position(game_state["airport_data"], game_state["interpol"])
         print("")
@@ -101,9 +100,7 @@ if __name__ == "__main__":
     random.seed() 
 # Fetch all data from database
 
-    os.system("clear")
     name = input("Input name: ")
-    os.system("clear")
 
     while True:
         userInput = prints.print_mainmenu(name)  # Print the main menu
@@ -118,6 +115,5 @@ if __name__ == "__main__":
         elif userInput == "Credits":
             prints.print_credits()
         elif userInput == "Exit":
-            os.system("clear")
             input("Press Enter to exit...")
             break

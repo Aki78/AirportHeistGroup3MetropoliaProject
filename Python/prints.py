@@ -12,7 +12,6 @@ def print_start(name):
     print("Choice> Exit")
 
 def print_instructions():
-    os.system("clear")
     print("This is the instructions")
     print("-- You are limited by budget and stamina.")
     print("-- You have to by tickets to travel.")
@@ -26,13 +25,11 @@ def print_instructions():
     return
 
 def print_settings():
-    os.system("clear")
     print("Under developments. Please come back later.")
     input("Press Enter to continue...")
     return
 
 def print_credits():
-    os.system("clear")
     print("Under developments. Please come back later.")
     input("Press Enter to continue...")
     return
@@ -52,7 +49,6 @@ def print_mainmenu(name):
     userInput = 0
 
     while True:
-        os.system("clear")
 
         print_start(name)
 

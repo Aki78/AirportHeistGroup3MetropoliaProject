@@ -22,7 +22,6 @@ def heist_decision(): #Input
     return userInput
 
 def money_heist(player, rate_upper, rate_lower, attempt):
-    os.system("clear")
     steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
     if attempt > 0:
         print("Attemps remaining:", attempt - 1)
@@ -41,7 +40,6 @@ def money_heist(player, rate_upper, rate_lower, attempt):
             break
 
     if userInput == "Steal":
-        os.system("clear")
         stolen_money = gfuncs.theft_success_earnings_gauss()
         print("Got", stolen_money, "€")
 
@@ -59,7 +57,6 @@ def money_heist(player, rate_upper, rate_lower, attempt):
             return player, True, attempt
 
         if userInput == "Steal":
-            os.system("clear")
             stolen_money = gfuncs.theft_success_earnings_gauss()
             print("Got", stolen_money, "€")
 
@@ -85,7 +82,6 @@ def money_heist(player, rate_upper, rate_lower, attempt):
 
 def escape(airport_coordinates, max_flight_distance, player,attempt):
     attempt = 5
-    os.system("clear")
 
     airport_coordinates = []
     possible_flights_name = []
@@ -126,7 +122,6 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
             selection = int(userInput) - 1
             break
 
-    os.system("clear")
     price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
     print("Travel")

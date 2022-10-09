@@ -8,6 +8,6 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	print(randi()%255)
+
 	color.r = rand_range(0.5,0.8)
-	print(color.r)
+
