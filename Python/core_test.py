@@ -59,8 +59,7 @@ def run_game():
     #init state
     game_state = init_state()
 
-    while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught"] is False:
-        os.system("cls")
+    while game_state["lost"] is False and game_state["got_caught"] is False:
         interpol_possible_move_code, interpol_possible_move_deg = interpol.interpol_position_and_movement(game_state["airport_data"], game_state["interpol_data"])
         print("")
         prints.print_player_position(game_state["airport_data"], game_state["player"])
@@ -90,7 +89,6 @@ def run_game():
             break
         
         game_state["interpol_data"] = interpol.update(interpol_possible_move_code, interpol_possible_move_deg, game_state["interpol_data"])   
-        
         
         if game_state["player"][1] == game_state["interpol_data"][0]:
             #send lost signal
