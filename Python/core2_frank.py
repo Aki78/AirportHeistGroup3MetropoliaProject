@@ -21,7 +21,9 @@ def main_screen():
         if user_input == "" or int(user_input) > 5 or int(user_input) < 1:
             print("Invalid input, please select one of the following options.")
             main_screen()
-        if user_input == "2":
+        if user_input == "1":
+            print("game not created yet")
+        if user_input == "2" or user_input == "Settings":
             setting_screen()
         if user_input == "3":
             instructions()
@@ -57,27 +59,18 @@ def instructions():
     while True:
         print("Instructions")
         time.sleep(1)
-        input("1 - You are limited by budget and stamina. Press 'enter'")
-        time.sleep(1.5)
-        print("2 - You have to by tickets to travel.")
-        time.sleep(1.5)
-        print("3 - In order to acquire money, you have to steal.")
-        time.sleep(1.5)
-        print("4 - You can get caught by the interpol, but you are informed about the odds.")
-        time.sleep(1.5)
-        print("5 - You can see in which possible cities the interpol will be, but not where they will go next.")
-        time.sleep(1.5)
-        print("6 - You are restricted to airports with-in a certain distance.")
-        time.sleep(1.5)
-        print("7 - You will lose if you go under stamina or budget.")
-        time.sleep(1.5)
+        input("1 - You are limited by budget and stamina. Press Enter to continue...")
+        input("2 - You have to buy tickets to travel. Press Enter to continue...")
+        input("3 - In order to acquire money, you have to steal. Press Enter to continue...")
+        input("4 - You can get caught by the interpol, but you are informed about the odds. Press Enter to continue...")
+        input("5 - You can see in which possible cities the interpol will be, but not where they will go next. Press Enter to continue...")
+        input("6 - You are restricted to airports with-in a certain distance. Press Enter to continue...")
+        input("7 - You will lose if you go under stamina or budget. Press Enter to continue...")
 
-        input("Press Enter to continue...")
-
-        instructions_input = str(input("Press 'Enter' to return to the main menu:"))
+        instructions_input = str(input("Press 'Enter' to return to the main menu: "))
 
         if instructions_input == None:
-            print("Unknown input, please try again.")
+           main_screen()
         else:
             main_screen()
         return

@@ -14,9 +14,9 @@ def print_start(name):
 def print_instructions():
     print("This is the instructions")
     print("-- You are limited by budget and stamina.")
-    print("-- You have to by tickets to travel.")
+    print("-- You have to buy tickets to travel.")
     print("-- In order to acquire money, you have to steal.")
-    print("-- You can get caught by the interpol, but you are informed about the odds.")
+    print("-- You can get caught by the interpol, but you are informed of the odds.")
     print("-- You can see in which possible cities the interpol will be, but not where they will go next.")
     print("-- You are restricted to airports with-in a certain distance.")
     print("-- You will lose if you go under stamina or budget.")
