@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <img src=![](hud.gif)>
+    <img src="./hud.gif">
 </p>
 
 
