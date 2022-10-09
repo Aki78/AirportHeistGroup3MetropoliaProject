@@ -1,7 +1,7 @@
 # Airport Heist
 <p align="center">
 
-![](hud2.gif)
+![](hud.gif)
 
 </p>
 
