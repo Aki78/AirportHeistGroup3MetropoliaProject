@@ -87,6 +87,9 @@ Where they travel to is limited by budget and distance.
 The success of a robbery is mostly down to luck.
 
 ## Quality Requirements
+The visual for the user experience must be pleasing, motion must be smooth. Loading time must not excede more than a couple seconds on a typical 
+laptop computer, and freezes must not occur. The game must run on at least 30 fps. The final product must be accesible online.
+
 Chapter 4 defines other requirements besides the functional requirements the flight simulator has. 
 Examples of these could be performance requirements 
 ("Fetching airport information from the database must take a maximum of two seconds.") 
