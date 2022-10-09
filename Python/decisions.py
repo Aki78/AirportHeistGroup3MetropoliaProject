@@ -72,7 +72,7 @@ def money_heist(player, rate_upper, rate_lower, attempt):
     return player, False, attempt
 
 
-def escape(airport_coordinates, max_flight_distance, player, attempt):
+def escape(airport_data, airport_coordinates, max_flight_distance, player, attempt):
     attempt = 5
 
     airport_coordinates = []
@@ -87,7 +87,7 @@ def escape(airport_coordinates, max_flight_distance, player, attempt):
     possible_flights_name = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
 
     # Check amount of possible airports (for later use)
-    amount_of_possible_flights = helper.print_possible_flights(possible_flights_name, airport_coordinates)
+    amount_of_possible_flights = helper.print_possible_flights(airport_data, possible_flights_name, airport_coordinates)
 
     # Player choose the airport and return the icao code of destination
     price, stamina, new_icao_code, new_coordinates = player_airport_selection(possible_flights_name,

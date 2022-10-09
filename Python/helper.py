@@ -40,12 +40,17 @@ def get_possible_flights(max_flight_distance, player_coordinates, deg_list):
 
     return possible_airport_name_list
 
-def print_possible_flights(name, coordinates):
+def print_possible_flights(airport_data, name, coordinates):
     selection = 1
+
     for i in name:
-        print(selection, "- ", i, end = '')
+        print(selection, "- ", i)
+
+        for j in range(len(airport_data)):
+            if airport_data[j]["name"] == i:
+                print("     Country: ",airport_data[j]["country"])
+        
         selection += 1
-        print("")
       
     return selection
 

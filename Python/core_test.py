@@ -14,9 +14,9 @@ def init_state():
     player[0] = "Aki" # Change to name input later
     player.append("EFHK")
 
-    interpol = [""] #interpol = ['icao_code', coordinates]
-    interpol[0] = "LFBD"
-    interpol.append((44.8283, -0.715556))
+    interpol_data = [""] #interpol_data = ['icao_code', coordinates]
+    interpol_data[0] = "LFBD"
+    interpol_data.append((44.8283, -0.715556))
     
     attempt_left = 5
     got_caught = False
@@ -29,18 +29,18 @@ def init_state():
 
 
     game_state = {
-                    "airport_data":airport_data,
-                    "player":player,
-                    "interpol":interpol,
-                    "got_caught":got_caught,
-                    "attempt_left": attempt_left,
+                    "airport_data" : airport_data,
+                    "player" : player,
+                    "interpol_data" : interpol_data,
+                    "got_caught" : got_caught,
+                    "attempt_left" : attempt_left,
                     "airport_coordinates" : airport_coordinates,
                     "stamina" : stamina,
                     "budget" : budget,
                     "rate_upper" : rate_upper,
                     "rate_lower" : rate_lower,
                     "max_flight_distance" : max_flight_distance,
-                    "lost": lost
+                    "lost" : lost
                   }
     
     for i in range(len(game_state["airport_data"])):
@@ -60,8 +60,8 @@ def run_game():
     game_state = init_state()
 
     while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught"] is False:
-        
-        interpol.print_interpol_position(game_state["airport_data"], game_state["interpol"])
+        os.system("cls")
+        interpol_possible_move_code, interpol_possible_move_deg = interpol.interpol_position_and_movement(game_state["airport_data"], game_state["interpol_data"])
         print("")
         prints.print_player_position(game_state["airport_data"], game_state["player"])
 
@@ -72,7 +72,7 @@ def run_game():
             if got_caught == True:
                 break
         elif userSelection == "Escape":
-            price, stamina, new_icao_code, new_coordinates, game_state["attempt_left"] = decisions.escape(game_state["airport_coordinates"], game_state["max_flight_distance"], game_state["player"], game_state["attempt_left"])
+            price, stamina, new_icao_code, new_coordinates, game_state["attempt_left"] = decisions.escape(game_state["airport_data"], game_state["airport_coordinates"], game_state["max_flight_distance"], game_state["player"], game_state["attempt_left"])
             if new_icao_code is not None:
                 game_state["player"] = gfuncs.update_player(game_state["player"], price, stamina, new_icao_code, new_coordinates)
 
@@ -89,7 +89,15 @@ def run_game():
             print("You lost")
             break
         
-        game_state["interpol_position"] = interpol.movement()    
+        game_state["interpol_data"] = interpol.update(interpol_possible_move_code, interpol_possible_move_deg, game_state["interpol_data"])   
+        
+        
+        if game_state["player"][1] == game_state["interpol_data"][0]:
+            #send lost signal
+            game_state["lost"] = True
+            print("You got caught")
+            print("You lost")
+
 
     input("Press Enter to continue...")
 
