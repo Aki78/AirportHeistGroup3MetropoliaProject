@@ -11,11 +11,11 @@ def interpol_position_and_movement(airport_data, interpol_data):
     for i in range(len(airport_data)):
         if airport_data[i]["ident"] == interpol_data[0]:
             print("The interpol is now at", airport_data[i]["country"])
-            print("Watch out for them")
+            print("Watch out for them!")
 
     interpol_position_name_list = helper.get_possible_flights(1000, interpol_data[1], airport_coordinates)
     
-    print("Their possible next destination")
+    print("Their possible next destination:")
     
     for i in range(len(airport_data)):
         for name in interpol_position_name_list:

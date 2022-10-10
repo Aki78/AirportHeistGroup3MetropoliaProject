@@ -19,8 +19,8 @@ def mode():
     #return stamina, budget, rate_up, rate_down, travel_distance
 
 def heist_decision(): #Input
-    print("Choice> Heist")
-    print("Choice> Escape")
+    print("- Heist")
+    print("- Escape")
     print("")
 
     while True:
@@ -62,6 +62,7 @@ def money_heist(player, rate_upper, rate_lower, attempt):
                 print("You got caught")
                 print("You lost")
                 input("Press Enter to continue")
+                
                 return player, True, attempt
         elif userInput == "Wait":
             attempt -= 1
@@ -117,8 +118,9 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
 
     price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
-    print("Travel")
-    print("Stay")
+    print("Do you want to travel?")
+    print("- Travel")
+    print("- Stay")
     print("")
 
     # Input decision (also fix later)

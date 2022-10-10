@@ -136,7 +136,7 @@ if __name__ == "__main__":
     random.seed() 
 
     name = input("Input name: ")
-
+            
     while True:
         userInput = prints.print_mainmenu(name)  # Print the main menu
         print(userInput)
