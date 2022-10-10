@@ -43,6 +43,7 @@ def init_state():
                     "max_flight_distance": max_flight_distance,
                     "lost": lost
                   }
+                  
     
     for i in range(len(game_state["airport_data"])):
         if game_state["airport_data"][i]["ident"] == game_state["player"][1]:
