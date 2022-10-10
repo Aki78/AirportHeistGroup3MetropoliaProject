@@ -2,36 +2,43 @@ import os
 
 
 def print_start(name):
-    print("Welcome to flight game")
     print("Hello, " + str(name) + "!")
-
-    print("Choice> Start")
-    print("Choice> Settings")
-    print("Choice> Instructions")
-    print("Choice> Credits")
-    print("Choice> Exit")
+    print("Welcome to flight game!")
+    print("")
+    print("-> Start")
+    print("-> Settings")
+    print("-> Instructions")
+    print("-> Credits")
+    print("-> Exit")
 
 def print_instructions():
-    print("This is the instructions")
+    print("This is the instructions:")
     print("-- You are limited by budget and stamina.")
     print("-- You have to buy tickets to travel.")
     print("-- In order to acquire money, you have to steal.")
-    print("-- You can get caught by the interpol, but you are informed of the odds.")
-    print("-- You can see in which possible cities the interpol will be, but not where they will go next.")
+    print("-- you can get caught by the interpol and lose the game.")
+    print("-- You will be informed of the interpol's possible destination")
     print("-- You are restricted to airports with-in a certain distance.")
     print("-- You will lose if you go under stamina or budget.")
 
-    input("Press Enter to continue...")
+    input("Press Enter to go back...")
     return
 
 def print_settings():
     print("Under developments. Please come back later.")
-    input("Press Enter to continue...")
+    input("Press Enter to go back...")
     return
 
 def print_credits():
-    print("Under developments. Please come back later.")
-    input("Press Enter to continue...")
+    print("The master mindes behind this game are:")
+    print("-> Aki")
+    print("-> Frank")
+    print("-> Khai")
+    print("-> Kiana")
+    print("These people all had to escape from prison at some point in their lives,")
+    print("So they have gathered around and made their experinces into a game.")
+    print("You can use this game to prepare for in real life situations.")
+    input("Press Enter to go back...")
     return
 
 def print_player_position(airport_data, player):
@@ -60,10 +67,16 @@ def print_mainmenu(name):
         else:
             return str(userInput)
 
-def steal_rate_and_decision(steal_rate):
-    print("Your are about to steal more money")
-    print("Successful stealing rate: ", steal_rate * 100, "%")
-    print("Choice> Steal")
-    print("Choice> Later")
+def steal_rate_and_decision(steal_rate, attempt):
+    if attempt > 1:
+            print("Attempts remaining:", attempt - 1)
+            print("Your are about to steal more money")
+    elif attempt == 1:
+        print("Last attempt")
+        print("You have to steal or you will get caught the next time")
+        
+    print("Successful stealing rate: " + str(round(steal_rate * 100)) + "%")
+    print("-> Steal")
+    print("-> Wait")
     print("")
-    
+    return

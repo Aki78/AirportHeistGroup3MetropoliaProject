@@ -3,6 +3,7 @@ import database
 import os
 import helper
 import gfuncs
+import prints
 
 def mode():
     print("Please select the game's mode:")
@@ -12,14 +13,14 @@ def mode():
     play_mode = input("Your selection: ")
 
     if play_mode == "1" or play_mode == "Easy":
-        return 1000, 10000, 1.0, 0, 1000
+        return 5000, 10000, 1.0, 0, 1000
     elif play_mode == "2" or play_mode == "Hard":
-        return 700, 5000, 0.75, 0.25, 800
+        return 2500, 5000, 0.75, 0.25, 800
     #return stamina, budget, rate_up, rate_down, travel_distance
 
 def heist_decision(): #Input
-    print("Choice> Heist")
-    print("Choice> Escape")
+    print("- Heist")
+    print("- Escape")
     print("")
 
     while True:
@@ -36,18 +37,7 @@ def heist_decision(): #Input
 def money_heist(player, rate_upper, rate_lower, attempt):
     steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
     if attempt > 0:
-        if attempt > 1:
-            print("Attempts remaining:", attempt - 1)
-            print("Your are about to steal more money")
-        elif attempt == 1:
-            print("Last attempt")
-            print("You have to steal or you will get caught the next time")
-        
-        
-        print("Successful stealing rate: " + str(round(steal_rate * 100)) + "%")
-        print("Choice> Steal")
-        print("Choice> Wait")
-        print("")
+        prints.steal_rate_and_decision(steal_rate, attempt)
 
         while True:
             userInput = input("Input: ")
@@ -72,12 +62,13 @@ def money_heist(player, rate_upper, rate_lower, attempt):
                 print("You got caught")
                 print("You lost")
                 input("Press Enter to continue")
+                
                 return player, True, attempt
         elif userInput == "Wait":
             attempt -= 1
     
     elif attempt == 0:
-        print("You got caught!")
+        print("You got caught by the local police")
         got_caught = True
         return player, got_caught, attempt
     
@@ -85,7 +76,6 @@ def money_heist(player, rate_upper, rate_lower, attempt):
 
 
 def escape(airport_data, airport_coordinates, max_flight_distance, player, attempt):
-    attempt = 5
 
     airport_coordinates = []
     possible_flights_name = []
@@ -108,9 +98,9 @@ def escape(airport_data, airport_coordinates, max_flight_distance, player, attem
 
     if new_icao_code is not None:
         #print("Waiting for new code 1", new_icao_code)
-        return price, stamina, new_icao_code, new_coordinates, attempt
+        return price, stamina, new_icao_code, new_coordinates, 5
     else:
-        return 0, 0, None, (0, 0), 5
+        return 0, 0, None, (0, 0), attempt
 
 
 def player_airport_selection(name_list, coordinates, player_coordinates, amount_of_possible_flights):
@@ -128,8 +118,9 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
 
     price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
-    print("Travel")
-    print("Stay")
+    print("Do you want to travel?")
+    print("- Travel")
+    print("- Stay")
     print("")
 
     # Input decision (also fix later)
