@@ -39,7 +39,7 @@ Due to your expert skills you are able to steal 10,000€ from the Alepa at Hels
 The police, however, have been alerted of your activities and are hot on your tail.
 Time to make your next move before interpol gets you!
 
-You must make it to the final destination airport before you stamina runs out! Travel is resticted to
+You must make it to the final destination airport before your stamina runs out! 
 There you have a hired escape crew who can get you beyond interpol's reach.
 
 ### Setting
@@ -63,15 +63,15 @@ depending on the game's difficulty selected.
 #### Travel
 
 Travel is possible with the purchase of a flight ticket.
-Players are also restricted to airports with-in a certain distance, which is dependent on the game difficulty selected.
-Players a shown  list of countries with-in their range.
+Players are also restricted to airports with-in a certain distance from their current location. This is dependent on the game's difficulty selected.
+Players are shown a list of countries with-in their travel range.
 
 #### Evading Capture
 
 Players can see in which city interpol is but not exactly where interpol will go next.
-Players will see a choice of 3 possible airports interpol will be in next.
+Players will see a choice possible airports interpol will be at next.
 Interpol moves from airport to airport at random. 
-Players are limited by their budget and stamina but can steal money to survive.
+Players are limited by their budget and stamina but can steal money if the need more.
 Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
 
 As the game progresses the player take chances by stealing money to increase their wealth
