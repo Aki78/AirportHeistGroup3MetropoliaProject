@@ -1,5 +1,4 @@
 import os
-import settings
 import database
 import random
 import prints
@@ -26,10 +25,9 @@ def init_state():
     stamina, budget, rate_upper, rate_lower, max_flight_distance = decisions.mode()
     print(budget)
     print(stamina)
-    
+
     airport_data = database.get_datalist()
     lost = False
-
 
     game_state = {
                     "airport_data" : airport_data,
@@ -70,11 +68,18 @@ def run_game():
         userSelection = decisions.heist_decision()
         
         if userSelection == "Heist":
-            game_state["player"], got_caught, game_state["attempt_left"] = decisions.money_heist(game_state["player"], game_state["rate_upper"], game_state["rate_lower"],game_state["attempt_left"])
+            game_state["player"], got_caught, game_state["attempt_left"] = decisions.money_heist(game_state["player"], 
+                                                                                                    game_state["rate_upper"], 
+                                                                                                    game_state["rate_lower"],
+                                                                                                    game_state["attempt_left"])
             if got_caught == True:
                 break
         elif userSelection == "Escape":
-            price, stamina, new_icao_code, new_coordinates, game_state["attempt_left"] = decisions.escape(game_state["airport_data"], game_state["airport_coordinates"], game_state["max_flight_distance"], game_state["player"], game_state["attempt_left"])
+            price, stamina, new_icao_code, new_coordinates, game_state["attempt_left"] = decisions.escape(game_state["airport_data"], 
+                                                                                                            game_state["airport_coordinates"], 
+                                                                                                            game_state["max_flight_distance"], 
+                                                                                                            game_state["player"], 
+                                                                                                            game_state["attempt_left"])
             if new_icao_code is not None:
                 game_state["player"] = gfuncs.update_player(game_state["player"], price, stamina, new_icao_code, new_coordinates)
 

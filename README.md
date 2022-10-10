@@ -95,6 +95,8 @@ The success of a robbery is mostly down to luck.
     <img src="./project_diagram.svg">
 </p>
 
+[Back to top](#airport-heist)
+
 ## Quality Requirements
 The visual for the user experience must be pleasing, motion must be smooth. Loading time must not excede more than a couple seconds on a typical 
 laptop computer, and freezes must not occur. The game must run on at least 30 fps. The final product must be accesible online.
@@ -145,6 +147,8 @@ This removed a lot of unnecessary information and made calling upon the database
     -A function that uses distance to calculate the cost of a flight
     -Stamina consumed function
 
+    [Back to top](#airport-heist)
+
 
 ## Learning Tools And information
 ### Run
@@ -164,7 +168,7 @@ Make sure the sql database name and table names match exactly.
 ### Useful Git Commands
 
 ```bash
-git pull (saves to github)
+git pull (saves from github)
 
 git add . (all files)
 git commit -m "discription of changes" (add your changes to local git history)
@@ -218,3 +222,4 @@ python3 filename.py		  runs python program that is in the file in your terminal 
 
 grep -r [expression]              finds the file where the expression exists
 ```
+[Back to top](#airport-heist)
