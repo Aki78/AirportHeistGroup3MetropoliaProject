@@ -87,8 +87,10 @@ and then making strategic moves to avoid arrest.
 
 
 The user is able to do two things: 
+
     -choose where they travel to
     -if they wish to rob the airport they are currently in.
+
 Where they travel to is limited by budget and distance.
 The success of a robbery is mostly down to luck.
 Listed below are all the funtctions that were created for the game:
@@ -147,18 +149,6 @@ Listed below are all the funtctions that were created for the game:
     -test_get_distances
 
     [Back to top](#airport-heist)
-Chapter 3 (Functional requirements) discusses everything the user can do with the game. 
-The functional requirements are typically presented as user stories with a role (who), 
-action (what), and benefit (why). 
-An example of a user story would be "As a player I can choose the next airport from the cities showing on the map, 
-so that my electric airplane will move there.". 
-The example user story contains a role (player), an action (selecting the next city) 
-and a benefit the user can gain by completing the action (moving to the new location). 
-There are enough user stories when they together describe all functionality of the game. 
-For the flight simulator this probably means dozens of user stories. 
-Each user story must be unambiguous and concrete. 
-It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
-
 
 
 <p align="center">
@@ -176,6 +166,7 @@ All functions created were ran through pytest to ensure proper working order.
 We also created a new database from the existing one. 
 This removed a lot of unnecessary information and made calling upon the database faster.
 
+[Back to top](#airport-heist)
 
 ## Learning Tools And information
 ### Run
