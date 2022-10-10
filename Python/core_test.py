@@ -20,14 +20,13 @@ def init_state():
 
     airport_data = database.get_datalist()
     
+    airport_coordinates = []
     attempt_left = 5
     got_caught = False
     lost = False
 
     destination_code, destination_country = helper.chooose_destination(airport_data) 
     destination_reached = False
-
-    airport_coordinates = []
 
     stamina, budget, rate_upper, rate_lower, max_flight_distance = decisions.mode()
     print(budget)
@@ -117,7 +116,6 @@ def run_game():
             print("You won")
             break
             
-
         game_state["interpol_data"] = interpol.update(interpol_possible_move_code, interpol_possible_move_deg, game_state["interpol_data"])   
         
         if game_state["player"][1] == game_state["interpol_data"][0]:
@@ -125,10 +123,6 @@ def run_game():
             game_state["lost"] = True
             print("Interpol caught you")
             print("You lost")
-
-    
-
-    input("Press Enter to continue...")
 
     return
 

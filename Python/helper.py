@@ -29,7 +29,6 @@ def get_distances(deg1, deg2):
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
     distance = R * c
 
-
     return distance
 
 def get_possible_flights(max_flight_distance, player_coordinates, deg_list):
@@ -42,6 +41,8 @@ def get_possible_flights(max_flight_distance, player_coordinates, deg_list):
     return possible_airport_name_list
 
 def chooose_destination(airport_data):
+    random.seed()
+
     destination_list = ["GCFV", "LPFR", "LMML"]
 
     d_code = random.choice(destination_list)
