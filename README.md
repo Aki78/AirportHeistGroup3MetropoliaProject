@@ -19,7 +19,6 @@
 
 [Learning Tools And Information](#learning-tools-and-information)
 
-
 ## Introduction
 This document specifies the design for the gameplay of Airport Heist.
 The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni.
@@ -39,15 +38,12 @@ Due to your expert skills you are able to steal 10,000€ from the Alepa at Hels
 The police, however, have been alerted of your activities and are hot on your tail.
 Time to make your next move before interpol gets you!
 
-You must make it to the final destination airport before your stamina runs out! 
-There you have a hired escape crew who can get you beyond interpol's reach.
-
 ### Setting
-Airport Heist is set in present day Europe.
+Airport Heist is set in present-day Europe.
 
 ## Functional Requirements
 ### How the game works
-Airport Heist is a single player game, where the main character aims to make it to the final destination airport, before their stamina runs out or they are captured.
+Airport Heist is a single player game, where the main character aims to make it to the final destination airport, before they are captured or their stamina or money runs out.
 
 #### Travel
 
