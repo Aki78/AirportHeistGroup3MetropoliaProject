@@ -61,7 +61,7 @@ def print_mainmenu(name):
 
         userInput = input("Input: ")
 
-        if userInput not in  ["Start", "Settings", "Instructions", "Credits", "Exist"] :
+        if userInput not in  ["Start", "Settings", "Instructions", "Credits", "Exit"] :
             print("Invalid input")
             input("Press Enter to continue...")
         else:
