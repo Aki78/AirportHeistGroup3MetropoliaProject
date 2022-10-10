@@ -1,4 +1,4 @@
-load data local infile '../eu_airports_3rd_attempt.csv'
+load data local infile './eu_airports_3rd_attempt.csv'
 into table eu_airports
 character set utf8
 fields terminated by ','
