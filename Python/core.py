@@ -29,17 +29,17 @@ def init_state():
 
 
     game_state = {
-                    "airport_data":airport_data,
-                    "player":player,
-                    "interpol":interpol,
-                    "got_caught":got_caught,
+                    "airport_data": airport_data,
+                    "player": player,
+                    "interpol": interpol,
+                    "got_caught": got_caught,
                     "attempt_left": attempt_left,
-                    "airport_coordinates" : airport_coordinates,
-                    "stamina" : stamina,
-                    "budget" : budget,
-                    "rate_upper" : rate_upper,
-                    "rate_lower" : rate_lower,
-                    "max_flight_distance" : max_flight_distance,
+                    "airport_coordinates": airport_coordinates,
+                    "stamina": stamina,
+                    "budget": budget,
+                    "rate_upper": rate_upper,
+                    "rate_lower": rate_lower,
+                    "max_flight_distance": max_flight_distance,
                     "lost": lost
                   }
     
@@ -59,7 +59,7 @@ def run_game():
     #init state
     game_state = init_state()
 
-    while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught"]is False:
+    while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught"] is False:
         
         interpol.print_interpol_position(game_state["airport_data"], game_state["interpol"])
         print("")
@@ -89,7 +89,7 @@ def run_game():
             print("You lost")
             break
         
-        game_state["interpol_position "]= interpol.movement()    
+        game_state["interpol_position "] = interpol.movement()
 
     input("Press Enter to continue...")
 
