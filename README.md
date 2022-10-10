@@ -7,11 +7,16 @@
 
 
 ## Contents
-    -Introduction [## Introduction](README.md:## Introduction)
-    -Vision
-    -Story
-    -Functional Requirements
-    -Learning Tools And Information
+[Introduction](#introduction)
+
+[Vision](#vision)
+
+[Story](#story)
+
+[Functional Requirements](#functional-requirements)
+
+[Learning Tools And Information](#learning-tools-and-information)
+
 
 ## Introduction
 This document specifies the design for the gameplay of Airport Heist.
