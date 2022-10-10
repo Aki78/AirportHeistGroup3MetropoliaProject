@@ -15,6 +15,8 @@
 
 [Functional Requirements](#functional-requirements)
 
+[Quality Requirements](#quality_requirements)
+
 [Learning Tools And Information](#learning-tools-and-information)
 
 
@@ -72,7 +74,9 @@ As the game progresses the player take chances by stealing money to increase the
 and then making strategic moves to avoid arrest.
 
 
-Insert picture here
+<p align="center">
+    <img src="./block_diagram2.png">
+</p>
 
 
 
