@@ -111,41 +111,59 @@ We also created a new database from the existing one.
 This removed a lot of unnecessary information and made calling upon the database faster.
 
 
-### Core Functions
-    -Main menu
-    -Settings
-    -Instructions
-    -Credits
-    -Decision to steal or escape
-    -Print player position
-    -Money heist
-    -Escape
-    -Player airport selection
-    -Update player information
-    -Run game
+### core_test Functions
+    -init_state
+    -run_game
 
 ### Helper Functions
-    -Convert feet to meters
-    -Convert meters to kilometers
-    -Get the distance between two lat and long co-ordinates
-    -Returns all the possible flights from a given airport
-    -print possible flights
-    -print flight details
-    -Convert lat and long degrees to x and y co-ordinates
-    -Compares all airport against each other, then shows a max and min distance
+    -feet_to_meters
+    -meters_to_kilometers
+    -get_distances
+    -get_possible_flights
+    -print_possible_flights
+    -print_flight_details
+    -deg_to_xy
+    -get_min_max_distance
 
 ### Database Functions
-    -Get new co-ordinates of one airport
-    -Get data about one airport
-    -Get airport name
-    -Get co-ordinates of current airport
-    -Take data from database and put into list
+    -get_new_coordinates
+    -get_geo_sirport_info
+    -get_airport_name
+    -get_coordinates
+    -get_datalist
 
-### Other Game Functions
-    -Uses Gauss theory to predict theft success earnings
-    -Random generator to determine if the theft is successful
-    -A function that uses distance to calculate the cost of a flight
-    -Stamina consumed function
+### Decisions
+    -mode
+    -heist_decision
+    -money_heist
+    -escape
+    -player_airport_selection
+
+### Game Functions
+    -theft_success_earnings_gauss
+    -theft_success_rate
+    -get_ticket_price
+    -get_stamina_consumptions
+    -interpol_index
+    -update_player
+
+### Interpol
+    -interpol_position_and_movement
+    -update
+
+### Prints
+    -print_start
+    -print_instructions
+    -print_settings
+    -print_credits
+    -print_player_position
+    -print_mainmenu
+    -steal_rate_and_decision(the be changed)
+
+### Tests
+    -test_feet_to_meters
+    -test_meters_to_km
+    -test_get_distances
 
     [Back to top](#airport-heist)
 
