@@ -86,5 +86,3 @@ def get_min_max_distance(airport_list):
                 my_minimum = get_distances(airport_list[i], airport_list[j])
 
     return (my_maximum, my_minimum)
-
-
