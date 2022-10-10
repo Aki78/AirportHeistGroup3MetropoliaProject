@@ -10,11 +10,20 @@ func _ready():
 	
 	randomize()
 	CameraScript.my_ease_in(self)
-	for i in range(5):
+	for i in range(35):
 		var airport = AirportScene.instance()
-		airport.rect_position.x =  rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][0] 
-		airport.rect_position.y = rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][1]
-#		var name = Http.airport_info[i]["Name"]
+		print("This is airport data",Http.game_state["airport_data"][i]["deg"])
+#		airport.rect_position.x = -2500 + 51*Http.game_state["airport_data"][i]["deg"][0] #  rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][0] 
+#		airport.rect_position.y = 300-0.63*51*Http.game_state["airport_data"][i]["deg"][1] # rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][1]
+#		airport.position.x = -350 + 35*Http.game_state["airport_data"][i]["deg"][1] #  rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][0] 
+#		airport.position.y = 2850- 55*Http.game_state["airport_data"][i]["deg"][0] # rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][1]
+		airport.position.x =Http.game_state["airport_data"][i]["deg"][1] #  rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][0] 
+		airport.position.y = Http.game_state["airport_data"][i]["deg"][0] # rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][1]
+
+		var name = Http.game_state["airport_data"][i]["name"]
+		airport.get_node("InfoBox").get_node("AirportName").text = name
+		print(name)
+		print(airport.position.y)
 #		var distance = Http.airport_info[i]["Distance"]
 #		var price = Http.airport_info[i]["Price"]
 #		var co2 = Http.airport_info[i]["CO2"]
@@ -25,7 +34,7 @@ func _ready():
 		else:
 			airport.modulate.r = 255
 			airport.modulate.a = 0.3
-		airport.init(i)
+		airport.get_node("Airport").init(i)
 		add_child(airport)
 
 
