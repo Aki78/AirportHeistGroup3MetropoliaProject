@@ -1,4 +1,5 @@
 import os
+import helper
 import database
 import random
 import prints
@@ -16,18 +17,21 @@ def init_state():
     interpol_data = [""] #interpol_data = ['icao_code', coordinates]
     interpol_data[0] = "LFBD"
     interpol_data.append((44.8283, -0.715556))
+
+    airport_data = database.get_datalist()
     
     attempt_left = 5
     got_caught = False
+    lost = False
+
+    destination_code, destination_country = helper.chooose_destination(airport_data) 
+    destination_reached = False
 
     airport_coordinates = []
 
     stamina, budget, rate_upper, rate_lower, max_flight_distance = decisions.mode()
     print(budget)
     print(stamina)
-
-    airport_data = database.get_datalist()
-    lost = False
 
     game_state = {
                     "airport_data" : airport_data,
@@ -41,7 +45,10 @@ def init_state():
                     "rate_upper" : rate_upper,
                     "rate_lower" : rate_lower,
                     "max_flight_distance" : max_flight_distance,
-                    "lost" : lost
+                    "lost" : lost,
+                    "destination_code" : destination_code,
+                    "destination_country" : destination_country,
+                    "destination_reached" : destination_reached
                   }
     
     for i in range(len(game_state["airport_data"])):
@@ -51,7 +58,8 @@ def init_state():
 
     game_state["player"].append(game_state["budget"])
     game_state["player"].append(game_state["stamina"])
-    print("Returning game state:", game_state)
+    
+    #print("Returning game state:", game_state)
 
     return game_state
 
@@ -60,10 +68,15 @@ def run_game():
     #init state
     game_state = init_state()
 
-    while game_state["lost"] is False and game_state["got_caught"] is False:
+    while game_state["lost"] is False and game_state["got_caught"] is False and game_state["destination_reached"] is False:
+        #Print interpol position
         interpol_possible_move_code, interpol_possible_move_deg = interpol.interpol_position_and_movement(  game_state["airport_data"], 
                                                                                                             game_state["interpol_data"])
         print("")
+        
+        #Print destination country
+        print("Your destination is", game_state["destination_country"])
+
         prints.print_player_position(game_state["airport_data"], game_state["player"])
 
         userSelection = decisions.heist_decision()
@@ -97,6 +110,14 @@ def run_game():
             print("You lost")
             break
         
+        if game_state["destination_code"] == game_state["player"][1]:
+            #send won signal
+            game_state["destination_reached"] = True 
+            print("You reached the destination without getting captured")
+            print("You won")
+            break
+            
+
         game_state["interpol_data"] = interpol.update(interpol_possible_move_code, interpol_possible_move_deg, game_state["interpol_data"])   
         
         if game_state["player"][1] == game_state["interpol_data"][0]:
@@ -104,6 +125,8 @@ def run_game():
             game_state["lost"] = True
             print("Interpol caught you")
             print("You lost")
+
+    
 
     input("Press Enter to continue...")
 

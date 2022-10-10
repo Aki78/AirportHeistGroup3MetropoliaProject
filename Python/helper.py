@@ -1,3 +1,4 @@
+import random
 import database
 import gfuncs
 from math import sin, cos, sqrt, atan2, degrees
@@ -39,6 +40,17 @@ def get_possible_flights(max_flight_distance, player_coordinates, deg_list):
             possible_airport_name_list.append(database.get_airport_name(new_coordinates))
 
     return possible_airport_name_list
+
+def chooose_destination(airport_data):
+    destination_list = ["GCFV", "LPFR", "LMML"]
+
+    d_code = random.choice(destination_list)
+    
+    for i in range(len(airport_data)):
+        if airport_data[i]["ident"] == d_code:
+            d_country = airport_data[i]["country"]
+
+    return d_code, d_country
 
 def print_possible_flights(airport_data, name, coordinates):
     selection = 1
