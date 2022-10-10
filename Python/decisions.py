@@ -83,9 +83,9 @@ def money_heist(player, rate_upper, rate_lower, attempt):
     
     return player, False, attempt
 
-def escape(airport_coordinates, max_flight_distance, player,attempt):
+
+def escape(airport_data, airport_coordinates, max_flight_distance, player, attempt):
     attempt = 5
-    os.system("clear")
 
     airport_coordinates = []
     possible_flights_name = []
@@ -99,18 +99,18 @@ def escape(airport_coordinates, max_flight_distance, player,attempt):
     possible_flights_name = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)
 
     # Check amount of possible airports (for later use)
-    amount_of_possible_flights = helper.print_possible_flights(possible_flights_name, airport_coordinates)
+    amount_of_possible_flights = helper.print_possible_flights(airport_data, possible_flights_name, airport_coordinates)
 
     # Player choose the airport and return the icao code of destination
     price, stamina, new_icao_code, new_coordinates = player_airport_selection(possible_flights_name,
-                                                                            airport_coordinates, player[2],
+                                                                                airport_coordinates, player[2],
                                                                                 amount_of_possible_flights)
 
     if new_icao_code is not None:
         #print("Waiting for new code 1", new_icao_code)
         return price, stamina, new_icao_code, new_coordinates, attempt
     else:
-        return 0, 0, None, (0, 0), 0
+        return 0, 0, None, (0, 0), 5
 
 
 def player_airport_selection(name_list, coordinates, player_coordinates, amount_of_possible_flights):
@@ -126,7 +126,6 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
             selection = int(userInput) - 1
             break
 
-    os.system("clear")
     price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
     print("Travel")
