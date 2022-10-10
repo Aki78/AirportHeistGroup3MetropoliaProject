@@ -201,7 +201,7 @@ def run_game(airport_data, player):
     player.append(budget)
     player.append(stamina)
         
-    while budget > 0 or stamina > 0:
+    while player[3] > 0 and player[4] > 0:
         os.system("cls")
         print_player_position(airport_data, player)
 
@@ -232,13 +232,13 @@ def mode():
         budget = 10000
         rate_up = 1.0
         rate_down = 0
-        travel_distance = 7000
+        travel_distance = 1000
     elif play_mode == "2":
         stamina = 700
         budget = 1000
         rate_up = 0.5
         rate_down = 0
-        travel_distance = 5000
+        travel_distance = 700
     return stamina, budget, rate_up, rate_down, travel_distance
 
 
