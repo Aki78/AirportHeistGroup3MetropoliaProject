@@ -15,6 +15,8 @@
 
 [Functional Requirements](#functional-requirements)
 
+[Quality Requirements](#quality_requirements)
+
 [Learning Tools And Information](#learning-tools-and-information)
 
 
