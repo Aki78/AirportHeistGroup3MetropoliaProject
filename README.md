@@ -9,9 +9,9 @@
 ## Contents
 [Introduction](#introduction)
 
-[Vision](#vision)
-[Backstory](#backstory)
-[Setting](#setting)
+[Vision](#vision) 
+- [Backstory](#backstory)
+- [Setting](#setting)
 
 [Functional Requirements](#functional-requirements)
 
