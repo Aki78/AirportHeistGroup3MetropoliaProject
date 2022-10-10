@@ -47,52 +47,46 @@ Airport Heist is set in present day Europe.
 
 ## Functional Requirements
 ### How the game works
-Airport Heist is a single player game, where the main character aims to avoid capture. 
-Players must make it to the final destination airport, before their stamina runs out.
-Players can fly to different cities with-in europe as long as they can afford the tickets and have enough stamina to get there.
-
-#### Stealing
-
-In order to acquire money to buy tickets players steal, however, there is a chance of getting caught.
-Players are informed of the odds of capture before they attempt a heist 
-and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
-If they use all 5 attempts before escaping, they will be caught and the game is over.
-The players stolen earnings are based on gauss' theory with two different expectation values,
-depending on the game's difficulty selected.
+Airport Heist is a single player game, where the main character aims to make it to the final destination airport, before their stamina runs out or they are captured.
 
 #### Travel
 
-Travel is possible with the purchase of a flight ticket.
-Players are also restricted to airports with-in a certain distance from their current location. This is dependent on the game's difficulty selected.
-Players are shown a list of countries with-in their travel range.
+Players start in Helsinki, Finland and must end up in the destination airport provided by the game. This airport is generated at random. Travel is possible with the purchase of a flight ticket.
+Players are also restricted to airports with-in a certain distance from their current location and all airports are wih-in the EU. The ristricted travel distance is dependent on the game's difficulty selected. Players are shown a list of countries with-in their travel range.
 
 #### Evading Capture
 
-Players can see in which city interpol is but not exactly where interpol will go next.
-Players will see a choice possible airports interpol will be at next.
-Interpol moves from airport to airport at random. 
-Players are limited by their budget and stamina but can steal money if the need more.
-Players start in Helsinki, Finland and the game ends when they are either caught by interpol or run out of money.
+Players can see in which city interpol is but not exactly where interpol will be at next.
+Players will see a list of possible airports interpol will be at next.
+Interpol moves from airport to airport at random. Interpol only move each time the player makes a decision. 
 
-As the game progresses the player take chances by stealing money to increase their wealth
-and then making strategic moves to avoid arrest.
+#### Stamina
+
+Players start with a set amount of stamina at the beginning of the game. Each time the player travels they use up stamina. How much stamina they use is dependant and the length of the flight. Stamina does not regenerate, so you must make it to your final destination before it runs out completely.
+
+#### Stealing
+
+The player starts with a set amount of money, which is again dependant on the game's difficulty selected.If the player needs more money to buy flight tickets players steal. There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
+If they use all 5 attempts before escaping, they will be caught and the game is over. The players stolen earnings are based on gauss' theory with two different expectation values,
+depending on the game's difficulty selected.
+
+
+The game is over when the player is either caught by interpol, run out of money or run out of stamina. 
+
+
+ The decision tree below show all possible decisions the player can make and the benefits of each. 
 
 
 <p align="center">
     <img src="./block_diagram2.png">
 </p>
 
-
-
-
-
 The user is able to do two things: 
 
     -choose where they travel to
     -if they wish to rob the airport they are currently in.
 
-Where they travel to is limited by budget and distance.
-The success of a robbery is mostly down to luck.
+
 Listed below are all the funtctions that were created for the game:
 ### core_test Functions
     -init_state
@@ -158,13 +152,12 @@ Listed below are all the funtctions that were created for the game:
 [Back to top](#airport-heist)
 
 ## Quality Requirements
-The visual for the user experience must be pleasing, motion must be smooth. Loading time must not excede more than a couple seconds on a typical 
-laptop computer, and freezes must not occur. The game must run on at least 30 fps. The final product must be accesible online.
+#### Preliminary Requirements
+All helper functions created were ran through pytest to ensure proper working order.
+The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
-
-All functions created were ran through pytest to ensure proper working order.
-We also created a new database from the existing one. 
-This removed a lot of unnecessary information and made calling upon the database faster.
+#### Final Requirements
+The visuals for the user experience must be pleasing and the animated motion must be smooth. Loading time must not excede more than a couple seconds on a typical laptop computer. The game should never freeze. The game must run on at least 30 fps. The final product must be accesible online.
 
 [Back to top](#airport-heist)
 
