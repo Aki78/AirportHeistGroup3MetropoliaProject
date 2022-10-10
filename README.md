@@ -80,7 +80,7 @@ The game is over when the player is either caught by interpol, run out of money 
 The user is able to do two things: 
 
     -choose where they travel to
-    -if they wish to rob the airport they are currently in.
+    -choose if they wish to rob the airport they are currently in.
 
 
 Listed below are all the funtctions that were created for the game:
@@ -138,8 +138,8 @@ Listed below are all the funtctions that were created for the game:
     -test_meters_to_km
     -test_get_distances
 
-    [Back to top](#airport-heist)
-
+### Project Diagram
+This diagram shoes how our different python files interact with each other to make our game work.
 
 <p align="center">
     <img src="./project_diagram.png">
