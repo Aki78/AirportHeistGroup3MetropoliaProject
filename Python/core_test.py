@@ -23,7 +23,10 @@ def init_state():
 
     airport_coordinates = []
 
-    stamina, budget, rate_upper, rate_lower, max_flight_distance = settings.mode()
+    stamina, budget, rate_upper, rate_lower, max_flight_distance = decisions.mode()
+    print(budget)
+    print(stamina)
+    
     airport_data = database.get_datalist()
     lost = False
 
@@ -95,7 +98,6 @@ def run_game():
             game_state["lost"] = True
             print("You got caught")
             print("You lost")
-
 
     input("Press Enter to continue...")
 
