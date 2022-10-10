@@ -1,12 +1,14 @@
 from flask import Flask, request
 import json
 import mysql.connector
-import core
+import core_test as core
 from time import sleep
 
 #####################################
 # Naming is from Godot's perspective#
 #####################################
+
+game_state = {}
 
 connection = mysql.connector.connect(
     host='127.0.0.1',
@@ -23,6 +25,7 @@ app = Flask(__name__)
 @app.route('/get_init')
 def get_init():
     try:
+        global game_state
         game_state = core.init_state()
         print("game init state is: ", game_state)
 

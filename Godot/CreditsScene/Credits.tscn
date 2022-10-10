@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/orbit.tres" type="DynamicFont" id=1]
+[ext_resource path="res://CreditsScene/Credits.gd" type="Script" id=2]
+[ext_resource path="res://CreditsScene/CreditsHomeButton.gd" type="Script" id=3]
+
+[node name="ColorRect" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Credits" type="Label" parent="."]
+margin_left = 716.0
+margin_top = 253.0
+margin_right = 967.0
+margin_bottom = 334.0
+custom_fonts/font = ExtResource( 1 )
+text = "Authors:"
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 640.0
+margin_top = 370.0
+margin_right = 1199.0
+margin_bottom = 706.0
+
+[node name="Franc" type="Label" parent="VBoxContainer"]
+margin_right = 559.0
+margin_bottom = 81.0
+custom_fonts/font = ExtResource( 1 )
+text = "Francesco Natanni"
+script = ExtResource( 2 )
+
+[node name="Khai" type="Label" parent="VBoxContainer"]
+margin_top = 85.0
+margin_right = 559.0
+margin_bottom = 166.0
+custom_fonts/font = ExtResource( 1 )
+text = "Khai Cao"
+script = ExtResource( 2 )
+
+[node name="Kiana" type="Label" parent="VBoxContainer"]
+margin_top = 170.0
+margin_right = 559.0
+margin_bottom = 251.0
+custom_fonts/font = ExtResource( 1 )
+text = "Kiana Aghajani"
+script = ExtResource( 2 )
+
+[node name="Aki" type="Label" parent="VBoxContainer"]
+margin_top = 255.0
+margin_right = 559.0
+margin_bottom = 336.0
+custom_fonts/font = ExtResource( 1 )
+text = "Eiaki V. R. Morooka"
+script = ExtResource( 2 )
+
+[node name="CreditsHomeButton" type="Button" parent="."]
+margin_left = 229.0
+margin_top = 205.0
+margin_right = 410.0
+margin_bottom = 292.0
+custom_fonts/font = ExtResource( 1 )
+text = "Home"
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="CreditsHomeButton" to="CreditsHomeButton" method="_on_CreditsHomeButton_pressed"]
