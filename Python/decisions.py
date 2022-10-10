@@ -10,10 +10,10 @@ def mode():
     print("2- Hard")
     
     play_mode = input("Your selection: ")
-    
-    if play_mode == "1":
+
+    if play_mode == "1" or play_mode == "Easy":
         return 1000, 10000, 1.0, 0, 1000
-    elif play_mode == "2" or play_mode == 'Hard':
+    elif play_mode == "2" or play_mode == "Hard":
         return 700, 5000, 0.75, 0.25, 800
     #return stamina, budget, rate_up, rate_down, travel_distance
 
