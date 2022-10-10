@@ -28,7 +28,7 @@ The Purpose of Airport Heist is to produce a fun and interactive game,
 that satisfies the guidelines provided by software1.
 
 ## Story
-### Backstory
+#### Backstory
 You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
 They have no idea of your genius though and neglect to watch over you properly.
 You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
@@ -38,7 +38,7 @@ Due to your expert skills you are able to steal 10,000€ from the Alepa at Hels
 The police, however, have been alerted of your activities and are hot on your tail.
 Time to make your next move before interpol gets you!
 
-### Setting
+#### Setting
 Airport Heist is set in present-day Europe.
 
 ## Functional Requirements
