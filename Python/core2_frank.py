@@ -19,9 +19,11 @@ def main_screen():
         user_input = str(input("What do you want to do: "))
 
         if user_input == "" or int(user_input) > 5 or int(user_input) < 1:
-            print("Unknown input, please try again.")
+            print("Invalid input, please select one of the following options.")
             main_screen()
-        if user_input == "2":
+        if user_input == "1":
+            print("game not created yet")
+        if user_input == "2" or user_input == "Settings":
             setting_screen()
         if user_input == "3":
             instructions()
@@ -56,20 +58,19 @@ def instructions():
     os.system('clear')
     while True:
         print("Instructions")
-        print("The first step is to decide if you will STEAL or ESCAPE."
-              "\nYou can choose to STEAL money to increase your wealth."
-              "\nYou will be shown the odds of your success."
-              "\nIf you like dont like your odds, you can try to escape or try to steal again with different odds."
-              "\nYou can decide to ESCAPE instead."
-              "\nYou will be taken to a map showing all airports with-in your reach and budget."
-              "\nKeep an eye on where interpol is searching for you and avoid getting too close to them!"
-              "\nChoose the airport you wish to travel to, but be aware of your stamina level, as the more you travel, the more you tire."
-              "\nIf you are caught, run out of stamina or run our of money, its game-over, as interpol will take you back to jail!")
+        time.sleep(1)
+        input("1 - You are limited by budget and stamina. Press Enter to continue...")
+        input("2 - You have to buy tickets to travel. Press Enter to continue...")
+        input("3 - In order to acquire money, you have to steal. Press Enter to continue...")
+        input("4 - You can get caught by the interpol, but you are informed about the odds. Press Enter to continue...")
+        input("5 - You can see in which possible cities the interpol will be, but not where they will go next. Press Enter to continue...")
+        input("6 - You are restricted to airports with-in a certain distance. Press Enter to continue...")
+        input("7 - You will lose if you go under stamina or budget. Press Enter to continue...")
 
-        instructions_input = str(input("Press 'Enter' to return to the main menu:"))
+        instructions_input = str(input("Press 'Enter' to return to the main menu: "))
 
         if instructions_input == None:
-            print("Unknown input, please try again.")
+           main_screen()
         else:
             main_screen()
         return

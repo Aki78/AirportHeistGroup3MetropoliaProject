@@ -65,7 +65,7 @@ def get_coordinates():
 def get_datalist():
     data_list = []
     
-    sql = "select name, municipality, ident, latitude_deg, longitude_deg from eu_airports"
+    sql = "select name, municipality, ident, latitude_deg, longitude_deg, country_name from eu_airports"
     
     cursor = connection.cursor()
     cursor.execute(sql)
@@ -73,8 +73,8 @@ def get_datalist():
     
     if cursor.rowcount > 0:
         for row in result:
-            data_list.append({"name": row[0], "municipality": row[1], "ident": row[2], "deg": (row[3], row[4])})
+            data_list.append({"name": row[0], "municipality": row[1], "ident": row[2], "deg": (row[3], row[4]), "country": row[5]})
     
-    print(data_list[0])
+    #print(data_list[0])
     
     return data_list

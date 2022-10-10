@@ -1,277 +1,117 @@
 import os
+import settings
 import database
-import gfuncs
-import helper
 import random
-
-def print_mainmenu():
-    userInput = 0
-    
-    while True:
-        os.system("cls")
-
-        print("Welcome to flight game")
-        print("")
-        print("Hello, "+ str(name) + "!")
-
-        print("1. Start")
-        print("2. Settings")
-        print("3. Instructions")
-        print("4. Credits")
-        print("5. Exit")
-
-        userInput = input("Input: ")
-
-        if userInput == "" or int(userInput) < 1 or int(userInput) > 5:
-            print("Invalid input")
-            input("Press Enter to continue...")
-        else:
-            return str(userInput)
-
-def print_settings():
-    os.system("cls")
-    print("Under developments. Please come back later.")
-    input("Press Enter to continue...")
-    return
-
-def print_instructions():
-    os.system("cls")
-    print("This is the instructions")
-    print("1 - ")
-    print("2 - ")
-    print("3 - ")
-    input("Press Enter to continue...")
-    return
-
-def print_credits():
-    os.system("cls")
-    print("Under developments. Please come back later.")
-    input("Press Enter to continue...")
-    return
-
-def decisions(): #Input
-    print("1. Steal")
-    print("2. Escape")
-    print("")
-
-    while True:
-        userInput = input("Input: ")
-
-        if str(userInput) != "1" and str(userInput) != "2":
-            print("Invalid input")
-        else:
-            break
+import prints
+import decisions
+import interpol
+import gfuncs
 
 
-    return userInput
+def init_state():
 
-def print_player_position(airport_data, player):
-    for i in range(len(airport_data)):
-        if airport_data[i]["ident"] == player[1]:
-            print("You are at", airport_data[i]["name"])
-            break
-    return
-
-def money_heist(player, rate_up, rate_down):
-    os.system("cls")
-
-    print("Your are about to steal more money")
-    steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
-
-    print("Successful stealing rate: ", steal_rate * 100, "%")
-    print("1. Steal")
-    print("2. Later")
-    print("")
-
-    while True:
-        userInput = input("Input: ")
-
-        if str(userInput) != "1" and str(userInput) != "2":
-            print("Invalid input")
-        else:
-            break
-
-    if userInput == "1":
-        os.system("cls")
-        stolen_money = gfuncs.theft_success_earnings_gauss()
-        print("Got", stolen_money, "€")
-
-        true_rate = random.uniform(rate_down, rate_up)
-        #print("true rate", true_rate)
-        if true_rate <= steal_rate:
-            print("Steal successful")
-            player[3] += stolen_money
-            input("Press Enter to continue")
-        else:
-            print("You got caught")
-            print("You lost")
-            input("Press Enter to continue")
-            return player, True
-
-    return player, False
-
-def escape(airport_coordinates, max_flight_distance, player):
-    os.system("cls")
-    
-    airport_coordinates         = []
-    possible_flights_name       = []
-    amount_of_possible_flights  = 0
-    
-    print("Possible airports:")
-    
-    airport_coordinates.extend(database.get_coordinates())
-    
-    #Return name list of possible airports
-    possible_flights_name           = helper.get_possible_flights(max_flight_distance, player[2], airport_coordinates)  
-
-    #Check amount of possible airports (for later use)
-    amount_of_possible_flights      = helper.print_possible_flights(possible_flights_name, airport_coordinates)
-    
-    #Player choose the airport and return the icao code of destination
-    price, stamina, new_icao_code, new_coordinates = player_airport_selection(possible_flights_name, airport_coordinates, player[2], amount_of_possible_flights)
-
-    if new_icao_code is not None:
-        print("Waiting for new code 1", new_icao_code)
-        return price, stamina, new_icao_code, new_coordinates
-    else:
-        return 0, 0, None, (0, 0)
-
-def player_airport_selection(name_list, coordinates, player_coordinates, amount_of_possible_flights):
-    userInput = "0"
-
-    #Input airport decision (fix later)
-    while True:
-        userInput = input("Input: ").strip()
-
-        if userInput == "" or type(int(userInput)) is not int:
-            print("Invalid input")
-        #elif 1 > int(userInput) or int(userInput) > amount_of_possible_flights + 1:
-        #    print("Invalid input")
-        else:
-            selection = int(userInput) - 1
-            break
-
-    os.system("cls")
-    price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
-
-    print("1. Travel")
-    print("2. Stay")
-    print("")
-
-    #Input decision (also fix later)
-    while True:
-        userInput = input("Input: ")
-
-        if str(userInput) != "1" and str(userInput) != "2":
-            print("Invalid input")
-        else:
-            break
-
-    if int(userInput) == 1:
-        print("Waiting for new code 2", icao_code)
-        return price, stamina, icao_code, new_coordinates
-    elif int(userInput) == 2:
-        return 0, 0, None, (0, 0)
-    
-def update_player(player, price, stamina, new_icao_code, new_coordinates):
-    player[1] = new_icao_code
-    player[2] = new_coordinates
-    player[3] -= price
-    player[4] -= stamina
-    return player
- 
-def run_game(airport_data, player):
-    os.system("cls")
-
-    player = [""]
-    player[0] = name 
-    got_caught = False
-    
-    airport_coordinates = []
-
-    stamina, budget, rate_up, rate_down, max_flight_distance = mode()
-
+    player = [""]   # player = ['name', 'icao_code', coordinates, budget, stamina]
+    player[0] = "Aki" # Change to name input later
     player.append("EFHK")
 
-    for i in range(len(airport_data)):
-        if airport_data[i]["ident"] == player[1]:
-            player.append(airport_data[i]["deg"])
-            break
+    interpol = [""] #interpol = ['icao_code', coordinates]
+    interpol[0] = "LFBD"
+    interpol.append((44.8283, -0.715556))
     
-    player.append(budget)
-    player.append(stamina)
+    attempt_left = 5
+    got_caught = False
+
+    airport_coordinates = []
+
+    stamina, budget, rate_upper, rate_lower, max_flight_distance = settings.mode()
+    airport_data = database.get_datalist()
+    lost = False
+
+
+    game_state = {
+                    "airport_data":airport_data,
+                    "player":player,
+                    "interpol":interpol,
+                    "got_caught":got_caught,
+                    "attempt_left": attempt_left,
+                    "airport_coordinates" : airport_coordinates,
+                    "stamina" : stamina,
+                    "budget" : budget,
+                    "rate_upper" : rate_upper,
+                    "rate_lower" : rate_lower,
+                    "max_flight_distance" : max_flight_distance,
+                    "lost": lost
+                  }
+    
+    for i in range(len(game_state["airport_data"])):
+        if game_state["airport_data"][i]["ident"] == game_state["player"][1]:
+            game_state["player"].append(game_state["airport_data"][i]["deg"])
+            break
+
+    game_state["player"].append(game_state["budget"])
+    game_state["player"].append(game_state["stamina"])
+    print("Returning game state:", game_state)
+
+    return game_state
+
+
+def run_game():
+    #init state
+    game_state = init_state()
+
+    while game_state["player"][3] > 0 and game_state["player"][4] > 0 and game_state["got_caught"]is False:
         
-    while player[3] > 0 and player[4] > 0:
-        os.system("cls")
-        print_player_position(airport_data, player)
+        interpol.print_interpol_position(game_state["airport_data"], game_state["interpol"])
+        print("")
+        prints.print_player_position(game_state["airport_data"], game_state["player"])
 
-        print("Budget   : ", player[3], "€")
-        print("Stamina  : ", player[4])
-
-        userSelection = decisions()
-        if userSelection == "1":
-            player, got_caught = money_heist(player, rate_up, rate_down)
+        userSelection = decisions.heist_decision()
+        
+        if userSelection == "Heist":
+            game_state["player"], got_caught, game_state["attempt_left "] = decisions.money_heist(game_state["player"], game_state["rate_upper"], game_state["rate_lower"],game_state["attempt_left"])
             if got_caught == True:
                 break
-        elif userSelection == "2":
-            price, stamina, new_icao_code, new_coordinates = escape(airport_coordinates, max_flight_distance, player)
+        elif userSelection == "Escape":
+            price, stamina, new_icao_code, new_coordinates, game_state["attempt_left "]= decisions.escape(game_state["airport_coordinates"], game_state["max_flight_distance"], game_state["player"], game_state["attempt_left"])
             if new_icao_code is not None:
-                player = update_player(player, price, stamina, new_icao_code, new_coordinates)
-                       
+                game_state["player "]= gfuncs.update_player(game_state["player"], price, stamina, new_icao_code, new_coordinates)
+
+        if game_state["player"][3] <= 0:
+            #send lost signal
+            game_state["lost"] = True
+            print("You run out of money")
+            print("You lost")
+            break
+        elif game_state["player"][4] <= 0:
+            #send lost signal
+            game_state["lost"] = True
+            print("You run out of stamina (too tired to go anywhere)")
+            print("You lost")
+            break
+        
+        game_state["interpol_position "]= interpol.movement()    
+
     input("Press Enter to continue...")
 
     return
 
-def mode():
-    print("Plese select the game's mode:")
-    print("1- Easy")
-    print("2- Hard")
-    play_mode = input("Your mode's number: ")
-    if play_mode == "1":
-        stamina = 10000
-        budget = 10000
-        rate_up = 1.0
-        rate_down = 0
-        travel_distance = 1000
-    elif play_mode == "2":
-        stamina = 700
-        budget = 1000
-        rate_up = 0.5
-        rate_down = 0
-        travel_distance = 700
-    return stamina, budget, rate_up, rate_down, travel_distance
+if __name__ == "__main__":
+    random.seed() 
 
+    name = input("Input name: ")
 
+    while True:
+        userInput = prints.print_mainmenu(name)  # Print the main menu
+        print(userInput)
 
-#MAIN
-random.seed()
-budget  = 1000000
-stamina = 100000
-player  = [""]  #player = ['name', 'position_code', coordinates, budget, stamina]
-
-#Fetch all data from database
-airport_data = database.get_datalist()
-
-os.system("cls")
-name = input("Input name: ")
-os.system("cls")
-
-
-
-
-while True:
-    userInput = print_mainmenu() #Print the main menu
-    print(userInput)
-
-    if userInput == "1":
-        run_game(airport_data, player)
-    elif userInput == "2":
-        print_settings()
-    elif userInput == "3":
-        print_instructions()
-    elif userInput == "4":
-        print_credits()
-    elif userInput == "5":
-        os.system("cls")
-        input("Press Enter to exit...")
-        break       
+        if userInput == "Start":
+            run_game()
+        elif userInput == "Settings":
+            prints.print_settings()
+        elif userInput == "Instructions":
+            prints.print_instructions()
+        elif userInput == "Credits":
+            prints.print_credits()
+        elif userInput == "Exit":
+            input("Press Enter to exit...")
+            break

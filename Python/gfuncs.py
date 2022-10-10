@@ -1,4 +1,5 @@
 import random
+import helper
 import numpy as np
 
 def theft_success_earnings_gauss():
@@ -14,6 +15,9 @@ def get_ticket_price(distance):
 def get_stamina_consumptions(distance):
     return round(distance / 2)
 
-"""def interpol_index(airport_list):
-    for
-    pass"""
+def update_player(player, price, stamina, new_icao_code, new_coordinates):
+    player[1] = new_icao_code
+    player[2] = new_coordinates
+    player[3] -= price
+    player[4] -= stamina
+    return player

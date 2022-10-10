@@ -1,6 +1,12 @@
 from flask import Flask, request
 import json
 import mysql.connector
+import core
+from time import sleep
+
+#####################################
+# Naming is from Godot's perspective#
+#####################################
 
 connection = mysql.connector.connect(
     host='127.0.0.1',
@@ -11,44 +17,32 @@ connection = mysql.connector.connect(
     autocommit=True
 )
 
-def find_airport_and_location_by_icao(icao):
-    sql = 'SELECT airport.name, country.name from airport join country using (iso_country)'
-    sql += ' WHERE ident = "' + icao + '"'
-    print(sql)
-    cursor = connection.cursor()
-    cursor.execute(sql)
-    result = cursor.fetchall()
 
-    print(result)
-    return result[0][1], result[0][0]
 
 app = Flask(__name__)
-@app.route('/airport/<icao>')
-def get_airport(icao):
-    country  =""
-    name = ""
-
+@app.route('/get_init')
+def get_init():
     try:
-        country, name = find_airport_and_location_by_icao(icao)
+        game_state = core.init_state()
+        print("game init state is: ", game_state)
 
-        response = {
-            "icao" : icao,
-            "airport_name" : name,
-            "location" : country
-        }
-
-        return response
+        return game_state
     except:
-        return "Airport Not Found"
+        # print(core.init_state())
+        print("Init failed")
+        return "No Init"
 
-
-@app.route('/send', methods = ['POST'] )
-def get_airport_rec():
-    print("Recieving")
+@app.route('/send_user_name', methods = ['POST'] )
+def send_user_name():
+    print("User name incoming Recieving")
     print(request.data)
+    game_state = json.loads(request.data)
+    print(game_state)
+    print("name is: ", request.data)
+    with open("game_state.json", "w") as outfile:
+        outfile.write(json.dumps(game_state))
 
-    return "A"
-
+    return game_state
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)
