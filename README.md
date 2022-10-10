@@ -10,14 +10,23 @@
 [Introduction](#introduction)
 
 [Vision](#vision)
-
-[Story](#story)
+    -Backstory
+    -Setting
 
 [Functional Requirements](#functional-requirements)
+    -How the game works
+    -Block diagram
+    -Functions
+    -Project diagram
 
 [Quality Requirements](#quality_requirements)
+    -Preliminary requirements
+    -Final requirements
 
 [Learning Tools And Information](#learning-tools-and-information)
+    -Run
+    -Useful git commands
+    -
 
 ## Introduction
 This document specifies the design for the gameplay of Airport Heist.
@@ -27,7 +36,6 @@ The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natan
 The Purpose of Airport Heist is to produce a fun and interactive game, 
 that satisfies the guidelines provided by software1.
 
-## Story
 #### Backstory
 You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
 They have no idea of your genius though and neglect to watch over you properly.
@@ -84,13 +92,13 @@ The user is able to do two things:
     -choose where they travel to
     -choose if they wish to rob the airport they are currently in.
 
-
+### Functions
 Listed below are all the funtctions that were created for the game:
-### core_test Functions
+#### core_test Functions
     -init_state
     -run_game
 
-### Helper Functions
+#### Helper Functions
     -feet_to_meters
     -meters_to_kilometers
     -get_distances
@@ -100,21 +108,21 @@ Listed below are all the funtctions that were created for the game:
     -deg_to_xy
     -get_min_max_distance
 
-### Database Functions
+#### Database Functions
     -get_new_coordinates
     -get_geo_sirport_info
     -get_airport_name
     -get_coordinates
     -get_datalist
 
-### Decisions
+#### Decisions
     -mode
     -heist_decision
     -money_heist
     -escape
     -player_airport_selection
 
-### Game Functions
+#### Game Functions
     -theft_success_earnings_gauss
     -theft_success_rate
     -get_ticket_price
@@ -122,11 +130,11 @@ Listed below are all the funtctions that were created for the game:
     -interpol_index
     -update_player
 
-### Interpol
+#### Interpol
     -interpol_position_and_movement
     -update
 
-### Prints
+#### Prints
     -print_start
     -print_instructions
     -print_settings
@@ -135,7 +143,7 @@ Listed below are all the funtctions that were created for the game:
     -print_mainmenu
     -steal_rate_and_decision(the be changed)
 
-### Tests
+#### Tests
     -test_feet_to_meters
     -test_meters_to_km
     -test_get_distances
@@ -192,15 +200,7 @@ git status (shows your current git state)
 git clone repo_name (when you want to copy a repo and add it your computer)
 ```
 
-### Project Info
-https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
-
-### Unrelated English Presentation on Tesla
-https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
-
-
 ### Useful Bash Commands
-
 ```bash
 pwd                               takes you to curent directory
 cd [name of directory]            change directory
@@ -231,4 +231,11 @@ python3 filename.py		  runs python program that is in the file in your terminal 
 
 grep -r [expression]              finds the file where the expression exists
 ```
+
+### Project Info
+https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
+
+### Unrelated English Presentation on Tesla
+https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
+
 [Back to top](#airport-heist)
