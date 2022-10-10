@@ -10,23 +10,29 @@
 [Introduction](#introduction)
 
 [Vision](#vision)
-    -Backstory
+
+    -[Backstory](#backstory)
     -Setting
 
 [Functional Requirements](#functional-requirements)
+
     -How the game works
     -Block diagram
     -Functions
     -Project diagram
 
 [Quality Requirements](#quality_requirements)
+
     -Preliminary requirements
     -Final requirements
 
 [Learning Tools And Information](#learning-tools-and-information)
+
     -Run
     -Useful git commands
-    -
+    -Useful bash commands
+    -Project information
+    -Unrelated English project
 
 ## Introduction
 This document specifies the design for the gameplay of Airport Heist.
