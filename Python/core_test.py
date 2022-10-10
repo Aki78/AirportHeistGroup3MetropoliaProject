@@ -61,21 +61,22 @@ def run_game():
     game_state = init_state()
 
     while game_state["lost"] is False and game_state["got_caught"] is False:
-        interpol_possible_move_code, interpol_possible_move_deg = interpol.interpol_position_and_movement(game_state["airport_data"], game_state["interpol_data"])
+        interpol_possible_move_code, interpol_possible_move_deg = interpol.interpol_position_and_movement(  game_state["airport_data"], 
+                                                                                                            game_state["interpol_data"])
         print("")
         prints.print_player_position(game_state["airport_data"], game_state["player"])
 
         userSelection = decisions.heist_decision()
         
         if userSelection == "Heist":
-            game_state["player"], got_caught, game_state["attempt_left"] = decisions.money_heist(game_state["player"], 
+            game_state["player"], got_caught, game_state["attempt_left"] = decisions.money_heist(   game_state["player"], 
                                                                                                     game_state["rate_upper"], 
                                                                                                     game_state["rate_lower"],
                                                                                                     game_state["attempt_left"])
             if got_caught == True:
                 break
         elif userSelection == "Escape":
-            price, stamina, new_icao_code, new_coordinates, game_state["attempt_left"] = decisions.escape(game_state["airport_data"], 
+            price, stamina, new_icao_code, new_coordinates, game_state["attempt_left"] = decisions.escape(  game_state["airport_data"], 
                                                                                                             game_state["airport_coordinates"], 
                                                                                                             game_state["max_flight_distance"], 
                                                                                                             game_state["player"], 
@@ -101,7 +102,7 @@ def run_game():
         if game_state["player"][1] == game_state["interpol_data"][0]:
             #send lost signal
             game_state["lost"] = True
-            print("You got caught")
+            print("Interpol caught you")
             print("You lost")
 
     input("Press Enter to continue...")

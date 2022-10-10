@@ -12,11 +12,11 @@ def print_start(name):
     print("-> Exit")
 
 def print_instructions():
-    print("This is the instructions")
+    print("This is the instructions:")
     print("-- You are limited by budget and stamina.")
     print("-- You have to buy tickets to travel.")
     print("-- In order to acquire money, you have to steal.")
-    print("-- You can get caught by the interpol and lose the game.")
+    print("-- you can get caught by the interpol and lose the game.")
     print("-- You will be informed of the interpol's possible destination")
     print("-- You are restricted to airports with-in a certain distance.")
     print("-- You will lose if you go under stamina or budget.")
@@ -67,10 +67,16 @@ def print_mainmenu(name):
         else:
             return str(userInput)
 
-def steal_rate_and_decision(steal_rate):
-    print("Your are about to steal more money")
-    print("Successful stealing rate: ", steal_rate * 100, "%")
+def steal_rate_and_decision(steal_rate, attempt):
+    if attempt > 1:
+            print("Attempts remaining:", attempt - 1)
+            print("Your are about to steal more money")
+    elif attempt == 1:
+        print("Last attempt")
+        print("You have to steal or you will get caught the next time")
+        
+    print("Successful stealing rate: " + str(round(steal_rate * 100)) + "%")
     print("-> Steal")
-    print("-> Later")
+    print("-> Wait")
     print("")
-    
+    return
