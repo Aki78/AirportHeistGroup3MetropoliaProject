@@ -69,7 +69,7 @@ depending on the game's difficulty selected.
 
 The game is over when the player is either caught by interpol, run out of money or run out of stamina. 
 
-
+### Block Diagram
  The decision tree below show all possible decisions the player can make and the benefits of each. 
 
 
