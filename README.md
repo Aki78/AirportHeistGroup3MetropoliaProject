@@ -75,7 +75,7 @@ and then making strategic moves to avoid arrest.
 
 
 <p align="center">
-    <img src="./block_diagram.svg">
+    <img src="./block_diagram2.png">
 </p>
 
 
