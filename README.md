@@ -51,6 +51,8 @@ Time to make your next move before interpol gets you!
 #### Setting
 Airport Heist is set in present-day Europe.
 
+[Back to top](#airport-heist)
+
 ## Functional Requirements
 ### How the game works
 Airport Heist is a single player game, where the main character aims to make it to the final destination airport, before they are captured or their stamina or money runs out.
@@ -93,6 +95,8 @@ The user is able to do two things:
 
     -choose where they travel to
     -choose if they wish to rob the airport they are currently in.
+
+[Back to top](#airport-heist)
 
 ### Functions
 Listed below are all the funtctions that were created for the game:
@@ -149,6 +153,8 @@ Listed below are all the funtctions that were created for the game:
     -test_feet_to_meters
     -test_meters_to_km
     -test_get_distances
+
+[Back to top](#airport-heist)
 
 ### Project Diagram
 This diagram shoes how our different python files interact with each other to make our game work.
