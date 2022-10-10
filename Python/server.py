@@ -34,7 +34,7 @@ def get_init():
 
 @app.route('/send_user_name', methods = ['POST'] )
 def send_user_name():
-    print("User name incoming Recieving")
+    print("Username incoming Receiving")
     print(request.data)
     game_state = json.loads(request.data)
     print(game_state)
