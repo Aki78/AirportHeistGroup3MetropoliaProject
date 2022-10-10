@@ -13,6 +13,7 @@ def print_start(name):
 
 def print_instructions():
     print("This is the instructions:")
+    print("-- You will be assigned a random destination.")
     print("-- You are limited by budget and stamina.")
     print("-- You have to buy tickets to travel.")
     print("-- In order to acquire money, you have to steal.")
