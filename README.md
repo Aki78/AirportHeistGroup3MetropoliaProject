@@ -14,24 +14,21 @@
 - [Setting](#setting)
 
 [Functional Requirements](#functional-requirements)
-
-    -How the game works
-    -Block diagram
-    -Functions
-    -Project diagram
+- [How the gamw works](#how-the-game-works)
+- [Block diagram](#block-diagram)
+- [Functions](#functions)
+- [Project diagram](#project-diagram)
 
 [Quality Requirements](#quality_requirements)
-
-    -Preliminary requirements
-    -Final requirements
+- [Preliminary requirements](#preliminary-requirements)
+- [Final requirements](#final-requirements)
 
 [Learning Tools And Information](#learning-tools-and-information)
-
-    -Run
-    -Useful git commands
-    -Useful bash commands
-    -Project information
-    -Unrelated English project
+- [Run](#run)
+- [Useful git commands](#useful-git-commands)
+- [Useful bash commands](#useful-bash-commands)
+- [Project information](#project-info)
+- [Unrelated English project](#unrelated-english-presentation-on-tesla)
 
 ## Introduction
 This document specifies the design for the gameplay of Airport Heist.
