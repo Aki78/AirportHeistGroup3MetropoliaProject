@@ -6,6 +6,7 @@ import prints
 import decisions
 import interpol
 import gfuncs
+import interpol
 
 
 def init_state():
