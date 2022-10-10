@@ -7,7 +7,7 @@
 
 
 ## Contents
-    -Introduction [introduction](#Introduction)
+    -Introduction [introduction](#introduction)
     -Vision
     -Story
     -Functional Requirements
