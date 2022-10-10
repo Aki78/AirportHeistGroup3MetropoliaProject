@@ -60,10 +60,16 @@ def print_mainmenu(name):
         else:
             return str(userInput)
 
-def steal_rate_and_decision(steal_rate):
-    print("Your are about to steal more money")
-    print("Successful stealing rate: ", steal_rate * 100, "%")
+def steal_rate_and_decision(steal_rate, attempt):
+    if attempt > 1:
+            print("Attempts remaining:", attempt - 1)
+            print("Your are about to steal more money")
+    elif attempt == 1:
+        print("Last attempt")
+        print("You have to steal or you will get caught the next time")
+        
+    print("Successful stealing rate: " + str(round(steal_rate * 100)) + "%")
     print("Choice> Steal")
-    print("Choice> Later")
+    print("Choice> Wait")
     print("")
-    
+    return

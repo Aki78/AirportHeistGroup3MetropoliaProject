@@ -3,6 +3,7 @@ import database
 import os
 import helper
 import gfuncs
+import prints
 
 def mode():
     print("Please select the game's mode:")
@@ -36,18 +37,7 @@ def heist_decision(): #Input
 def money_heist(player, rate_upper, rate_lower, attempt):
     steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
     if attempt > 0:
-        if attempt > 1:
-            print("Attempts remaining:", attempt - 1)
-            print("Your are about to steal more money")
-        elif attempt == 1:
-            print("Last attempt")
-            print("You have to steal or you will get caught the next time")
-        
-        
-        print("Successful stealing rate: " + str(round(steal_rate * 100)) + "%")
-        print("Choice> Steal")
-        print("Choice> Wait")
-        print("")
+        prints.steal_rate_and_decision(steal_rate, attempt)
 
         while True:
             userInput = input("Input: ")
@@ -77,7 +67,7 @@ def money_heist(player, rate_upper, rate_lower, attempt):
             attempt -= 1
     
     elif attempt == 0:
-        print("You got caught!")
+        print("You got caught by the local police")
         got_caught = True
         return player, got_caught, attempt
     
@@ -85,7 +75,6 @@ def money_heist(player, rate_upper, rate_lower, attempt):
 
 
 def escape(airport_data, airport_coordinates, max_flight_distance, player, attempt):
-    attempt = 5
 
     airport_coordinates = []
     possible_flights_name = []
@@ -108,9 +97,9 @@ def escape(airport_data, airport_coordinates, max_flight_distance, player, attem
 
     if new_icao_code is not None:
         #print("Waiting for new code 1", new_icao_code)
-        return price, stamina, new_icao_code, new_coordinates, attempt
+        return price, stamina, new_icao_code, new_coordinates, 5
     else:
-        return 0, 0, None, (0, 0), 5
+        return 0, 0, None, (0, 0), attempt
 
 
 def player_airport_selection(name_list, coordinates, player_coordinates, amount_of_possible_flights):
