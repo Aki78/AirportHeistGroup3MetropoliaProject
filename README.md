@@ -7,12 +7,11 @@
 
 
 ## Contents
-#### [Introduction](#introduction)
+[Introduction](#introduction)
 
-#### [Vision](#vision)
-
+[Vision](#vision)
 [Backstory](#backstory)
-    -Setting
+[Setting](#setting)
 
 [Functional Requirements](#functional-requirements)
 
