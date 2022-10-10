@@ -34,35 +34,39 @@ You are a master thief, captured by the Finnish authorities on the minor charge 
 They have no idea of your genius though and neglect to watch over you properly.
 You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
 You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice. 
+
 Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport. 
 The police, however, have been alerted of your activities and are hot on your tail.
 Time to make your next move before interpol gets you!
+
+You must make it to the final destination airport before you stamina runs out! Travel is resticted to
+There you have a hired escape crew who can get you beyond interpol's reach.
 
 ### Setting
 Airport Heist is set in present day Europe.
 
 ## Functional Requirements
 ### How the game works
-Airport Heist is a single player game, 
-where the main character aims to avoid capture from interpol.
-Players can fly to different cities with-in europe as long as they can afford the tickets.
+Airport Heist is a single player game, where the main character aims to avoid capture. 
+Players must make it to the final destination airport, before their stamina runs out.
+Players can fly to different cities with-in europe as long as they can afford the tickets and have enough stamina to get there.
 
-Stealing
+#### Stealing
 
 In order to acquire money to buy tickets players steal, however, there is a chance of getting caught.
 Players are informed of the odds of capture before they attempt a heist 
 and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
 If they use all 5 attempts before escaping, they will be caught and the game is over.
 The players stolen earnings are based on gauss' theory with two different expectation values,
-depending on the game difficulty selected.
+depending on the game's difficulty selected.
 
-Travel
+#### Travel
 
 Travel is possible with the purchase of a flight ticket.
 Players are also restricted to airports with-in a certain distance, which is dependent on the game difficulty selected.
 Players a shown  list of countries with-in their range.
 
-Evading Capture
+#### Evading Capture
 
 Players can see in which city interpol is but not exactly where interpol will go next.
 Players will see a choice of 3 possible airports interpol will be in next.
@@ -158,7 +162,7 @@ It must be possible to look back at the user stories later to determine whether 
 
 
 <p align="center">
-    <img src="./project_diagram.svg">
+    <img src="./project_diagram.png">
 </p>
 
 [Back to top](#airport-heist)
