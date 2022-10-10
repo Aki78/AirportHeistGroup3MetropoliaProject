@@ -26,6 +26,20 @@ The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natan
 The Purpose of Airport Heist is to produce a fun and interactive game, 
 that satisfies the guidelines provided by software1.
 
+## Story
+### Backstory
+You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
+They have no idea of your genius though and neglect to watch over you properly.
+You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
+You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice. 
+Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport. 
+The police, however, have been alerted of your activities and are hot on your tail.
+Time to make your next move before interpol gets you!
+
+### Setting
+Airport Heist is set in present day Europe.
+
+## Functional Requirements
 ### How the game works
 Airport Heist is a single player game, 
 where the main character aims to avoid capture from interpol.
@@ -61,56 +75,15 @@ and then making strategic moves to avoid arrest.
 Insert picture here
 
 
-## Story
-### Backstory
-You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
-They have no idea of your genius though and neglect to watch over you properly.
-You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
-You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice. 
-Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport. 
-The police, however, have been alerted of your activities and are hot on your tail.
-Time to make your next move before interpol gets you!
 
-### Setting
-Airport Heist is set in present day Europe.
 
-## Functional Requirements
-Chapter 3 (Functional requirements) discusses everything the user can do with the game. 
-The functional requirements are typically presented as user stories with a role (who), 
-action (what), and benefit (why). 
-An example of a user story would be "As a player I can choose the next airport from the cities showing on the map, 
-so that my electric airplane will move there.". 
-The example user story contains a role (player), an action (selecting the next city) 
-and a benefit the user can gain by completing the action (moving to the new location). 
-There are enough user stories when they together describe all functionality of the game. 
-For the flight simulator this probably means dozens of user stories. 
-Each user story must be unambiguous and concrete. 
-It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
 
-The user is able to do two things: choose where they travel to and if they wish to rob the airport they are currently in.
+The user is able to do two things: 
+    -choose where they travel to
+    -if they wish to rob the airport they are currently in.
 Where they travel to is limited by budget and distance.
 The success of a robbery is mostly down to luck.
-
-<p align="center">
-    <img src="./project_diagram.svg">
-</p>
-
-[Back to top](#airport-heist)
-
-## Quality Requirements
-The visual for the user experience must be pleasing, motion must be smooth. Loading time must not excede more than a couple seconds on a typical 
-laptop computer, and freezes must not occur. The game must run on at least 30 fps. The final product must be accesible online.
-
-Chapter 4 defines other requirements besides the functional requirements the flight simulator has. 
-Examples of these could be performance requirements 
-("Fetching airport information from the database must take a maximum of two seconds.") 
-or usability requirements ("The user must get instant feedback from all actions they perform").
-
-All functions created were ran through pytest to ensure proper working order.
-We also created a new database from the existing one. 
-This removed a lot of unnecessary information and made calling upon the database faster.
-
-
+Listed below are all the funtctions that were created for the game:
 ### core_test Functions
     -init_state
     -run_game
@@ -166,6 +139,34 @@ This removed a lot of unnecessary information and made calling upon the database
     -test_get_distances
 
     [Back to top](#airport-heist)
+Chapter 3 (Functional requirements) discusses everything the user can do with the game. 
+The functional requirements are typically presented as user stories with a role (who), 
+action (what), and benefit (why). 
+An example of a user story would be "As a player I can choose the next airport from the cities showing on the map, 
+so that my electric airplane will move there.". 
+The example user story contains a role (player), an action (selecting the next city) 
+and a benefit the user can gain by completing the action (moving to the new location). 
+There are enough user stories when they together describe all functionality of the game. 
+For the flight simulator this probably means dozens of user stories. 
+Each user story must be unambiguous and concrete. 
+It must be possible to look back at the user stories later to determine whether each planned functionality has been implemented in the software.
+
+
+
+<p align="center">
+    <img src="./project_diagram.svg">
+</p>
+
+[Back to top](#airport-heist)
+
+## Quality Requirements
+The visual for the user experience must be pleasing, motion must be smooth. Loading time must not excede more than a couple seconds on a typical 
+laptop computer, and freezes must not occur. The game must run on at least 30 fps. The final product must be accesible online.
+
+
+All functions created were ran through pytest to ensure proper working order.
+We also created a new database from the existing one. 
+This removed a lot of unnecessary information and made calling upon the database faster.
 
 
 ## Learning Tools And information
