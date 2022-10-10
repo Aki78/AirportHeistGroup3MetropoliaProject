@@ -7,7 +7,7 @@
 
 
 ## Contents
-    -Introduction [## Introduction](README.md:## Introduction)
+    -Introduction [Introduction](##Introduction)
     -Vision
     -Story
     -Functional Requirements
