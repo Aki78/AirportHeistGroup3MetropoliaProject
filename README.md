@@ -7,7 +7,7 @@
 
 
 ## Contents
-    -Introduction
+    -Introduction [## Introduction(README.md:Introduction)]
     -Vision
     -Story
     -Functional Requirements
@@ -85,6 +85,10 @@ It must be possible to look back at the user stories later to determine whether 
 The user is able to do two things: choose where they travel to and if they wish to rob the airport they are currently in.
 Where they travel to is limited by budget and distance.
 The success of a robbery is mostly down to luck.
+
+<p align="center">
+    <img src="./project_diagram.svg">
+</p>
 
 ## Quality Requirements
 The visual for the user experience must be pleasing, motion must be smooth. Loading time must not excede more than a couple seconds on a typical 
