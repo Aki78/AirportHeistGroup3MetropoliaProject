@@ -4,7 +4,7 @@ from colorama import Fore , Back , Style
 
 def print_start(name):
     print("Hello, " + str(name) + "!")
-    print("Welcome to flight game!")
+    print(Fore.LIGHTMAGENTA_EX + "Welcome to flight game!" +  Style.RESET_ALL)
     print("")
     print(Fore.MAGENTA + "->" + Style.RESET_ALL+ " Start")
     print(Fore.MAGENTA +"->" + Style.RESET_ALL+ " Settings")
@@ -61,7 +61,8 @@ def print_mainmenu(name):
 
         print_start(name)
 
-        userInput = input("Input: ")
+        userInput = input(Fore.YELLOW +"Input:")
+        print(Style.RESET_ALL)
 
         if userInput not in  ["Start", "Settings", "Instructions", "Credits", "Exit"] :
             print("Invalid input")
@@ -74,12 +75,12 @@ def steal_rate_and_decision(steal_rate, attempt, stolen_money):
             print("Attempts remaining:", attempt - 1)
             print("Your are about to steal more money")
     elif attempt == 1:
-        print("Last attempt")
-        print("You have to steal or you will get caught the next time")
+        print(Fore.RED + "Last attempt" + Style.RESET_ALL)
+        print("You have to steal or you will get caught the next time.")
 
     print("You will get", stolen_money, "€")        
     print("Successful stealing rate: " + str(round(steal_rate * 100)) + "%")
-    print("-> Steal")
-    print("-> Wait")
+    print(Fore.MAGENTA + "->" + Style.RESET_ALL + " Steal")
+    print(Fore.MAGENTA + "->" + Style.RESET_ALL + " Wait")
     print("")
     return
