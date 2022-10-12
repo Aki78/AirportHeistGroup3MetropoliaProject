@@ -66,7 +66,7 @@ The main character start in Helsinki, Finland and must end up in the destination
 #### Evading Capture
 
 Players can see in which city interpol is and a list of airports interpol may be at next.
-Interpol moves from airport to airport at random, whenever the player makes a decision. 
+Interpol moves from airport to airport at random, whenever the player makes a decision in the game. 
 
 #### Stamina
 
@@ -74,11 +74,7 @@ Stamina is a set amount of energy that the main character has for travelling. Ea
 
 #### Stealing
 
-The main character starts with the money they stole. Players are able to heist if they need more money. There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
-If they use all 5 attempts before escaping, they will be caught and the game is over.
-
-
-The game is over when the player is either caught by interpol, run out of money or run out of stamina. 
+The main character starts the game with a set amount of money. If the player requires more money they need to heist. There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist and can abort if they feel the risks are too great. Players have 5 attempts to steal. If they use all 5 attempts before escaping, they will be caught and the game is over.
 
 [Back to top](#airport-heist)
 
