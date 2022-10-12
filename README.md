@@ -15,7 +15,7 @@
 - [Objective](#objective)
 
 [Functional Requirements](#functional-requirements)
-- [How the gamw works](#how-the-game-works)
+- [How the game works](#how-the-game-works)
 - [Block diagram](#block-diagram)
 - [Functions](#functions)
 - [Project diagram](#project-diagram)
@@ -25,6 +25,7 @@
 - [Final requirements](#final-requirements)
 
 [Learning Tools And Information](#learning-tools-and-information)
+- [Airport Heist Presentation](#airport-heist-demo)
 - [Run](#run)
 - [Useful git commands](#useful-git-commands)
 - [Useful bash commands](#useful-bash-commands)
@@ -179,6 +180,10 @@ The visuals for the user experience must be pleasing and the animated motion mus
 [Back to top](#airport-heist)
 
 ## Learning Tools And information
+### Airport Heist Presentation
+
+https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit?userstoinvite=kmorooka78@gmail.com&actionButton=1#slide=id.p
+
 ### Run
 If you are using Mac/Linux run
 ```bash
