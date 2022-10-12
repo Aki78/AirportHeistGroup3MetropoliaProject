@@ -91,7 +91,7 @@ The game is over when the player is either caught by interpol, run out of money 
 
 
 <p align="center">
-    <img src="./block_diagram.png">
+    <img src="./block_diagram1.png">
 </p>
 
 The user is able to do two things: 
