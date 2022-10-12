@@ -155,7 +155,7 @@ Listed below are all the funtctions that were created for the game:
 [Back to top](#airport-heist)
 
 ### Project Diagram
-This diagram shoes how our different python files interact with each other to make our game work.
+This diagram shoes how our different python files interact with each other. In the future will create our user interface through javascript.
 
 <p align="center">
     <img src="./project_diagram.png">
