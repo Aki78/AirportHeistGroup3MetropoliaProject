@@ -61,7 +61,7 @@ Airport Heist is a single player game, where the main character aims to make it 
 
 #### Travel
 
-The main character start in Helsinki, Finland and must end up in the destination airport provided by the game. Travel is possible with the purchase of a flight ticket.
+The main character start in Helsinki, Finland and must end up in the destination airport provided by the game. Travel is possible with the purchase of flight tickets.
 Players are also restricted to airports with-in a certain distance from their current location and all airports are in the EU. Players are shown a list of countries which they can travel to.
 
 #### Evading Capture
