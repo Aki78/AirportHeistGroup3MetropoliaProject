@@ -13,14 +13,14 @@ def print_start(name):
 
 def print_instructions():
     print("This is the instructions:")
-    print("-- You will be assigned a random destination.")
-    print("-- You are limited by budget and stamina.")
-    print("-- You have to buy tickets to travel.")
-    print("-- In order to acquire money, you have to steal.")
-    print("-- you can get caught by the interpol and lose the game.")
-    print("-- You will be informed of the interpol's possible destination")
-    print("-- You are restricted to airports with-in a certain distance.")
-    print("-- You will lose if you go under stamina or budget.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You will be assigned a random destination.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You are limited by budget and stamina.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You have to buy tickets to travel.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " In order to acquire money, you have to steal.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " you can get caught by the interpol and lose the game.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You will be informed of the interpol's possible destination")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You are restricted to airports with-in a certain distance.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You will lose if you go under stamina or budget.")
 
     input("Press Enter to go back...")
     return
