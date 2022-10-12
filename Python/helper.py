@@ -60,11 +60,11 @@ def print_possible_flights(airport_data, name, coordinates):
     selection = 1
 
     for i in name:
-        print(selection, "- ", i)
+        print(selection, "- ", end = '')
 
         for j in range(len(airport_data)):
             if airport_data[j]["name"] == i:
-                print(j, " - Country: ",airport_data[j]["country"])
+                print("Country:",airport_data[j]["country"])
         
         selection += 1
       
