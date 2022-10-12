@@ -59,7 +59,7 @@ Airport Heist is a single player game, where the main character aims to make it 
 
 #### Travel
 
-Players start in Helsinki, Finland and must end up in the destination airport provided by the game. Travel is possible with the purchase of a flight ticket.
+The main character start in Helsinki, Finland and must end up in the destination airport provided by the game. Travel is possible with the purchase of a flight ticket.
 Players are also restricted to airports with-in a certain distance from their current location and all airports are in the EU. Players are shown a list of countries which they can travel to.
 
 #### Evading Capture
@@ -69,13 +69,12 @@ Interpol moves from airport to airport at random, whenever the player makes a de
 
 #### Stamina
 
-Stamina is a set amount of energy the main character has for travelling. Each time the player travels they use up stamina. How much stamina they use is dependant and the length of the flight. Stamina does not regenerate, so you must make it to your final destination before it runs out completely.
+Stamina is a set amount of energy that the main character has for travelling. Each time the main character travels they use up stamina. Stamina does not regenerate, so you must make it to your final destination before it runs out completely.
 
 #### Stealing
 
-The player starts with a set amount of money, which is again dependant on the game's difficulty selected.If the player needs more money to buy flight tickets players steal. There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
-If they use all 5 attempts before escaping, they will be caught and the game is over. The players stolen earnings are based on gauss' theory with two different expectation values,
-depending on the game's difficulty selected.
+The main character starts with the money they stole. Players are able to heist if they need more money. There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
+If they use all 5 attempts before escaping, they will be caught and the game is over.
 
 
 The game is over when the player is either caught by interpol, run out of money or run out of stamina. 
