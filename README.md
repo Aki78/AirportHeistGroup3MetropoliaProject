@@ -133,7 +133,20 @@ All helper functions created were ran through pytest to ensure proper working or
 The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
 #### Final Requirements
-The visuals for the user experience must be pleasing and the animated motion must be smooth. Loading time must not excede more than a couple seconds on a typical laptop computer. The game should never freeze. The game must run on at least 30 fps. The final product must be accesible online.
+The user interface will be translated to JavaScript, and any missing features will be implemented at that time.
+
+##### Game goals
+
+    -create scoring system
+    -save top 10 players in a database
+    -visually pleasing user interface
+    -smooth animated motion
+    -short start-up time
+    -30fps
+    -no freezing
+    -the game will be in real time
+    -AI will be used
+    -the game will be playable online from anywhere for anyone. 
 
 [Back to top](#airport-heist)
 
