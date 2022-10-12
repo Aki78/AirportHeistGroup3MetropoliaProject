@@ -42,8 +42,10 @@ def heist_decision(): #Input
 
 def money_heist(player, rate_upper, rate_lower, attempt):
     steal_rate = round(gfuncs.theft_success_rate() * 100) / 100
+    stolen_money = gfuncs.theft_success_earnings_gauss()
+    
     if attempt > 0:
-        prints.steal_rate_and_decision(steal_rate, attempt)
+        prints.steal_rate_and_decision(steal_rate, attempt, stolen_money)
 
         while True:
             userInput = input("Input: ")
@@ -54,8 +56,8 @@ def money_heist(player, rate_upper, rate_lower, attempt):
                 break
 
         if userInput == "Steal":
-            stolen_money = gfuncs.theft_success_earnings_gauss()
-            print("You will get", stolen_money, "€")
+            #stolen_money = gfuncs.theft_success_earnings_gauss()
+            #print("You will get", stolen_money, "€")
 
             true_rate = random.uniform(rate_lower, rate_upper)
             # print("true rate", true_rate)

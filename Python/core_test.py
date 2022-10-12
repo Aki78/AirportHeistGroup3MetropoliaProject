@@ -57,7 +57,7 @@ def init_state():
             break
 
     game_state["player"].append(game_state["budget"])
-    game_state["player"].append(game_state["stamina"])    
+    game_state["player"].append(game_state["stamina"]) 
 
     #print("Returning game state:", game_state)    
 
