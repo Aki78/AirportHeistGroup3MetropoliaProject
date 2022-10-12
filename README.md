@@ -86,11 +86,6 @@ The main character starts the game with a set amount of money. If the player req
     <img src="./block_diagram1.png">
 </p>
 
-The user is able to do two things: 
-
-    -choose where they travel to
-    -choose if they wish to rob the airport they are currently in.
-
 [Back to top](#airport-heist)
 
 ### Functions
