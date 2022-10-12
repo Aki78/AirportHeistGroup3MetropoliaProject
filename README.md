@@ -114,6 +114,8 @@ All functions created were sorted into different files, depending on what the fu
     -Prints
     -Tests
 
+Having these different files allowed us to find and use functions easily.
+
 [Back to top](#airport-heist)
 
 ### Project Diagram
