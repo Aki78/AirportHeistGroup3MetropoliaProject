@@ -75,6 +75,4 @@ def get_datalist():
         for row in result:
             data_list.append({"name": row[0], "municipality": row[1], "ident": row[2], "deg": (row[3], row[4]), "country": row[5]})
     
-    #print(data_list[0])
-    
     return data_list

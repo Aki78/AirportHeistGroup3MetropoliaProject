@@ -1,5 +1,5 @@
 import os
-import settings
+# import settings
 import database
 import random
 import prints

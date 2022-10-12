@@ -29,8 +29,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.0192238"
-     inkscape:cx="312.98327"
-     inkscape:cy="340.45516"
+     inkscape:cx="587.70213"
+     inkscape:cy="342.41744"
      inkscape:window-width="1920"
      inkscape:window-height="974"
      inkscape:window-x="-11"
@@ -138,15 +138,6 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient2463"
-       id="linearGradient2465"
-       x1="80.733412"
-       y1="58.797807"
-       x2="95.789804"
-       y2="58.797807"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2463"
        id="linearGradient3906"
        gradientUnits="userSpaceOnUse"
        x1="80.733412"
@@ -189,7 +180,7 @@
        xlink:href="#linearGradient2463"
        id="linearGradient4798"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-1,0,0,1,184.03373,60.744755)"
+       gradientTransform="matrix(-1,0,0,1,175.98635,61.004348)"
        x1="80.733412"
        y1="58.797807"
        x2="95.789804"
@@ -377,23 +368,23 @@
        transform="matrix(1.1669802,0,0,1.9627498,-47.053581,-15.349832)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan1734">Player State:
+         id="tspan3284">Player State:
 </tspan><tspan
          x="238.2608"
          y="22.324745"
-         id="tspan1736">    -distance from interpol
+         id="tspan3286">    -distance from interpol
 </tspan><tspan
          x="238.2608"
          y="26.293495"
-         id="tspan1738">    -stamina level
+         id="tspan3288">    -stamina level
 </tspan><tspan
          x="238.2608"
          y="30.262245"
-         id="tspan1740">    -money 
+         id="tspan3290">    -money 
 </tspan><tspan
          x="238.2608"
          y="34.230995"
-         id="tspan1742">    -odds of a successful heist
+         id="tspan3292">    -odds of a successful heist
 </tspan></text>
     <text
        xml:space="preserve"
@@ -411,28 +402,28 @@
        id="text1437"
        style="fill:#ffffff;white-space:pre;shape-inside:url(#rect1439)" />
     <path
-       style="fill:url(#linearGradient2465);stroke-width:1.4;fill-opacity:1;stroke-dasharray:none;stroke:#ffffff;stroke-opacity:1;marker-end:url(#Arrow1)"
+       style="fill:none;stroke-width:1.4;fill-opacity:1;stroke-dasharray:none;stroke:#0000ce;stroke-opacity:1;marker-end:url(#Arrow1)"
        d="M 95.789804,45.42877 C 80.733412,72.166844 80.733412,72.166844 80.733412,72.166844"
        id="path2434" />
     <path
-       style="fill:url(#linearGradient3906);fill-opacity:1;stroke:#ffffff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       style="fill:url(#linearGradient3906);fill-opacity:1;stroke:#0000fe;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
        d="M 61.004346,105.39474 C 45.947954,132.13282 45.947954,132.13282 45.947954,132.13282"
        id="path3902" />
     <path
-       style="fill:url(#linearGradient3960);fill-opacity:1;stroke:#ffffff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       style="fill:url(#linearGradient3960);fill-opacity:1;stroke:#0000ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
        d="m 170.29298,105.65434 c -15.05639,26.73808 -15.05639,26.73808 -15.05639,26.73808"
        id="path3956" />
     <path
-       style="fill:url(#linearGradient3998);fill-opacity:1;stroke:#ffffff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       style="fill:url(#linearGradient3998);fill-opacity:1;stroke:#0100cc;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
        d="m 179.36106,45.688363 c 15.05639,26.738074 15.05639,26.738074 15.05639,26.738074"
        id="path3994" />
     <path
-       style="fill:url(#linearGradient4782);fill-opacity:1;stroke:#ffffff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       style="fill:url(#linearGradient4782);fill-opacity:1;stroke:#0303ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
        d="m 213.36774,105.91393 c 15.05639,26.73808 15.05639,26.73808 15.05639,26.73808"
        id="path4778" />
     <path
-       style="fill:url(#linearGradient4798);fill-opacity:1;stroke:#ffffff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
-       d="M 88.243928,106.17352 C 103.30032,132.9116 103.30032,132.9116 103.30032,132.9116"
+       style="fill:url(#linearGradient4798);fill-opacity:1;stroke:#0101ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="m 80.196546,106.43311 c 15.056392,26.73808 15.056392,26.73808 15.056392,26.73808"
        id="path4794" />
     <path
        style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
@@ -477,7 +468,7 @@
        transform="matrix(1.1902895,0,0,2.2537669,-278.98955,-5.4028325)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan1744">Reward = avoid interpol
+         id="tspan3294">Reward = avoid interpol
 </tspan></text>
     <text
        xml:space="preserve"
@@ -500,7 +491,7 @@
        transform="matrix(1.1637497,0,0,2.2537669,-165.70559,72.734652)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan1746">Reward = keep stamina
+         id="tspan3296">Reward = keep stamina
 </tspan></text>
     <rect
        style="fill:#000000;stroke-width:0.0778736"
@@ -518,7 +509,7 @@
        transform="matrix(1.1796992,0,0,2.2537669,-41.531368,79.224476)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan1748">Reward = better odds
+         id="tspan3298">Reward = better odds
 </tspan></text>
     <rect
        style="fill:#000000;stroke-width:0.0811374"
@@ -536,7 +527,7 @@
        transform="matrix(1.2235826,0,0,2.2537669,-118.71609,88.31023)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan1750">Reward = more money
+         id="tspan3300">Reward = more money
 </tspan></text>
   </g>
 </svg>

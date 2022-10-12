@@ -27,3 +27,7 @@ func _on_SettingsButton_pressed():
 
 func _on_HudContainer_tree_exited():
 	pass
+
+
+func _on_Credits_pressed():
+	get_tree().change_scene("res://CreditsScene/Credits.tscn")
