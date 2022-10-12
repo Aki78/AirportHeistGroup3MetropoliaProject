@@ -43,6 +43,9 @@ def get_possible_flights(max_flight_distance, player_coordinates, deg_list):
 def chooose_destination(airport_data):
     random.seed()
 
+    d_code = ''
+    d_country = ''
+
     destination_list = ["GCFV", "LPFR", "LMML"]
 
     d_code = random.choice(destination_list)
