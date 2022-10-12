@@ -22,7 +22,7 @@
 
 [Quality Requirements](#quality_requirements)
 - [Preliminary requirements](#preliminary-requirements)
-- [Final requirements](#final-requirements)
+- [Final requirements](#final-requirements-and-goals)
 
 [Learning Tools And Information](#learning-tools-and-information)
 - [Airport Heist Presentation](#airport-heist-demo)
@@ -118,10 +118,7 @@ This diagram shows how our different python files interact with each other. At t
 All helper functions created were ran through pytest to ensure proper working order.
 The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
-#### Final Requirements
-The user interface will be translated to JavaScript, and any missing features will be implemented at that time.
-
-##### Game goals
+#### Final Requirements and Goals
 
     -create scoring system
     -save top 10 players in a database
