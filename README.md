@@ -204,6 +204,8 @@ git stash (restore everythiing to last commit)
 git status (shows your current git state)
 
 git clone repo_name (when you want to copy a repo and add it your computer)
+
+./run_git.sh 'comment'(franks special command)
 ```
 
 ### Useful Bash Commands
