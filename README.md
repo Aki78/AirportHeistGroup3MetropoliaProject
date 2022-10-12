@@ -105,7 +105,7 @@ Having these different files allowed us to find and use functions easily.
 [Back to top](#airport-heist)
 
 ### Project Diagram
-This diagram shoes how our different python files interact with each other. In the future will create our user interface through javascript.
+This diagram shows how our different python files interact with each other. At the moment we are using Godot, a game engine, but in the future we will create our user interface through javascript.
 
 <p align="center">
     <img src="./project_diagram.png">
