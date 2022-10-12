@@ -59,24 +59,22 @@ Airport Heist is a single player game, where the main character aims to make it 
 
 #### Travel
 
-Players start in Helsinki, Finland and must end up in the destination airport provided by the game. This airport is generated at random. Travel is possible with the purchase of a flight ticket.
-Players are also restricted to airports with-in a certain distance from their current location and all airports are wih-in the EU. The ristricted travel distance is dependent on the game's difficulty selected. Players are shown a list of countries with-in their travel range.
+The main character start in Helsinki, Finland and must end up in the destination airport provided by the game. Travel is possible with the purchase of a flight ticket.
+Players are also restricted to airports with-in a certain distance from their current location and all airports are in the EU. Players are shown a list of countries which they can travel to.
 
 #### Evading Capture
 
-Players can see in which city interpol is but not exactly where interpol will be at next.
-Players will see a list of possible airports interpol will be at next.
-Interpol moves from airport to airport at random. Interpol only move each time the player makes a decision. 
+Players can see in which city interpol is and a list of airports interpol may be at next.
+Interpol moves from airport to airport at random, whenever the player makes a decision. 
 
 #### Stamina
 
-Players start with a set amount of stamina at the beginning of the game. Each time the player travels they use up stamina. How much stamina they use is dependant and the length of the flight. Stamina does not regenerate, so you must make it to your final destination before it runs out completely.
+Stamina is a set amount of energy that the main character has for travelling. Each time the main character travels they use up stamina. Stamina does not regenerate, so you must make it to your final destination before it runs out completely.
 
 #### Stealing
 
-The player starts with a set amount of money, which is again dependant on the game's difficulty selected.If the player needs more money to buy flight tickets players steal. There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
-If they use all 5 attempts before escaping, they will be caught and the game is over. The players stolen earnings are based on gauss' theory with two different expectation values,
-depending on the game's difficulty selected.
+The main character starts with the money they stole. Players are able to heist if they need more money. There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist and can abort if they feel the risks are too great. Players have 5 attempts to steal. 
+If they use all 5 attempts before escaping, they will be caught and the game is over.
 
 
 The game is over when the player is either caught by interpol, run out of money or run out of stamina. 
@@ -157,7 +155,7 @@ Listed below are all the funtctions that were created for the game:
 [Back to top](#airport-heist)
 
 ### Project Diagram
-This diagram shoes how our different python files interact with each other to make our game work.
+This diagram shoes how our different python files interact with each other. In the future will create our user interface through javascript.
 
 <p align="center">
     <img src="./project_diagram.png">

@@ -1,5 +1,4 @@
 ﻿"id","ident","airport_name","country_name","iso_country","latitude_deg","longitude_deg","elevation_ft","municipality",
-"123","BIKF","Keflavik International Airport","Iceland","IS","63.985001","-22.6056","171","Reykjavik",
 "2155","EBBR","Brussels Airport","Belgium","BE","50.901401519800004","4.48443984985","184","Brussels",
 "2301","EETN","Lennart Meri Tallinn Airport","Estonia","EE","59.41329956049999","24.832799911499997","131","Tallinn",
 "2307","EFHK","Helsinki Vantaa Airport","Finland","FI","60.3172","24.963301","179","Helsinki",
@@ -13,7 +12,6 @@
 "2648","ESGG","Gothenburg-Landvetter Airport","Sweden","SE","57.662799835205","12.279800415039","506","Gothenburg",
 "2758","EVRA","Riga International Airport","Latvia","LV","56.92359924316406","23.971099853515625","36","Riga",
 "2766","EYVI","Vilnius International Airport","Lithuania","LT","54.634102","25.285801","648","Vilnius",
-"3077","GCFV","Fuerteventura Airport","Spain","ES","28.4527","-13.8638","85","Fuerteventura Island",
 "3972","LATI","Tirana International Airport Mother Tere","Albania","AL","41.4146995544","19.7206001282","126","Tirana",
 "3974","LBBG","Burgas Airport","Bulgaria","BG","42.56959915161133","27.515199661254883","135","Burgas",
 "3993","LDZA","Zagreb Airport","Croatia","HR","45.7429008484","16.0687999725","353","Zagreb",
@@ -36,3 +34,4 @@
 "6501","UMMS","Minsk National Airport","Belarus","BY","53.888071","28.039964","670","Minsk",
 "41136","RU-0016","Lipetsk Air Base","Russia","RU","52.6349983215332","39.44499969482422","636","Lipetsk",
 "301881","EDDB","Berlin Brandenburg Airport","Germany","DE","52.351389","13.493889","157","Berlin",
+"4019","LEMD","Adolfo Suarez Madrid-Barajas Airport","Spain","ES","40.471926","-3.56264","1998","Madrid",
