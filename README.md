@@ -103,60 +103,15 @@ The user is able to do two things:
 [Back to top](#airport-heist)
 
 ### Functions
-Listed below are all the funtctions that were created for the game:
-#### core_test Functions
-    -init_state
-    -run_game
-
-#### Helper Functions
-    -feet_to_meters
-    -meters_to_kilometers
-    -get_distances
-    -get_possible_flights
-    -print_possible_flights
-    -print_flight_details
-    -deg_to_xy
-    -get_min_max_distance
-
-#### Database Functions
-    -get_new_coordinates
-    -get_geo_sirport_info
-    -get_airport_name
-    -get_coordinates
-    -get_datalist
-
-#### Decisions
-    -mode
-    -heist_decision
-    -money_heist
-    -escape
-    -player_airport_selection
-
-#### Game Functions
-    -theft_success_earnings_gauss
-    -theft_success_rate
-    -get_ticket_price
-    -get_stamina_consumptions
-    -interpol_index
-    -update_player
-
-#### Interpol
-    -interpol_position_and_movement
-    -update
-
-#### Prints
-    -print_start
-    -print_instructions
-    -print_settings
-    -print_credits
-    -print_player_position
-    -print_mainmenu
-    -steal_rate_and_decision(the be changed)
-
-#### Tests
-    -test_feet_to_meters
-    -test_meters_to_km
-    -test_get_distances
+All functions created were sorted into different files, depending on what the functions does. Listed below are the python files created to sort the functions.
+    - core_test Functions
+    - Helper Functions
+    - Database Functions
+    - Decisions
+    - Game Functions
+    - Interpol
+    - Prints
+    - Tests
 
 [Back to top](#airport-heist)
 
