@@ -1,3 +1,4 @@
+from ast import For
 import os
 from colorama import Fore , Back , Style 
 
@@ -32,10 +33,10 @@ def print_settings():
 
 def print_credits():
     print("The master mindes behind this game are:")
-    print("-> Aki")
-    print("-> Frank")
-    print("-> Khai")
-    print("-> Kiana")
+    print("->" + Fore.LIGHTGREEN_EX +" Aki" + Style.RESET_ALL)
+    print("->" + Fore.LIGHTGREEN_EX + " Frank" + Style.RESET_ALL)
+    print("->" + Fore.LIGHTGREEN_EX + " Khai" + Style.RESET_ALL)
+    print("->" + Fore.LIGHTGREEN_EX + " Kiana" + Style.RESET_ALL)
     print("These people all had to escape from prison at some point in their lives,")
     print("So they have gathered around and made their experinces into a game.")
     print("You can use this game to prepare for in real life situations.")
