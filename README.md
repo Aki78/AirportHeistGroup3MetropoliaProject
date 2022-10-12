@@ -104,6 +104,7 @@ The user is able to do two things:
 
 ### Functions
 All functions created were sorted into different files, depending on what the functions does. Listed below are the python files created to sort the functions.
+
     -core_test Functions
     -Helper Functions
     -Database Functions
