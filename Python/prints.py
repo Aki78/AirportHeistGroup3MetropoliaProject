@@ -1,15 +1,15 @@
 import os
-
+from colorama import Fore , Back , Style 
 
 def print_start(name):
     print("Hello, " + str(name) + "!")
     print("Welcome to flight game!")
     print("")
-    print("-> Start")
-    print("-> Settings")
-    print("-> Instructions")
-    print("-> Credits")
-    print("-> Exit")
+    print(Fore.MAGENTA + "->" + Style.RESET_ALL+ " Start")
+    print(Fore.MAGENTA +"->" + Style.RESET_ALL+ " Settings")
+    print(Fore.MAGENTA +"->" + Style.RESET_ALL+ " Instructions")
+    print(Fore.MAGENTA +"->" + Style.RESET_ALL+ " Credits")
+    print(Fore.MAGENTA +"->" + Style.RESET_ALL+  " Exit")
 
 def print_instructions():
     print("This is the instructions:")
