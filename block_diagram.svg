@@ -29,12 +29,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.0192238"
-     inkscape:cx="587.70213"
+     inkscape:cx="535.21121"
      inkscape:cy="342.41744"
      inkscape:window-width="1920"
      inkscape:window-height="974"
      inkscape:window-x="-11"
-     inkscape:window-y="1789"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -150,7 +150,7 @@
        xlink:href="#linearGradient2463"
        id="linearGradient3960"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(74.503183,60.22557)"
+       gradientTransform="translate(90.078761,59.965977)"
        x1="80.733412"
        y1="58.797807"
        x2="95.789804"
@@ -170,7 +170,7 @@
        xlink:href="#linearGradient2463"
        id="linearGradient4782"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-1,0,0,1,309.15754,60.485162)"
+       gradientTransform="matrix(-1,0,0,1,299.5526,59.965976)"
        x1="80.733412"
        y1="58.797807"
        x2="95.789804"
@@ -180,7 +180,7 @@
        xlink:href="#linearGradient2463"
        id="linearGradient4798"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-1,0,0,1,175.98635,61.004348)"
+       gradientTransform="matrix(-1,0,0,1,169.75612,60.485162)"
        x1="80.733412"
        y1="58.797807"
        x2="95.789804"
@@ -200,14 +200,14 @@
     <text
        xml:space="preserve"
        style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
-       x="88.420731"
-       y="33.705189"
+       x="115.67799"
+       y="34.224373"
        id="text167"><tspan
          sodipodi:role="line"
          id="tspan165"
          style="fill:#ffffff;stroke-width:1.33128"
-         x="88.420731"
-         y="33.705189">Airport Heist</tspan></text>
+         x="115.67799"
+         y="34.224373">Menu</tspan></text>
     <rect
        style="fill:#000000;stroke-width:0.264583"
        id="rect327"
@@ -262,13 +262,6 @@
          style="fill:#ffffff;stroke-width:1.33128"
          x="8.933876"
          y="155.64117">Travel</tspan></text>
-    <rect
-       style="fill:#000000;stroke-width:0.264583"
-       id="rect1207"
-       width="63.511742"
-       height="26.065514"
-       x="44.421509"
-       y="76.728058" />
     <text
        xml:space="preserve"
        style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
@@ -368,23 +361,23 @@
        transform="matrix(1.1669802,0,0,1.9627498,-47.053581,-15.349832)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan3284">Player State:
+         id="tspan567">Player State:
 </tspan><tspan
          x="238.2608"
          y="22.324745"
-         id="tspan3286">    -distance from interpol
+         id="tspan569">    -distance from interpol
 </tspan><tspan
          x="238.2608"
          y="26.293495"
-         id="tspan3288">    -stamina level
+         id="tspan571">    -stamina level
 </tspan><tspan
          x="238.2608"
          y="30.262245"
-         id="tspan3290">    -money 
+         id="tspan573">    -money 
 </tspan><tspan
          x="238.2608"
          y="34.230995"
-         id="tspan3292">    -odds of a successful heist
+         id="tspan575">    -odds of a successful heist
 </tspan></text>
     <text
        xml:space="preserve"
@@ -411,7 +404,7 @@
        id="path3902" />
     <path
        style="fill:url(#linearGradient3960);fill-opacity:1;stroke:#0000ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
-       d="m 170.29298,105.65434 c -15.05639,26.73808 -15.05639,26.73808 -15.05639,26.73808"
+       d="m 185.86856,105.39475 c -15.05639,26.73808 -15.05639,26.73808 -15.05639,26.73808"
        id="path3956" />
     <path
        style="fill:url(#linearGradient3998);fill-opacity:1;stroke:#0100cc;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
@@ -419,23 +412,19 @@
        id="path3994" />
     <path
        style="fill:url(#linearGradient4782);fill-opacity:1;stroke:#0303ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
-       d="m 213.36774,105.91393 c 15.05639,26.73808 15.05639,26.73808 15.05639,26.73808"
+       d="m 203.7628,105.39474 c 15.05639,26.73808 15.05639,26.73808 15.05639,26.73808"
        id="path4778" />
     <path
        style="fill:url(#linearGradient4798);fill-opacity:1;stroke:#0101ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
-       d="m 80.196546,106.43311 c 15.056392,26.73808 15.056392,26.73808 15.056392,26.73808"
+       d="M 73.966315,105.91392 C 89.022707,132.652 89.022707,132.652 89.022707,132.652"
        id="path4794" />
     <path
        style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
-       d="m 103.30031,106.17352 c 15.0564,26.73808 15.0564,26.73808 15.0564,26.73808"
+       d="m 87.984325,106.17351 c 15.056405,26.73808 15.056405,26.73808 15.056405,26.73808"
        id="path4810" />
     <path
-       style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
-       d="m 228.68372,106.69271 c 15.0564,26.73808 15.0564,26.73808 15.0564,26.73808"
-       id="path9432" />
-    <path
-       style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
-       d="m 181.67972,106.9523 c -15.0564,26.73808 -15.0564,26.73808 -15.0564,26.73808"
+       style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.87;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
+       d="M 158.86104,46.958737 C 143.23562,133.75045 143.23562,133.75045 143.23562,133.75045"
        id="path9436" />
     <path
        style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.81015;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
@@ -468,7 +457,7 @@
        transform="matrix(1.1902895,0,0,2.2537669,-278.98955,-5.4028325)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan3294">Reward = avoid interpol
+         id="tspan577">Reward = avoid interpol
 </tspan></text>
     <text
        xml:space="preserve"
@@ -476,58 +465,63 @@
        id="text11176"
        style="fill:none;stroke-width:5.76;stroke-dasharray:none;stroke:#000000;stroke-opacity:1;fill-opacity:1;white-space:pre;shape-inside:url(#rect11178)" />
     <rect
-       style="fill:#000000;stroke-width:0.0819858"
+       style="fill:#000000;stroke-width:0.08028"
        id="rect11194"
-       width="50.432205"
+       width="48.355461"
        height="11.865401"
-       x="109.64395"
-       y="106.32876" />
+       x="95.366341"
+       y="108.40551" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;white-space:pre;inline-size:54.1672;fill:#ffffff;stroke-width:0.264583"
        x="238.2608"
        y="18.355995"
        id="text11198"
-       transform="matrix(1.1637497,0,0,2.2537669,-165.70559,72.734652)"><tspan
+       transform="matrix(1.1637497,0,0,2.2537669,-179.9832,74.811391)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan3296">Reward = keep stamina
+         id="tspan579">Reward = keep stamina
 </tspan></text>
     <rect
        style="fill:#000000;stroke-width:0.0778736"
        id="rect11200"
        width="45.499939"
        height="11.865401"
-       x="237.62328"
-       y="112.81857" />
+       x="236.3253"
+       y="100.09851" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;white-space:pre;inline-size:54.1672;fill:#ffffff;stroke-width:0.264583"
        x="238.2608"
        y="18.355995"
        id="text11204"
-       transform="matrix(1.1796992,0,0,2.2537669,-41.531368,79.224476)"><tspan
+       transform="matrix(1.1796992,0,0,2.2537669,-42.829333,66.50442)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan3298">Reward = better odds
+         id="tspan581">Reward = better odds
 </tspan></text>
     <rect
        style="fill:#000000;stroke-width:0.0811374"
        id="rect11206"
        width="49.393833"
        height="11.865401"
-       x="170.9079"
-       y="121.90434" />
+       x="106.00966"
+       y="55.708134" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;white-space:pre;inline-size:54.1672;fill:#ffffff;stroke-width:0.264583"
        x="238.2608"
        y="18.355995"
        id="text11210"
-       transform="matrix(1.2235826,0,0,2.2537669,-118.71609,88.31023)"><tspan
+       transform="matrix(1.2235826,0,0,2.2537669,-183.61433,22.114023)"><tspan
          x="238.2608"
          y="18.355995"
-         id="tspan3300">Reward = more money
+         id="tspan583">Reward = more money
 </tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.81015;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
+       d="m 197.85313,34.27058 c 67.59429,13.683649 38.13589,55.695881 30.44442,98.85119"
+       id="path3330"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
