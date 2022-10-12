@@ -6,6 +6,7 @@ import prints
 import decisions
 import interpol
 import gfuncs
+import time
 
 
 def init_state():
@@ -57,8 +58,11 @@ def init_state():
 
     game_state["player"].append(game_state["budget"])
     game_state["player"].append(game_state["stamina"])
+    time.sleep(0.5)
     
-    print("Returning game state:", game_state)
+
+    #print("Returning game state:", game_state)
+    
 
     return game_state
 

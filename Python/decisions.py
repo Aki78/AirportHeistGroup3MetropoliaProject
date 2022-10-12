@@ -10,8 +10,8 @@ def mode():
     print("1- Easy")
     print("2- Hard")
     
-    # play_mode = input("Your selection: ")
-    play_mode = "1" 
+    play_mode = input("Your selection: ")
+    # play_mode = "1" 
 
     if play_mode == "1" or play_mode == "Easy":
         return 5000, 10000, 1.0, 0, 1000
