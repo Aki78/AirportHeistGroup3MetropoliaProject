@@ -1,6 +1,6 @@
 import pytest
 import helper
-import game_functions
+import gfuncs
 
 
 def test_feet_to_meters():
@@ -28,7 +28,7 @@ def test_get_min_max_distance():
 
 def test_get_ticket_price():
     distance = helper.get_distances((52.30, 4.76), (37.93, 23.94))
-    result = game_functions.get_ticket_price(distance)
+    result = gfuncs.get_ticket_price(distance)
     assert result == 3272
 
 
