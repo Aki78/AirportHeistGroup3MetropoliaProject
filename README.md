@@ -61,7 +61,7 @@ Your mission is to get to your extraction team who are waiting at the destinatio
 
 ## Functional Requirements
 ### How the game works
-Airport Heist is a single player game, where the main character aims to make it to the final destination airport, before they are captured or their stamina or money runs out.
+Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they are captured, their stamina runs out or money runs out.
 
 #### Travel
 
