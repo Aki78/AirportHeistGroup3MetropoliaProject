@@ -4,13 +4,16 @@ import os
 import helper
 import gfuncs
 import prints
+from colorama import Fore , Style 
+
 
 def mode():
     print("Please select the game's mode:")
-    print("1- Easy")
-    print("2- Hard")
+    print(Fore.MAGENTA + "1-" + Style.RESET_ALL + " Easy")
+    print(Fore.MAGENTA + "2-" + Style.RESET_ALL + " Hard")
     
-    play_mode = input("Your selection: ")
+    play_mode = input(Fore.YELLOW + "Your selection:")
+    print(Style.RESET_ALL)
 
     if play_mode == "1" or play_mode == "Easy":
         return 5000, 10000, 1.0, 0, 1000
@@ -25,12 +28,13 @@ def mode():
     #return stamina, budget, rate_up, rate_down, travel_distance
 
 def heist_decision(): #Input
-    print("-> Heist")
-    print("-> Escape")
+    print(Fore.MAGENTA + "->" +Style.RESET_ALL +" Heist")
+    print(Fore.MAGENTA + "->" +Style.RESET_ALL + " Escape")
     print("")
 
     while True:
-        userInput = input("Input: ")
+        userInput = input(Fore.YELLOW + "Input: ")
+        print(Style.RESET_ALL)
 
         if str(userInput) != "Heist" and str(userInput) != "Escape":
             print("Invalid input")
@@ -48,7 +52,8 @@ def money_heist(player, rate_upper, rate_lower, attempt):
         prints.steal_rate_and_decision(steal_rate, attempt, stolen_money)
 
         while True:
-            userInput = input("Input: ")
+            userInput = input(Fore.YELLOW + "Input: ")
+            print(Style.RESET_ALL)
 
             if str(userInput) != "Steal" and str(userInput) != "Wait":
                 print("Invalid input")
@@ -62,13 +67,13 @@ def money_heist(player, rate_upper, rate_lower, attempt):
             true_rate = random.uniform(rate_lower, rate_upper)
             # print("true rate", true_rate)
             if true_rate <= steal_rate:
-                print("Steal successful")
+                print(Fore.RED + "Steal successful" + Style.RESET_ALL)
                 player[3] += stolen_money
                 attempt -= 1
                 input("Press Enter to continue")
             else:
                 print("You got caught by local police")
-                print("You lost")
+                print(Fore.RED + "You lost" + Style.RESET_ALL)
                 input("Press Enter to continue")
                 
                 return player, True, attempt
@@ -127,13 +132,14 @@ def player_airport_selection(name_list, coordinates, player_coordinates, amount_
     price, stamina, icao_code, new_coordinates = helper.print_flight_details(name_list, selection, player_coordinates)
 
     print("Do you want to travel?")
-    print("-> Travel")
-    print("-> Stay")
+    print(Fore.MAGENTA + "->" + Style.RESET_ALL + " Travel")
+    print(Fore.MAGENTA + "->" + Style.RESET_ALL + " Stay")
     print("")
 
     # Input decision (also fix later)
     while True:
-        userInput = input("Input: ")
+        userInput = input(Fore.YELLOW + "Input: ")
+        print(Style.RESET_ALL)
 
         if str(userInput) != "Travel" and str(userInput) != "Stay":
             print("Invalid input")
