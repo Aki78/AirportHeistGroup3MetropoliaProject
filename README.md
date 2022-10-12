@@ -69,7 +69,7 @@ Interpol moves from airport to airport at random, whenever the player makes a de
 
 #### Stamina
 
-Players start with a set amount of stamina at the beginning of the game. Each time the player travels they use up stamina. How much stamina they use is dependant and the length of the flight. Stamina does not regenerate, so you must make it to your final destination before it runs out completely.
+Stamina is a set amount of energy the main character has for travelling. Each time the player travels they use up stamina. How much stamina they use is dependant and the length of the flight. Stamina does not regenerate, so you must make it to your final destination before it runs out completely.
 
 #### Stealing
 
