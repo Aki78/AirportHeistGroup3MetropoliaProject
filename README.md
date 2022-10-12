@@ -12,6 +12,7 @@
 [Vision](#vision) 
 - [Backstory](#backstory)
 - [Setting](#setting)
+- [Objective](#objective)
 
 [Functional Requirements](#functional-requirements)
 - [How the gamw works](#how-the-game-works)
