@@ -51,6 +51,10 @@ Time to make your next move before interpol gets you!
 #### Setting
 Airport Heist is set in present-day Europe.
 
+#### Objective
+Your mission is to get to your extraction team who are waiting at the destination airport so they can smuggle you out of the EU.
+
+
 [Back to top](#airport-heist)
 
 ## Functional Requirements
