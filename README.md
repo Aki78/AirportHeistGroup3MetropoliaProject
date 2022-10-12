@@ -89,7 +89,7 @@ The main character starts the game with a set amount of money. If the player req
 [Back to top](#airport-heist)
 
 ### Functions
-All functions created were sorted into different files, depending on what the functions does. Listed below are the python files created to sort the functions.
+All functions created were sorted into different files, depending on what the function does. Listed below are the python files created to sort the functions.
 
     -core_test Functions
     -Helper Functions
