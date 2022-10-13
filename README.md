@@ -127,9 +127,9 @@ The database was cut down, to remove a lot of unnecessary information and to mak
     -short start-up time
     -30fps
     -no freezing
-    -the game will be in real time
-    -AI will be used
-    -the game will be playable online from anywhere for anyone. 
+    -the game will be in real time, instead of turn-based
+    -interpol will be trained with machine learning
+    -server will be set up remotely so the game will be playable online for anyone, anywhere 
 
 [Back to top](#airport-heist)
 
