@@ -25,7 +25,7 @@
 - [Final requirements](#final-requirements-and-goals)
 
 [Learning Tools And Information](#learning-tools-and-information)
-- [Airport Heist Presentation](#airport-heist-demo)
+- [Airport Heist Presentation](#airport-heist-presentation)
 - [Run](#run)
 - [Useful git commands](#useful-git-commands)
 - [Useful bash commands](#useful-bash-commands)
