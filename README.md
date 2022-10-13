@@ -188,7 +188,7 @@ cd ..			          .. means back one directory
 DANGER COMMANDS
 rm file.py		          removes file named (only for files not directory)
 rmdir			          removes and empty directory only
-rm -r [name of directory] removes directory and everything in it
+rm -r [name of directory]         removes directory and everything in it
 rm -rf name		          remove recurssive force name of directoty
 rm *				  this will delete all files only! so make sure youre in the right directory
 rm -r * 			  deletes everything in directory including other directories
