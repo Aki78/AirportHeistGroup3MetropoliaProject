@@ -195,7 +195,7 @@ rm -r * 			  deletes everything in directory including other directories
 rm -r *4*			  deletes everything that has a 4 in it
 find . -name "*3*.py"	          find files with 3 and .py in it
 find . -name "*3*.py" -delete	  find files with 3 and .py in it and then deletes it
-cat main.py						  will print out whats inside the file
+cat main.py			  will print out whats inside the file
 
 control-c			  stop command
 py -3 filename.py		  runs python program that is in the file in your terminal (windows only)
