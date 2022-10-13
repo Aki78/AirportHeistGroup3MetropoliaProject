@@ -134,7 +134,7 @@ The database was cut down, to remove a lot of unnecessary information and to mak
 [Back to top](#airport-heist)
 
 ## Learning Tools And information
-### Airport Heist Presentation
+### Airport Heist Demo
 
 https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit?userstoinvite=kmorooka78@gmail.com&actionButton=1#slide=id.p
 
