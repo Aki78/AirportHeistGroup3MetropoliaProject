@@ -20,7 +20,7 @@
 - [Functions](#functions)
 - [Project diagram](#project-diagram)
 
-[Quality Requirements](#quality_requirements)
+[Quality Requirements](#quality-requirements)
 - [Preliminary requirements](#preliminary-requirements)
 - [Final requirements](#final-requirements-and-goals)
 
