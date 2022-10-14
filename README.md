@@ -1,4 +1,4 @@
-# Airport Heist
+8# Airport Heist
 
 
 <p align="center">
@@ -134,23 +134,6 @@ The database was cut down, to remove a lot of unnecessary information and to mak
 [Back to top](#airport-heist)
 
 ## Learning Tools And information
-### Airport Heist Demo
-
-https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit?userstoinvite=kmorooka78@gmail.com&actionButton=1#slide=id.p
-
-### Run
-If you are using Mac/Linux run
-```bash
-python3 connect_py.py
-```
-
-If you are using Windows run
-```bash
-py -3 connect_py.py
-```
-
-Make sure your local user name and password are root and root.
-Make sure the sql database name and table names match exactly.
 
 ### Useful Git Commands
 
@@ -206,8 +189,3 @@ grep -r [expression]              finds the file where the expression exists
 
 ### Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
-
-### Unrelated English Presentation on Tesla
-https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
-
-[Back to top](#airport-heist)
