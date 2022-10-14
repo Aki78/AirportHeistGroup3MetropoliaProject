@@ -157,10 +157,9 @@ git clone repo_name (when you want to copy a repo and add it your computer)
 
 ### Useful Bash Commands
 ```bash
-pwd                               takes you to curent directory
+pwd                               shows you to curent directory
 cd [name of directory]            change directory
 cd ~ 		                  takes you home
-cd mouseless	                  takes the path to mouseless if its directly under your home (~this symbol is the same as writing c:/user/murph)
 ls 			          list directory and files in the directory
 mkdir [name of directory]         makes a directory
 touch [name of file]	          creates a file in the current directory 
@@ -170,9 +169,9 @@ cd ..			          .. means back one directory
 
 DANGER COMMANDS
 rm file.py		          removes file named (only for files not directory)
-rmdir			          removes and empty directory only
+rmdir			          removes empty directory only
 rm -r [name of directory]         removes directory and everything in it
-rm -rf name		          remove recurssive force name of directoty
+rm -rf name		          remove recurssive force name of directoty, must use force to delete git directory
 rm *				  this will delete all files only! so make sure youre in the right directory
 rm -r * 			  deletes everything in directory including other directories
 rm -r *4*			  deletes everything that has a 4 in it
