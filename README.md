@@ -190,3 +190,5 @@ grep -r [expression]              finds the file where the expression exists
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
 
 https://github.com/ilkkamtk/html-css-assignment
+
+https://www.youtube.com/playlist?list=PLKenVLUxjmH-y89AiiI2xcXDy5QG83D4K
