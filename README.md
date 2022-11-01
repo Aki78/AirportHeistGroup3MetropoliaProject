@@ -5,6 +5,24 @@
     <img src="./hud.gif">
 </p>
 
+## To-Do-List:
+    -accounts
+        -user account with password: database python and javascript
+        -guest account    
+    -HUD webpage
+        -game
+        -gameover
+        -credits
+        -settings
+    -fix bug destination airport
+    -master python
+    -leaderboard
+    -connect python to database
+    -refactor core to javascript
+    -host webpage and communicate
+    -find server and connect
+    -unit testing
+    -neural network and machine learning
 
 ## Contents
 [Introduction](#introduction)
@@ -31,25 +49,6 @@
 - [Useful bash commands](#useful-bash-commands)
 - [Project information](#project-info)
 - [Unrelated English project](#unrelated-english-presentation-on-tesla)
-
-##To-Do-List:
-
-    -accounts
-        -user account with password: database python and javascript
-        -guest account    
-    -HUD webpage
-        -game
-        -gameover
-        -credits
-        -settings
-    -fix bug destination airport
-    -leaderboard
-    -connect python to database
-    -refactor core to javascript
-    -host webpage and communicate
-    -find server and connect
-    -unit testing
-    -neural network and machine learning
 
 ## Introduction
 This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive game, that satisfies the guidelines provided by software1.
