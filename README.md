@@ -1,4 +1,4 @@
-# Airport Heist
+8# Airport Heist
 
 
 <p align="center">
@@ -153,23 +153,6 @@ The database was cut down, to remove a lot of unnecessary information and to mak
 [Back to top](#airport-heist)
 
 ## Learning Tools And information
-### Airport Heist Demo
-
-https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit?userstoinvite=kmorooka78@gmail.com&actionButton=1#slide=id.p
-
-### Run
-If you are using Mac/Linux run
-```bash
-python3 connect_py.py
-```
-
-If you are using Windows run
-```bash
-py -3 connect_py.py
-```
-
-Make sure your local user name and password are root and root.
-Make sure the sql database name and table names match exactly.
 
 ### Useful Git Commands
 
@@ -193,10 +176,9 @@ git clone repo_name (when you want to copy a repo and add it your computer)
 
 ### Useful Bash Commands
 ```bash
-pwd                               takes you to curent directory
+pwd                               shows you to curent directory
 cd [name of directory]            change directory
 cd ~ 		                  takes you home
-cd mouseless	                  takes the path to mouseless if its directly under your home (~this symbol is the same as writing c:/user/murph)
 ls 			          list directory and files in the directory
 mkdir [name of directory]         makes a directory
 touch [name of file]	          creates a file in the current directory 
@@ -206,9 +188,9 @@ cd ..			          .. means back one directory
 
 DANGER COMMANDS
 rm file.py		          removes file named (only for files not directory)
-rmdir			          removes and empty directory only
+rmdir			          removes empty directory only
 rm -r [name of directory]         removes directory and everything in it
-rm -rf name		          remove recurssive force name of directoty
+rm -rf name		          remove recurssive force name of directoty, must use force to delete git directory
 rm *				  this will delete all files only! so make sure youre in the right directory
 rm -r * 			  deletes everything in directory including other directories
 rm -r *4*			  deletes everything that has a 4 in it
@@ -226,7 +208,6 @@ grep -r [expression]              finds the file where the expression exists
 ### Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
 
-### Unrelated English Presentation on Tesla
-https://docs.google.com/presentation/d/1TpIigIBr3PJndSA2aOSsjrBivZLBFT9-3XDx2xj_RbI/edit#slide=id.p
+https://github.com/ilkkamtk/html-css-assignment
 
-[Back to top](#airport-heist)
+https://www.youtube.com/playlist?list=PLKenVLUxjmH-y89AiiI2xcXDy5QG83D4K
