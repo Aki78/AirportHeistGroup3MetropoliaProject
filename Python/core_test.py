@@ -58,7 +58,7 @@ def init_state():
     game_state["player"].append(game_state["budget"])
     game_state["player"].append(game_state["stamina"])
     
-    print("Returning game state:", game_state)
+    print("Returning game state from init():", game_state)
 
     return game_state
 
@@ -129,20 +129,10 @@ def run_game():
 if __name__ == "__main__":
     random.seed() 
 
-    name = input("Input name: ")
+    # name = input("Input name: ")
+    name = "somethuing"
             
     while True:
         userInput = prints.print_mainmenu(name)  # Print the main menu
-        print(userInput)
-
         if userInput == "Start":
             run_game()
-        elif userInput == "Settings":
-            prints.print_settings()
-        elif userInput == "Instructions":
-            prints.print_instructions()
-        elif userInput == "Credits":
-            prints.print_credits()
-        elif userInput == "Exit":
-            input("Press Enter to exit...")
-            break
