@@ -1,26 +1,27 @@
+from ast import For
 import os
-
+from colorama import Fore , Back , Style 
 
 def print_start(name):
     print("Hello, " + str(name) + "!")
-    print("Welcome to flight game!")
+    print(Fore.LIGHTMAGENTA_EX + "Welcome to flight game!" +  Style.RESET_ALL)
     print("")
-    print("-> Start")
-    print("-> Settings")
-    print("-> Instructions")
-    print("-> Credits")
-    print("-> Exit")
+    print(Fore.MAGENTA + "->" + Style.RESET_ALL+ " Start")
+    print(Fore.MAGENTA +"->" + Style.RESET_ALL+ " Settings")
+    print(Fore.MAGENTA +"->" + Style.RESET_ALL+ " Instructions")
+    print(Fore.MAGENTA +"->" + Style.RESET_ALL+ " Credits")
+    print(Fore.MAGENTA +"->" + Style.RESET_ALL+  " Exit")
 
 def print_instructions():
     print("This is the instructions:")
-    print("-- You will be assigned a random destination.")
-    print("-- You are limited by budget and stamina.")
-    print("-- You have to buy tickets to travel.")
-    print("-- In order to acquire money, you have to steal.")
-    print("-- you can get caught by the interpol and lose the game.")
-    print("-- You will be informed of the interpol's possible destination")
-    print("-- You are restricted to airports with-in a certain distance.")
-    print("-- You will lose if you go under stamina or budget.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You will be assigned a random destination.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You are limited by budget and stamina.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You have to buy tickets to travel.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " In order to acquire money, you have to steal.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " you can get caught by the interpol and lose the game.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You will be informed of the interpol's possible destination")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You are restricted to airports with-in a certain distance.")
+    print(Fore.LIGHTBLUE_EX + "--" + Style.RESET_ALL+ " You will lose if you go under stamina or budget.")
 
     input("Press Enter to go back...")
     return
@@ -32,10 +33,10 @@ def print_settings():
 
 def print_credits():
     print("The master mindes behind this game are:")
-    print("-> Aki")
-    print("-> Frank")
-    print("-> Khai")
-    print("-> Kiana")
+    print("->" + Fore.LIGHTGREEN_EX +" Aki" + Style.RESET_ALL)
+    print("->" + Fore.LIGHTGREEN_EX + " Frank" + Style.RESET_ALL)
+    print("->" + Fore.LIGHTGREEN_EX + " Khai" + Style.RESET_ALL)
+    print("->" + Fore.LIGHTGREEN_EX + " Kiana" + Style.RESET_ALL)
     print("These people all had to escape from prison at some point in their lives,")
     print("So they have gathered around and made their experinces into a game.")
     print("You can use this game to prepare for in real life situations.")
@@ -60,7 +61,8 @@ def print_mainmenu(name):
 
         print_start(name)
 
-        userInput = input("Input: ")
+        userInput = input(Fore.YELLOW +"Input:")
+        print(Style.RESET_ALL)
 
         if userInput not in  ["Start", "Settings", "Instructions", "Credits", "Exit"] :
             print("Invalid input")
@@ -68,16 +70,17 @@ def print_mainmenu(name):
         else:
             return str(userInput)
 
-def steal_rate_and_decision(steal_rate, attempt):
+def steal_rate_and_decision(steal_rate, attempt, stolen_money):
     if attempt > 1:
             print("Attempts remaining:", attempt - 1)
             print("Your are about to steal more money")
     elif attempt == 1:
-        print("Last attempt")
-        print("You have to steal or you will get caught the next time")
-        
+        print(Fore.RED + "Last attempt" + Style.RESET_ALL)
+        print("You have to steal or you will get caught the next time.")
+
+    print("You will get", stolen_money, "€")        
     print("Successful stealing rate: " + str(round(steal_rate * 100)) + "%")
-    print("-> Steal")
-    print("-> Wait")
+    print(Fore.MAGENTA + "->" + Style.RESET_ALL + " Steal")
+    print(Fore.MAGENTA + "->" + Style.RESET_ALL + " Wait")
     print("")
     return
