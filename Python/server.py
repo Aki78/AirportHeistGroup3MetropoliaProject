@@ -47,5 +47,25 @@ def send_user_name():
 
     return game_state
 
+@app.route('/decision_options', methods = ['POST'] )
+def send_user_name():
+    print("Username incoming Receiving")
+    print(request.data)
+    game_state = json.loads(request.data)
+    print(game_state)
+    print("name is: ", request.data)
+    with open("game_state.json", "w") as outfile:
+        outfile.write(json.dumps(game_state))
+
+    return game_state
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)
