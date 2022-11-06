@@ -18,10 +18,10 @@ func shake_cam():
 	camera.shake_amount += 2.0
 
 # ease in for scene, used in ready() input usually is self
-func my_ease_in(my_self, duration = 0.5):
+func my_ease_in(my_self, duration = 1.5):
 	my_self.modulate.a = 0
 	var anima := Anima.begin(my_self)
-	anima.then({animate = my_self, items_delay = duration,
+	anima.then({animate = my_self, items_delay = duration, duration=duration,
 	 property = 'opacity', from = 0, to = 1 })
 	anima.play()
 	return anima
