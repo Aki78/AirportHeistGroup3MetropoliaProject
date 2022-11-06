@@ -10,11 +10,11 @@ scale = Vector2( 2.16, 2.16 )
 texture = ExtResource( 3 )
 
 [node name="WonLabel" type="Label" parent="."]
-margin_left = -490.741
-margin_top = -197.222
-margin_right = 2085.26
-margin_bottom = 1091.78
-rect_scale = Vector2( 0.379503, 0.379503 )
+margin_left = -371.296
+margin_top = -211.111
+margin_right = 2204.7
+margin_bottom = 1077.89
+rect_scale = Vector2( 0.285136, 0.285136 )
 custom_fonts/font = ExtResource( 1 )
 text = "You Won
 "
