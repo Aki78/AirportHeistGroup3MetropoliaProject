@@ -12,7 +12,7 @@ func _ready():
 	Sound.stop_click()
 	print(state["current_airport"].rect_position)
 	print(get_closest_airport())
-	$Airplain.position = state["current_airport"].rect_position
+	$Player.position = state["current_airport"].rect_position
 	connect_airports()
 	update_state(state["current_airport"])
 
@@ -42,7 +42,7 @@ func get_pos_dist(a,b):
 
 func start_tween(airport1, airport2):
 	var tween = get_node("Tween")
-	tween.interpolate_property($Airplain, "position",
+	tween.interpolate_property($Player, "position",
 			airport1.rect_position, airport2.rect_position, 1,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
@@ -59,13 +59,14 @@ func erase_far():
 	state["current_airport"].modulate.a=0;
 
 func update_state(my_airport):
+	minus_cash(my_airport)
 	state["current_airport"] = my_airport
 	move_interpol()
 	$Interpol.position = state["interpol_airport"].rect_position + Vector2(55,35)
 	get_closest_airport()
 	erase_far()
 
-	$Airplain.position = state["current_airport"].rect_position + Vector2(50,50)
+	$Player.position = state["current_airport"].rect_position + Vector2(50,50)
 
 func _on_Europe_tree_exiting():
 	Sound.stop_spy()
@@ -87,7 +88,7 @@ func move_interpol():
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	yield(tween,"tween_all_completed")
-	if get_pos_dist($Airplain, $Interpol) < 1:
+	if get_pos_dist($Player, $Interpol) < 1:
 		print("Game over")
 		Sound.stop_spy()
 		$GameOverTimer.start()
@@ -97,12 +98,22 @@ func on_airport_pressed(new_airport):
 	print("yes")
 	var old_airport = state["current_airport"]
 	update_state(new_airport)
+	update_ui()
 	start_tween(old_airport, new_airport)
+	if state["cash"] < 0:
+		$GameOverTimer.start()
 
 func _on_GameOverTimer_timeout():
 	print("GAAAAMMMEEE OOOVVVEEEERRRR")
 	CameraScript.my_ease_out(self)
 	get_tree().change_scene("res://GameOver/GameOverScene.tscn")
+
+func minus_cash(new_airport):
+	print("price is: ", new_airport.price)
+	state["cash"] -= new_airport.price
+
+func update_ui():
+	$Player.set_cash(state["cash"])
 
 func _on_WonTimer_timeout():
 	

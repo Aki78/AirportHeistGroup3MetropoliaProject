@@ -28,7 +28,7 @@ script = ExtResource( 2 )
 
 [node name="GameScreen" type="Node2D" parent="."]
 
-[node name="Airplain" parent="." instance=ExtResource( 4 )]
+[node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( -1358.27, -983.192 )
 scale = Vector2( 0.0670413, 0.102724 )
 
@@ -61,7 +61,6 @@ margin_top = -594.145
 margin_right = 1462.41
 margin_bottom = 363.855
 airport_name = "Finland"
-price = "1235351"
 
 [node name="AirportNode7" parent="Airports" instance=ExtResource( 3 )]
 margin_left = -3.03906

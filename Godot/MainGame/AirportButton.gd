@@ -9,7 +9,8 @@ var self_size = 5
 var extended_size = 15
 
 export var airport_name : String
-export var price : String
+export var price_str : String
+var price
 
 onready var bubbleAnimation = $AnimationPlayer
 
@@ -21,7 +22,8 @@ func _ready():
 func init(index):
 	own_index = index
 
-func set_price(price):
+func set_price(new_price):
+	price = new_price
 	$InfoBox/Price.text = "Price: " + str(price)
 	
 
