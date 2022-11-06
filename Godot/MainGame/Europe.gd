@@ -3,9 +3,11 @@ extends Sprite
 export var AirportScene : PackedScene
 onready var first_airport = $Airports/AirportNode5
 onready var airports = $Airports
+onready var destination = $Airports/AirportNode10
 onready var state = {"current_airport":first_airport, "neighbors":[], "cash":5000, "interpol_airport":$Airports/AirportNode14}
 
 var min_dist = 700
+onready var is_close = false
 
 func _ready():
 	Sound.play_spy()
@@ -65,6 +67,8 @@ func update_state(my_airport):
 	$Interpol.position = state["interpol_airport"].rect_position + Vector2(55,35)
 	get_closest_airport()
 	erase_far()
+	if state["current_airport"] == destination:
+		$WonTimer.start()
 
 	$Player.position = state["current_airport"].rect_position + Vector2(50,50)
 
@@ -102,11 +106,21 @@ func on_airport_pressed(new_airport):
 	start_tween(old_airport, new_airport)
 	if state["cash"] < 0:
 		$GameOverTimer.start()
+	if get_dist(state["current_airport"], state["interpol_airport"]) < 700 and not is_close:
+		Sound.stop_spy()
+		Sound.play_panic()
+		is_close = true
+	if is_close and get_dist(state["current_airport"], state["interpol_airport"]) > 700 :
+		Sound.stop_panic()
+		Sound.play_spy()
+		is_close = false
 
 func _on_GameOverTimer_timeout():
 	print("GAAAAMMMEEE OOOVVVEEEERRRR")
-	CameraScript.my_ease_out(self)
+	var anima = CameraScript.my_ease_out(self)
+	yield(anima, "animation_completed")
 	get_tree().change_scene("res://GameOver/GameOverScene.tscn")
+
 
 func minus_cash(new_airport):
 	print("price is: ", new_airport.price)
@@ -118,5 +132,6 @@ func update_ui():
 func _on_WonTimer_timeout():
 	
 	print("Won")
-	CameraScript.my_ease_out(self)
-	get_tree().change_scene("res://GameOver/GameOverScene.tscn")
+	var anima = CameraScript.my_ease_out(self)
+	yield(anima, "animation_completed")
+	get_tree().change_scene("res://Won/WonScene.tscn")
