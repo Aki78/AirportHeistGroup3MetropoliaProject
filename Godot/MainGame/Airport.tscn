@@ -40,14 +40,6 @@ custom_fonts/font = ExtResource( 3 )
 text = "Price"
 script = ExtResource( 4 )
 
-[node name="Distance" type="Label" parent="InfoBox"]
-margin_top = 1294.0
-margin_right = 2516.0
-margin_bottom = 1937.0
-custom_fonts/font = ExtResource( 3 )
-text = "Distance"
-script = ExtResource( 4 )
-
 [connection signal="mouse_entered" from="." to="." method="_on_Airport_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Airport_mouse_exited"]
 [connection signal="pressed" from="." to="." method="_on_Airport_pressed"]

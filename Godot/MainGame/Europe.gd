@@ -3,7 +3,7 @@ extends Sprite
 export var AirportScene : PackedScene
 onready var first_airport = $Airports/AirportNode5
 onready var airports = $Airports
-onready var state = {"current_airport":first_airport, "neighbors":[]}
+onready var state = {"current_airport":first_airport, "neighbors":[], "cash":5000}
 
 var min_dist = 700
 
@@ -14,7 +14,7 @@ func _ready():
 	print(get_closest_airport())
 	$Airplain.position = state["current_airport"].rect_position
 	connect_airports()
-	update_state()
+	update_state(state["current_airport"])
 
 func _on_Button_pressed():
 	var anima = CameraScript.my_ease_out(self)
@@ -38,15 +38,13 @@ func get_closest_airport():
 func get_dist(a,b):
 	return (a.rect_position-b.rect_position).length()
 
-func start_tween(my_vec1, my_vec2):
-	$Airplain.modulate.a = 1
+func start_tween(airport1, airport2):
 	var tween = get_node("Tween")
 	tween.interpolate_property($Airplain, "position",
-			my_vec1, my_vec2, 1,
+			airport1.rect_position, airport2.rect_position, 1,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	yield(tween,"tween_all_completed")
-	$Airplain.modulate.a = 0
 
 func erase_far():
 	for _i in airports.get_children():
@@ -55,12 +53,15 @@ func erase_far():
 	for _i in state["neighbors"]:
 		_i.modulate.a = 1
 		_i.set_disabled(false)
+	state["current_airport"].set_disabled(true)
+	state["current_airport"].modulate.a=0;
 
-func update_state():
+func update_state(my_airport):
+	state["current_airport"] = my_airport
 	get_closest_airport()
 	erase_far()
 
-	$Airplain.position = state["current_airport"].rect_position
+	$Airplain.position = state["current_airport"].rect_position + Vector2(50,50)
 	
 func _on_AnimateMe_pressed():
 	start_tween(Vector2(0,0), Vector2(1000,1000))
@@ -68,7 +69,10 @@ func _on_AnimateMe_pressed():
 func _on_Europe_tree_exiting():
 	Sound.stop_spy()
 	
-func on_airport_pressed(airport):
+func on_airport_pressed(new_airport):
 	print("yes")
-	state["current_airport"] = airport
-	update_state()
+	var old_airport = state["current_airport"]
+	update_state(new_airport)
+	start_tween(old_airport, new_airport)
+	
+	

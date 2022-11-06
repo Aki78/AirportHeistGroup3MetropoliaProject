@@ -8,15 +8,22 @@ var own_index
 var self_size = 5
 var extended_size = 15
 
+export var airport_name : String
+export var price : String
+
 onready var bubbleAnimation = $AnimationPlayer
 
 func _ready():
-#	rect_scale = Vector2(1.0,1.0)
-#	self.rect_size=Vector2(self_size,self_size)
+
 	set_button_scale(self_size,self_size)
+	set_price(100)
 
 func init(index):
 	own_index = index
+
+func set_price(price):
+	$InfoBox/Price.text = "Price: " + str(price)
+	
 
 func add_info(name,coordinate, distance, price, co2):
 	$InfoBox.add_info(name,coordinate, distance, price, co2)
@@ -26,7 +33,7 @@ func _on_Airport_mouse_entered():
 	print("Entered")
 #	rect_size.x = 100
 	set_button_scale(extended_size,extended_size)
-	$InfoBox.appear()
+
 
 
 func _on_Airport_mouse_exited():

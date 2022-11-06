@@ -15,6 +15,5 @@ func dissapear():
 func add_info(name, coordinate, distance, price, co2):
 	$AirportName.text = name
 	$Price.text = str(price)
-	$Distance.text = str(distance)
-	$CO2.text = str(co2)
+
 
