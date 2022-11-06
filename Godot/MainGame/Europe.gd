@@ -69,6 +69,9 @@ func update_state(my_airport):
 	erase_far()
 	if state["current_airport"] == destination:
 		$WonTimer.start()
+		Sound.stop_panic()
+		Sound.stop_spy()
+		Sound.play_victory()
 
 	$Player.position = state["current_airport"].rect_position + Vector2(50,50)
 

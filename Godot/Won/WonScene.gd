@@ -3,7 +3,7 @@ extends Sprite
 func _ready():
 	CameraScript.my_ease_in(self, 5)
 	Sound.stop_panic()
-	Sound.play_victory()
+#	Sound.play_victory()
 
 
 
