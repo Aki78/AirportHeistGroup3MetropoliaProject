@@ -21,6 +21,25 @@ custom_fonts/font = ExtResource( 1 )
 text = "You Won
 "
 
+[node name="Score" type="Label" parent="."]
+margin_left = -381.944
+margin_top = 41.6667
+margin_right = 2194.06
+margin_bottom = 1330.67
+rect_scale = Vector2( 0.162795, 0.162795 )
+custom_fonts/font = ExtResource( 1 )
+text = "You Won
+"
+
+[node name="Best" type="Label" parent="."]
+margin_left = -445.833
+margin_top = -19.4443
+margin_right = 2781.17
+margin_bottom = 1269.56
+rect_scale = Vector2( 0.0974947, 0.0974947 )
+custom_fonts/font = ExtResource( 1 )
+text = "Best Score"
+
 [node name="BackToMainMenu" type="Button" parent="."]
 margin_left = 74.0742
 margin_top = 48.611

@@ -72,6 +72,8 @@ func update_state(my_airport):
 		Sound.stop_panic()
 		Sound.stop_spy()
 		Sound.play_victory()
+		if State.load_score() < state.cash:
+			State.save_score(state.cash)
 
 	$Player.position = state["current_airport"].rect_position + Vector2(50,50)
 
