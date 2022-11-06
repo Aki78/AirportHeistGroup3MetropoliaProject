@@ -82,6 +82,8 @@ func move_interpol():
 	yield(tween,"tween_all_completed")
 	if get_pos_dist($Airplain, $Interpol) < 1:
 		print("Game over")
+		Sound.stop_spy()
+		$GameOverTimer.start()
 	
 
 func on_airport_pressed(new_airport):
@@ -91,3 +93,9 @@ func on_airport_pressed(new_airport):
 	start_tween(old_airport, new_airport)
 	
 	
+
+
+func _on_GameOverTimer_timeout():
+	print("GAAAAMMMEEE OOOVVVEEEERRRR")
+	CameraScript.my_ease_out(self)
+	get_tree().change_scene("res://GameOver/GameOverScene.tscn")
