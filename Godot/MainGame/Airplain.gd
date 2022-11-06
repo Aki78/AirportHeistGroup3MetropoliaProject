@@ -1,4 +1,4 @@
 extends Sprite
 
 func _ready():
-	pass 
+	modulate.r = 0.5

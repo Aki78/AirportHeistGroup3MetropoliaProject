@@ -4,5 +4,7 @@
 [ext_resource path="res://Images/airport_icon.png" type="Texture" id=2]
 
 [node name="Airplain" type="Sprite"]
+position = Vector2( 849.5, 638 )
+scale = Vector2( 2.77349, 2.33194 )
 texture = ExtResource( 2 )
 script = ExtResource( 1 )

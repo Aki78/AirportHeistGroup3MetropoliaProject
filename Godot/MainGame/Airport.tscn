@@ -1,114 +1,27 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Images/airport_icon.png" type="Texture" id=1]
 [ext_resource path="res://MainGame/AirportButton.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/big_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://MainGame/Price.gd" type="Script" id=4]
 [ext_resource path="res://MainGame/InfoBox.gd" type="Script" id=5]
-[ext_resource path="res://MainGame/Airport.gd" type="Script" id=6]
 
-[sub_resource type="Animation" id=1]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0.025, 0.025 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "oscilate"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.48, 0.98 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.025, 0.025 ), Vector2( 0.045, 0.045 ), Vector2( 0.025, 0.025 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0.025, 0.025 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "oscilate"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.48, 0.98 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.025, 0.025 ), Vector2( 0.045, 0.045 ), Vector2( 0.025, 0.025 ) ]
-}
-
-[node name="AirportNode" type="Node2D"]
-position = Vector2( -53120, -12480 )
-scale = Vector2( 1, 1 )
-script = ExtResource( 6 )
-
-[node name="Airport" type="TextureButton" parent="."]
-margin_left = 52948.0
-margin_top = 12318.0
-margin_right = 53906.0
-margin_bottom = 13276.0
-rect_scale = Vector2( 0.331277, 0.331277 )
+[node name="Airport" type="TextureButton"]
+margin_left = 875.0
+margin_top = 484.0
+margin_right = 1833.0
+margin_bottom = 1442.0
+rect_scale = Vector2( 0.149891, 0.165298 )
 button_mask = 5
 texture_normal = ExtResource( 1 )
 texture_hover = ExtResource( 1 )
 script = ExtResource( 2 )
 
-[node name="TextureRect" type="TextureRect" parent="Airport"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -53600.0
-margin_top = -12960.0
-margin_right = -53560.0
-margin_bottom = -12920.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Airport"]
-anims/RESET = SubResource( 1 )
-anims/oscilate = SubResource( 2 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("")
-anims/RESET = SubResource( 3 )
-anims/oscilate = SubResource( 4 )
-
 [node name="InfoBox" type="VBoxContainer" parent="."]
-margin_left = 53517.0
-margin_top = 11974.0
-margin_right = 56033.0
-margin_bottom = 14558.0
+margin_left = 1240.9
+margin_top = -84.6943
+margin_right = 3756.9
+margin_bottom = 2499.31
 rect_scale = Vector2( 0.39882, 0.39882 )
 script = ExtResource( 5 )
 
@@ -135,18 +48,6 @@ custom_fonts/font = ExtResource( 3 )
 text = "Distance"
 script = ExtResource( 4 )
 
-[node name="CO2" type="Label" parent="InfoBox"]
-margin_top = 1941.0
-margin_right = 2516.0
-margin_bottom = 2584.0
-custom_fonts/font = ExtResource( 3 )
-text = "CO2"
-script = ExtResource( 4 )
-
-[connection signal="mouse_entered" from="Airport" to="Airport" method="_on_TextureButton_mouse_entered"]
-[connection signal="mouse_entered" from="Airport" to="." method="_on_Airport_mouse_entered"]
-[connection signal="mouse_exited" from="Airport" to="Airport" method="_on_TextureButton_mouse_exited"]
-[connection signal="mouse_exited" from="Airport" to="." method="_on_Airport_mouse_exited"]
-[connection signal="pressed" from="Airport" to="Airport" method="_on_Airport_pressed"]
-[connection signal="mouse_entered" from="Airport/TextureRect" to="Airport" method="_on_TextureRect_mouse_entered"]
-[connection signal="mouse_exited" from="Airport/TextureRect" to="Airport" method="_on_TextureRect_mouse_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_Airport_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Airport_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_Airport_pressed"]

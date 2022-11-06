@@ -2,45 +2,35 @@ extends Sprite
 
 export var AirportScene : PackedScene
 
-onready var airports = []
+onready var first_airport = $Airports/AirportNode5
+
+onready var airports = $Airports
+
+onready var state = {"current_airport":first_airport, "neighbors":[]}
 
 func _ready():
 	Sound.play_spy()
 	Sound.stop_click()
-	
-	randomize()
-	CameraScript.my_ease_in(self)
-	for i in range(35):
-		var airport = AirportScene.instance()
-		print("This is airport data",Http.game_state["airport_data"][i]["deg"])
-#		airport.rect_position.x = -2500 + 51*Http.game_state["airport_data"][i]["deg"][0] #  rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][0] 
-#		airport.rect_position.y = 300-0.63*51*Http.game_state["airport_data"][i]["deg"][1] # rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][1]
-#		airport.position.x = -350 + 35*Http.game_state["airport_data"][i]["deg"][1] #  rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][0] 
-#		airport.position.y = 2850- 55*Http.game_state["airport_data"][i]["deg"][0] # rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][1]
-		airport.position.x =Http.game_state["airport_data"][i]["deg"][1] #  rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][0] 
-		airport.position.y = Http.game_state["airport_data"][i]["deg"][0] # rand_range(-100,100)*i #Http.airport_info[i]["Coordinate"][1]
-
-		var name = Http.game_state["airport_data"][i]["name"]
-		airport.get_node("InfoBox").get_node("AirportName").text = name
-		print(name)
-		print(airport.position.y)
-#		var distance = Http.airport_info[i]["Distance"]
-#		var price = Http.airport_info[i]["Price"]
-#		var co2 = Http.airport_info[i]["CO2"]
-		airports.append(airport)
-#		airport.add_info(name, 0 ,distance, price, co2)
-		if i in Http.closest_list:
-			airport.modulate.b = 255
-		else:
-			airport.modulate.r = 255
-			airport.modulate.a = 0.3
-		airport.get_node("Airport").init(i)
-		add_child(airport)
-
+	print(state["current_airport"].rect_position)
+	print(get_closest_airport())
 
 func _on_Button_pressed():
 	var anima = CameraScript.my_ease_out(self)
 	yield(anima, "animation_completed")
+
+
+func get_closest_airport():
+	var current_airport = state["current_airport"]
+	var airports = $Airports
+	state["neighbors"] = []
+	for _i in airports.get_children():
+		var dist = get_dist(_i, current_airport)
+		if dist < 1000:
+			state["neighbors"].append(_i)
+	print(state)
+
+func get_dist(a,b):
+	return (a.rect_position-b.rect_position).length()
 
 func start_tween(my_vec1, my_vec2):
 	$Airplain.modulate.a = 1
@@ -52,10 +42,27 @@ func start_tween(my_vec1, my_vec2):
 	yield(tween,"tween_all_completed")
 	$Airplain.modulate.a = 0
 
+func erase_far():
+	for _i in airports.get_children():
+		_i.modulate.a = 0.3
+		_i.set_disabled(true)
+	for _i in state["neighbors"]:
+		_i.modulate.a = 1
+		_i.set_disabled(false)
+		
+		
+
+
+func update_state():
+	pass
+	
+
+func _physics_process(delta):
+	erase_far()
+	
 
 func _on_AnimateMe_pressed():
 	start_tween(Vector2(0,0), Vector2(1000,1000))
-
 
 func _on_Europe_tree_exiting():
 	Sound.stop_spy()
