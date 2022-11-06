@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Images/europe.png" type="Texture" id=1]
 [ext_resource path="res://MainGame/IngameGobackButton.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Fonts/orbit.tres" type="DynamicFont" id=5]
 [ext_resource path="res://MainGame/Europe.gd" type="Script" id=6]
 [ext_resource path="res://MainGame/Airports.gd" type="Script" id=7]
+[ext_resource path="res://Images/pngegg.png" type="Texture" id=8]
 
 [node name="Europe" type="Sprite"]
 position = Vector2( 960, 539 )
@@ -97,6 +98,11 @@ margin_left = -350.963
 margin_top = 192.41
 margin_right = 607.037
 margin_bottom = 1150.41
+
+[node name="Interpol" type="Sprite" parent="."]
+position = Vector2( 604.69, 427.107 )
+scale = Vector2( 0.574588, 0.574588 )
+texture = ExtResource( 8 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_Europe_tree_exiting"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

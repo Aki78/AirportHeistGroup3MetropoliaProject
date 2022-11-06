@@ -26,6 +26,7 @@ rect_scale = Vector2( 0.39882, 0.39882 )
 script = ExtResource( 5 )
 
 [node name="AirportName" type="Label" parent="InfoBox"]
+visible = false
 margin_right = 2516.0
 margin_bottom = 643.0
 custom_fonts/font = ExtResource( 3 )
@@ -33,9 +34,8 @@ text = "Name"
 script = ExtResource( 4 )
 
 [node name="Price" type="Label" parent="InfoBox"]
-margin_top = 647.0
 margin_right = 2516.0
-margin_bottom = 1290.0
+margin_bottom = 643.0
 custom_fonts/font = ExtResource( 3 )
 text = "Price"
 script = ExtResource( 4 )

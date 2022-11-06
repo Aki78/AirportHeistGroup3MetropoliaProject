@@ -33,6 +33,7 @@ func _on_Airport_mouse_entered():
 	print("Entered")
 #	rect_size.x = 100
 	set_button_scale(extended_size,extended_size)
+	$InfoBox.appear()
 
 
 

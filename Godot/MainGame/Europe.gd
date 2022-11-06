@@ -3,7 +3,7 @@ extends Sprite
 export var AirportScene : PackedScene
 onready var first_airport = $Airports/AirportNode5
 onready var airports = $Airports
-onready var state = {"current_airport":first_airport, "neighbors":[], "cash":5000}
+onready var state = {"current_airport":first_airport, "neighbors":[], "cash":5000, "interpol_airport":$Airports/AirportNode14}
 
 var min_dist = 700
 
@@ -37,6 +37,8 @@ func get_closest_airport():
 
 func get_dist(a,b):
 	return (a.rect_position-b.rect_position).length()
+func get_pos_dist(a,b):
+	return (a.position-b.position).length()
 
 func start_tween(airport1, airport2):
 	var tween = get_node("Tween")
@@ -58,17 +60,30 @@ func erase_far():
 
 func update_state(my_airport):
 	state["current_airport"] = my_airport
+	move_interpol()
+	$Interpol.position = state["interpol_airport"].rect_position + Vector2(55,35)
 	get_closest_airport()
 	erase_far()
 
 	$Airplain.position = state["current_airport"].rect_position + Vector2(50,50)
-	
-func _on_AnimateMe_pressed():
-	start_tween(Vector2(0,0), Vector2(1000,1000))
 
 func _on_Europe_tree_exiting():
 	Sound.stop_spy()
 	
+func move_interpol():
+	var old_interpol_airport = state["interpol_airport"]
+	var rand_num = randi()%len(airports.get_children())
+	state["interpol_airport"] = airports.get_children()[rand_num] 
+	var tween = get_node("Tween")
+	tween.interpolate_property($Interpol, "position",
+			old_interpol_airport.rect_position, state["interpol_airport"].rect_position, 1,
+			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
+	yield(tween,"tween_all_completed")
+	if get_pos_dist($Airplain, $Interpol) < 1:
+		print("Game over")
+	
+
 func on_airport_pressed(new_airport):
 	print("yes")
 	var old_airport = state["current_airport"]
