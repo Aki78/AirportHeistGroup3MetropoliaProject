@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/big_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameOver/BackToMainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Images/124389928_a_single_person_airport_heist_art_work.png" type="Texture" id=3]
+
+[node name="WonScene" type="Sprite"]
+position = Vector2( 998, 554 )
+scale = Vector2( 2.16, 2.16 )
+texture = ExtResource( 3 )
+
+[node name="WonLabel" type="Label" parent="."]
+margin_left = -490.741
+margin_top = -197.222
+margin_right = 2085.26
+margin_bottom = 1091.78
+rect_scale = Vector2( 0.379503, 0.379503 )
+custom_fonts/font = ExtResource( 1 )
+text = "You Won
+"
+
+[node name="BackToMainMenu" type="Button" parent="."]
+margin_left = 74.0742
+margin_top = 48.611
+margin_right = 3059.07
+margin_bottom = 697.611
+rect_scale = Vector2( 0.104868, 0.221068 )
+custom_fonts/font = ExtResource( 1 )
+text = "Main Menu"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="BackToMainMenu" to="BackToMainMenu" method="_on_BackToMainMenu_pressed"]

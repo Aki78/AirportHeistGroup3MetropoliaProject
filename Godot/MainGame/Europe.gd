@@ -73,6 +73,13 @@ func _on_Europe_tree_exiting():
 func move_interpol():
 	var old_interpol_airport = state["interpol_airport"]
 	var rand_num = randi()%len(airports.get_children())
+	while 1:
+		old_interpol_airport = state["interpol_airport"]
+		rand_num = randi()%len(airports.get_children())
+
+
+		if (get_dist(old_interpol_airport, airports.get_children()[rand_num] )) < 700:
+			break
 	state["interpol_airport"] = airports.get_children()[rand_num] 
 	var tween = get_node("Tween")
 	tween.interpolate_property($Interpol, "position",
@@ -91,11 +98,14 @@ func on_airport_pressed(new_airport):
 	var old_airport = state["current_airport"]
 	update_state(new_airport)
 	start_tween(old_airport, new_airport)
-	
-	
-
 
 func _on_GameOverTimer_timeout():
 	print("GAAAAMMMEEE OOOVVVEEEERRRR")
+	CameraScript.my_ease_out(self)
+	get_tree().change_scene("res://GameOver/GameOverScene.tscn")
+
+func _on_WonTimer_timeout():
+	
+	print("Won")
 	CameraScript.my_ease_out(self)
 	get_tree().change_scene("res://GameOver/GameOverScene.tscn")
