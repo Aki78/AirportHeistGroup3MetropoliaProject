@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/big_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameOver/BackToMainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Images/124389928_a_single_person_airport_heist_art_work.png" type="Texture" id=3]
+[ext_resource path="res://Won/WonScene.gd" type="Script" id=4]
+
+[node name="WonScene" type="Sprite"]
+position = Vector2( 998, 554 )
+scale = Vector2( 2.16, 2.16 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="WonLabel" type="Label" parent="."]
+margin_left = -371.296
+margin_top = -211.111
+margin_right = 2204.7
+margin_bottom = 1077.89
+rect_scale = Vector2( 0.285136, 0.285136 )
+custom_fonts/font = ExtResource( 1 )
+text = "You Won
+"
+
+[node name="Score" type="Label" parent="."]
+margin_left = -381.944
+margin_top = 41.6667
+margin_right = 2194.06
+margin_bottom = 1330.67
+rect_scale = Vector2( 0.162795, 0.162795 )
+custom_fonts/font = ExtResource( 1 )
+text = "You Won
+"
+
+[node name="Best" type="Label" parent="."]
+margin_left = -445.833
+margin_top = -19.4443
+margin_right = 2781.17
+margin_bottom = 1269.56
+rect_scale = Vector2( 0.0974947, 0.0974947 )
+custom_fonts/font = ExtResource( 1 )
+text = "Best Score"
+
+[node name="BackToMainMenu" type="Button" parent="."]
+margin_left = 74.0742
+margin_top = 48.611
+margin_right = 3059.07
+margin_bottom = 697.611
+rect_scale = Vector2( 0.104868, 0.221068 )
+custom_fonts/font = ExtResource( 1 )
+text = "Main Menu"
+script = ExtResource( 2 )
+
+[connection signal="tree_exiting" from="." to="." method="_on_WonScene_tree_exiting"]
+[connection signal="pressed" from="BackToMainMenu" to="BackToMainMenu" method="_on_BackToMainMenu_pressed"]

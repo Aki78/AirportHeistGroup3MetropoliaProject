@@ -104,7 +104,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/anima/shapes/Line.gd"
 }, {
-"base": "Node",
+"base": "Reference",
 "class": "AnimaNode",
 "language": "GDScript",
 "path": "res://addons/anima/core/anima_node.gd"
@@ -275,8 +275,8 @@ boot_splash/image="res://Images/airport_heist_loading_screen_final.png"
 Anima="*res://addons/anima/core/anima.gd"
 AnimaUI="*res://addons/anima/ui/AnimaUI.gd"
 CameraScript="*res://Singletons/CameraScript.gd"
-Http="*res://Singletons/http.gd"
 Sound="*res://Singletons/Sound.gd"
+State="*res://Singletons/State.gd"
 
 [display]
 

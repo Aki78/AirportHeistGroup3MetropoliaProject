@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/big_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://MainGame/TextScreen.gd" type="Script" id=2]
+[ext_resource path="res://Images/right-arrow_white.png" type="Texture" id=3]
+
+[node name="TextScreen" type="ColorRect"]
+margin_left = 538.0
+margin_top = 253.0
+margin_right = 578.0
+margin_bottom = 293.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="RighArrow" type="Sprite" parent="."]
+position = Vector2( 10, 15 )
+scale = Vector2( 0.0104138, 0.0104138 )
+texture = ExtResource( 3 )
+
+[node name="Row1" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Row1"]
+margin_left = 14.0
+margin_top = 12.0
+margin_right = 2597.0
+margin_bottom = 655.0
+rect_scale = Vector2( 0.00810587, 0.0106442 )
+custom_fonts/font = ExtResource( 1 )
+text = "SomeTet"
+
+[node name="Row2" type="Node2D" parent="."]
+position = Vector2( -1, 12 )
+
+[node name="Label" type="Label" parent="Row2"]
+margin_left = 15.0
+margin_top = 11.0
+margin_right = 2598.0
+margin_bottom = 654.0
+rect_scale = Vector2( 0.00810587, 0.0106442 )
+custom_fonts/font = ExtResource( 1 )
+text = "SomeTet"

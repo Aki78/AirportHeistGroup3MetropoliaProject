@@ -1,20 +1,11 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+func set_pixel_size():
+	var is = get_node("sprite").get_texture().get_size() #image size
+	var th = 50 #target height
+	var tw = 100 #target width
+	var scale = Vector2((is.x/(is.x/tw))/50, (is.y/(is.y/th))/50)
 
 func _on_Airport_mouse_entered():
 #	bubbleAnimation.play("oscilate")
