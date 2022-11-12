@@ -1,0 +1,30 @@
+.container {
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+  }
+
+.nav__bar {
+    overflow: hidden;
+    background-color: #C9EAF8;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav__bar a {
+    text-align: center;
+    float: left;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 40px;
+}
+
+.nav__bar a:hover {
+    color: #DD9392;
+    background-color: #105D7E;
+}
+
