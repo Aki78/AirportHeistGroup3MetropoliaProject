@@ -22,7 +22,7 @@ func _ready() -> void:
 #adding sound node to root
 func add_sounds():
 
-	var sound_spy :AudioStream = preload("res://Sounds/41_Minutes_of_Spy_Music_-_Instrumental_Spy_Themes-XZBp0VvuUhQ.mp3") 
+	var sound_spy :AudioStream = preload("res://Sounds/Spy.mp3") 
 	var sound_hud :AudioStream = preload("res://Sounds/El_Profesor_-_Bella_Ciao_(HUGEL_Remix)_[Lyric_Video]-jhgJV0Pg54Y.mp3") 
 	var sound_pink :AudioStream = preload("res://Sounds/The_Pink_Panther_Theme_Music-lp6z3s1Gig0.mp3") 
 	var sound_click :AudioStream = preload("res://Sounds/click.mp3") 
