@@ -6,7 +6,7 @@
 
 .nav__bar {
     overflow: hidden;
-    background-color: #C9EAF8;
+    background-color: #91453B;
 }
 
 ul {
@@ -24,6 +24,7 @@ ul {
 }
 
 .nav__bar a:hover {
-    color: #DD9392;
-    background-color: #105D7E;
+    color: #AD685C;
+    background-color: #0B0518;
+    padding: 18px 20px;
 }
