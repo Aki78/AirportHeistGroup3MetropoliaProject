@@ -152,9 +152,9 @@ a {
     margin-left: 4px;
 }
 
-.leaderboard .ppl {
-    color: snow;
-    font-size: 16px;
+.leadbrd .ppl {
+    color: rgb(197, 193, 193);
+    font-size: 20px;
 }
 
 .leadbrd ol {
@@ -167,7 +167,7 @@ a {
 }
 
 .leadbrd li mark {
-    flex-grow: 1;
+    flex-grow: 2;
     color: snow;
     background-color: transparent;
 }
