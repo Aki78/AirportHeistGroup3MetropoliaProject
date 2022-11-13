@@ -100,7 +100,7 @@ ul {
 
 
 body {
-    font: 16px/1.2 "Roboto", sans-serif;
+    font: 22px/1.2 "Roboto", sans-serif;
     color: #333;
 }
 
@@ -182,37 +182,37 @@ a {
 }
 
 .leadbrd li:nth-child(2) {
-    background: #e0574f;
+    background: #F36353;
 }
 
 .leadbrd li:nth-child(3) {
-    background: #d7514d;
+    background: #EC5F51;
 }
 
 .leadbrd li:nth-child(4) {
-    background: #cd4b4b;
+    background: #E55A4F;
 }
 
 .leadbrd li:nth-child(5) {
-    background: #c24448;
+    background: #DE564D;
 }
 
 .leadbrd li:nth-child(6) {
-    background: #c24448;
+    background: #D6514B;
 }
 
 .leadbrd li:nth-child(7) {
-    background: #c24448;
+    background: #CF4D49;
 }
 
 .leadbrd li:nth-child(8) {
-    background: #c24448;
+    background: #C84847;
 }
 
 .leadbrd li:nth-child(9) {
-    background: #c24448;
+    background: #C14445;
 }
 
 .leadbrd li:nth-child(10) {
-    background: #c24448;
+    background: #BA3F43;
 }
