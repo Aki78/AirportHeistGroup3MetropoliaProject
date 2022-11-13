@@ -128,7 +128,7 @@ a {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: absolute;
-    top: 700px;
+    top: 750px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -140,10 +140,11 @@ a {
 }
 
 .leadbrd .top {
-    padding: 20px 16px;
+    padding: 20px 18px;
     color: snow;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .leadbrd .top h1 {
