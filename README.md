@@ -142,21 +142,6 @@ The main character starts the game with a set amount of money. If the player req
 
 [Back to top](#airport-heist)
 
-### Functions
-All functions created were sorted into different files, depending on what the function does. Listed below are the python files created to sort the functions.
-
-    -core_test Functions
-    -Helper Functions
-    -Database Functions
-    -Decisions
-    -Game Functions
-    -Interpol
-    -Prints
-    -Tests
-
-Having these different files allowed us to find and use functions easily.
-
-[Back to top](#airport-heist)
 
 ### Project Diagram
 This diagram shows how our different python files interact with each other. At the moment we are using Godot, a game engine, but in the future we will create our user interface through javascript.
