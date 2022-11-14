@@ -53,11 +53,11 @@
 - [ ] godot add to google playstore (optional)
 
 ### All
-    - [ ] set up server
-    - [ ] make presentation
-    - [ ] make charts
-    - [ ] update documentation
-    - [ ] test final game
+- [ ] set up server
+- [ ] make presentation
+- [ ] make charts
+- [ ] update documentation
+- [ ] test final game
 
 
 ## Contents
