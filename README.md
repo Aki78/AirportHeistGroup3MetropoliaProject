@@ -6,13 +6,13 @@
 </p>
 
 ## To-Do-List:
--Khai
+###Khai
 - [ ] js react
 - [ ] js embedding Web Assembly
 - [ ] js connecting all components
 - [ ] js unit test (optional)
 
--Kiana
+###Kiana
 - [ ] html/css leader board
 - [ ] html/css user login 
 - [ ] html/css create user account 
@@ -21,7 +21,7 @@
 - [ ] html/css/js add night-mode option
 - [ ] html/css/js progress graph (optional)
 
--Frank
+###Frank
 - [ ] flask API's for game init
 - [ ] flask API's leader board
 - [ ] flask user login
@@ -32,7 +32,7 @@
 - [ ] flask document API's (optional)
 - [ ] flask  API unit testing (optional)
 
--Jenni
+###Jenni
 - [ ] SQL leaderboard
 - [ ] SQL users
 - [ ] SQL best score
@@ -41,7 +41,7 @@
 - [ ] SQL play history (optional)
 - [ ] SQL migrate to SQLite (optional)
 
--Aki
+###Aki
 - [ ] godot game logic / dialog
 - [ ] godot better map
 - [ ] godot cleanup UI and loader
@@ -52,7 +52,7 @@
 - [ ] godot make real time (optional)
 - [ ] godot add to google playstore (optional)
 
--All
+###All
     - [ ] set up server
     - [ ] make presentation
     - [ ] make charts
