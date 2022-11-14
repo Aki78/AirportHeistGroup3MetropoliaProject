@@ -5,7 +5,7 @@
     <img src="./hud.gif">
 </p>
 
-## To-Do-List:
+## To-Do-List
 ### Khai
 - [ ] js react
 - [ ] js embedding Web Assembly
