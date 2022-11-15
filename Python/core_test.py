@@ -11,7 +11,7 @@ import time
 
 def init_state():
 
-    player = [""]   # player = ['name', 'icao_code', coordinates, budget, stamina]
+    player = ["steve", "jenni", "john", "emma"]   # player = ['name', 'icao_code', coordinates, budget, stamina]
     player[0] = "Aki" # Change to name input later
     player.append("EFHK")
 
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     random.seed() 
 
     # name = input("Input name: ")
-    name = "somethuing"
+    name = "something"
             
     while True:
         userInput = prints.print_mainmenu(name)  # Print the main menu
