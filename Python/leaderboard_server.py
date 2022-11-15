@@ -1,4 +1,5 @@
 import mysql.connector
+import tabulate
 
 connection = mysql.connector.connect(
     host='127.0.0.1',
@@ -23,5 +24,13 @@ game_state = {
 
 }
 add_leaderboard_data(game_state)
+
+def get_leaderboard_data():
+    sql = ("select * from top_players order by score desc limit 10;")
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    print("\nTop 5 players:")
+    print(tabulate(result, headers=["Player", "Score"], tablefmt="double_outline"))
 
 
