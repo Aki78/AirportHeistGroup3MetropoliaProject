@@ -33,7 +33,7 @@
 - [ ] flask  API unit testing (optional)
 
 ### Jenni
-- [ ] SQL leaderboard
+- [x] SQL leaderboard
 - [ ] SQL users
 - [ ] SQL best score
 - [ ] SQL update airport DB
