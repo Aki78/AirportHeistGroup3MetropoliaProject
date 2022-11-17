@@ -1,35 +1,48 @@
-import spinner from './img/spina.gif'
 import background from './img/main_background.png'
-import { Route } from 'react-router-dom';
+import ReactDOM from "react-dom/client";
 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
-
-const Play = () => {
-
-    return (
-        <>
-            
-            <div id='folder-background'></div>
-        </>
-    )
-
-}
+import Home from './Home/Home' 
 
 const App = () => {
     return (
-        
         <>
-            <img src={background} alt='background'></img>
-            <div id='body-content'></div>
-                
-                
-            
+        <p>test</p>
+      <Router>
+    <div class="container">
+        <div class="nav__bar">
+            <ul>
+                <li><Link to="Home" >Home</Link></li>
+                <li><Link to="Home" >Home</Link></li>
+                <li><Link to="Home" >Home</Link></li>
+                <li><Link to="Home" >Home</Link></li>
+            </ul>
+        </div>
+    </div>
+          <div>
 
-            
+            <Routes>
+              <Route path="Home" element={<Home/>}/>
+            </Routes>
+            <Routes>
+              <Route path="Home" element={<Home/>}/>
+            </Routes>
+          </div>
+    </Router> 
         </>
         
     )
 }
 
+            //<img src={background} alt='background'></img>
+            //<div id='body-content'></div>
 
 export default App;
+
+
