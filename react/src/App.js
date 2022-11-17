@@ -1,5 +1,6 @@
 import spinner from './img/spina.gif'
 import background from './img/main_background.png'
+import { Route } from 'react-router-dom';
 
 import './App.css';
 
