@@ -7,8 +7,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 import './App.css';
 import Home from './Home/Home' 
+import LeaderBoard from './LeaderBoard/LeaderBoard' 
 
 const App = () => {
     return (
@@ -19,7 +21,7 @@ const App = () => {
         <div class="nav__bar">
             <ul>
                 <li><Link to="Home" >Home</Link></li>
-                <li><Link to="Home" >Home</Link></li>
+                <li><Link to="LeaderBoard" >LeaderBoard</Link></li>
                 <li><Link to="Home" >Home</Link></li>
                 <li><Link to="Home" >Home</Link></li>
             </ul>
@@ -31,7 +33,7 @@ const App = () => {
               <Route path="Home" element={<Home/>}/>
             </Routes>
             <Routes>
-              <Route path="Home" element={<Home/>}/>
+              <Route path="LeaderBoard" element={<LeaderBoard/>}/>
             </Routes>
           </div>
     </Router> 
