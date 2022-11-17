@@ -1,0 +1,192 @@
+* .container {
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.main {
+    position: relative;
+    text-align: center;
+    top: 18px;
+    bottom: 200px;
+}
+
+.leadbrd__h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 75px;
+    color: transparent;
+    background: conic-gradient(#1B273F 12%, #282A3F 12%,
+            #342E3E 33%, #41313E 33%,
+            #4E343D 55%, #5A383D 55%,
+            #673B3C 71%, #743E3C 71%,
+            #82403B 88%, #8F443B 88%);
+    background-size: 70%;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    animation: expand-reverse 0.5s ease forwards;
+}
+
+.leadbrd__h1:hover {
+    animation: expand 0.5s ease forwards;
+}
+
+@keyframes expand {
+    0% {
+        background-size: 50%;
+        background-position: 0 0;
+    }
+
+    20% {
+        background-size: 55%;
+        background-position: 0 1em;
+    }
+
+    100% {
+        background-size: 325%;
+        background-position: -10em -4em;
+    }
+}
+
+@keyframes expand-reverse {
+    0% {
+        background-size: 325%;
+        background-position: -10em -4em;
+    }
+
+    20% {
+        background-size: 55%;
+        background-position: 0 1em;
+    }
+
+    100% {
+        background-size: 50%;
+        background-position: 0 0;
+    }
+}
+
+.section {
+    border-top: 5px solid #252F55;
+}
+
+
+
+body {
+    font: 22px/1.2 "Roboto", sans-serif;
+    color: #333;
+}
+
+.blog {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.chart {
+    width: 800px;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 750px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.leadbrd {
+    background: linear-gradient(to bottom, #3a404d, #181c26);
+}
+
+.leadbrd .top {
+    padding: 20px 18px;
+    color: snow;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.leadbrd .top h1 {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.leadbrd .ppl {
+    color: rgb(197, 193, 193);
+    font-size: 20px;
+}
+
+.leadbrd ol {
+    counter-reset: number;
+}
+
+.leadbrd li {
+    padding: 16px;
+    display: flex;
+}
+
+.leadbrd li mark {
+    flex-grow: 2;
+    color: snow;
+    background-color: transparent;
+}
+
+.leadbrd li:before {
+    counter-increment: number;
+    content: counter(number) ".";
+    margin-right: 4px;
+}
+
+.leadbrd li:nth-child(1) {
+    background: #fa6855;
+}
+
+.leadbrd li:nth-child(2) {
+    background: #F36353;
+}
+
+.leadbrd li:nth-child(3) {
+    background: #EC5F51;
+}
+
+.leadbrd li:nth-child(4) {
+    background: #E55A4F;
+}
+
+.leadbrd li:nth-child(5) {
+    background: #DE564D;
+}
+
+.leadbrd li:nth-child(6) {
+    background: #D6514B;
+}
+
+.leadbrd li:nth-child(7) {
+    background: #CF4D49;
+}
+
+.leadbrd li:nth-child(8) {
+    background: #C84847;
+}
+
+.leadbrd li:nth-child(9) {
+    background: #C14445;
+}
+
+.leadbrd li:nth-child(10) {
+    background: #BA3F43;
+}
