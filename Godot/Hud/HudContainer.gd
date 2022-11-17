@@ -11,7 +11,8 @@ func _on_StartButton_pressed():
 	Sound.play_click()
 	var anima = CameraScript.my_ease_out(self)
 	yield(anima, "animation_completed")
-	get_tree().change_scene("res://MainGame/GameScreen.tscn")
+	Sound.stop_hud()
+	get_tree().change_scene("res://LoadingScene/LoadGame.tscn")
 
 
 func _on_HudContainer_tree_exiting():

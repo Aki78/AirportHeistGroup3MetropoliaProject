@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Images/1923527716_a_single_person_airport_heist_art_work.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/big_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://LoadingScene/LoadGame.gd" type="Script" id=3]
+
+[node name="LoadingGameSprite" type="Sprite"]
+position = Vector2( 961.5, 539.5 )
+scale = Vector2( 1.88184, 2.11133 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -200.071
+margin_top = 17.2877
+margin_right = 2392.93
+margin_bottom = 660.288
+rect_scale = Vector2( 0.249571, 0.249571 )
+custom_fonts/font = ExtResource( 2 )
+text = "Loading..."
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
