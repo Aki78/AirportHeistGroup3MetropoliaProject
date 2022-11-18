@@ -1,4 +1,3 @@
-import background from './img/main_background.png'
 import ReactDOM from "react-dom/client";
 
 import {
@@ -26,7 +25,7 @@ const App = () => {
                 <li><Link to="Home" >Home</Link></li>
                 <li><Link to="LeaderBoard" >LeaderBoard</Link></li>
                 <li><Link to="Tutorial">Tutorial</Link></li>
-                <li><Link to="Game" >Game</Link></li>
+                <li><a href="https://aki78.itch.io/group3-metropolia" >Game</a></li>
             </ul>
         </div>
     </div>
@@ -51,8 +50,6 @@ const App = () => {
     )
 }
 
-            //<img src={background} alt='background'></img>
-            //<div id='body-content'></div>
 
 export default App;
 

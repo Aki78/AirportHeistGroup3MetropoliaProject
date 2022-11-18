@@ -5,59 +5,8 @@
     <img src="./hud.gif">
 </p>
 
-## To-Do-List
-### Khai
-- [ ] js react
-- [ ] js embedding Web Assembly
-- [ ] js connecting all components
-- [ ] js unit test (optional)
-
-### Kiana
-- [ ] html/css leader board
-- [ ] html/css user login 
-- [ ] html/css create user account 
-- [ ] html/css tutorial page
-- [ ] html/css make mobile friendly
-- [ ] html/css/js add night-mode option
-- [ ] html/css/js progress graph (optional)
-
-### Frank
-- [ ] flask API's for game init
-- [ ] flask API's leader board
-- [ ] flask user login
-- [ ] flask create user account
-- [ ] flask fetching weather
-- [ ] flask fetching ticket prices (optional)
-- [ ] flask API's for graph (optional)
-- [ ] flask document API's (optional)
-- [ ] flask  API unit testing (optional)
-
-### Jenni
-- [x] SQL leaderboard
-- [ ] SQL users
-- [ ] SQL best score
-- [ ] SQL update airport DB
-- [ ] SQL set up user settings DB
-- [ ] SQL play history (optional)
-- [ ] SQL migrate to SQLite (optional)
-
-### Aki
-- [ ] godot game logic / dialog
-- [ ] godot better map
-- [ ] godot cleanup UI and loader
-- [ ] godot call game init from API's
-- [ ] godot call weather from API's
-- [ ] godot call ticket prices from API's (optional)
-- [ ] godot machine learn AI (optional)
-- [ ] godot make real time (optional)
-- [ ] godot add to google playstore (optional)
-
-### All
-- [ ] set up server
-- [ ] make presentation
-- [ ] make charts
-- [ ] update documentation
-- [ ] test final game
+# Page
+https://Aki78.github.io/airport-heist.github.io
 
 
 ## Contents
@@ -224,6 +173,61 @@ python3 filename.py		  runs python program that is in the file in your terminal 
 
 grep -r [expression]              finds the file where the expression exists
 ```
+
+
+## To-Do-List
+### Khai
+- [ ] js react
+- [ ] js embedding Web Assembly
+- [ ] js connecting all components
+- [ ] js unit test (optional)
+
+### Kiana
+- [ ] html/css leader board
+- [ ] html/css user login 
+- [ ] html/css create user account 
+- [ ] html/css tutorial page
+- [ ] html/css make mobile friendly
+- [ ] html/css/js add night-mode option
+- [ ] html/css/js progress graph (optional)
+
+### Frank
+- [ ] flask API's for game init
+- [ ] flask API's leader board
+- [ ] flask user login
+- [ ] flask create user account
+- [ ] flask fetching weather
+- [ ] flask fetching ticket prices (optional)
+- [ ] flask API's for graph (optional)
+- [ ] flask document API's (optional)
+- [ ] flask  API unit testing (optional)
+
+### Jenni
+- [x] SQL leaderboard
+- [ ] SQL users
+- [ ] SQL best score
+- [ ] SQL update airport DB
+- [ ] SQL set up user settings DB
+- [ ] SQL play history (optional)
+- [ ] SQL migrate to SQLite (optional)
+
+### Aki
+- [ ] godot game logic / dialog
+- [ ] godot better map
+- [ ] godot cleanup UI and loader
+- [ ] godot call game init from API's
+- [ ] godot call weather from API's
+- [ ] godot call ticket prices from API's (optional)
+- [ ] godot machine learn AI (optional)
+- [ ] godot make real time (optional)
+- [ ] godot add to google playstore (optional)
+
+### All
+- [ ] set up server
+- [ ] make presentation
+- [ ] make charts
+- [ ] update documentation
+- [ ] test final game
 
 ### Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
