@@ -6,7 +6,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
 import './App.css';
 
 import Home from './Home/Home' 
@@ -22,17 +21,17 @@ const App = () => {
     <div class="container">
         <div class="nav__bar">
             <ul>
-                <li><Link to="Home" >Home</Link></li>
+                <li><Link to="airport-heist.github.io" >Home</Link></li>
                 <li><Link to="LeaderBoard" >LeaderBoard</Link></li>
                 <li><Link to="Tutorial">Tutorial</Link></li>
-                <li><a href="https://aki78.itch.io/group3-metropolia" >Game</a></li>
+                <li><a href="https://aki78.itch.io/group3-metropolia" target="blank" >Game</a></li>
             </ul>
         </div>
     </div>
           <div>
 
             <Routes>
-              <Route path="Home" element={<Home/>}/>
+              <Route path="airport-heist.github.io" element={<Home/>}/>
             </Routes>
             <Routes>
               <Route path="LeaderBoard" element={<LeaderBoard/>}/>
