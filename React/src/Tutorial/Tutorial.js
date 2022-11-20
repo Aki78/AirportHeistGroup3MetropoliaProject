@@ -4,7 +4,7 @@ import React from 'react'
 const Tutorial = () => {
     return (
         <>
-        <p> This is Tutorial. </p>
+            <p>Tutorial contents</p>
         </>
         
     )

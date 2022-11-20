@@ -1,52 +1,36 @@
 import ReactDOM from "react-dom/client";
-
-import {
-  BrowserRouter as Router,
+import { 
   Routes,
   Route,
-  Link
 } from "react-router-dom";
+
+import Home from './Home/Home'
+import LeaderBoard from './LeaderBoard/LeaderBoard'
+import Tutorial from './Tutorial/Tutorial'
+import Game from './Game/Game'
+
 import './App.css';
 
-import Home from './Home/Home' 
-import LeaderBoard from './LeaderBoard/LeaderBoard' 
-import Tutorial from './Tutorial/Tutorial' 
-import Game from './Game/Game' 
+import Navigation from './Navigation/Navigation';
+
 
 const App = () => {
-    return (
-        <>
-        <p>test</p>
-      <Router>
-    <div class="container">
-        <div class="nav__bar">
-            <ul>
-                <li><Link to="airport-heist.github.io" >Home</Link></li>
-                <li><Link to="LeaderBoard" >LeaderBoard</Link></li>
-                <li><Link to="Tutorial">Tutorial</Link></li>
-                <li><a href="https://aki78.itch.io/group3-metropolia" target="blank" >Game</a></li>
-            </ul>
-        </div>
-    </div>
-          <div>
 
+  return (
+    <>  
+        <Navigation />
+        <div class="container">
             <Routes>
-              <Route path="airport-heist.github.io" element={<Home/>}/>
+                <Route path="airport-heist.github.io" element={<Home />} />
+                <Route path="LeaderBoard" element={<LeaderBoard />} />
+                <Route path="Game" element={<Game />} />
+                <Route path="Tutorial" element={<Tutorial />} />
             </Routes>
-            <Routes>
-              <Route path="LeaderBoard" element={<LeaderBoard/>}/>
-            </Routes>
-            <Routes>
-              <Route path="Tutorial" element={<Tutorial/>}/>
-            </Routes>
-            <Routes>
-              <Route path="Game" element={<Game/>}/>
-            </Routes>
-          </div>
-    </Router> 
-        </>
-        
-    )
+        </div>
+
+    </>
+
+  )
 }
 
 
