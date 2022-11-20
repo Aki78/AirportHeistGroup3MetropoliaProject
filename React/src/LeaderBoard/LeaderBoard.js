@@ -6,13 +6,14 @@ const LeaderBoard = () => {
         <>
                 <main class="main">
                     <div class="leadbrd__h1">
-                        <h1>LeaderBoard</h1>
+                        <h1>Leaderboard</h1>
                     </div>
+                    
                     <div class="section">
                         <div class="chart">
                             <div class="leadbrd">
                                 <div class="top">
-                                    <h1>Top Ten Players</h1>
+                                    <h1>Top 10 Players</h1>
                                 </div>
                                 <div class="ppl">
                                     <ol>
