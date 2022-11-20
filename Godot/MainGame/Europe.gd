@@ -11,7 +11,7 @@ onready var is_close = false
 
 func _ready():
 	Sound.play_spy()
-	Sound.stop_click()
+	#Sound.play_panic()
 	print(state["current_airport"].rect_position)
 	print(get_closest_airport())
 	$Player.position = state["current_airport"].rect_position
