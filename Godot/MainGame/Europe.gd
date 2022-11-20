@@ -17,6 +17,8 @@ func _ready():
 	$Player.position = state["current_airport"].rect_position
 	connect_airports()
 	update_state(state["current_airport"])
+	var dialog = Dialogic.start('timeline-choose')
+	add_child(dialog)
 
 func _on_Button_pressed():
 	var anima = CameraScript.my_ease_out(self)
