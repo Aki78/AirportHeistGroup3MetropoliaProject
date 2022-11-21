@@ -46,12 +46,20 @@ custom_fonts/font = ExtResource( 1 )
 text = "Kiana Aghajani"
 script = ExtResource( 2 )
 
-[node name="Aki" type="Label" parent="VBoxContainer"]
+[node name="Jenni" type="Label" parent="VBoxContainer"]
 margin_top = 255.0
 margin_right = 559.0
 margin_bottom = 336.0
 custom_fonts/font = ExtResource( 1 )
-text = "Eiaki V. R. Morooka"
+text = "Jenni Hallikas"
+script = ExtResource( 2 )
+
+[node name="Aki" type="Label" parent="VBoxContainer"]
+margin_top = 340.0
+margin_right = 559.0
+margin_bottom = 421.0
+custom_fonts/font = ExtResource( 1 )
+text = "Eiaki V. Morooka"
 script = ExtResource( 2 )
 
 [node name="CreditsHomeButton" type="Button" parent="."]

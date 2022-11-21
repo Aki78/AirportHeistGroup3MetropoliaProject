@@ -320,7 +320,7 @@ script = ExtResource( 13 )
 position = Vector2( 206, 174 )
 scale = Vector2( 1.05348, 1.2055 )
 frames = SubResource( 5 )
-frame = 139
+frame = 28
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -403,6 +403,7 @@ script = ExtResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
+[connection signal="tree_exiting" from="." to="." method="_on_HudBackGround_tree_exiting"]
 [connection signal="timeout" from="Dance" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Noise/Timer" to="Noise" method="_on_Timer_timeout"]
 [connection signal="mouse_exited" from="HudContainer" to="." method="_on_HudContainer_mouse_exited"]

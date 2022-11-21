@@ -1,0 +1,45 @@
+/*.container {
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+  }
+
+.nav__bar {
+    overflow: hidden;
+    background-color: #91453B;
+    font-family: "Josefin Sans", sans-serif;
+    border-color: black;
+    border-radius: 7px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nav__bar a {
+    text-align: center;
+    float: left;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 40px;
+}
+
+.nav__bar a:hover {
+    color: #AD685C;
+    background-color: #0B0518;
+    padding: 18px 20px;
+}
+
+*/
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+    
+}
