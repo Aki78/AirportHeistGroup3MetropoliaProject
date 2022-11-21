@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "https://hostinger-react-app.com/static/css/main.120cbf12.css",
+    "main.js": "https://hostinger-react-app.com/static/js/main.a522089a.js",
+    "static/media/main_background.png": "https://hostinger-react-app.com/static/media/main_background.89c4168cf4d4d91e5445.png",
+    "index.html": "https://hostinger-react-app.com/index.html",
+    "main.120cbf12.css.map": "https://hostinger-react-app.com/static/css/main.120cbf12.css.map",
+    "main.a522089a.js.map": "https://hostinger-react-app.com/static/js/main.a522089a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.120cbf12.css",
+    "static/js/main.a522089a.js"
+  ]
+}
