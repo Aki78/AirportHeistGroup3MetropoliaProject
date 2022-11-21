@@ -69,8 +69,8 @@ func erase_far():
 func update_state(my_airport):
 	minus_cash(my_airport)
 	state["current_airport"] = my_airport
-	move_interpol()
-	$Interpol.position = state["interpol_airport"].rect_position + Vector2(55,35)
+#	move_interpol()
+#	$Interpol.position = state["interpol_airport"].rect_position + Vector2(55,35)
 	get_closest_airport()
 	erase_far()
 	if state["current_airport"] == destination:
@@ -103,10 +103,10 @@ func move_interpol():
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	yield(tween,"tween_all_completed")
-	if get_pos_dist($Player, $Interpol) < 1:
-		print("Game over")
-		Sound.stop_spy()
-		$GameOverTimer.start()
+#	if get_pos_dist($Player, $Interpol) < 1:
+#		print("Game over")
+#		Sound.stop_spy()
+#		$GameOverTimer.start()
 	
 
 func on_airport_pressed(new_airport):
@@ -157,4 +157,14 @@ func _on_Player_pressed():
 #	dialog.queue_free()
 	dialog = Dialogic.start("timeline-choose")
 	add_child(dialog)
-	
+
+func _on_InterpolArea_area_entered(area):
+	print("ENTERED")
+	print("Game over")
+	Sound.stop_spy()
+	$GameOverTimer.start()
+
+
+func _on_InterpolMove_timeout():
+	move_interpol()
+	$Interpol.position = state["interpol_airport"].rect_position + Vector2(55,35)
