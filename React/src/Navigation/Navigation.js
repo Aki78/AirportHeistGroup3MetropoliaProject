@@ -16,6 +16,9 @@ const Navigation = () => {
                 <li><Link to="LeaderBoard" >Leaderboard</Link></li>
                 <li><a href="https://aki78.itch.io/group3-metropolia" target="blank" >Game</a></li>
                 <li><Link to="Tutorial">Tutorial</Link></li> 
+                <li><Link to="Credits">Credits</Link></li> 
+                <li><Link to="Weather">Weather</Link></li> 
+                <li><Link to="Download">Download</Link></li> 
             </ul>
         </nav>
 

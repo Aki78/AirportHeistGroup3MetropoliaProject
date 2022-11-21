@@ -8,6 +8,9 @@ import Home from './Home/Home'
 import LeaderBoard from './LeaderBoard/LeaderBoard'
 import Tutorial from './Tutorial/Tutorial'
 import Game from './Game/Game'
+import Download from './Download/Download'
+import Credits from './Credits/Credits'
+import Weather from './Weather/Weather'
 
 import './App.css';
 
@@ -26,6 +29,9 @@ const App = () => {
                 <Route path="LeaderBoard" element={<LeaderBoard />} />
                 <Route path="Game" element={<Game />} />
                 <Route path="Tutorial" element={<Tutorial />} />
+                <Route path="Credits" element={<Credits />} />
+                <Route path="Download" element={<Download />} />
+                <Route path="Weather" element={<Weather />} />
             </Routes>
         </div>
         
