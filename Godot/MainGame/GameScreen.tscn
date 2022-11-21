@@ -109,8 +109,8 @@ one_shot = true
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 
-[node name="InterpolMove" type="Timer" parent="."]
-wait_time = 5.0
+[node name="InterpolTimer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [connection signal="tree_exiting" from="." to="." method="_on_Europe_tree_exiting"]
@@ -121,4 +121,4 @@ autostart = true
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
 [connection signal="timeout" from="WonTimer" to="." method="_on_WonTimer_timeout"]
 [connection signal="pressed" from="Player" to="." method="_on_Player_pressed"]
-[connection signal="timeout" from="InterpolMove" to="." method="_on_InterpolMove_timeout"]
+[connection signal="timeout" from="InterpolTimer" to="." method="_on_InterpolMove_timeout"]

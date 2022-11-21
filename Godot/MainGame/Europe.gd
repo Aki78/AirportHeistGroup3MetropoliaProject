@@ -21,6 +21,7 @@ func _ready():
 	dialog = Dialogic.start('timeline-choose')
 
 	dialog.connect('dialogic_signal',self, 'dialogic_listener')
+	$Interpol.position = $Airports/AirportNode14.rect_position
 
 
 
@@ -69,8 +70,6 @@ func erase_far():
 func update_state(my_airport):
 	minus_cash(my_airport)
 	state["current_airport"] = my_airport
-#	move_interpol()
-#	$Interpol.position = state["interpol_airport"].rect_position + Vector2(55,35)
 	get_closest_airport()
 	erase_far()
 	if state["current_airport"] == destination:
@@ -162,9 +161,10 @@ func _on_InterpolArea_area_entered(area):
 	print("ENTERED")
 	print("Game over")
 	Sound.stop_spy()
+	$InterpolTimer.stop()
 	$GameOverTimer.start()
 
 
 func _on_InterpolMove_timeout():
 	move_interpol()
-	$Interpol.position = state["interpol_airport"].rect_position + Vector2(55,35)
+#	$Interpol.position = state["interpol_airport"].rect_position # + Vector2(55,35)
