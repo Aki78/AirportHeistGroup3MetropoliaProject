@@ -15,7 +15,7 @@ onready var game_over_music =AudioStreamPlayer.new()
 onready var tween_out_node = Tween
 onready var tween_out
 
-var transition_duration = 3.00
+var transition_duration = 1.00
 var transition_type = 1 # TRANS_SINE
 #possible use if music doesn't connect well
 var current_music
