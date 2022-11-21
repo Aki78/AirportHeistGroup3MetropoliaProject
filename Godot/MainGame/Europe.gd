@@ -8,18 +8,20 @@ onready var state = {"current_airport":first_airport, "neighbors":[], "cash":500
 
 var min_dist = 700
 onready var is_close = false
+var dialog
 
 func _ready():
 	Sound.play_spy()
 	#Sound.play_panic()
 	print(state["current_airport"].rect_position)
 	print(get_closest_airport())
-	$Player.position = state["current_airport"].rect_position
+	$Player.rect_position = state["current_airport"].rect_position
 	connect_airports()
 	update_state(state["current_airport"])
-	var dialog = Dialogic.start('timeline-choose')
+	dialog = Dialogic.start('timeline-choose')
+
 	dialog.connect('dialogic_signal',self, 'dialogic_listener')
-	add_child(dialog)
+
 
 
 func _on_Button_pressed():
@@ -44,11 +46,11 @@ func get_closest_airport():
 func get_dist(a,b):
 	return (a.rect_position-b.rect_position).length()
 func get_pos_dist(a,b):
-	return (a.position-b.position).length()
+	return (a.rect_position-b.position).length()
 
 func start_tween(airport1, airport2):
 	var tween = get_node("Tween")
-	tween.interpolate_property($Player, "position",
+	tween.interpolate_property($Player, "rect_position",
 			airport1.rect_position, airport2.rect_position, 1,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
@@ -79,7 +81,7 @@ func update_state(my_airport):
 		if State.load_score() < state.cash:
 			State.save_score(state.cash)
 
-	$Player.position = state["current_airport"].rect_position + Vector2(50,50)
+	$Player.rect_position = state["current_airport"].rect_position + Vector2(0,0)
 
 func _on_Europe_tree_exiting():
 	Sound.stop_spy()
@@ -149,3 +151,10 @@ func dialogic_listener(a):
 		"yes":
 			print("YES!")
 			Sound.play_deep()
+
+
+func _on_Player_pressed():
+#	dialog.queue_free()
+	dialog = Dialogic.start("timeline-choose")
+	add_child(dialog)
+	
