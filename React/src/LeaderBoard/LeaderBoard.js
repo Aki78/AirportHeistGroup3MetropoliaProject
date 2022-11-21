@@ -2,12 +2,19 @@ import './leadbrd.css'
 import React from 'react'
 
 const LeaderBoard = () => {
+
+    const my_list = Array.from(Array(10).keys());
+
+    const makeList = () => (my_list.map(e => {
+        return <li className='fade-in-list' style={{opacity: "0", animationDelay: `${0.1*e}s`}}></li>
+    }))
+
     return (
         <>
             <div class="main">
                 <div class="leadbrd_h1">
                     <h1>Leaderboard</h1>
-                </div>  
+                </div>
 
                 <div class="section">
                     <div class="leadbrd">
@@ -16,23 +23,17 @@ const LeaderBoard = () => {
                         </div>
                         <div class="ppl">
                             <ol>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                {makeList()}
                             </ol>
                         </div>
+
+                            <h1>You</h1>
+                            <li></li>
                     </div>
-                </div>                  
+                </div>
             </div>
         </>
-        
+
     )
 }
 
