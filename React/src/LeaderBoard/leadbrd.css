@@ -162,3 +162,22 @@ ul {
 .leadbrd li:nth-child(10) {
     background: #BA3F43;
 }
+
+
+.fade-in-list {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        position: relative;
+        left: -10%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 10%;
+        opacity: 100%;
+    }
+
+}
