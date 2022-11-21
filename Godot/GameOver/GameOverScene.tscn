@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Images/1721321208_a_single_person_airport_heist_art_work.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/big_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://GameOver/BackToMainMenu.gd" type="Script" id=3]
+[ext_resource path="res://GameOver/GameOverScene.gd" type="Script" id=4]
 
 [node name="GameOverScene" type="Sprite"]
 position = Vector2( 1150, 563 )
 scale = Vector2( 2.30176, 2.30176 )
 texture = ExtResource( 1 )
+script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = -331.486
@@ -28,4 +30,8 @@ custom_fonts/font = ExtResource( 2 )
 text = "Main Menu"
 script = ExtResource( 3 )
 
+[node name="Timer" type="Timer" parent="BackToMainMenu"]
+one_shot = true
+
 [connection signal="pressed" from="BackToMainMenu" to="BackToMainMenu" method="_on_BackToMainMenu_pressed"]
+[connection signal="timeout" from="BackToMainMenu/Timer" to="BackToMainMenu" method="_on_Timer_timeout"]

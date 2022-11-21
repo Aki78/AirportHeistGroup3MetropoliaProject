@@ -11,12 +11,16 @@ onready var is_close = false
 
 func _ready():
 	Sound.play_spy()
-	Sound.stop_click()
+	#Sound.play_panic()
 	print(state["current_airport"].rect_position)
 	print(get_closest_airport())
 	$Player.position = state["current_airport"].rect_position
 	connect_airports()
 	update_state(state["current_airport"])
+	var dialog = Dialogic.start('timeline-choose')
+	dialog.connect('dialogic_signal',self, 'dialogic_listener')
+	add_child(dialog)
+
 
 func _on_Button_pressed():
 	var anima = CameraScript.my_ease_out(self)
@@ -140,3 +144,8 @@ func _on_WonTimer_timeout():
 	var anima = CameraScript.my_ease_out(self)
 	yield(anima, "animation_completed")
 	get_tree().change_scene("res://Won/WonScene.tscn")
+func dialogic_listener(a):
+	match a:
+		"yes":
+			print("YES!")
+			Sound.play_deep()

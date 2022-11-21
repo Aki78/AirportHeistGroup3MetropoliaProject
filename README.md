@@ -33,7 +33,6 @@ https://Aki78.github.io/airport-heist.github.io
 - [Useful git commands](#useful-git-commands)
 - [Useful bash commands](#useful-bash-commands)
 - [Project information](#project-info)
-- [Unrelated English project](#unrelated-english-presentation-on-tesla)
 
 ## Introduction
 This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive game, that satisfies the guidelines provided by software1.
