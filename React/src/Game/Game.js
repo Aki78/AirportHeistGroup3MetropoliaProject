@@ -1,10 +1,10 @@
 import './game.css'
 import React from 'react'
 
-const Game= () => {
+const Game = () => {
     return (
         <>
-        <p> This is Game. </p>
+            <p> This is Game. </p>
         </>
         
     )

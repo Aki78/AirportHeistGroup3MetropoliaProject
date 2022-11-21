@@ -12,6 +12,7 @@ import Game from './Game/Game'
 import './App.css';
 
 import Navigation from './Navigation/Navigation';
+import Footer from './Footer/Footer';
 
 
 const App = () => {
@@ -27,6 +28,8 @@ const App = () => {
                 <Route path="Tutorial" element={<Tutorial />} />
             </Routes>
         </div>
+        
+        <Footer />
 
     </>
 
@@ -35,5 +38,3 @@ const App = () => {
 
 
 export default App;
-
-

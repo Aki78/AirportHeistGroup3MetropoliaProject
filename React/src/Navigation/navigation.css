@@ -38,15 +38,15 @@ ul {
 
 .nav_bar {
     height: 84px;
-    margin-bottom: 10%;
-    background-color: gray;
+    margin-bottom: 0;
+    background-color: rgb(21, 19, 60);
 }
 
 .nav_bar ul {
     display: flex;
     justify-content: space-evenly;
     margin-left: -15px;
-    width: 65%;
+    width: 50%;
     padding: 0;
     text-align: center;
     
@@ -55,12 +55,12 @@ ul {
 
 .nav_bar ul li a {
     text-decoration: none;
-    color:black;
+    color:rgb(241, 238, 233);
 }
 
 .nav_bar ul li a:hover {
     text-decoration: none;
-    color: red;
+    color: rgb(224, 77, 1);
     transition: 250ms;
 }
 
