@@ -1,11 +1,9 @@
-extends Sprite
+extends Button
 
 onready var cash = 5000
 
 func _ready():
-	modulate.r = 0.5
-	scale.x= 1
-	scale.y = 1
+	self_modulate.a = 0.0
 	$Cash.text = str(cash)
 
 func set_cash(price):

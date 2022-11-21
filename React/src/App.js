@@ -1,59 +1,46 @@
-import background from './img/main_background.png'
 import ReactDOM from "react-dom/client";
-
-import {
-  BrowserRouter as Router,
+import { 
   Routes,
   Route,
-  Link
 } from "react-router-dom";
+
+import Home from './Home/Home'
+import LeaderBoard from './LeaderBoard/LeaderBoard'
+import Tutorial from './Tutorial/Tutorial'
+import Game from './Game/Game'
+import Download from './Download/Download'
+import Credits from './Credits/Credits'
+import Weather from './Weather/Weather'
 
 import './App.css';
 
-import Home from './Home/Home' 
-import LeaderBoard from './LeaderBoard/LeaderBoard' 
-import Tutorial from './Tutorial/Tutorial' 
-import Game from './Game/Game' 
+import Navigation from './Navigation/Navigation';
+import Footer from './Footer/Footer';
+
 
 const App = () => {
-    return (
-        <>
-        <p>test</p>
-      <Router>
-    <div class="container">
-        <div class="nav__bar">
-            <ul>
-                <li><Link to="Home" >Home</Link></li>
-                <li><Link to="LeaderBoard" >LeaderBoard</Link></li>
-                <li><Link to="Tutorial">Tutorial</Link></li>
-                <li><Link to="Game" >Game</Link></li>
-            </ul>
-        </div>
-    </div>
-          <div>
 
+  return (
+    <>  
+        <Navigation />
+        <div class="container">
             <Routes>
-              <Route path="Home" element={<Home/>}/>
+                <Route path="airport-heist.github.io" element={<Home />} />
+                <Route path="LeaderBoard" element={<LeaderBoard />} />
+                <Route path="Game" element={<Game />} />
+                <Route path="Tutorial" element={<Tutorial />} />
+                <Route path="Credits" element={<Credits />} />
+                <Route path="Download" element={<Download />} />
+                <Route path="Weather" element={<Weather />} />
             </Routes>
-            <Routes>
-              <Route path="LeaderBoard" element={<LeaderBoard/>}/>
-            </Routes>
-            <Routes>
-              <Route path="Tutorial" element={<Tutorial/>}/>
-            </Routes>
-            <Routes>
-              <Route path="Game" element={<Game/>}/>
-            </Routes>
-          </div>
-    </Router> 
-        </>
+        </div>
         
-    )
+        <Footer />
+
+    </>
+
+  )
 }
 
-            //<img src={background} alt='background'></img>
-            //<div id='body-content'></div>
 
 export default App;
-
-

@@ -8,7 +8,8 @@
 [ext_resource path="res://MainGame/Europe.gd" type="Script" id=6]
 [ext_resource path="res://MainGame/Airports.gd" type="Script" id=7]
 [ext_resource path="res://Images/pngegg.png" type="Texture" id=8]
-[ext_resource path="res://TextScreen.tscn" type="PackedScene" id=9]
+
+[sub_resource type="CircleShape2D" id=1]
 
 [node name="Europe" type="Sprite"]
 position = Vector2( 960, 539 )
@@ -18,7 +19,6 @@ script = ExtResource( 6 )
 AirportScene = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="."]
-visible = false
 margin_left = -1446.0
 margin_top = -1121.0
 margin_right = -1203.0
@@ -29,17 +29,7 @@ script = ExtResource( 2 )
 
 [node name="GameScreen" type="Node2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1358.27, -983.192 )
-scale = Vector2( 0.0670413, 0.102724 )
-
 [node name="Tween" type="Tween" parent="."]
-
-[node name="AnimateMe" type="Button" parent="."]
-visible = false
-margin_right = 292.0
-margin_bottom = 178.0
-text = "Start Animation"
 
 [node name="Airports" type="Node2D" parent="."]
 script = ExtResource( 7 )
@@ -104,6 +94,12 @@ position = Vector2( 604.69, 427.107 )
 scale = Vector2( 0.574588, 0.574588 )
 texture = ExtResource( 8 )
 
+[node name="InterpolArea" type="Area2D" parent="Interpol"]
+
+[node name="InterpolShape" type="CollisionShape2D" parent="Interpol/InterpolArea"]
+scale = Vector2( -6.50902, -6.50902 )
+shape = SubResource( 1 )
+
 [node name="GameOverTimer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
@@ -111,13 +107,18 @@ one_shot = true
 [node name="WonTimer" type="Timer" parent="."]
 one_shot = true
 
-[node name="TextScreen" parent="." instance=ExtResource( 9 )]
-visible = false
+[node name="Player" parent="." instance=ExtResource( 4 )]
+
+[node name="InterpolTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
 
 [connection signal="tree_exiting" from="." to="." method="_on_Europe_tree_exiting"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Button" to="GameScreen" method="_on_Button_pressed"]
-[connection signal="pressed" from="AnimateMe" to="." method="_on_AnimateMe_pressed"]
+[connection signal="area_entered" from="Interpol/InterpolArea" to="." method="_on_InterpolArea_area_entered"]
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
 [connection signal="timeout" from="WonTimer" to="." method="_on_WonTimer_timeout"]
+[connection signal="pressed" from="Player" to="." method="_on_Player_pressed"]
+[connection signal="timeout" from="InterpolTimer" to="." method="_on_InterpolMove_timeout"]

@@ -1,4 +1,4 @@
-.container {
+/*.container {
     margin: 0 auto;
     width: 900px;
     text-align: center;
@@ -34,3 +34,12 @@ ul {
     padding: 18px 20px;
 }
 
+*/
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+    
+}
