@@ -9,70 +9,12 @@ ul {
     text-align: center;
 }
 
-.leadbrd_h1 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 70px;
-    color: transparent;
-    background: conic-gradient(#1B273F 12%, #282A3F 12%,
-            #342E3E 33%, #41313E 33%,
-            #4E343D 55%, #5A383D 55%,
-            #673B3C 71%, #743E3C 71%,
-            #82403B 88%, #8F443B 88%);
-    background-size: 70%;
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    animation: expand-reverse 500ms ease forwards;
-}
-
-.leadbrd_h1:hover {
-    animation: expand 0.5s ease forwards;
-}
-
-@keyframes expand {
-    0% {
-        background-size: 50%;
-        background-position: 0 0;
-    }
-
-    20% {
-        background-size: 55%;
-        background-position: 0 1em;
-    }
-
-    100% {
-        background-size: 325%;
-        background-position: -10em -4em;
-    }
-}
-
-@keyframes expand-reverse {
-    0% {
-        background-size: 325%;
-        background-position: -10em -4em;
-    }
-
-    20% {
-        background-size: 55%;
-        background-position: 0 1em;
-    }
-
-    100% {
-        background-size: 50%;
-        background-position: 0 0;
-    }
-}
-
-.section {
-    border-top: 5px solid #252F55;
-}
-
 .leadbrd {
-    margin-top: 50px;
+    margin-top: 150px;
     margin-bottom: 150px;
     background: linear-gradient(to bottom, #3a404d, #181c26);
 
-    width: 800px;
+    width: 950px;
     height: auto;
     border-radius: 10px;
     background-color: white;
@@ -109,6 +51,7 @@ ul {
 .leadbrd li {
     padding: 16px;
     display: flex;
+    border-radius: 10px;
 }
 
 .leadbrd li mark {

@@ -6,16 +6,12 @@ const LeaderBoard = () => {
     const my_list = Array.from(Array(10).keys());
 
     const makeList = () => (my_list.map(e => {
-        return <li className='fade-in-list' style={{opacity: "0", animationDelay: `${0.1*e}s`}}></li>
+        return <li className='fade-in-list' style={{ opacity: "0", animationDelay: `${0.1 * e}s` }}></li>
     }))
 
     return (
         <>
             <div class="main">
-                <div class="leadbrd_h1">
-                    <h1>Leaderboard</h1>
-                </div>
-
                 <div class="section">
                     <div class="leadbrd">
                         <div class="top">
@@ -27,8 +23,8 @@ const LeaderBoard = () => {
                             </ol>
                         </div>
 
-                            <h1>You</h1>
-                            <li></li>
+                        <h1>You</h1>
+                        <li></li>
                     </div>
                 </div>
             </div>
