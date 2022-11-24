@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import CookieConsent from "react-cookie-consent";
 
 import Home from './Home/Home'
 import LeaderBoard from './LeaderBoard/LeaderBoard'
@@ -16,6 +17,7 @@ import './App.css';
 
 import Navigation from './Navigation/Navigation';
 import Footer from './Footer/Footer';
+
 
 
 const App = () => {
@@ -34,7 +36,15 @@ const App = () => {
                 <Route path="Weather" element={<Weather />} />
             </Routes>
         </div>
-        
+      <CookieConsent
+    location="top"
+    buttonText="Okay!"
+    cookieName="mywmeookieName2"
+    style={{ background: "#2B373B" }}
+    buttonStyle={{ color: "#4e503b", fontSize: "33px" }}
+>
+    This website uses cookies to enhance the user experience.{" "}
+</CookieConsent>
         <Footer />
 
     </>
