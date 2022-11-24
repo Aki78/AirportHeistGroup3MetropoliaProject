@@ -180,11 +180,11 @@ grep -r [expression]              finds the file where the expression exists
 - [ ] js embedding Web Assembly
 - [ ] js connecting all components
 - [ ] js unit test (optional)
+- [ ] js user login 
+- [ ] js create user account 
 
 ### Kiana
 - [ ] html/css leader board
-- [ ] html/css user login 
-- [ ] html/css create user account 
 - [ ] html/css tutorial page
 - [ ] html/css make mobile friendly
 - [ ] html/css/js add night-mode option
