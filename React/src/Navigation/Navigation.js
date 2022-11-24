@@ -14,7 +14,7 @@ const Navigation = () => {
                 <li><img src={Logo} alt="logo"></img></li>
                 <li><Link to="airport-heist.github.io" >Home</Link></li>
                 <li><Link to="LeaderBoard" >Leaderboard</Link></li>
-                <li><a href="https://aki78.itch.io/group3-metropolia" target="blank" >Game</a></li>
+                <li><Link to="Game" >Game</Link></li>
                 <li><Link to="Tutorial">Tutorial</Link></li> 
                 <li><Link to="Credits">Credits</Link></li> 
                 <li><Link to="Weather">Weather</Link></li> 
