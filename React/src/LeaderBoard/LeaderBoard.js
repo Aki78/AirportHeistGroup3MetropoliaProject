@@ -6,7 +6,7 @@ const LeaderBoard = () => {
     const my_list = Array.from(Array(10).keys());
 
     const makeList = () => (my_list.map(e => {
-        return <li className='fade-in-list' style={{ opacity: "0", animationDelay: `${0.1 * e}s` }}></li>
+        return <li className='fade-in-list' style={{ opacity: "0", animationDelay: `${0.05 * e}s` }}></li>
     }))
 
     return (

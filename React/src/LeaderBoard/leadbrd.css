@@ -112,15 +112,33 @@ ul {
 
 @keyframes fadeIn {
     0% {
+        position: static ;
+        left: -10px;
         opacity: 0;
     }
-    10% {
-        opacity: 15%;
+    59% {
+        position: static ;
+        left: -10px;
+        opacity: 20%;
     }
-    90% {
-        opacity: 0%;
+    60% {
+        position: relative ;
+        left: -10px;
+        opacity: 0;
+    }
+    70% {
+        position: relative ;
+        left: -10%;
+        opacity: 0;
+    }
+    80% {
+        position: relative ;
+        left: 20%;
+        opacity: 0;
     }
     100% {
+        position: static ;
+        left: 10%; 
         opacity: 1;
     }
 }
