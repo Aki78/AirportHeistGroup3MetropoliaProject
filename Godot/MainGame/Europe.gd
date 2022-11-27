@@ -8,7 +8,8 @@ onready var state = {"current_airport":first_airport, "neighbors":[], "cash":500
 
 var min_dist = 700
 onready var is_close = false
-var dialog
+
+onready var current_success = true
 
 func _ready():
 	Sound.play_spy()
@@ -18,12 +19,7 @@ func _ready():
 	$Player.rect_position = state["current_airport"].rect_position
 	connect_airports()
 	update_state(state["current_airport"])
-	dialog = Dialogic.start('timeline-choose')
-
-	dialog.connect('dialogic_signal',self, 'dialogic_listener')
 	$Interpol.position = $Airports/AirportNode14.rect_position
-
-
 
 func _on_Button_pressed():
 	var anima = CameraScript.my_ease_out(self)
@@ -51,11 +47,14 @@ func get_pos_dist(a,b):
 
 func start_tween(airport1, airport2):
 	var tween = get_node("Tween")
+	$Player.hide_success_rate()
 	tween.interpolate_property($Player, "rect_position",
 			airport1.rect_position, airport2.rect_position, 1,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	yield(tween,"tween_all_completed")
+	current_success=$Player.set_success_rate()
+	$Player.show_success_rate()
 
 func erase_far():
 	for _i in airports.get_children():
@@ -145,17 +144,12 @@ func _on_WonTimer_timeout():
 	var anima = CameraScript.my_ease_out(self)
 	yield(anima, "animation_completed")
 	get_tree().change_scene("res://Won/WonScene.tscn")
-func dialogic_listener(a):
-	match a:
-		"yes":
-			print("YES!")
-			Sound.play_deep()
-
 
 func _on_Player_pressed():
-#	dialog.queue_free()
-	dialog = Dialogic.start("timeline-choose")
-	add_child(dialog)
+
+	print("pressed")
+
+
 
 func _on_InterpolArea_area_entered(area):
 	print("ENTERED")

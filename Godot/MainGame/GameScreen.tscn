@@ -100,10 +100,6 @@ texture = ExtResource( 8 )
 scale = Vector2( -6.50902, -6.50902 )
 shape = SubResource( 1 )
 
-[node name="GameOverTimer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
-
 [node name="WonTimer" type="Timer" parent="."]
 one_shot = true
 
@@ -113,12 +109,16 @@ one_shot = true
 wait_time = 2.0
 autostart = true
 
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="tree_exiting" from="." to="." method="_on_Europe_tree_exiting"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Button" to="GameScreen" method="_on_Button_pressed"]
 [connection signal="area_entered" from="Interpol/InterpolArea" to="." method="_on_InterpolArea_area_entered"]
-[connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
 [connection signal="timeout" from="WonTimer" to="." method="_on_WonTimer_timeout"]
 [connection signal="pressed" from="Player" to="." method="_on_Player_pressed"]
 [connection signal="timeout" from="InterpolTimer" to="." method="_on_InterpolMove_timeout"]
+[connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]

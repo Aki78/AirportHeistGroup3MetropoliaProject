@@ -26,6 +26,15 @@ custom_fonts/font = ExtResource( 3 )
 text = "1000"
 script = ExtResource( 5 )
 
+[node name="SuccessRate" type="Label" parent="."]
+margin_left = -84.8833
+margin_top = 1123.46
+margin_right = 3438.12
+margin_bottom = 2653.46
+custom_fonts/font = ExtResource( 3 )
+text = "50%"
+script = ExtResource( 5 )
+
 [node name="PlayerImage" type="Sprite" parent="."]
 position = Vector2( 448, 470 )
 scale = Vector2( 5.29349, 4.45075 )
