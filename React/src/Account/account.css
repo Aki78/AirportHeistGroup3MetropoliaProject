@@ -1,0 +1,71 @@
+.sign-in-form {
+    padding: 20px 20px 20px 20px;
+}
+
+.username + .password + .password-confirm {
+    display: flex;
+    justify-content: center;
+}
+
+.username input {
+    justify-content: center;
+    text-align: center;
+}
+
+.password input {
+    justify-content: center;
+    text-align: center;
+}
+
+.password-confirm input {
+    justify-content: center;
+    text-align: center;
+}
+
+.username input::placeholder {
+    text-align: center;
+}
+
+.password input::placeholder {
+    text-align: center;
+}
+
+.password-confirm input::placeholder {
+    text-align: center;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+}
+
+.sign-in-form > button {
+    width: 100px;
+    height: 25px;
+    
+    background-color: rgb(22, 22, 22);
+    color: rgb(241, 238, 233);
+}
+
+.sign-in-form > button::hover {
+    background-color: rgb(100, 100, 100);
+    color: rgb(241, 238, 233);
+}
+
+.sign-up-form > button {
+    width: 100px;
+    height: 25px;
+    
+    background-color: rgb(22, 22, 22);
+    color: rgb(241, 238, 233);
+}
+
+.sign-up-form > button::hover {
+    background-color: rgb(100, 100, 100);
+    color: rgb(241, 238, 233);
+}
+
+.line {
+    height: 3px;
+    background: black;
+  }
