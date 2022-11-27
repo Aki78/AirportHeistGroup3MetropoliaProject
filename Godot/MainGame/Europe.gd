@@ -11,15 +11,17 @@ onready var is_close = false
 
 onready var current_success = true
 
+onready var first_interpol = $Interpols/Interpol
+
 func _ready():
 	Sound.play_spy()
-	#Sound.play_panic()
 	print(state["current_airport"].rect_position)
 	print(get_closest_airport())
 	$Player.rect_position = state["current_airport"].rect_position
 	connect_airports()
 	update_state(state["current_airport"])
-	$Interpol.position = $Airports/AirportNode14.rect_position
+	first_interpol.position = $Airports/AirportNode14.rect_position
+	first_interpol.get_node("InterpolArea").connect("area_entered",self,"_on_InterpolArea_area_entered")
 	current_success=$Player.set_success_rate()
 
 func _on_Button_pressed():
@@ -30,6 +32,7 @@ func connect_airports():
 	for _i in $Airports.get_children():
 		print("connecting: ", _i.name)
 		_i.connect("pressed",self,"on_airport_pressed", [_i])
+		
 
 func get_closest_airport():
 	var current_airport = state["current_airport"]
@@ -98,16 +101,11 @@ func move_interpol():
 			break
 	state["interpol_airport"] = airports.get_children()[rand_num] 
 	var tween = get_node("Tween")
-	tween.interpolate_property($Interpol, "position",
+	tween.interpolate_property(first_interpol, "position",
 			old_interpol_airport.rect_position, state["interpol_airport"].rect_position, 1,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	yield(tween,"tween_all_completed")
-#	if get_pos_dist($Player, $Interpol) < 1:
-#		print("Game over")
-#		Sound.stop_spy()
-#		$GameOverTimer.start()
-	
 
 func on_airport_pressed(new_airport):
 	print("yes")
@@ -156,8 +154,8 @@ func _on_Player_pressed():
 		plus_cash($Player)
 		current_success=$Player.set_success_rate()
 	else:
+		pass
 #		$GameOverTimer.start()
-
 	print("pressed")
 
 
@@ -172,4 +170,3 @@ func _on_InterpolArea_area_entered(area):
 
 func _on_InterpolMove_timeout():
 	move_interpol()
-#	$Interpol.position = state["interpol_airport"].rect_position # + Vector2(55,35)
