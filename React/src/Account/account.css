@@ -10,16 +10,25 @@
 .username input {
     justify-content: center;
     text-align: center;
+
+    border: none;
+    border-radius: 7px;
 }
 
 .password input {
     justify-content: center;
     text-align: center;
+
+    border: none;
+    border-radius: 7px;
 }
 
 .password-confirm input {
     justify-content: center;
     text-align: center;
+
+    border: none;
+    border-radius: 7px;
 }
 
 .username input::placeholder {
@@ -35,8 +44,9 @@
 }
 
 input {
-    width: 300px;
-    height: 50px;
+    width: 200px;
+    height: 30px;
+    margin: 5px 0 5px 0;
 }
 
 .sign-in-form > button {
@@ -44,7 +54,16 @@ input {
     height: 25px;
     
     background-color: rgb(22, 22, 22);
+    
+    border: none;
+    border-radius: 7px;
+}
+
+.sign-in-form > button a {
     color: rgb(241, 238, 233);
+    text-decoration: none;
+    box-sizing: border-box;   
+    padding: 5px 23px 5px 23px; 
 }
 
 .sign-in-form > button::hover {
@@ -58,6 +77,16 @@ input {
     
     background-color: rgb(22, 22, 22);
     color: rgb(241, 238, 233);
+
+    border: none;
+    border-radius: 7px;
+}
+
+.sign-up-form > button a {
+    color: rgb(241, 238, 233);
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 5px 21px 5px 21px; 
 }
 
 .sign-up-form > button::hover {
@@ -68,4 +97,12 @@ input {
 .line {
     height: 3px;
     background: black;
-  }
+}
+
+h4 {
+    margin: 20px 0 0 0;
+}
+
+h3 {
+    margin: 10px 0 10px 0;
+}

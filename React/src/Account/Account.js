@@ -1,8 +1,8 @@
 import './account.css'
 import React from 'react'
 import { useState } from 'react'
+import { Link } from "react-router-dom";
 import Form from 'react'
-import Button from 'react'
 
 const Account = () => {
     const [username, setUsername] = useState("")
@@ -11,13 +11,6 @@ const Account = () => {
 
     const [text, setText] = useState("")
 
-    function validateForm() {
-        return username.length > 0 && password.length > 0;
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-    }
 
 
 
@@ -29,7 +22,7 @@ const Account = () => {
                 <div class="username">
                     <input 
                         placeholder='Username'
-                        onChange={event => setUsername(event.target.value)}
+                        onChange={e => setUsername(e.target.value)}
                     />
                 </div>
                 
@@ -37,12 +30,12 @@ const Account = () => {
                     <input
                         type="password"
                         placeholder='Password'
-                        onChange={event => setPassword(event.target.value)}
+                        onChange={e => setPassword(e.target.value)}
                     />
                 </div>
 
                 <button onClick={() => setText("Signed in")}>
-                    Sign in
+                    <Link to="../airport-heist.github.io">Sign in</Link>
                 </button>
             </div>
 
@@ -55,7 +48,7 @@ const Account = () => {
                 <div class="username">
                     <input 
                         placeholder='Username'
-                        onChange={event => setUsername(event.target.value)}
+                        onChange={e => setUsername(e.target.value)}
                     />
                 </div>
                 
@@ -63,7 +56,7 @@ const Account = () => {
                     <input
                         type="password"
                         placeholder='Password'
-                        onChange={event => setPassword(event.target.value)}
+                        onChange={e => setPassword(e.target.value)}
                     />
                 </div>
 
@@ -71,12 +64,12 @@ const Account = () => {
                     <input
                         type="password"
                         placeholder='Confirm password'
-                        onChange={event => setPasswordconfirm(event.target.value)}
+                        onChange={e => setPasswordconfirm(e.target.value)}
                     />
                 </div>
 
                 <button onClick={() => setText("Signed up")}>
-                    Sign up
+                    <Link to="../airport-heist.github.io">Sign up</Link>
                 </button>
 
             </div>
