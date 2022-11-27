@@ -20,6 +20,7 @@ func _ready():
 	connect_airports()
 	update_state(state["current_airport"])
 	$Interpol.position = $Airports/AirportNode14.rect_position
+	current_success=$Player.set_success_rate()
 
 func _on_Button_pressed():
 	var anima = CameraScript.my_ease_out(self)
@@ -54,6 +55,7 @@ func start_tween(airport1, airport2):
 	tween.start()
 	yield(tween,"tween_all_completed")
 	current_success=$Player.set_success_rate()
+
 	$Player.show_success_rate()
 
 func erase_far():
@@ -132,8 +134,12 @@ func _on_GameOverTimer_timeout():
 
 
 func minus_cash(new_airport):
-	print("price is: ", new_airport.price)
 	state["cash"] -= new_airport.price
+
+func plus_cash(player):
+	print(player.prize)
+	state["cash"] += player.prize
+	player.set_cash(state["cash"])
 
 func update_ui():
 	$Player.set_cash(state["cash"])
@@ -146,6 +152,11 @@ func _on_WonTimer_timeout():
 	get_tree().change_scene("res://Won/WonScene.tscn")
 
 func _on_Player_pressed():
+	if current_success:
+		plus_cash($Player)
+		current_success=$Player.set_success_rate()
+	else:
+#		$GameOverTimer.start()
 
 	print("pressed")
 
