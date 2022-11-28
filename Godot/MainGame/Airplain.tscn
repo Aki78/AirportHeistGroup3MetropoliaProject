@@ -26,6 +26,24 @@ custom_fonts/font = ExtResource( 3 )
 text = "1000"
 script = ExtResource( 5 )
 
+[node name="SuccessRate" type="Label" parent="."]
+margin_left = -1462.99
+margin_top = 1088.5
+margin_right = 2060.01
+margin_bottom = 2618.5
+custom_fonts/font = ExtResource( 3 )
+text = "50%"
+script = ExtResource( 5 )
+
+[node name="Prize" type="Label" parent="."]
+margin_left = 1378.1
+margin_top = 1123.46
+margin_right = 4901.1
+margin_bottom = 2653.46
+custom_fonts/font = ExtResource( 3 )
+text = "€100"
+script = ExtResource( 5 )
+
 [node name="PlayerImage" type="Sprite" parent="."]
 position = Vector2( 448, 470 )
 scale = Vector2( 5.29349, 4.45075 )
