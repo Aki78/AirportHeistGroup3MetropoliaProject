@@ -6,7 +6,16 @@ import Logo from '../img/title.png'
 
 
 
-const Navigation = () => {
+const Navigation = ({ checkSignedIn }, { usernameSignedin }) => {
+    var usernameDisplay;
+    if ({checkSignedIn} === "true") {
+        usernameDisplay = { usernameSignedin };
+    }
+    else if ({checkSignedIn} === "false") {
+        usernameDisplay = "Sign in";
+    }
+
+
     return (
         <nav class="nav_bar">
             <ul>
@@ -21,7 +30,8 @@ const Navigation = () => {
             </ul>
 
             <div class="sign-in">
-                <p><Link to="Sign-in">Sign in</Link></p>
+                <p>{checkSignedIn}</p>
+                <p><Link to="Sign-in">{ usernameDisplay }</Link></p>
             </div>
         </nav>
     )
