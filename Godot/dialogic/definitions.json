@@ -12,9 +12,9 @@
 	"variables": [
 		{
 			"id": "1668965482-366",
-			"name": "New value",
+			"name": "Prob",
 			"type": 0,
-			"value": ""
+			"value": "50"
 		}
 	]
 }
