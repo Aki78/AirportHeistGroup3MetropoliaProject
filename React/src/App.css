@@ -32,6 +32,7 @@ body {
     margin: 0 0 0 0;
     font: 22px/1.2 "Roboto", sans-serif;
     color: #333;
+    position: relative;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -46,14 +47,14 @@ body {
 }
 
 #root {
-    margin-top: -25px;
     width: 100%;
     max-width: 100%;
-    background-color: #EC994B;
+    background-color: rgb(236, 153, 75);
 }  
 
 .container {
     width: 75%;
     height: auto;
+    min-height: 750px;
 }
 

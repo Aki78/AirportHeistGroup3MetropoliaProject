@@ -1,13 +1,21 @@
 {
 	"events": [
 		{
+			"emit_signal": "a",
+			"event_id": "dialogic_040"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_010",
 			"options": [
 
 			],
 			"portrait": "",
-			"question": "The probability of success is [shake rate=50 level=20]50%[/shake]. Do you want to [wave amp=100 freq=2] heist [/wave]?"
+			"question": "The probability of success is [shake rate=50 level=20] [Prob] %[/shake]. Do you want to [wave amp=100 freq=2] heist [/wave]?"
+		},
+		{
+			"emit_signal": "a",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Yes",
@@ -15,10 +23,6 @@
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
-		},
-		{
-			"emit_signal": "yes",
-			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "No",

@@ -15,7 +15,6 @@ var price
 onready var bubbleAnimation = $AnimationPlayer
 
 func _ready():
-
 	set_button_scale(self_size,self_size)
 	set_price(100)
 

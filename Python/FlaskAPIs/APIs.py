@@ -12,7 +12,7 @@ connection = mysql.connector.connect(
      )
 
 def recieve_all_scores_and_players():
-    sql = ''
+    sql = 'select * from top_players ORDER BY score desc LIMIT 10'
     sql += ''
     # print(sql)
     cursor = connection.cursor()
@@ -46,12 +46,15 @@ def topten():
             return "Connection Failed, can't get top 10 players"
     if request.method == 'POST':
         """Post new score to Database"""
+        """INSERT INTO top_players (player_id, score) VALUES ('player_name', player_score);"""
         pass
     if request.method == 'DELETE':
         """Delete User and score"""
+        """DELETE FROM top_players WHERE player_id='player-name';"""
         pass
     if request.method == 'PATCH':
         """Change score"""
+        """UPDATE top_players SET score = new_score WHERE player_id = 'player_name';"""
         pass
 
 if __name__ == '__main__':
