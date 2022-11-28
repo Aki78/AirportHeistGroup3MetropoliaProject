@@ -34,3 +34,11 @@ ul {
     padding: 18px 20px;
 }
 
+.porting {
+    animation: fadein 10s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
