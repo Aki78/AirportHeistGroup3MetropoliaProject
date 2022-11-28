@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link } from "react-router-dom";
 import Form from 'react'
 
-const Account = ({ callbackUsername }, { callbackPassword },  callbackSignedIn ) => {
+const Account = ({ callbackUsername ,  callbackPassword ,  callbackSignedIn} ) => {
 
     const [text, setText] = useState("")
 
@@ -40,7 +40,7 @@ const Account = ({ callbackUsername }, { callbackPassword },  callbackSignedIn )
                         onChange={e => handlePassword(e.target.value)}
                     />
                 </div>
-                <button onClick={() => handleSignedIn("true")}>
+                <button onClick={() => handleSignedIn(true)}>
                     <Link to="../airport-heist.github.io">Sign in</Link>
                 </button>
             </div>

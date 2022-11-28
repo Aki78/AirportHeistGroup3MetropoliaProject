@@ -26,7 +26,7 @@ import { useState } from 'react';
 const App = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  const [signedin, setSignedin] = useState("false")
+  const [signedin, setSignedin] = useState(false)
 
 
   const callbackUsernameFunction = (username) => {
@@ -44,7 +44,7 @@ const App = () => {
   return (
     <>  
         <Navigation checkSignIn={signedin} usernameSignedin={username}/>
-        <p>{signedin}</p>
+        <p>{signedin.toString()}</p>
         <div class="container">
             <Routes>
                 <Route path="airport-heist.github.io" element={<Home />} />
@@ -54,8 +54,9 @@ const App = () => {
                 <Route path="Credits" element={<Credits />} />
                 <Route path="Download" element={<Download />} />
                 <Route path="Weather" element={<Weather />} />
-                {/*<Route path="Account">{signedin ? <Account /> : { username }}</Route>*/}
-                <Route path="Sign-in"  element={<Account callbackUsername={callbackUsernameFunction} callbackPassword={callbackPasswordFunction} callbackSignedIn={callbackSignedInFunction}/>} />
+                {/* <Route path="Account" element={signedin ? <Account /> :  username }/> */}
+                <Route path="Sign-in"  element={signedin ? username: <Account callbackUsername={callbackUsernameFunction} callbackPassword={callbackPasswordFunction} callbackSignedIn={callbackSignedInFunction}/> } />
+                {signedin.toString()}
             </Routes>
         </div>
       {/*<CookieConsent
