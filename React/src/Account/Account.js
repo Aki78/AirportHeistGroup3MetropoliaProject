@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link } from "react-router-dom";
 import Form from 'react'
 
-const Account = ({ callbackUsername }, { callbackPassword }, { callbackSignedIn }) => {
+const Account = ({ callbackUsername }, { callbackPassword },  callbackSignedIn ) => {
 
     const [text, setText] = useState("")
 
