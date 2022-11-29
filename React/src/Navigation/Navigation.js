@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 import './navigation.css'
-import Logo from '../img/title.png'
+import Logo from '../Images/title.png'
 
 
 

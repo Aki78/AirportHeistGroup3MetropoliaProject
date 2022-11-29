@@ -36,10 +36,41 @@ ul {
 
 */
 
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    
-    
+.compass {
+    position: sticky;
 }
+
+.compass-inner {
+    margin-left: -136%;
+    animation: rotation-clockwise 90s infinite linear;
+}
+
+.compass-outer {
+    margin-top: -72%;
+    margin-left: -135%;
+    animation: rotation-counterclockwise 90s infinite linear;
+
+}
+
+
+
+@keyframes rotation-clockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation-counterclockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+}
+
+
+
