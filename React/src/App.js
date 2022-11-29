@@ -13,19 +13,39 @@ import Download from './Download/Download'
 import Credits from './Credits/Credits'
 import Weather from './Weather/Weather'
 import Account from './Account/Account'
+import AccountManagement from './Account/AccountManagement'
 
 import './App.css';
 
 import Navigation from './Navigation/Navigation';
 import Footer from './Footer/Footer';
 
+import { useState } from 'react';
+
 
 
 const App = () => {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [signedin, setSignedin] = useState(false)
+
+
+  const callbackUsernameFunction = (username) => {
+    setUsername(username);
+  }
+
+  const callbackPasswordFunction = (password) => {
+    setPassword(password);
+  }
+
+  const callbackSignedInFunction = (signedin) => {
+    setSignedin(signedin);
+  }
 
   return (
     <>  
-        <Navigation />
+        <Navigation checkSignIn={signedin} usernameSignedin={username}/>
+        {/*<p>{signedin.toString()}</p>*/}
         <div class="container">
             <Routes>
                 <Route path="airport-heist.github.io" element={<Home />} />
@@ -35,7 +55,9 @@ const App = () => {
                 <Route path="Credits" element={<Credits />} />
                 <Route path="Download" element={<Download />} />
                 <Route path="Weather" element={<Weather />} />
-                <Route path="Sign-in" element={<Account />} />
+                {/* <Route path="Account" element={signedin ? <Account /> :  username }/> */}
+                <Route path="Account"  element={signedin ? <AccountManagement username={username} /> : <Account callbackUsername={callbackUsernameFunction} callbackPassword={callbackPasswordFunction} callbackSignedIn={callbackSignedInFunction}/> } />
+                
             </Routes>
         </div>
       {/*<CookieConsent

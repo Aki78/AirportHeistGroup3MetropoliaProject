@@ -1,19 +1,20 @@
 import './account.css'
 import React from 'react'
-import { useState } from 'react'
 import { Link } from "react-router-dom";
-import Form from 'react'
 
-const Account = () => {
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-    const [password_confirm, setPasswordconfirm] = useState("")
+const Account = ({ callbackUsername ,  callbackPassword ,  callbackSignedIn} ) => {
+    
+    function handleUSername(username) {
+        callbackUsername(username);
+    }
 
-    const [text, setText] = useState("")
+    function handlePassword(password) {
+        callbackPassword(password);
+    }
 
-
-
-
+    function handleSignedIn(signedin) {
+        callbackSignedIn(signedin);
+    }
 
     return (
         <>
@@ -21,8 +22,9 @@ const Account = () => {
             <div class="sign-in-form">
                 <div class="username">
                     <input 
+                        text="text"
                         placeholder='Username'
-                        onChange={e => setUsername(e.target.value)}
+                        onChange={e => handleUSername(e.target.value)}
                     />
                 </div>
                 
@@ -30,17 +32,16 @@ const Account = () => {
                     <input
                         type="password"
                         placeholder='Password'
-                        onChange={e => setPassword(e.target.value)}
+                        onChange={e => handlePassword(e.target.value)}
                     />
                 </div>
-
-                <button onClick={() => setText("Signed in")}>
+                <button onClick={() => handleSignedIn(true)}>
                     <Link to="../airport-heist.github.io">Sign in</Link>
                 </button>
             </div>
 
             <div class="line"></div>
-
+{/*
             <h4>Or</h4>
             <h3>Sign up</h3>
 
@@ -71,8 +72,8 @@ const Account = () => {
                 <button onClick={() => setText("Signed up")}>
                     <Link to="../airport-heist.github.io">Sign up</Link>
                 </button>
-
             </div>
+*/}
         </>
 
     )
