@@ -1,13 +1,8 @@
 import './account.css'
-import React, { useEffect } from 'react'
-import { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
-import Form from 'react'
 
 const Account = ({ callbackUsername ,  callbackPassword ,  callbackSignedIn} ) => {
-
-    const [text, setText] = useState("")
-
     
     function handleUSername(username) {
         callbackUsername(username);

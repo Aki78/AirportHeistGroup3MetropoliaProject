@@ -33,19 +33,19 @@
 
 
 
-.sign-in {
+.account {
     display: flex;
     position: absolute;
     height: 84px;
     right: 30px;
 }
 
-.sign-in p a {
+.account p a {
     text-decoration: none;
     color: rgb(241, 238, 233);
 }
 
-.sign-in p a:hover {
+.account p a:hover {
     color: rgb(224, 77, 1);
     transition: 250ms;
 }

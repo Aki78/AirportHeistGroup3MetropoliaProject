@@ -44,7 +44,7 @@ const App = () => {
   return (
     <>  
         <Navigation checkSignIn={signedin} usernameSignedin={username}/>
-        <p>{signedin.toString()}</p>
+        {/*<p>{signedin.toString()}</p>*/}
         <div class="container">
             <Routes>
                 <Route path="airport-heist.github.io" element={<Home />} />
@@ -55,8 +55,8 @@ const App = () => {
                 <Route path="Download" element={<Download />} />
                 <Route path="Weather" element={<Weather />} />
                 {/* <Route path="Account" element={signedin ? <Account /> :  username }/> */}
-                <Route path="Sign-in"  element={signedin ? username: <Account callbackUsername={callbackUsernameFunction} callbackPassword={callbackPasswordFunction} callbackSignedIn={callbackSignedInFunction}/> } />
-                {signedin.toString()}
+                <Route path="Account"  element={signedin ? username : <Account callbackUsername={callbackUsernameFunction} callbackPassword={callbackPasswordFunction} callbackSignedIn={callbackSignedInFunction}/> } />
+                
             </Routes>
         </div>
       {/*<CookieConsent

@@ -7,19 +7,10 @@ import Logo from '../img/title.png'
 
 
 const Navigation = ({ checkSignedIn, usernameSignedin }) => {
-    var username = { usernameSignedin }
-    var check = { checkSignedIn }
-    var usernameDisplay = "Sign in";
-    
-    if (check === "true") {
-        usernameDisplay = username;
-    }
-    else if (check === "false") {
-        usernameDisplay = "Sign in";
-    }
 
 
     return (
+        
         <nav class="nav_bar">
             <ul>
                 <li><img src={Logo} alt="logo"></img></li>
@@ -32,9 +23,9 @@ const Navigation = ({ checkSignedIn, usernameSignedin }) => {
 
             </ul>
 
-            <div class="sign-in">
-                <p>{usernameDisplay}</p>
-                <p><Link to="Sign-in">{ usernameDisplay }</Link></p>
+            <div class="account">
+                <p></p>
+                <p><Link to="Account">Account</Link></p>
             </div>
         </nav>
     )
