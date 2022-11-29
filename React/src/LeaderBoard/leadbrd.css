@@ -10,13 +10,13 @@ ul {
 }
 
 .leadbrd {
-    margin-top: 150px;
+    margin-top: 200px;
     margin-bottom: 150px;
-    background: linear-gradient(to bottom, #56322b, #985b47);
-
+    background: linear-gradient(to bottom, #003333, #487061);
+    
     width: 950px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 40px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
@@ -51,7 +51,7 @@ ul {
 .leadbrd li {
     padding: 16px;
     display: flex;
-    border-radius: 10px;
+    border-radius: 15px  ;
 }
 
 .leadbrd li mark {
