@@ -13,6 +13,7 @@ import Download from './Download/Download'
 import Credits from './Credits/Credits'
 import Weather from './Weather/Weather'
 import Account from './Account/Account'
+import AccountManagement from './Account/AccountManagement'
 
 import './App.css';
 
@@ -55,7 +56,7 @@ const App = () => {
                 <Route path="Download" element={<Download />} />
                 <Route path="Weather" element={<Weather />} />
                 {/* <Route path="Account" element={signedin ? <Account /> :  username }/> */}
-                <Route path="Account"  element={signedin ? username : <Account callbackUsername={callbackUsernameFunction} callbackPassword={callbackPasswordFunction} callbackSignedIn={callbackSignedInFunction}/> } />
+                <Route path="Account"  element={signedin ? <AccountManagement username={username} /> : <Account callbackUsername={callbackUsernameFunction} callbackPassword={callbackPasswordFunction} callbackSignedIn={callbackSignedInFunction}/> } />
                 
             </Routes>
         </div>
