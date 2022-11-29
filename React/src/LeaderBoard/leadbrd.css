@@ -67,43 +67,43 @@ ul {
 }
 
 .leadbrd li:nth-child(1) {
-    background: #456789;
+    background: #85A498;
 }
 
 .leadbrd li:nth-child(2) {
-    background: #406284;
+    background: #7D9E91;
 }
 
 .leadbrd li:nth-child(3) {
-    background: #3B5D7F;
+    background: #75988B;
 }
 
 .leadbrd li:nth-child(4) {
-    background: #36587A;
+    background: #6D9384;
 }
 
 .leadbrd li:nth-child(5) {
-    background: #315375;
+    background: #658D7E;
 }
 
 .leadbrd li:nth-child(6) {
-    background: #2C4E70;
+    background: #5D8777;
 }
 
 .leadbrd li:nth-child(7) {
-    background: #27496B;
+    background: #558171;
 }
 
 .leadbrd li:nth-child(8) {
-    background: #224466;
+    background: #4D7C6A;
 }
 
 .leadbrd li:nth-child(9) {
-    background: #1D3F61;
+    background: #457664;
 }
 
 .leadbrd li:nth-child(10) {
-    background: #183A5C;
+    background: #3D705D;
 }
 
 .fade-in-list {
