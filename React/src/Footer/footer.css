@@ -9,6 +9,11 @@
     color:rgb(241, 238, 233);
 
     padding-left: 75px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 

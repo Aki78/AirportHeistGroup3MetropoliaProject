@@ -37,19 +37,31 @@ ul {
 */
 
 .compass {
-    position: sticky;
+    position: fixed;
+    margin-top: 20%;
 }
 
-.compass-inner {
-    margin-left: -136%;
-    animation: rotation-clockwise 90s infinite linear;
+.compass-inner img {
+    margin-left: -129%;
+    animation: rotation-clockwise 120s infinite linear;
 }
 
-.compass-outer {
-    margin-top: -72%;
-    margin-left: -135%;
-    animation: rotation-counterclockwise 90s infinite linear;
+.compass-outer img {
+    margin-top: -120%;
+    margin-left: -133%;
+    animation: rotation-counterclockwise 120s infinite linear;
 
+}
+
+.airplane {
+    position: inherit;
+    
+}
+
+.airplane img {
+    margin-left: 25%;
+    transform: rotate(-90deg);
+    animation: flying 90s infinite linear;
 }
 
 
@@ -72,5 +84,13 @@ ul {
     }
 }
 
+@keyframes flying- {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+}
 
 
