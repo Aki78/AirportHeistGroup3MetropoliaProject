@@ -3,6 +3,7 @@ import React from 'react'
 
 import CompassInner from '../Images/compass-icon-13573_inner.png'
 import CompassOuter from '../Images/compass-icon-13573_outer.png'
+import Airplane from '../Images/airplane-icon-png-2515.png'
 
 
 const Home = () => {
@@ -17,6 +18,10 @@ const Home = () => {
                 <div class="compass-outer">
                     <img src={CompassOuter} alt="compass-outer-logo"></img>
                 </div>
+            </div>
+
+            <div class="airplane">
+                <img src={Airplane} alt="airplane-image"></img>
             </div>
         </>
         
