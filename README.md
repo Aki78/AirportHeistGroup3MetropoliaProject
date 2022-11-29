@@ -203,7 +203,7 @@ grep -r [expression]              finds the file where the expression exists
 
 ### Jenni
 - [x] SQL leaderboard
-- [ ] SQL users
+- [x] SQL users
 - [ ] SQL best score
 - [ ] SQL update airport DB
 - [ ] SQL set up user settings DB

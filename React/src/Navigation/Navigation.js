@@ -2,12 +2,15 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 import './navigation.css'
-import Logo from '../img/title.png'
+import Logo from '../Images/title.png'
 
 
 
-const Navigation = () => {
+const Navigation = ({ checkSignedIn, usernameSignedin }) => {
+
+
     return (
+        
         <nav class="nav_bar">
             <ul>
                 <li><img src={Logo} alt="logo"></img></li>
@@ -20,8 +23,9 @@ const Navigation = () => {
 
             </ul>
 
-            <div class="sign-in">
-                <p><Link to="Sign-in">Sign in</Link></p>
+            <div class="account">
+                <p></p>
+                <p><Link to="Account">Account</Link></p>
             </div>
         </nav>
     )
