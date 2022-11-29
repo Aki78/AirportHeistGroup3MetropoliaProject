@@ -12,7 +12,7 @@ ul {
 .leadbrd {
     margin-top: 150px;
     margin-bottom: 150px;
-    background: linear-gradient(to bottom, #836c54, #9b7e60);
+    background: linear-gradient(to bottom, #56322b, #985b47);
 
     width: 950px;
     height: auto;
@@ -67,43 +67,43 @@ ul {
 }
 
 .leadbrd li:nth-child(1) {
-    background: #fa6855;
+    background: #BC734B;
 }
 
 .leadbrd li:nth-child(2) {
-    background: #F36353;
+    background: #BD744C;
 }
 
 .leadbrd li:nth-child(3) {
-    background: #EC5F51;
+    background: #BE754D;
 }
 
 .leadbrd li:nth-child(4) {
-    background: #E55A4F;
+    background: #BF764E;
 }
 
 .leadbrd li:nth-child(5) {
-    background: #DE564D;
+    background: #C0774F;
 }
 
 .leadbrd li:nth-child(6) {
-    background: #D6514B;
+    background: #C27851;
 }
 
 .leadbrd li:nth-child(7) {
-    background: #CF4D49;
+    background: #C37952;
 }
 
 .leadbrd li:nth-child(8) {
-    background: #C84847;
+    background: #C47A53;
 }
 
 .leadbrd li:nth-child(9) {
-    background: #C14445;
+    background: #C57B54;
 }
 
 .leadbrd li:nth-child(10) {
-    background: #BA3F43;
+    background: #C67C55;
 }
 
 .fade-in-list {
