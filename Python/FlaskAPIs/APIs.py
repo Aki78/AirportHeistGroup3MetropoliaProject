@@ -50,7 +50,7 @@ def topten():
         pass
     if request.method == 'DELETE':
         """Delete User and score"""
-        """DELETE FROM top_players WHERE player_id='player-name';"""
+        """DELETE FROM top_players WHERE player_id = 'player-name';"""
         pass
     if request.method == 'PATCH':
         """Change score"""
