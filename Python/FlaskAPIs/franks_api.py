@@ -39,7 +39,7 @@ def top_ten():
             args = request.args
             player_name = str(args.get("player_name"))
             password = str(args.get("password"))
-            sql = f"INSERT INTO top_players (player_id, score) VALUES (\"{player_name}\",\"{password}\" 0);"
+            sql = f"INSERT INTO top_players (player_id, score) VALUES (\"{player_name}\",\"{password}\", 0);"
             cursor = connection.cursor()
             cursor.execute(sql)
             result = cursor.fetchall()
@@ -83,9 +83,23 @@ def top_ten():
             return http_response
 
     if request.method == 'DELETE':
-        """Delete User and score"""
-        """DELETE FROM top_players WHERE player_id = 'player-name';"""
-        pass
+        try:
+            args = request.args
+            player_name = str(args.get("player_name"))
+            sql = f"DELETE FROM top_players WHERE player_id = \"{player_name}\";"
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            result = cursor.fetchall()
+            cursor.close()
+            return json.dumps(result)
+        except ValueError:
+            response = {
+                "message": "could not connect to delete user information",
+                "status": 400
+            }
+            json_response = json.dumps(response)
+            http_response = Response(response=json_response, status=400, mimetype="application/json")
+            return http_response
 
 
 if __name__ == '__main__':
