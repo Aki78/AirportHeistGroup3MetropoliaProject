@@ -20,7 +20,6 @@ https://Aki78.github.io/airport-heist.github.io
 [Functional Requirements](#functional-requirements)
 - [How the game works](#how-the-game-works)
 - [Block diagram](#block-diagram)
-- [Functions](#functions)
 - [Project diagram](#project-diagram)
 
 [Quality Requirements](#quality-requirements)
