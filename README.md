@@ -195,8 +195,8 @@ grep -r [expression]              finds the file where the expression exists
 - [ ] flask user login
 - [x] flask create user account
 - [ ] flask fetching weather
-- [o] flask fetching ticket prices (optional)
-- [o] flask API's for graph (optional)
+- [ ] flask fetching ticket prices (optional)
+- [ ] flask API's for graph (optional)
 - [ ] flask document API's (optional)
 - [ ] flask  API unit testing (optional)
 
