@@ -23,7 +23,7 @@ const LeaderBoard = () => {
                             </ol>
                         </div>
 
-                        <h1>You</h1>
+                        <h1 class="you">You</h1>
                         <li></li>
                     </div>
                 </div>

@@ -12,8 +12,7 @@ ul {
 .leadbrd {
     margin-top: 200px;
     margin-bottom: 150px;
-    background: linear-gradient(to bottom, #3b221b, #623b2e);
-    
+    background: linear-gradient(to bottom, #372529, #845f4b);
     width: 950px;
     height: auto;
     border-radius: 40px;
@@ -104,6 +103,10 @@ ul {
 
 .leadbrd li:nth-child(10) {
     background: #3D705D;
+}
+
+.you {
+    color: snow;
 }
 
 .fade-in-list {
