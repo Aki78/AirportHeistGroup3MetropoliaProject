@@ -53,6 +53,8 @@ def topten():
         """DELETE FROM top_players WHERE player_id = 'player-name';"""
         pass
     if request.method == 'PATCH':
+        """get player's current highest score"""
+        """SELECT score FROM top_players WHERE player_id = 'jenni2'"""
         """Change score"""
         """UPDATE top_players SET score = new_score WHERE player_id = 'player_name';"""
         pass
