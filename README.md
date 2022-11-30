@@ -27,10 +27,10 @@ https://Aki78.github.io/airport-heist.github.io
 - [Final requirements](#final-requirements-and-goals)
 
 [Learning Tools And Information](#learning-tools-and-information)
-- [Airport Heist Presentation](#airport-heist-presentation)
 - [Run](#run)
 - [Useful git commands](#useful-git-commands)
 - [Useful bash commands](#useful-bash-commands)
+- [To Do List](#to-do-list)
 - [Project information](#project-info)
 
 ## Introduction
@@ -191,12 +191,12 @@ grep -r [expression]              finds the file where the expression exists
 
 ### Frank
 - [ ] flask API's for game init
-- [ ] flask API's leader board
+- [x] flask API's leader board
 - [ ] flask user login
-- [ ] flask create user account
+- [x] flask create user account
 - [ ] flask fetching weather
-- [ ] flask fetching ticket prices (optional)
-- [ ] flask API's for graph (optional)
+- [o] flask fetching ticket prices (optional)
+- [o] flask API's for graph (optional)
 - [ ] flask document API's (optional)
 - [ ] flask  API unit testing (optional)
 
