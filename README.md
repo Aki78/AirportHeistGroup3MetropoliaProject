@@ -171,7 +171,7 @@ python3 filename.py		  runs python program that is in the file in your terminal 
 
 grep -r [expression]              finds the file where the expression exists
 ```
-
+[Back to top](#airport-heist)
 
 ## To-Do-List
 ### Khai
@@ -226,6 +226,8 @@ grep -r [expression]              finds the file where the expression exists
 - [ ] make charts
 - [ ] update documentation
 - [ ] test final game
+
+[Back to top](#airport-heist)
 
 ### Project Info
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
