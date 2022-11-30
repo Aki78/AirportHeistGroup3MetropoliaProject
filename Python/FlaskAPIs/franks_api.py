@@ -72,6 +72,7 @@ def top_ten():
                 cursor.execute(sql2)
                 result = cursor.fetchall()
                 cursor.close()
+                connection.commit()
                 return json.dumps(result)
         except ValueError:
             response = {
