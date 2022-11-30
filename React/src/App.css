@@ -49,12 +49,12 @@ body {
 #root {
     width: 100%;
     max-width: 100%;
-    background-color: rgb(186,0,0);
+    background-color: #f6ab60;
 }  
 
 .container {
     width: 75%;
     height: auto;
-    min-height: 750px;
+    min-height: 1000px;
 }
 

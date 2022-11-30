@@ -36,10 +36,60 @@ ul {
 
 */
 
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    
+.compass {
+    position: fixed;
+    margin-top: 20%;
+}
+
+.compass-inner img {
+    margin-left: -129%;
+    animation: rotation-clockwise 120s infinite linear;
+}
+
+.compass-outer img {
+    margin-top: -120%;
+    margin-left: -133%;
+    animation: rotation-counterclockwise 120s infinite linear;
+
+}
+
+.airplane {
+    position: inherit;
     
 }
+
+.airplane img {
+    margin-left: 25%;
+    animation: flying 90s infinite linear;
+}
+
+
+
+@keyframes rotation-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation-counterclockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-359deg);
+    }
+}
+
+@keyframes flying- {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+
