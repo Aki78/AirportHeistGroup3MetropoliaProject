@@ -4,16 +4,33 @@ import React from 'react'
 const Credits = () => {
     return (
         <>
-            <ul class="cul">
-                <li class="back" id="hb">Backend people:</li>
-                <li class="back">Francesco Natanni</li>
-                <li class="back">Eiaki V. Morooka</li>
-                <li class="data" id="hd">Database people:</li>
-                <li class="data">Jenni Hallikas</li>
-                <li class="front" id="hf">Frontend people:</li>
-                <li class="front">Khai Cao</li>
-                <li class="front">Kiana Aghajani</li>
-            </ul>
+            <main>
+                <section>
+                    <div class="backend">
+                        <h4>People behind the backend part:</h4>
+                        <ul>
+                            <li>Francesco Natanni</li>
+                            <li>Eiaki V. Morooka</li>
+                        </ul>
+                    </div>
+
+                    <div class="database">
+                        <h4>The person who made the database work:</h4>
+                        <ul>
+                            <li>Jenni Hallikas</li>
+                        </ul>
+                    </div>
+
+                    <div class="frontend">
+                        <h4>People who built the frontend:</h4>
+                        <ul>
+                            <li>Khai Cao</li>
+                            <li class="front">Kiana Aghajani</li>
+                        </ul>
+                    </div>
+
+                </section>
+            </main>
         </>
 
     )

@@ -34,37 +34,53 @@ ul {
     padding: 18px 20px;
 }
 
+/*
+nav_bar settings ends here
+*/
 
 
-.back {
-    color: rgb(22, 22, 22);
+
+
+main {
+    margin: 0 auto;
+    width: 900px;
+}
+
+section {
     display: flex;
-    margin-left: 70px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 125px;
 }
 
-#hb {
-    font-size: xx-large;
+.backend {
+    width: 35%;
+    padding: 1%;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: black;
+    border-radius: 50px;
+    border-style: solid;
 }
 
-.data {
-    color: rgb(22, 22, 22);
-    display: flex;
-    margin-left: 400px;
-
-
+.database {
+    width: 35%;
+    padding: 1%;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: black;
+    border-radius: 50px;
+    border-style: solid;
 }
 
-#hd {
-    font-size: xx-large;
-
-}
-
-.front {
-    color: rgb(22, 22, 22);
-    display: flex;
-    margin-left: 800px;
-}
-
-#hf {
-    font-size: xx-large;
+.frontend {
+    width: 35%;
+    padding: 1%;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: black;
+    border-radius: 50px;
+    border-style: solid;
+    margin-top: 60px;
 }
