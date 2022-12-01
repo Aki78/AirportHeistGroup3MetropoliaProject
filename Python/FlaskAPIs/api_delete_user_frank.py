@@ -14,18 +14,17 @@ connection = mysql.connector.connect(
 )
 
 
-@app.route('/delete_user/')
+@app.delete('/deleteuser/')
 def delete_user():
     try:
-        args = request.args
-        username = str(args.get("username"))
+        user = request.get_json()
+        username = user['username']
         sql = f"DELETE FROM users WHERE username = \"{username}\";"
         cursor = connection.cursor()
         cursor.execute(sql)
-        result = cursor.fetchall()
         connection.commit()
         cursor.close()
-        return result
+        return "removed user from database"
 
     except ValueError:
         response = {

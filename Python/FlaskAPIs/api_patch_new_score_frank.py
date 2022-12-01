@@ -14,12 +14,12 @@ connection = mysql.connector.connect(
 )
 
 
-@app.route('/patch_new_score/')
+@app.patch('/updatescore/')
 def patch_new_score():
     try:
-        args = request.args
-        username = str(args.get("username"))
-        new_score = str(args.get("new_score"))
+        user = request.get_json()
+        username = user['username']
+        new_score = user['score']
         sql1 = f"SELECT score FROM users WHERE username = \"{username}\";"
         sql2 = f"UPDATE users SET score = \"{new_score}\" WHERE username = \"{username}\";"
         cursor = connection.cursor()
