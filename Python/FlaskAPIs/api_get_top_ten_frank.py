@@ -17,7 +17,7 @@ connection = mysql.connector.connect(
 @app.route('/top_ten')
 def top_ten():
     try:
-        sql = 'select * from users ORDER BY score desc LIMIT 10'
+        sql = 'SELECT username, score FROM users ORDER BY score DESC LIMIT 10;'
         cursor = connection.cursor()
         cursor.execute(sql)
         result = cursor.fetchall()

@@ -20,7 +20,7 @@ def top_ten():
     if request.method == 'GET':
         """for getting top ten players from our database"""
         try:
-            sql = 'select * from users ORDER BY score desc LIMIT 10'
+            sql = 'SELECT username, score FROM users ORDER BY score DESC LIMIT 10;'
             cursor = connection.cursor()
             cursor.execute(sql)
             result = cursor.fetchall()
