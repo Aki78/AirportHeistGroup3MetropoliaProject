@@ -13,20 +13,19 @@ connection = mysql.connector.connect(
   password='root'
 )
 
-
-@app.route('/post_new_user/')
+@app.post('/newuser/')
 def post_new_user():
     try:
-        args = request.args
-        username = str(args.get("username"))
-        passwordhash = str(args.get("passwordhash"))
+        new_user = request.get_json()
+        username = new_user['username']
+        passwordhash = new_user['passwordhash']
         sql = f"INSERT INTO users (username, passwordhash, score) VALUES (\"{username}\",\"{passwordhash}\", 0);"
         cursor = connection.cursor()
         cursor.execute(sql)
         result = cursor.fetchall()
         connection.commit()
         cursor.close()
-        return result
+        return "database updated"
 
     except ValueError:
         response = {
