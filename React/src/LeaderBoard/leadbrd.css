@@ -157,3 +157,15 @@ ul {
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .section {
+        width: 100%;
+        display: block;
+    }
+
+    .leadbrd {
+        width: 100%;
+        display: block;
+    }
+}
