@@ -28,11 +28,12 @@ def patch_new_score():
         if int(new_score) > int(result_score[0][0]):
             cursor.execute(sql2)
             connection.commit()
+            print(f"you beat your previous high score: {result_score[0][0]}")
             cursor.close()
         else:
-            print("you did not beat your previous highest score")
+            print(f"you did not beat your previous high score: {result_score[0][0]}")
             cursor.close()
-        return f"you beat your previous high score"
+        return f"your score: {new_score}"
 
     except ValueError:
         response = {

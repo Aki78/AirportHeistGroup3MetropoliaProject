@@ -14,18 +14,18 @@ connection = mysql.connector.connect(
 )
 
 
-@app.route('/post_new_score/')
-def post_new_score():
+@app.route('/post_new_user/')
+def post_new_user():
     try:
         args = request.args
         username = str(args.get("username"))
         passwordhash = str(args.get("passwordhash"))
-        sql = f"INSERT INTO users (username, passwordhash, score) VALUES (\"{username}\",\"{passwordhash}\", 0);;"
+        sql = f"INSERT INTO users (username, passwordhash, score) VALUES (\"{username}\",\"{passwordhash}\", 0);"
         cursor = connection.cursor()
         cursor.execute(sql)
         result = cursor.fetchall()
-        cursor.close()
         connection.commit()
+        cursor.close()
         return result
 
     except ValueError:
