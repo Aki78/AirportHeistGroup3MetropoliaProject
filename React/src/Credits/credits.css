@@ -116,30 +116,24 @@ article {
     margin-top: 75px;
 }
 
+article a {
+    color: rgb(22, 22, 22);
+}
+
+article h4 {
+    text-align: left;
+}
+
 article .back {
-    width: 50%;
-    padding: 1%;
-    box-sizing: border-box;
-    text-align: center;
-    border-color: black;
-    border-radius: 50px;
-    border-style: solid;
-    border-bottom: 6px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 75px;
 }
 
-article .data {
-    width: 50%;
-    padding: 1%;
-    box-sizing: border-box;
-    text-align: center;
-    border-color: black;
-    border-radius: 50px;
-    border-style: solid;
-    border-bottom: 6px solid black;
-}
-
-article .front {
-    width: 50%;
+article .frank {
+    width: 30%;
     padding: 1%;
     box-sizing: border-box;
     text-align: center;
@@ -148,5 +142,44 @@ article .front {
     border-style: solid;
     margin-top: 60px;
     margin-left: 8px;
+    border-bottom: 6px solid black;
+}
+
+article .aki {
+    margin-bottom: 10px;
+    width: 30%;
+    padding: 1%;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: black;
+    border-radius: 50px;
+    border-style: solid;
+    margin-top: 60px;
+    margin-left: 8px;
+    border-bottom: 6px solid black;
+}
+
+article .data {
+    width: 700px;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: black;
+    border-radius: 30px;
+    border-style: solid;
+    border-bottom: 6px solid black;
+    margin-top: 50px;
+}
+
+article .jenni {
+    margin-bottom: 10px;
+}
+
+article .front {
+    width: 700px;
+    text-align: center;
+    border-color: black;
+    border-radius: 30px;
+    border-style: solid;
+    margin-top: 50px;
     border-bottom: 6px solid black;
 }

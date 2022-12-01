@@ -36,21 +36,21 @@ const Credits = () => {
                     <div class='back'>
                         <h4>I'll start with the people who made the logic work:</h4>
                         <div class="frank">
-                            <p>Frank's</p>
+                            <p>Frank</p>
                             <p>His e-mail:</p>
                             <a href="mailto: francesn@metropolia.fi">francesn@metropolia.fi</a>
-                            <p>The github link for the nerds:</p>
+                            <p>his github link for the nerds:</p>
                             <a href='https://github.com/murphyslemon'>https://github.com/murphyslemon</a>
                         </div>
-                        <div class="Aki">
-                            <p>Aki's</p>
+                        <div class="aki">
+                            <p>Aki</p>
                             <p>Everything about him is confidential, sorry babe</p>
-                            <p>But look, I found his <p>e-mail</p> for you!</p>
+                            <p>But I found his e-mail for you!</p>
                             <a href='mailto: eiakim@metropolia.fi'>eiakim@metropolia.fi</a>
                         </div>
                     </div>
                     <div class="data">
-                        <p>For the database;</p>
+                        <h4>For the database ;</h4>
                         <p>Jenni had to do everything by herself, so I take this opportunity to shout-out to her. You should too!</p>
                         <div class="jenni">
                             <p>Have her e-mal if you had database related questions.</p>
