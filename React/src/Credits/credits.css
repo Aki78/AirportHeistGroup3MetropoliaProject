@@ -1,3 +1,16 @@
+/* fonts */
+/* for section */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+/* for motto */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+/* for how q*/
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+/* for h4 in article*/
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap');
+/* for actual info*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
 .container {
     margin: 0 auto;
     width: 900px;
@@ -48,6 +61,9 @@ main {
 
 main #motto {
     margin-top: 80px;
+    font-family: 'Source Code Pro', monospace;
+    color: rgba(22, 22, 22, 22);
+    font-weight: 700;
 }
 
 section {
@@ -56,6 +72,8 @@ section {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 75px;
+    font-family: 'DM Sans', sans-serif;
+    color: rgb(22, 22, 22);
 }
 
 .backend {
@@ -98,30 +116,53 @@ section {
 /* contact info starts */
 
 #line {
+    /* that horizontal line at the start */
     border-bottom: 6px solid black;
     margin-top: 70px;
 }
 
 #how {
+    /* the header */
     margin-top: 70px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
+    color: rgb(22, 22, 22);
+    font-size: 50px;
 }
 
 article {
+    color: rgb(22, 22, 22);
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     margin-top: 75px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
 }
 
 article a {
     color: rgb(22, 22, 22);
 }
 
-article h4 {
+article .back h4 {
     text-align: center;
+    font-family: 'Hind', sans-serif;
+}
+
+article .data h4 {
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+}
+
+article .front h4 {
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+}
+
+article .back {
+    margin-top: 0px;
 }
 
 article .frank {
@@ -132,6 +173,7 @@ article .frank {
     border-radius: 30px;
     border-style: solid;
     margin-top: 60px;
+    font-family: 'Inter', sans-serif;
 }
 
 article .aki {
@@ -142,6 +184,7 @@ article .aki {
     border-radius: 30px;
     border-style: solid;
     margin-top: 60px;
+    font-family: 'Inter', sans-serif;
 }
 
 article .data {
@@ -150,13 +193,14 @@ article .data {
 }
 
 article .jenni {
-    width: 600px;
+    width: 620px;
     box-sizing: border-box;
     text-align: centert;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
     margin-top: 60px;
+    font-family: 'Inter', sans-serif;
 }
 
 article .front {
@@ -172,6 +216,7 @@ article .khai {
     border-radius: 30px;
     border-style: solid;
     margin-top: 60px;
+    font-family: 'Inter', sans-serif;
 }
 
 article .kia {
@@ -183,4 +228,32 @@ article .kia {
     border-style: solid;
     margin-top: 60px;
     margin-bottom: 200px;
+    font-family: 'Inter', sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        width: 100%;
+        display: block;
+    }
+
+    section {
+        width: 100%;
+        display: block;
+    }
+
+    article {
+        width: 100%;
+        display: block;
+    }
+
+    #line {
+        width: 100%;
+        display: block;
+    }
+
+    #how {
+        width: 100%;
+        display: block;
+    }
 }
