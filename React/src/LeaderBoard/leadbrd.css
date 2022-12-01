@@ -12,7 +12,7 @@ ul {
 .leadbrd {
     margin-top: 200px;
     margin-bottom: 150px;
-    background: linear-gradient(to bottom, #372529, #845f4b);
+    background: linear-gradient(to bottom, #e1dddd, #e1d9da, #b0b3aa);
     width: 950px;
     height: auto;
     border-radius: 40px;
@@ -27,10 +27,10 @@ ul {
 
 .leadbrd .top {
     padding: 20px 18px;
-    color: snow;
+    color: rgb(22, 22, 22);
     font-size: 22px;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inconsolata', monospace;
 }
 
 .leadbrd .top h1 {
@@ -39,7 +39,8 @@ ul {
 }
 
 .leadbrd .ppl {
-    color: rgb(197, 193, 193);
+    color: rgb(22, 22, 22);
+    /*rgb(197, 193, 193);*/
     font-size: 20px;
 }
 
@@ -50,98 +51,109 @@ ul {
 .leadbrd li {
     padding: 16px;
     display: flex;
-    border-radius: 15px  ;
+    border-radius: 15px;
 }
 
 .leadbrd li mark {
     flex-grow: 2;
-    color: snow;
+    color: rgb(22, 22, 22);
     background-color: transparent;
 }
 
 .leadbrd li:before {
     counter-increment: number;
-    content: counter(number) ".";
+    content: "#" "" counter(number);
     margin-right: 4px;
 }
 
 .leadbrd li:nth-child(1) {
-    background: #85A498;
+    background: #FF843E;
 }
 
 .leadbrd li:nth-child(2) {
-    background: #7D9E91;
+    background: #FD813B;
 }
 
 .leadbrd li:nth-child(3) {
-    background: #75988B;
+    background: #FB7F39;
 }
 
 .leadbrd li:nth-child(4) {
-    background: #6D9384;
+    background: #F97C36;
 }
 
 .leadbrd li:nth-child(5) {
-    background: #658D7E;
+    background: #F77934;
 }
 
 .leadbrd li:nth-child(6) {
-    background: #5D8777;
+    background: #F47731;
 }
 
 .leadbrd li:nth-child(7) {
-    background: #558171;
+    background: #F2742F;
 }
 
 .leadbrd li:nth-child(8) {
-    background: #4D7C6A;
+    background: #F0712C;
 }
 
 .leadbrd li:nth-child(9) {
-    background: #457664;
+    background: #EE6F2A;
 }
 
 .leadbrd li:nth-child(10) {
-    background: #3D705D;
+    background: #EC6C27;
 }
 
 .you {
-    color: snow;
+    color: rgb(22, 22, 22);
+    font-family: 'Inconsolata', monospace;
+}
+
+.one {
+    display: flex;
+    margin-left: 34px;
 }
 
 .fade-in-list {
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 0.5s forwards;
 }
 
 @keyframes fadeIn {
     0% {
-        position: static ;
+        position: static;
         left: -10px;
         opacity: 0;
     }
+
     59% {
-        position: static ;
+        position: static;
         left: -10px;
         opacity: 20%;
     }
+
     60% {
-        position: relative ;
+        position: relative;
         left: -10px;
         opacity: 0;
     }
+
     70% {
-        position: relative ;
+        position: relative;
         left: -10%;
         opacity: 0;
     }
+
     80% {
-        position: relative ;
+        position: relative;
         left: 20%;
         opacity: 0;
     }
+
     100% {
-        position: static ;
-        left: 10%; 
+        position: static;
+        left: 10%;
         opacity: 1;
     }
 }
