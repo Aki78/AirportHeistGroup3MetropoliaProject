@@ -18,6 +18,7 @@ app.config["JSON_SORT_KEYS"] = False
 @app.route('/top_ten', methods=['GET', 'POST', 'DELETE', 'PATCH'])
 def top_ten():
     if request.method == 'GET':
+        """for getting top ten players from our database"""
         try:
             sql = 'select * from top_players ORDER BY score desc LIMIT 10'
             cursor = connection.cursor()
@@ -36,6 +37,7 @@ def top_ten():
 
     if request.method == 'POST':
         try:
+            """for adding a new user to our database"""
             args = request.args
             player_name = str(args.get("player_name"))
             password = str(args.get("password"))
@@ -57,6 +59,7 @@ def top_ten():
 
     if request.method == 'PATCH':
         try:
+            """for checking if new score is higher than previous and is yes adding to our database"""
             args = request.args
             player_name = str(args.get("player_name"))
             sql1 = f"SELECT score FROM top_players WHERE player_id = \"{player_name}\""
@@ -85,6 +88,7 @@ def top_ten():
 
     if request.method == 'DELETE':
         try:
+            """for removing a user from our database"""
             args = request.args
             player_name = str(args.get("player_name"))
             sql = f"DELETE FROM top_players WHERE player_id = \"{player_name}\";"
