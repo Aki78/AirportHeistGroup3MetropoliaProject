@@ -29,6 +29,8 @@ const Credits = () => {
                         </ul>
                     </div>
 
+                    <div class="info">
+                    </div>
                 </section>
             </main>
         </>
