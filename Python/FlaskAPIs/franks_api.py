@@ -20,7 +20,7 @@ def top_ten():
     if request.method == 'GET':
         """for getting top ten players from our database"""
         try:
-            sql = 'select * from top_players ORDER BY score desc LIMIT 10'
+            sql = 'SELECT username, score FROM users ORDER BY score DESC LIMIT 10;'
             cursor = connection.cursor()
             cursor.execute(sql)
             result = cursor.fetchall()
@@ -39,9 +39,9 @@ def top_ten():
         try:
             """for adding a new user to our database"""
             args = request.args
-            player_name = str(args.get("player_name"))
-            password = str(args.get("password"))
-            sql = f"INSERT INTO top_players (player_id, score) VALUES (\"{player_name}\",\"{password}\", 0);"
+            username = str(args.get("username"))
+            passwordhash = str(args.get("passwordhash"))
+            sql = f"INSERT INTO users (username, passwordhash, score) VALUES (\"{username}\",\"{passwordhash}\", 0);"
             cursor = connection.cursor()
             cursor.execute(sql)
             result = cursor.fetchall()
@@ -61,8 +61,8 @@ def top_ten():
         try:
             """for checking if new score is higher than previous and is yes adding to our database"""
             args = request.args
-            player_name = str(args.get("player_name"))
-            sql1 = f"SELECT score FROM top_players WHERE player_id = \"{player_name}\""
+            username = str(args.get("username"))
+            sql1 = f"SELECT score FROM users WHERE username = \"{username}\""
             cursor = connection.cursor()
             cursor.execute(sql1)
             result_score = cursor.fetchall()
@@ -70,7 +70,7 @@ def top_ten():
 
             new_score = str(args.get("new_score"))
             if new_score > result_score:
-                sql2 = f"UPDATE top_players SET score = new_score WHERE player_id = \"{new_score}\";"
+                sql2 = f"UPDATE users SET score = \"{new_score}\" WHERE username = \"{username}\";"
                 cursor = connection.cursor()
                 cursor.execute(sql2)
                 result = cursor.fetchall()
@@ -90,8 +90,8 @@ def top_ten():
         try:
             """for removing a user from our database"""
             args = request.args
-            player_name = str(args.get("player_name"))
-            sql = f"DELETE FROM top_players WHERE player_id = \"{player_name}\";"
+            username = str(args.get("username"))
+            sql = f"DELETE FROM users WHERE username = \"{username}\";"
             cursor = connection.cursor()
             cursor.execute(sql)
             result = cursor.fetchall()
@@ -105,6 +105,17 @@ def top_ten():
             json_response = json.dumps(response)
             http_response = Response(response=json_response, status=400, mimetype="application/json")
             return http_response
+
+
+@app.errorhandler(404)
+def page_not_found(error_code):
+    response = {
+        "message": "Invalid endpoint",
+        "status": 404
+    }
+    json_response = json.dumps(response)
+    http_response = Response(response=json_response, status=404, mimetype="application/json")
+    return http_response
 
 
 if __name__ == '__main__':
