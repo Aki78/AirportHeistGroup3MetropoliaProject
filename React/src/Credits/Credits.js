@@ -41,34 +41,42 @@ const Credits = () => {
                             <a href="mailto: francesn@metropolia.fi">francesn@metropolia.fi</a>
                             <p>his github link for the nerds:</p>
                             <a href='https://github.com/murphyslemon'>https://github.com/murphyslemon</a>
+                            <br></br> <br></br>
                         </div>
                         <div class="aki">
                             <p>Aki</p>
-                            <p>Everything about him is confidential, sorry babe</p>
+                            <p>Everything about him is confidential, sorry babe.</p>
                             <p>But I found his e-mail for you!</p>
                             <a href='mailto: eiakim@metropolia.fi'>eiakim@metropolia.fi</a>
+                            <br></br> <br></br>
                         </div>
                     </div>
                     <div class="data">
+                        <br></br> <br></br>
                         <h4>For the database ;</h4>
-                        <p>Jenni had to do everything by herself, so I take this opportunity to shout-out to her. You should too!</p>
                         <div class="jenni">
-                            <p>Have her e-mal if you had database related questions.</p>
+                            <p>Jenni <br></br><br></br>had to do everything by herself, so I took this opportunity to shout-out to her.</p>
+                            <p>You should too!</p>
+                            <p>Have her e-mal if you have (database related) questions.</p>
                             <a href='mailto: jenni.hallikas@metropolia.fi'>jenni.hallikas@metropolia.fi</a>
+                            <br></br> <br></br>
                         </div>
                     </div>
                     <div class="front">
-                        <h4>And finally we have the gen-z!</h4>
-                        <div class="Khai"></div>
-                        <p>Khai is the only person who will text you back so I got all his account for you!</p>
-                        <p>Find him on facebook with: MKRadius</p>
-                        <p>Insta is the same, but for snap try: M_k_Radiuss12</p>
-                        <p>Pinterest and tumbler are personal, so NO.</p>
-                        <p>His discord is Lmao#7890</p>
-                        <p>The rest is NOYB, bestie!</p>
-                        <div class="kia"></div>
-                        <p>hmmm Kiana?</p>
-                        <p>She said thank you, next.</p>
+                        <br></br> <br></br>
+                        <h4>And finally we have the cool ppl!</h4>
+                        <div class="khai">
+                            <p>Khai <br></br> <br></br> would be the only person who will text you back <br></br>so I got all his accounts ready!</p>
+                            <p>Find him on facebook and Insta with: MKRadius</p>
+                            <p>For snap try: M_k_Radiuss12</p>
+                            <p>Pinterest and tumbler are personal, so NO.</p>
+                            <p>His discord is: Lmao#7890</p>
+                            <p>And the rest is NOYB, bestie!</p>
+                        </div>
+                        <div class="kia">
+                            <p>Kiana?</p>
+                            <p>She said thank you, next.</p>
+                        </div>
                     </div>
                 </article>
 

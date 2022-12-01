@@ -121,65 +121,66 @@ article a {
 }
 
 article h4 {
-    text-align: left;
-}
-
-article .back {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 75px;
+    text-align: center;
 }
 
 article .frank {
-    width: 30%;
-    padding: 1%;
+    width: 600px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: centert;
     border-color: black;
-    border-radius: 50px;
+    border-radius: 30px;
     border-style: solid;
     margin-top: 60px;
-    margin-left: 8px;
-    border-bottom: 6px solid black;
 }
 
 article .aki {
-    margin-bottom: 10px;
-    width: 30%;
-    padding: 1%;
+    width: 600px;
     box-sizing: border-box;
     text-align: center;
     border-color: black;
-    border-radius: 50px;
+    border-radius: 30px;
     border-style: solid;
     margin-top: 60px;
-    margin-left: 8px;
-    border-bottom: 6px solid black;
 }
 
 article .data {
-    width: 700px;
-    box-sizing: border-box;
-    text-align: center;
-    border-color: black;
-    border-radius: 30px;
-    border-style: solid;
-    border-bottom: 6px solid black;
-    margin-top: 50px;
+    border-top: 6px solid black;
+    margin-top: 90px;
 }
 
 article .jenni {
-    margin-bottom: 10px;
-}
-
-article .front {
-    width: 700px;
-    text-align: center;
+    width: 600px;
+    box-sizing: border-box;
+    text-align: centert;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
-    margin-top: 50px;
-    border-bottom: 6px solid black;
+    margin-top: 60px;
+}
+
+article .front {
+    border-top: 6px solid black;
+    margin-top: 90px;
+}
+
+article .khai {
+    width: 600px;
+    box-sizing: border-box;
+    text-align: centert;
+    border-color: black;
+    border-radius: 30px;
+    border-style: solid;
+    margin-top: 60px;
+}
+
+article .kia {
+    width: 600px;
+    box-sizing: border-box;
+    text-align: centert;
+    border-color: black;
+    border-radius: 30px;
+    border-style: solid;
+    margin-top: 60px;
+    margin-bottom: 200px;
 }
