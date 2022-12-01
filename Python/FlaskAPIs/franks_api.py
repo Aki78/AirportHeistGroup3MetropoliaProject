@@ -59,7 +59,7 @@ def top_ten():
 
     if request.method == 'PATCH':
         try:
-            """for checking if new score is higher than previous and is yes adding to our database"""
+            """for checking if new score is higher than previous and if higher adding to our database"""
             args = request.args
             username = str(args.get("username"))
             new_score = str(args.get("new_score"))
@@ -71,10 +71,10 @@ def top_ten():
             if int(new_score) > int(result_score[0][0]):
                 cursor.execute(sql2)
                 connection.commit()
-                print(f"you beat your previous high score: {result_score[0][0]}")
+                # print(f"you beat your previous high score: {result_score[0][0]}")
                 cursor.close()
             else:
-                print(f"you did not beat your previous high score: {result_score[0][0]}")
+                # print(f"you did not beat your previous high score: {result_score[0][0]}")
                 cursor.close()
             return f"your score: {new_score}"
         except ValueError:
