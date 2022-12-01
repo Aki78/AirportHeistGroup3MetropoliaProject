@@ -24,7 +24,7 @@ const LeaderBoard = () => {
                         </div>
 
                         <h1 class="you">You</h1>
-                        <li></li>
+                        <li class="one"></li>
                     </div>
                 </div>
             </div>
