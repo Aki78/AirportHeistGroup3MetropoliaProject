@@ -14,25 +14,19 @@ connection = mysql.connector.connect(
 )
 
 
-@app.route('/patch_new_score/')
-def patch_new_score():
+@app.route('/post_new_user/')
+def post_new_user():
     try:
         args = request.args
         username = str(args.get("username"))
-        new_score = str(args.get("new_score"))
-        sql1 = f"SELECT score FROM users WHERE username = \"{username}\";"
-        sql2 = f"UPDATE users SET score = \"{new_score}\" WHERE username = \"{username}\";"
+        passwordhash = str(args.get("passwordhash"))
+        sql = f"INSERT INTO users (username, passwordhash, score) VALUES (\"{username}\",\"{passwordhash}\", 0);;"
         cursor = connection.cursor()
-        cursor.execute(sql1)
-        result_score = cursor.fetchall()
-        if int(new_score) > int(result_score[0][0]):
-            cursor.execute(sql2)
-            connection.commit()
-            cursor.close()
-        else:
-            print("you did not beat your previous highest score")
-            cursor.close()
-        return f"you beat your previous high score"
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        cursor.close()
+        connection.commit()
+        return result
 
     except ValueError:
         response = {

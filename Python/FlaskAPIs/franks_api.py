@@ -62,21 +62,21 @@ def top_ten():
             """for checking if new score is higher than previous and is yes adding to our database"""
             args = request.args
             username = str(args.get("username"))
-            sql1 = f"SELECT score FROM users WHERE username = \"{username}\""
+            new_score = str(args.get("new_score"))
+            sql1 = f"SELECT score FROM users WHERE username = \"{username}\";"
+            sql2 = f"UPDATE users SET score = \"{new_score}\" WHERE username = \"{username}\";"
             cursor = connection.cursor()
             cursor.execute(sql1)
             result_score = cursor.fetchall()
-            cursor.close()
-
-            new_score = str(args.get("new_score"))
-            if new_score > result_score:
-                sql2 = f"UPDATE users SET score = \"{new_score}\" WHERE username = \"{username}\";"
-                cursor = connection.cursor()
+            if int(new_score) > int(result_score[0][0]):
                 cursor.execute(sql2)
-                result = cursor.fetchall()
-                cursor.close()
                 connection.commit()
-                return json.dumps(result)
+                print(f"you beat your previous high score: {result_score[0][0]}")
+                cursor.close()
+            else:
+                print(f"you did not beat your previous high score: {result_score[0][0]}")
+                cursor.close()
+            return f"your score: {new_score}"
         except ValueError:
             response = {
                 "message": "could not connect to update score",
