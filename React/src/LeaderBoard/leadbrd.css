@@ -67,43 +67,43 @@ ul {
 }
 
 .leadbrd li:nth-child(1) {
-    background: #FF843E;
+    background: linear-gradient(to right, #FF843E, #161616);
 }
 
 .leadbrd li:nth-child(2) {
-    background: #FD813B;
+    background: linear-gradient(to right, #FD813B, #161616);
 }
 
 .leadbrd li:nth-child(3) {
-    background: #FB7F39;
+    background: linear-gradient(to right, #FB7F39, #161616);
 }
 
 .leadbrd li:nth-child(4) {
-    background: #F97C36;
+    background: linear-gradient(to right, #F97C36, #161616);
 }
 
 .leadbrd li:nth-child(5) {
-    background: #F77934;
+    background: linear-gradient(to right, #F77934, #161616);
 }
 
 .leadbrd li:nth-child(6) {
-    background: #F47731;
+    background: linear-gradient(to right, #F47731, #161616);
 }
 
 .leadbrd li:nth-child(7) {
-    background: #F2742F;
+    background: linear-gradient(to right, #F2742F, #161616);
 }
 
 .leadbrd li:nth-child(8) {
-    background: #F0712C;
+    background: linear-gradient(to right, #F0712C, #161616);
 }
 
 .leadbrd li:nth-child(9) {
-    background: #EE6F2A;
+    background: linear-gradient(to right, #EE6F2A, #161616);
 }
 
 .leadbrd li:nth-child(10) {
-    background: #EC6C27;
+    background: linear-gradient(to right, #EC6C27, #161616);
 }
 
 .you {

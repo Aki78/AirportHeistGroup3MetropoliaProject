@@ -183,7 +183,7 @@ grep -r [expression]              finds the file where the expression exists
 - [ ] js create user account 
 
 ### Kiana
-- [ ] html/css leader board
+- [x] html/css leader board
 - [ ] html/css tutorial page
 - [ ] html/css make mobile friendly
 - [ ] html/css/js add night-mode option
