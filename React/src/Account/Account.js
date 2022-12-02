@@ -6,38 +6,32 @@ import { useNavigate } from "react-router-dom";
 
 import Home from '../Home/Home';
 
-const Account = ({ callbackUsername ,  callbackPassword ,  callbackSignedIn} ) => {
+const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
     
     //const nametest = document.getElementsByTagName("input[type='text']")[0].value;
-    const usernameInputRef = useRef(null);
-    const passwordInputRef = useRef(null);
-    var checkSignInInputRef = useRef(null);
+    const [accUsername, setAccUsername] = useState("");        //check username
+    const [accPassword, setAccPassword] = useState("");        //check password
 
-    let navigate = useNavigate();
+    let navigate = useNavigate();   //for navigating to home page
 
-    const [info, setInfo] = useState();
+    function handleUSername(accUsername) {
+        callbackUsername(accUsername)
+    }
 
-    function checkCredentials(usernameInputRef, passwordInputRef) {
-        console.log("Log check", usernameInputRef)
+    function handleSignedIn(signedin) {
+        callbackSignedIn(signedin)
+    }
 
-        async function retrieveInfo(usernameInputRef) {
-            await fetch('http://127.0.0.1:5000/Account/' + usernameInputRef)
-                .then(response => response.json())
-                .then(response => {
-                    console.log("???", response)
-                    setInfo(response);
-                    console.log(response);
-                })
-                .catch(err => console.error(err));
-        }
-
-        retrieveInfo(usernameInputRef);
+    function checkCredentials(accUsername, accPassword, response) {
+        console.log("Log check", accUsername)   
+        console.log("Log check from DB", response)     
         
-        let checkUser = info.username;
+        let checkUser = response.username;
         //let checkPass = info[1];    
         console.log("After fetch", checkUser);
-        if (checkUser === usernameInputRef) { // && checkPass === passwordInputRef) {
-            console.log("Match");
+        if (checkUser === accUsername) { // && checkPass === passwordInputRef) {
+            console.log("Credentials match");
+            console.log("Redirecting user");
             return true;
         }
         else {
@@ -46,39 +40,41 @@ const Account = ({ callbackUsername ,  callbackPassword ,  callbackSignedIn} ) =
         }
     }
 
-
-    function handleUSername(username) {
-        callbackUsername(username);
+    async function retrieveInfo(accUsername) {
+        await fetch('http://127.0.0.1:5000/Account/' + accUsername)
+            .then(response => response.json())
+            .then(response => {
+                console.log("Got from DB ", response)
+                const res = checkCredentials(accUsername, accPassword, response);
+                return res;
+            })
+            .catch(err => console.error(err));    
     }
 
-    function handlePassword(password) {
-        callbackPassword(password);
-    }
 
-    function handleSignedIn(signedin) {
-        callbackSignedIn(signedin);
-    }
+    function handleSignInEvent() {
+        console.log(accUsername);
+        console.log(accPassword);
 
-    function handleClick() {
-        handleUSername(usernameInputRef.current.value);
-        handlePassword(passwordInputRef.current.value);
-        
-        if (checkCredentials(usernameInputRef.current.value, passwordInputRef.current.value)) {
-            handleSignedIn(checkSignInInputRef.current = true);
+        if (retrieveInfo(accUsername)) {
+            handleUSername(accUsername);
+            handleSignedIn(true);
             const routeChange = () => {
                 let path = '/airport-heist.github.io';
                 navigate(path);
             }
-            console.log("User logged in");
             routeChange();
 
         }
         else {
-            handleSignedIn(checkSignInInputRef.current = false);
+            handleSignedIn(false);
         }
 
 
     }
+
+
+
 
     return (
         <>
@@ -89,7 +85,7 @@ const Account = ({ callbackUsername ,  callbackPassword ,  callbackSignedIn} ) =
                         id="username"
                         type="text"
                         placeholder='Username'
-                        ref={usernameInputRef}
+                        onChange={e => setAccUsername(e.target.value)}
                     />
                 </div>
                 
@@ -98,10 +94,10 @@ const Account = ({ callbackUsername ,  callbackPassword ,  callbackSignedIn} ) =
                         id="password"
                         type="password"
                         placeholder='Password'
-                        ref={passwordInputRef}
+                        onChange={e => setAccPassword(e.target.value)}
                     />
                 </div>
-                <button onClick={handleClick}>Sign in</button>
+                <button onClick={handleSignInEvent}>Sign in</button>
                 <br/>
             </div>
 

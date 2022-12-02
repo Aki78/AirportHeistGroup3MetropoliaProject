@@ -17,7 +17,7 @@ connection = mysql.connector.connect(
 )
 
 
-@app.route('/Account/<username>')
+@app.get('/Account/<username>')
 def login_credential_check(username):
     try:
         sql = f"select username from users where username = '{username}'"        
