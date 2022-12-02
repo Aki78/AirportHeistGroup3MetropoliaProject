@@ -25,10 +25,11 @@ import { useState } from 'react';
 
 
 const App = () => {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-  const [signedin, setSignedin] = useState(false)
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [signedin, setSignedin] = useState(false);
 
+  
 
   const callbackUsernameFunction = (username) => {
     setUsername(username);
@@ -46,7 +47,7 @@ const App = () => {
     <>  
         <Navigation checkSignIn={signedin} usernameSignedin={username}/>
         {/*<p>{signedin.toString()}</p>*/}
-        <div class="container">
+        <div className="container">
             <Routes>
                 <Route path="airport-heist.github.io" element={<Home />} />
                 <Route path="LeaderBoard" element={<LeaderBoard />} />
@@ -57,7 +58,6 @@ const App = () => {
                 <Route path="Weather" element={<Weather />} />
                 {/* <Route path="Account" element={signedin ? <Account /> :  username }/> */}
                 <Route path="Account"  element={signedin ? <AccountManagement username={username} /> : <Account callbackUsername={callbackUsernameFunction} callbackPassword={callbackPasswordFunction} callbackSignedIn={callbackSignedInFunction}/> } />
-                
             </Routes>
         </div>
       {/*<CookieConsent

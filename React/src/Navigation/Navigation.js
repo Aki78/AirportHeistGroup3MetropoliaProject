@@ -11,7 +11,7 @@ const Navigation = ({ checkSignedIn, usernameSignedin }) => {
 
     return (
         
-        <nav class="nav_bar">
+        <nav className="nav_bar">
             <ul>
                 <li><img src={Logo} alt="logo"></img></li>
                 <li><Link to="airport-heist.github.io" >Home</Link></li>
@@ -23,8 +23,7 @@ const Navigation = ({ checkSignedIn, usernameSignedin }) => {
 
             </ul>
 
-            <div class="account">
-                <p></p>
+            <div className="account">
                 <p><Link to="Account">Account</Link></p>
             </div>
         </nav>

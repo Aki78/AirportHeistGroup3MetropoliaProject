@@ -23,14 +23,6 @@
     border-radius: 7px;
 }
 
-.password-confirm input {
-    justify-content: center;
-    text-align: center;
-
-    border: none;
-    border-radius: 7px;
-}
-
 .username input::placeholder {
     text-align: center;
 }
@@ -39,38 +31,28 @@
     text-align: center;
 }
 
-.password-confirm input::placeholder {
-    text-align: center;
-}
-
 input {
-    width: 200px;
-    height: 30px;
-    margin: 5px 0 5px 0;
+    width: 300px;
+    height: 50px;
+    margin: 10px 0 10px 0;
 }
 
 .sign-in-form > button {
-    width: 100px;
-    height: 25px;
+    width: 150px;
+    height: 35px;
     
+    color: rgb(241, 238, 233);
     background-color: rgb(22, 22, 22);
     
-    border: none;
+    
     border-radius: 7px;
 }
 
-.sign-in-form > button a {
-    color: rgb(241, 238, 233);
-    text-decoration: none;
-    box-sizing: border-box;   
-    padding: 5px 23px 5px 23px; 
-}
-
-.sign-in-form > button::hover {
-    background-color: rgb(100, 100, 100);
+.sign-in-form > button:hover {
+    background-color: rgb(77, 77, 77);
     color: rgb(241, 238, 233);
 }
-
+/*
 .sign-up-form > button {
     width: 100px;
     height: 25px;
@@ -93,7 +75,7 @@ input {
     background-color: rgb(100, 100, 100);
     color: rgb(241, 238, 233);
 }
-
+*/
 .line {
     height: 3px;
     background: black;

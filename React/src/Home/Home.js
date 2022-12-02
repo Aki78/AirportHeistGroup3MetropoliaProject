@@ -11,16 +11,16 @@ const Home = () => {
         <>
             {/*<img src={require('../img/hud.gif')} alt='background'></img>*/}
 
-            <div class="compass">
-                <div class="compass-inner">
+            <div className="compass">
+                <div className="compass-inner">
                     <img src={CompassInner} alt="compass-inner-logo"></img>
                 </div>
-                <div class="compass-outer">
+                <div className="compass-outer">
                     <img src={CompassOuter} alt="compass-outer-logo"></img>
                 </div>
             </div>
 
-            <div class="airplane">
+            <div className="airplane">
                 <img src={Airplane} alt="airplane-image"></img>
             </div>
         </>

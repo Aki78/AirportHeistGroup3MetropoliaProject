@@ -11,20 +11,20 @@ const LeaderBoard = () => {
 
     return (
         <>
-            <div class="main">
-                <div class="section">
-                    <div class="leadbrd">
-                        <div class="top">
+            <div className="main">
+                <div className="section">
+                    <div className="leadbrd">
+                        <div className="top">
                             <h1>Top 10 Players</h1>
                         </div>
-                        <div class="ppl">
+                        <div className="ppl">
                             <ol>
                                 {makeList()}
                             </ol>
                         </div>
 
-                        <h1 class="you">You</h1>
-                        <li class="one"></li>
+                        <h1 className="you">You</h1>
+                        <li className="one"></li>
                     </div>
                 </div>
             </div>
