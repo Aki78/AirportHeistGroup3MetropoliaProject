@@ -204,7 +204,7 @@ grep -r [expression]              finds the file where the expression exists
 - [x] SQL leaderboard
 - [x] SQL users
 - [ ] SQL best score
-- [ ] SQL update airport DB
+- [x] SQL update airport DB
 - [ ] SQL set up user settings DB
 - [ ] SQL play history (optional)
 - [ ] SQL migrate to SQLite (optional)
