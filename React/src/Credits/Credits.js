@@ -39,14 +39,16 @@ const Credits = () => {
                             <p>Frank's</p>
                             <p>His e-mail:</p>
                             <a href="mailto: francesn@metropolia.fi">francesn@metropolia.fi</a>
-                            <p>The github link for the nerds:</p>
+                            <p>his github link for the nerds:</p>
                             <a href='https://github.com/murphyslemon'>https://github.com/murphyslemon</a>
+                            <br></br> <br></br>
                         </div>
                         <div className="Aki">
                             <p>Aki's</p>
                             <p>Everything about him is confidential, sorry babe</p>
                             <p>But look, I found his <p>e-mail</p> for you!</p>
                             <a href='mailto: eiakim@metropolia.fi'>eiakim@metropolia.fi</a>
+                            <br></br> <br></br>
                         </div>
                     </div>
                     <div className="data">
@@ -55,6 +57,7 @@ const Credits = () => {
                         <div className="jenni">
                             <p>Have her e-mal if you had database related questions.</p>
                             <a href='mailto: jenni.hallikas@metropolia.fi'>jenni.hallikas@metropolia.fi</a>
+                            <br></br> <br></br>
                         </div>
                     </div>
                     <div className="front">
