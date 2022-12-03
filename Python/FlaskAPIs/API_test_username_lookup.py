@@ -29,9 +29,10 @@ def register_new_account_to_db():
         db_password = password + salt
         hashed = hashlib.md5(db_password.encode())
 
-        sql = f"INSERT INTO users(username, passwordhash, score) VALUES(\"{username}\",\"{hashed}\", 0);"
+        sql = f"insert into users(username, passwordhash, score) VALUES(\"{username}\",\"{hashed}\", 0);"
         cursor = connection.cursor()
         cursor.execute(sql)
+        connection.commit()
         cursor.close()
 
         response = {

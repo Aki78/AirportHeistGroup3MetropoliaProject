@@ -142,7 +142,6 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             console.log("???????")
             handleSignedIn(false);
         }
-
     }
 
     return (
