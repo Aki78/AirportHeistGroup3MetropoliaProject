@@ -17,6 +17,36 @@ connection = mysql.connector.connect(
 )
 
 
+@app.get('/Account/checkExist=<username>')
+def check_existing_account(username):
+    try:
+        sql = f"select username from users where username = '{username}'"        
+        
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        cursor.close()
+
+        if cursor.rowcount > 0:
+            response = {
+                "message": "Exist"
+            }
+        else:
+            response = {
+                "message": "Nonexist"
+            }
+
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid number as addend",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
+
 @app.get('/Account/<username>')
 def login_credential_check(username):
     try:
