@@ -67,43 +67,43 @@ ul {
 }
 
 .leadbrd li:nth-child(1) {
-    background: linear-gradient(to right, #FF843E, #161616);
+    background: linear-gradient(to right, #FF843E, #160F0F);
 }
 
 .leadbrd li:nth-child(2) {
-    background: linear-gradient(to right, #FD813B, #161616);
+    background: linear-gradient(to right, #FD813B, #160F0F);
 }
 
 .leadbrd li:nth-child(3) {
-    background: linear-gradient(to right, #FB7F39, #161616);
+    background: linear-gradient(to right, #FB7F39, #160F0F);
 }
 
 .leadbrd li:nth-child(4) {
-    background: linear-gradient(to right, #F97C36, #161616);
+    background: linear-gradient(to right, #F97C36, #160F0F);
 }
 
 .leadbrd li:nth-child(5) {
-    background: linear-gradient(to right, #F77934, #161616);
+    background: linear-gradient(to right, #F77934, #160F0F);
 }
 
 .leadbrd li:nth-child(6) {
-    background: linear-gradient(to right, #F47731, #161616);
+    background: linear-gradient(to right, #F47731, #160F0F);
 }
 
 .leadbrd li:nth-child(7) {
-    background: linear-gradient(to right, #F2742F, #161616);
+    background: linear-gradient(to right, #F2742F, #160F0F);
 }
 
 .leadbrd li:nth-child(8) {
-    background: linear-gradient(to right, #F0712C, #161616);
+    background: linear-gradient(to right, #F0712C, #160F0F);
 }
 
 .leadbrd li:nth-child(9) {
-    background: linear-gradient(to right, #EE6F2A, #161616);
+    background: linear-gradient(to right, #EE6F2A, #160F0F);
 }
 
 .leadbrd li:nth-child(10) {
-    background: linear-gradient(to right, #EC6C27, #161616);
+    background: linear-gradient(to right, #EC6C27, #160F0F);
 }
 
 .you {
