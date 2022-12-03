@@ -168,7 +168,7 @@ article .back {
 article .frank {
     width: 600px;
     box-sizing: border-box;
-    text-align: centert;
+    text-align: center;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
@@ -195,7 +195,7 @@ article .data {
 article .jenni {
     width: 620px;
     box-sizing: border-box;
-    text-align: centert;
+    text-align: center;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
@@ -209,9 +209,9 @@ article .front {
 }
 
 article .khai {
-    width: 600px;
+    width: 620px;
     box-sizing: border-box;
-    text-align: centert;
+    text-align: center;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
@@ -222,7 +222,7 @@ article .khai {
 article .kia {
     width: 600px;
     box-sizing: border-box;
-    text-align: centert;
+    text-align: center;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
