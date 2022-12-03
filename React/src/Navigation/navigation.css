@@ -11,14 +11,14 @@
     position: absolute;
     width: 50%;
     padding: 0;
-    text-align: center; 
+    text-align: center;
     line-height: 350%;
 }
 
 .nav_bar ul li a {
     text-decoration: none;
-    color:rgb(241, 238, 233);
-    
+    color: rgb(241, 238, 233);
+
 }
 
 .nav_bar ul li a:hover {
@@ -28,7 +28,7 @@
 
 .nav_bar ul li img {
     width: 150px;
-    height: auto;   
+    height: auto;
 }
 
 
@@ -49,3 +49,7 @@
     color: rgb(224, 77, 1);
     transition: 250ms;
 }
+
+
+
+

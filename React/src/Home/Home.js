@@ -10,7 +10,6 @@ const Home = () => {
     return (
         <>
             {/*<img src={require('../img/hud.gif')} alt='background'></img>*/}
-
             <div className="compass">
                 <div className="compass-inner">
                     <img src={CompassInner} alt="compass-inner-logo"></img>
@@ -24,7 +23,7 @@ const Home = () => {
                 <img src={Airplane} alt="airplane-image"></img>
             </div>
         </>
-        
+
     )
 }
 
