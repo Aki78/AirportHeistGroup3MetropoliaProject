@@ -38,7 +38,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
     }
 
     async function retrieveInfo(accUsername) {
-        await fetch("http://127.0.0.1:5000/Account/" + accUsername)
+        await fetch("http://127.0.0.1:5000/Account/retrieve=" + accUsername)
             .then(response => response.json())
             .then(response => {
                 console.log("Got from DB ", response)
@@ -91,7 +91,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                     console.log("User existed")
                     return true
                 }
-                else if (response.message === "Nonexist"){
+                else if (response.message === "Nonexist") {
                     console.log("No user with same username")
                     return false
                 }
@@ -99,26 +99,19 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             .catch(err => console.error(err)); 
     }
 
-    async function registerNewUser(accUsername, accPassword) {
-        await fetch("http://127.0.0.1:5000/Account/createAccount?username=" + accUsername + "&password=" + accPassword)
+    async function registerNewUser(accUsername, accPassword) {    
+        await fetch("http://127.0.0.1:5000/Account/createAccount?username=" + accUsername + "&password=" + accPassword, {method: "POST"})
             .then(response => response.json())
             .then(response => {
-                console.log("Got from DB ", response)
-                //const res = checkCredentials(accUsername, accPassword, response);
-                if (response.message === "Exist") {
-                    console.log("User existed")
-                    return true
-                }
-                else if (response.message === "Nonexist"){
-                    console.log("No user with same username")
-                    return false
-                }
+                console.log("Got from DB ", response) 
+                console.log(response.message)               
             })
             .catch(err => console.error(err)); 
+        return "Account created"
     }
 
 
-    function handleSignUpEvent() {
+    async function handleSignUpEvent() {
         console.log(accUsername);
         console.log(accPassword);
         console.log(passwordConfirm);
@@ -129,9 +122,11 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             handleUsername(accUsername);
             handleSignedIn(true);
 
-            const exist = checkExistingAccount(accUsername);
+            const exist = await checkExistingAccount(accUsername);
             if (!exist) {
-                //registerNewUser(accUsername, accPassword);
+                console.log("About to create new acc")
+                const res = registerNewUser(accUsername, accPassword);
+                console.log(res)
                 const routeChange = () => {
                     let path = '/airport-heist.github.io';
                     navigate(path);
@@ -139,14 +134,12 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 routeChange();
             }
             else {
+                console.log("???")
                 handleSignedIn(false);
             }
-            
-
-            
-
         }
         else {
+            console.log("???????")
             handleSignedIn(false);
         }
 
@@ -184,15 +177,15 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             <h4>Don't have an account?</h4>
             <h2>Sign up</h2>
 
-            <div class="sign-up-form">
-                <div class="username">
+            <div className="sign-up-form">
+                <div className="username">
                     <input 
                         placeholder='Username'
                         onChange={e => setAccUsername(e.target.value)}
                     />
                 </div>
                 
-                <div class="password">
+                <div className="password">
                     <input
                         type="password"
                         placeholder='Password'
@@ -200,7 +193,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                     />
                 </div>
 
-                <div class="password-confirm">
+                <div className="password-confirm">
                     <input
                         type="password"
                         placeholder='Confirm password'

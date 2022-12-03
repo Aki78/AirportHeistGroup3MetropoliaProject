@@ -1,6 +1,7 @@
 from flask import Flask, Response, request
 from flask_cors import CORS
 import json
+import hashlib
 import mysql.connector
 
 app = Flask(__name__)
@@ -15,6 +16,38 @@ connection = mysql.connector.connect(
   user='root',
   password='root'
 )
+
+
+@app.post('/Account/createAccount')
+def register_new_account_to_db():
+    try:
+        args = request.args
+        username = args.get("username")
+        password = args.get("password")
+        salt = "5gz"
+
+        db_password = password + salt
+        hashed = hashlib.md5(db_password.encode())
+
+        sql = f"INSERT INTO users(username, passwordhash, score) VALUES(\"{username}\",\"{hashed}\", 0);"
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        cursor.close()
+
+        response = {
+            "message": "New user added"
+        }
+
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid number as addend",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
 
 
 @app.get('/Account/checkExist=<username>')
@@ -47,7 +80,7 @@ def check_existing_account(username):
         http_response = Response(response=json_response, status=400, mimetype="application/json")
         return http_response
 
-@app.get('/Account/<username>')
+@app.get('/Account/retrieve=<username>')
 def login_credential_check(username):
     try:
         sql = f"select username from users where username = '{username}'"        
