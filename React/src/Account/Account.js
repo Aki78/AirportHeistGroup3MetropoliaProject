@@ -82,6 +82,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
     }
 
     async function checkExistingAccount(accUsername) {
+        let res;
         await fetch("http://127.0.0.1:5000/Account/checkExist=" + accUsername)
             .then(response => response.json())
             .then(response => {
@@ -89,14 +90,20 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 //const res = checkCredentials(accUsername, accPassword, response);
                 if (response.message === "Exist") {
                     console.log("User existed")
-                    return true
+                    res = true;
                 }
                 else if (response.message === "Nonexist") {
                     console.log("No user with same username")
-                    return false
+                    res = false;
                 }
             })
             .catch(err => console.error(err)); 
+        if (res === true) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     async function registerNewUser(accUsername, accPassword) {    
@@ -123,8 +130,12 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             handleSignedIn(true);
 
             const exist = await checkExistingAccount(accUsername);
-            if (!exist) {
-                console.log("About to create new acc")
+            if (exist) {
+                alert("The username is taken. Please choose another one.");
+                handleSignedIn(false);
+            }
+            else {
+                console.log("About to create new acc");
                 const res = registerNewUser(accUsername, accPassword);
                 console.log(res)
                 const routeChange = () => {
@@ -133,13 +144,9 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 }
                 routeChange();
             }
-            else {
-                console.log("???")
-                handleSignedIn(false);
-            }
         }
         else {
-            console.log("???????")
+            alert("Wrong password check. Please confirm again.");
             handleSignedIn(false);
         }
     }
