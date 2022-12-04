@@ -185,7 +185,7 @@ grep -r [expression]              finds the file where the expression exists
 ### Kiana
 - [x] html/css leader board
 - [ ] html/css tutorial page
-- [ ] html/css make mobile friendly
+- [x] html/css make mobile friendly
 - [ ] html/css/js add night-mode option
 - [ ] html/css/js progress graph (optional)
 
