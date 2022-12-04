@@ -8,7 +8,7 @@ const Credits = () => {
                 <h2 id='motto'>PREPARE FOR TROUBLE AND MAKE IT DOUBLE</h2>
                 <section>
                     <div className="backend">
-                        <h4>The brains behind the backend part:</h4>
+                        <h4>The team behind the backend:</h4>
                         <ul>
                             <li>Francesco Natanni</li>
                             <li>Eiaki V. Morooka</li>
@@ -16,7 +16,7 @@ const Credits = () => {
                     </div>
 
                     <div className="database">
-                        <h4>The person who made the database work:</h4>
+                        <h4>Person who worked on the database:</h4>
                         <ul>
                             <li>Jenni Hallikas</li>
                         </ul>
@@ -52,7 +52,7 @@ const Credits = () => {
                     </div>
                     <div className="data">
                         <br></br> <br></br>
-                        <h4>The database:</h4>
+                        <h4>Database:</h4>
                         <div className="jenni">
                             <p>Jenni</p>
                             <p>Her e-mail address is:</p>
@@ -69,9 +69,12 @@ const Credits = () => {
                             <a href='mailto: khai.caho@metropolia.fi'>khai.caho@metropolia.fi</a>
                             <p>His github link is:</p>
                             <a href='x'>https://github.com/khai2003</a>
+                            <br></br> <br></br>
                         </div>
                         <div className="kia">
                             <p>Kiana</p>
+                            <p>E-mail address is:</p>
+                            <a href='mailto: kiana.aghajani@metropolia.fi'>kiana.aghajani@metropolia.fi</a>
                             <p>Contact her on Discord with:</p>
                             <p>kiian#2547</p>
                         </div>
