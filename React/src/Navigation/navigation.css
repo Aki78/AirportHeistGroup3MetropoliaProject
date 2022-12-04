@@ -132,18 +132,15 @@
     }
 
     .nav_bar li {
-        display: flex;
-        padding: 4px;
-    }
-
-    .nav_bar li img {
-        margin-left: 170px;
+        display: block;
+        padding: 2px;
+        margin-left: 1px;
     }
 
     .account {
         display: block;
         top: 7px;
-
+        left: 730px;
     }
 }
 
@@ -187,7 +184,7 @@
     }
 }
 
-@media only screen and (min-width: 270px) and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
     .nav_bar {
         width: 100%;
         display: block;
@@ -196,18 +193,18 @@
     .nav_bar li {
         width: 270px;
         display: flex;
-        padding: 4px;
-        font-size: 15px;
+        padding: 6px;
+        
     }
 
     .nav_bar li img {
-        margin-left: 170px;
+        margin-left: 160px;
     }
 
     .account {
         display: block;
-        top: 40px;
-        right: 110px;
+        top: 22px;
+        left: 433px;
         font-size: 15px;
     }
 }
