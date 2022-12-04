@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <img src="./hud.gif">
+    <img src="./Poster/hud.gif">
 </p>
 
 # Page
@@ -84,7 +84,7 @@ The main character starts the game with a set amount of money. If the player req
 
 
 <p align="center">
-    <img src="./block_diagram1.png">
+    <img src="./Poster/block_diagram1.png">
 </p>
 
 [Back to top](#airport-heist)
@@ -94,7 +94,7 @@ The main character starts the game with a set amount of money. If the player req
 This diagram shows how our different python files interact with each other. At the moment we are using Godot, a game engine, but in the future we will create our user interface through javascript.
 
 <p align="center">
-    <img src="./project_diagram.png">
+    <img src="./Poster/project_diagram.png">
 </p>
 
 [Back to top](#airport-heist)
