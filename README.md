@@ -175,53 +175,48 @@ grep -r [expression]              finds the file where the expression exists
 
 ## To-Do-List
 ### Khai
-- [ ] js react
-- [ ] js embedding Web Assembly
-- [ ] js connecting all components
+- [x] js react
+- [x] js user login 
+- [x] js create user account 
+- [ ] flask user login with password
 - [ ] js unit test (optional)
-- [ ] js user login 
-- [ ] js create user account 
+- [ ] js embedding Web Assembly (optional)
 
 ### Kiana
 - [x] html/css leader board
 - [ ] html/css tutorial page
 - [x] html/css make mobile friendly
-- [ ] html/css/js add night-mode option
+- [ ] html/css/js add night-mode option (optional)
 - [ ] html/css/js progress graph (optional)
 
 ### Frank
-- [ ] flask API's for game init
 - [x] flask API's leader board
-- [ ] flask user login
 - [x] flask create user account
 - [x] flask fetching weather
 - [ ] flask fetching ticket prices (optional)
-- [ ] flask API's for graph (optional)
 - [ ] flask document API's (optional)
 - [ ] flask  API unit testing (optional)
 
 ### Jenni
 - [x] SQL leaderboard
 - [x] SQL users
-- [ ] SQL best score
 - [x] SQL update airport DB
-- [ ] SQL set up user settings DB
+- [ ] SQL set up DB could
+- [ ] SQL user settings DB (optional)
 - [ ] SQL play history (optional)
-- [ ] SQL migrate to SQLite (optional)
 
 ### Aki
-- [ ] godot game logic / dialog
-- [ ] godot better map
-- [ ] godot cleanup UI and loader
+- [x] godot game logic / dialog
 - [ ] godot call game init from API's
-- [ ] godot call weather from API's
-- [ ] godot call ticket prices from API's (optional)
+- [x] godot make real time strategy
+- [ ] flask API's for game init
+- [x] flask set up python cloud
+- [ ] godot better map (optional)
 - [ ] godot machine learn AI (optional)
-- [ ] godot make real time (optional)
 - [ ] godot add to google playstore (optional)
 
 ### All
-- [ ] set up server
+- [x] set up server
 - [ ] make presentation
 - [ ] make charts
 - [ ] update documentation
