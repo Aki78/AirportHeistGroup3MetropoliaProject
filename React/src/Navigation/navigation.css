@@ -119,8 +119,8 @@
     }
 
     .account {
-        display: block;
         top: 10px;
+        left: 800px;
     }
 }
 
