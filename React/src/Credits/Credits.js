@@ -34,7 +34,7 @@ const Credits = () => {
                 <h2 id='how'>Contact Information</h2>
                 <article>
                     <div className='back'>
-                        <h4>I'll start with the people who made the logic work:</h4>
+                        <h4>First the backend team:</h4>
                         <div className="frank">
                             <p>Frank</p>
                             <p>His e-mail:</p>
@@ -45,36 +45,35 @@ const Credits = () => {
                         </div>
                         <div className="aki">
                             <p>Aki</p>
-                            <p>His e-mail address is:</p>
+                            <p>You can reach him with:</p>
                             <a href='mailto: eiakim@metropolia.fi'>eiakim@metropolia.fi</a>
                             <br></br> <br></br>
                         </div>
                     </div>
                     <div className="data">
                         <br></br> <br></br>
-                        <p>For the database;</p>
+                        <h4>The database:</h4>
                         <div className="jenni">
-                            <p>Jenni <br></br> <br></br> had to do everything by herself, so I took this opportunity to shout-out to her.</p>
-                            <p>You should too!</p>
-                            <p>Have her e-mal if you have (database related) questions.</p>
+                            <p>Jenni</p>
+                            <p>Her e-mail address is:</p>
                             <a href='mailto: jenni.hallikas@metropolia.fi'>jenni.hallikas@metropolia.fi</a>
                             <br></br> <br></br>
                         </div>
                     </div>
                     <div className="front">
                         <br></br> <br></br>
-                        <h4>And finally we have the cool ppl!</h4>
+                        <h4>The frontend team:</h4>
                         <div className="khai">
                             <p>Khai</p>
-                            <p>would be the only person who texts you back <br></br> <br></br> so I got all his accounts ready!</p>
-                            <p>Find him on Facebook and Insta with: Radius</p>
-                            <p>For Snap try: M_iuss12</p>
-                            <p>His discord is lol#7890</p>
-                            <p>Pinterest and Tumbler are personal, so NO.</p>
+                            <p>His e-mail is:</p>
+                            <a href='mailto: khai.caho@metropolia.fi'>khai.caho@metropolia.fi</a>
+                            <p>His github link is:</p>
+                            <a href='x'>https://github.com/khai2003</a>
                         </div>
                         <div className="kia">
-                            <p>hmmm Kiana?</p>
-                            <p>She said thank you, next.</p>
+                            <p>Kiana</p>
+                            <p>Contact her on Discord with:</p>
+                            <p>kiian#2547</p>
                         </div>
                     </div>
                 </article>

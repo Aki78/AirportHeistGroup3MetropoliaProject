@@ -54,96 +54,6 @@
 
 /* the thing with dimentions */
 
-
-
-@media only screen and (max-width: 1280px) {
-
-    .nav_bar {
-        width: 100%;
-        display: block;
-    }
-
-    .nav_bar li {
-        width: 270px;
-        display: flex;
-        padding: 8px;
-    }
-
-    .nav_bar li img {
-        margin-left: 1px;
-    }
-
-    .account {
-        right: 35px;
-        top: 12px;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-
-    .nav_bar {
-        width: 100%;
-        display: block;
-    }
-
-    .nav_bar li {
-        width: 270px;
-        display: flex;
-        padding: 6px;
-    }
-
-    .nav_bar li img {
-        margin-left: 100px;
-    }
-
-    .account {
-        left: 900px;
-        top: 11px;
-    }
-}
-
-@media only screen and (max-width: 912px) {
-
-    .nav_bar {
-        width: 100%;
-        display: block;
-    }
-
-    .nav_bar li {
-        display: flex;
-        padding: 6px;
-    }
-
-    img {
-        margin-left: 130px;
-    }
-
-    .account {
-        top: 10px;
-        left: 800px;
-    }
-}
-
-@media only screen and (min-width: 820px) {
-
-    .nav_bar {
-        width: 100%;
-        display: block;
-    }
-
-    .nav_bar li {
-        display: block;
-        padding: 2px;
-        margin-left: 1px;
-    }
-
-    .account {
-        display: block;
-        top: 7px;
-        left: 730px;
-    }
-}
-
 @media only screen and (max-width: 540px) {
 
     .nav_bar {
@@ -165,26 +75,8 @@
 }
 
 
-@media only screen and (max-width: 280px) {
 
-    .nav_bar {
-        width: 100%;
-        display: flex;
-    }
-
-    .nav_bar li {
-        left: 800px;
-        padding: 1px;
-        font-size: 10px;
-    }
-
-    .account {
-        display: block;
-        top: 32px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .nav_bar {
         width: 100%;
         display: block;
