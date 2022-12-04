@@ -102,3 +102,20 @@ h4 {
 h2 {
     margin: 10px 0 10px 0;
 }
+
+
+
+/* responsive part */
+
+@media only screen and (min-width: 280px) and (max-width: 1180px) {
+    .sign-in-form {
+        width: 100%;
+        display: block;
+    }
+
+    .sign-up-form {
+        width: 100%;
+        display: block;
+    }
+
+}

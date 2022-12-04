@@ -288,6 +288,7 @@ article .kia {
     article .kia {
         width: 100%;
         display: block;
+        margin-bottom: 200px;
     }
 
     #line {
