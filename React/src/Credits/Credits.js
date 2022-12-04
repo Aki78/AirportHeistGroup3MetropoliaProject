@@ -31,7 +31,7 @@ const Credits = () => {
                     </div>
                 </section>
                 <div id='line'></div>
-                <h2 id='how'>How to talk to us?</h2>
+                <h2 id='how'>Contact Information</h2>
                 <article>
                     <div className='back'>
                         <h4>I'll start with the people who made the logic work:</h4>
@@ -39,14 +39,13 @@ const Credits = () => {
                             <p>Frank</p>
                             <p>His e-mail:</p>
                             <a href="mailto: francesn@metropolia.fi">francesn@metropolia.fi</a>
-                            <p>his github link for the nerds:</p>
+                            <p>His github link:</p>
                             <a href='https://github.com/murphyslemon'>https://github.com/murphyslemon</a>
                             <br></br> <br></br>
                         </div>
                         <div className="aki">
                             <p>Aki</p>
-                            <p>Everything about him is confidential, sorry babe.</p>
-                            <p>But I found his e-mail for you!</p>
+                            <p>His e-mail address is:</p>
                             <a href='mailto: eiakim@metropolia.fi'>eiakim@metropolia.fi</a>
                             <br></br> <br></br>
                         </div>
