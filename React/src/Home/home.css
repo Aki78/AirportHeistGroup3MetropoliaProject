@@ -55,7 +55,7 @@ ul {
 
 .airplane {
     position: inherit;
-    
+
 }
 
 .airplane img {
@@ -69,6 +69,7 @@ ul {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(359deg);
     }
@@ -78,6 +79,7 @@ ul {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(-359deg);
     }
@@ -87,9 +89,9 @@ ul {
     from {
         transform: translateY(0);
     }
+
     to {
         transform: translateY(-20px);
     }
 }
-
 

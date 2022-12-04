@@ -36,45 +36,49 @@ const Credits = () => {
                     <div className='back'>
                         <h4>I'll start with the people who made the logic work:</h4>
                         <div className="frank">
-                            <p>Frank's</p>
+                            <p>Frank</p>
                             <p>His e-mail:</p>
                             <a href="mailto: francesn@metropolia.fi">francesn@metropolia.fi</a>
                             <p>his github link for the nerds:</p>
                             <a href='https://github.com/murphyslemon'>https://github.com/murphyslemon</a>
                             <br></br> <br></br>
                         </div>
-                        <div className="Aki">
-                            <p>Aki's</p>
-                            <p>Everything about him is confidential, sorry babe</p>
-                            <p>But look, I found his <p>e-mail</p> for you!</p>
+                        <div className="aki">
+                            <p>Aki</p>
+                            <p>Everything about him is confidential, sorry babe.</p>
+                            <p>But I found his e-mail for you!</p>
                             <a href='mailto: eiakim@metropolia.fi'>eiakim@metropolia.fi</a>
                             <br></br> <br></br>
                         </div>
                     </div>
                     <div className="data">
+                        <br></br> <br></br>
                         <p>For the database;</p>
-                        <p>Jenni had to do everything by herself, so I take this opportunity to shout-out to her. You should too!</p>
                         <div className="jenni">
-                            <p>Have her e-mal if you had database related questions.</p>
+                            <p>Jenni <br></br> <br></br> had to do everything by herself, so I took this opportunity to shout-out to her.</p>
+                            <p>You should too!</p>
+                            <p>Have her e-mal if you have (database related) questions.</p>
                             <a href='mailto: jenni.hallikas@metropolia.fi'>jenni.hallikas@metropolia.fi</a>
                             <br></br> <br></br>
                         </div>
                     </div>
                     <div className="front">
-                        <h4>And finally we have the gen-z!</h4>
-                        <div className="Khai"></div>
-                        <p>Khai is the only person who will text you back so I got all his account for you!</p>
-                        <p>Find him on facebook with: MKRadius</p>
-                        <p>Insta is the same, but for snap try: M_k_Radiuss12</p>
-                        <p>Pinterest and tumbler are personal, so NO.</p>
-                        <p>His discord is Lmao#7890</p>
-                        <p>The rest is NOYB, bestie!</p>
-                        <div className="kia"></div>
-                        <p>hmmm Kiana?</p>
-                        <p>She said thank you, next.</p>
+                        <br></br> <br></br>
+                        <h4>And finally we have the cool ppl!</h4>
+                        <div className="khai">
+                            <p>Khai</p>
+                            <p>would be the only person who texts you back <br></br> <br></br> so I got all his accounts ready!</p>
+                            <p>Find him on Facebook and Insta with: Radius</p>
+                            <p>For Snap try: M_iuss12</p>
+                            <p>His discord is lol#7890</p>
+                            <p>Pinterest and Tumbler are personal, so NO.</p>
+                        </div>
+                        <div className="kia">
+                            <p>hmmm Kiana?</p>
+                            <p>She said thank you, next.</p>
+                        </div>
                     </div>
                 </article>
-
             </main>
         </>
 

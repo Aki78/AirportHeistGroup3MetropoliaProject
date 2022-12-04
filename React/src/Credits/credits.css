@@ -128,6 +128,7 @@ section {
     font-family: 'Cabin', sans-serif;
     color: rgb(22, 22, 22);
     font-size: 50px;
+
 }
 
 article {
@@ -138,8 +139,10 @@ article {
     flex-direction: row;
     justify-content: center;
     margin-top: 75px;
+    /*
     border-left: 3px solid black;
     border-right: 3px solid black;
+    */
 }
 
 article a {
@@ -168,7 +171,7 @@ article .back {
 article .frank {
     width: 600px;
     box-sizing: border-box;
-    text-align: centert;
+    text-align: center;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
@@ -195,7 +198,7 @@ article .data {
 article .jenni {
     width: 620px;
     box-sizing: border-box;
-    text-align: centert;
+    text-align: center;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
@@ -209,9 +212,9 @@ article .front {
 }
 
 article .khai {
-    width: 600px;
+    width: 620px;
     box-sizing: border-box;
-    text-align: centert;
+    text-align: center;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
@@ -222,7 +225,7 @@ article .khai {
 article .kia {
     width: 600px;
     box-sizing: border-box;
-    text-align: centert;
+    text-align: center;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
@@ -231,7 +234,7 @@ article .kia {
     font-family: 'Inter', sans-serif;
 }
 
-@media screen and (max-width: 900px) {
+@media only screen and (min-width: 280px) and (max-width: 1180px) {
     main {
         width: 100%;
         display: block;
@@ -243,6 +246,46 @@ article .kia {
     }
 
     article {
+        width: 100%;
+        display: block;
+    }
+
+    article .front {
+        width: 100%;
+        display: block;
+    }
+
+    article .back {
+        width: 100%;
+        display: block;
+    }
+
+    article .data {
+        width: 100%;
+        display: block;
+    }
+
+    article .frank {
+        width: 100%;
+        display: block;
+    }
+
+    article .aki {
+        width: 100%;
+        display: block;
+    }
+
+    article .jenni {
+        width: 100%;
+        display: block;
+    }
+
+    article .khai {
+        width: 100%;
+        display: block;
+    }
+
+    article .kia {
         width: 100%;
         display: block;
     }

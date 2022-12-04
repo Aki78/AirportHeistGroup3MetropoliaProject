@@ -10,15 +10,15 @@ const Navigation = ({ checkSignedIn, usernameSignedin }) => {
 
 
     return (
-        
+
         <nav className="nav_bar">
             <ul>
                 <li><img src={Logo} alt="logo"></img></li>
                 <li><Link to="airport-heist.github.io" >Home</Link></li>
                 <li><Link to="Game" >Game</Link></li>
                 <li><Link to="LeaderBoard" >Leaderboard</Link></li>
-                <li><Link to="Tutorial">Tutorial</Link></li> 
-                <li><Link to="Weather">Weather</Link></li> 
+                <li><Link to="Tutorial">Tutorial</Link></li>
+                <li><Link to="Weather">Weather</Link></li>
                 {/*<li><Link to="Download">Download</Link></li>*/}
 
             </ul>
