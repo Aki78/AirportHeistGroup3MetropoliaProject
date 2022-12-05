@@ -18,3 +18,8 @@ scale = Vector2( -6.50902, -6.50902 )
 shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="InterpolTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="InterpolTimer" to="." method="_on_InterpolTimer_timeout"]

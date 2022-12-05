@@ -5,6 +5,7 @@ onready var first_airport = $Airports/AirportNode5
 onready var airports = $Airports
 onready var destination = $Airports/AirportNode10
 onready var state = {"current_airport":first_airport, "neighbors":[], "cash":5000, "interpol_airport":$Airports/AirportNode14}
+onready var paris_airport = $Airports/AirportNode14
 
 var min_dist = 700
 
@@ -20,11 +21,13 @@ func _ready():
 	update_state(state["current_airport"])
 	first_interpol.position = $Airports/AirportNode14.rect_position
 	first_interpol.get_node("InterpolArea").connect("area_entered",self,"_on_InterpolArea_area_entered")
+	first_interpol.init(paris_airport, airports.get_children())
 	current_success=$Player.set_success_rate()
 	
 func init_interpol():
 	var new_interpol = Interpol.instance()
-	new_interpol.init($Airports/AirportNode14, airports.get_children())
+	new_interpol.init(paris_airport, airports.get_children())
+	$Interpols.add_child(new_interpol)
 	new_interpol.get_node("InterpolArea").connect("area_entered",self,"_on_InterpolArea_area_entered")
 
 func _on_Button_pressed():
@@ -121,13 +124,12 @@ func _on_Player_pressed():
 		plus_cash($Player)
 		current_success=$Player.set_success_rate()
 	else:
-		pass
+		init_interpol()
 #		$GameOverTimer.start()
 
 func _on_InterpolArea_area_entered(area):
-	Sound.stop_spy()
-	$InterpolTimer.stop()
-	$GameOverTimer.start()
-
-func _on_InterpolMove_timeout():
-	$Interpols/Interpol.move_interpol(state, airports.get_children())
+	print("AREA", area)
+	if ($Player/PlayerArea == area):
+		Sound.stop_spy()
+		$InterpolTimer.stop()
+		$GameOverTimer.start()
