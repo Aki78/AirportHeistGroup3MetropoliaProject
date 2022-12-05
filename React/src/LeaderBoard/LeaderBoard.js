@@ -24,10 +24,11 @@ const LeaderBoard = () => {
     
     //const my_list = userInfo.map();
 
-    const makeList = () => (userInfo.map(userInfo => {
+    const makeList = () => (userInfo.map((userInfo, index) => {
+        console.log("user info",userInfo.length)
 
         return  (
-            <li className='fade-in-list' style={{ opacity: "0", animationDelay: `${0.05 * userInfo.length}s` }}>
+            <li className='fade-in-list' style={{ opacity: "0", animationDelay: `${0.05 * index}s` }}>
                 <a id="ldb_username">{userInfo[0]}</a>
                 <a id="ldb_score">{userInfo[1]}</a>
             </li>
