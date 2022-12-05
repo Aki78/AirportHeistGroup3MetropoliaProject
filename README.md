@@ -1,32 +1,38 @@
 # Airport Heist
 
-
 <p align="center">
     <img src="./Poster/hud.gif">
 </p>
 
 # Page
+
 https://Aki78.github.io/airport-heist.github.io
 
-
 ## Contents
+
 [Introduction](#introduction)
 
-[Vision](#vision) 
+[Current State](#current-state)
+
+[Vision](#vision)
+
 - [Backstory](#backstory)
 - [Setting](#setting)
 - [Objective](#objective)
 
 [Functional Requirements](#functional-requirements)
+
 - [How the game works](#how-the-game-works)
-- [Block diagram](#block-diagram)
+- [Decision Tree](#decision-tree)
 - [Project diagram](#project-diagram)
 
 [Quality Requirements](#quality-requirements)
+
 - [Preliminary requirements](#preliminary-requirements)
 - [Final requirements](#final-requirements-and-goals)
 
 [Learning Tools And Information](#learning-tools-and-information)
+
 - [Run](#run)
 - [Useful git commands](#useful-git-commands)
 - [Useful bash commands](#useful-bash-commands)
@@ -34,53 +40,79 @@ https://Aki78.github.io/airport-heist.github.io
 - [Project information](#project-info)
 
 ## Introduction
-This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai cao, Kiana Aghajani and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive game, that satisfies the guidelines provided by software1.
+
+This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai cao,
+Kiana Aghajani and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive game, that
+satisfies the guidelines provided by software1. As well as producing an attractive and intuitive website that satisfies
+the requirements in software2. Airport Heist is suitable for all ages.
+
+## Current State
+
+Our game and website are currently fully functional. Our website allows users to create a profile and compete with 
+other users for highest score. Users can also find a tutorial on how to play and view current weather data in the 
+cities they will be flying to with-in the game. When users wish to play Airport Heist they will be redirected
+to our game's website. This is due to GitHub having a megabyte size limit per file.
 
 ## Vision
-#### Backstory
-You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
-They have no idea of your genius though and neglect to watch over you properly.
-You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run! 
-You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice. 
 
-Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport. 
+#### Backstory
+
+You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
+They have no idea of your true genius though and neglect to watch over you properly.
+You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run!
+You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice.
+
+Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport.
 The police, however, have been alerted of your activities and are hot on your tail.
-Time to make your next move before interpol gets you!
+Make it to the extraction point in portugal before you interpol finds you!
 
 #### Setting
+
 Airport Heist is set in present-day Europe.
 
 #### Objective
-Your mission is to get to your extraction team who are waiting at the destination airport so they can smuggle you out of the EU.
 
+Your mission is to get to your extraction team, who are waiting for you in portugal, so they can smuggle you out of
+the EU.
 
 [Back to top](#airport-heist)
 
 ## Functional Requirements
+
 ### How the game works
-Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they are captured, their stamina runs out or money runs out.
+
+Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they
+are captured, their stamina runs out or money runs out.
 
 #### Travel
 
-The main character start in Helsinki, Finland and must end up in the destination airport provided by the game. Travel is possible with the purchase of flight tickets. Players are shown a list of countries which they can travel to.
+The main character starts in Helsinki, Finland and must end up in Portugal. Flights are limited to 800km. 
+Players are shown the airports, with-in their 800km travel range, on a map. They must decide their flight path 
+themselves.
 
 #### Evading Capture
 
-Players can see in which city interpol is and a list of airports interpol may be at next.
-Interpol moves from airport to airport at random, whenever the player makes a decision in the game. 
+Players can see in which city interpol is and must avoid flying to the same airport. Interpol moves from airport 
+to airport at random, in real time. players must make their decisions quickly.
 
 #### Stamina
 
-Stamina is a set amount of energy that the main character has for travelling. Each time the main character travels they use up stamina. Stamina does not regenerate, so you must make it to your final destination before it runs out completely.
+Stamina is a set amount of energy that the main character has for travelling. Each time the main character travels they
+use up stamina. Stamina does not regenerate, so you must make it to your final destination before it runs out
+completely.
 
 #### Stealing
 
-The main character starts the game with a set amount of money. If the player requires more money they need to heist. There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist and can abort if they feel the risks are too great. Players have 5 attempts to steal. If they use all 5 attempts before escaping, they will be caught and the game is over.
+The main character starts the game with a set amount of money. If the player requires more money they need to heist.
+There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist
+and can abort if they feel the risks are too great. Players have 5 attempts to steal. If they use all 5 attempts before
+escaping, they will be caught and the game is over.
 
 [Back to top](#airport-heist)
 
-### Block Diagram
- The decision tree below show all possible decisions the player can make and the benefits of each. 
+### Decision Tree
+
+The decision tree below show all possible decisions the player can make and the benefits of each.
 
 
 <p align="center">
@@ -89,9 +121,10 @@ The main character starts the game with a set amount of money. If the player req
 
 [Back to top](#airport-heist)
 
-
 ### Project Diagram
-This diagram shows how our different python files interact with each other. At the moment we are using Godot, a game engine, but in the future we will create our user interface through javascript.
+
+This diagram shows how our different python files interact with each other. At the moment we are using Godot, a game
+engine, but in the future we will create our user interface through javascript.
 
 <p align="center">
     <img src="./Poster/project_diagram.png">
@@ -100,7 +133,9 @@ This diagram shows how our different python files interact with each other. At t
 [Back to top](#airport-heist)
 
 ## Quality Requirements
+
 #### Preliminary Requirements
+
 All helper functions created were ran through pytest to ensure proper working order.
 The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
@@ -142,6 +177,7 @@ git clone repo_name (when you want to copy a repo and add it your computer)
 ```
 
 ### Useful Bash Commands
+
 ```bash
 pwd                               shows you to curent directory
 cd [name of directory]            change directory
@@ -171,18 +207,22 @@ python3 filename.py		  runs python program that is in the file in your terminal 
 
 grep -r [expression]              finds the file where the expression exists
 ```
+
 [Back to top](#airport-heist)
 
 ## To-Do-List
+
 ### Khai
+
 - [x] js react
-- [x] js user login 
-- [x] js create user account 
+- [x] js user login
+- [x] js create user account
 - [ ] flask user login with password
 - [ ] js unit test (optional)
 - [ ] js embedding Web Assembly (optional)
 
 ### Kiana
+
 - [x] html/css leader board
 - [ ] html/css tutorial page
 - [x] html/css make mobile friendly
@@ -190,14 +230,15 @@ grep -r [expression]              finds the file where the expression exists
 - [ ] html/css/js progress graph (optional)
 
 ### Frank
+
 - [x] flask API's leader board
 - [x] flask create user account
 - [x] flask fetching weather
-- [ ] flask fetching ticket prices (optional)
 - [ ] flask document API's (optional)
-- [ ] flask  API unit testing (optional)
+- [x] flask API unit testing (done with insomnia)
 
 ### Jenni
+
 - [x] SQL leaderboard
 - [x] SQL users
 - [x] SQL update airport DB
@@ -206,6 +247,7 @@ grep -r [expression]              finds the file where the expression exists
 - [ ] SQL play history (optional)
 
 ### Aki
+
 - [x] godot game logic / dialog
 - [ ] godot call game init from API's
 - [x] godot make real time strategy
@@ -216,6 +258,7 @@ grep -r [expression]              finds the file where the expression exists
 - [ ] godot add to google playstore (optional)
 
 ### All
+
 - [x] set up server
 - [ ] make presentation
 - [ ] make charts
@@ -225,6 +268,7 @@ grep -r [expression]              finds the file where the expression exists
 [Back to top](#airport-heist)
 
 ### Project Info
+
 https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
 
 https://github.com/ilkkamtk/html-css-assignment
