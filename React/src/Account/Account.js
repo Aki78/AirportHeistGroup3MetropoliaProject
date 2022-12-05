@@ -33,6 +33,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         }
         else {
             console.log("Incorrect credentials");
+            alert("Wrong username or password. Please try again.");
             return false;
         }
     }

@@ -1,9 +1,12 @@
 from flask import Flask, Response
+from flask_cors import CORS
 import json
 import mysql.connector
 
 app = Flask(__name__)
+cors = CORS(app)
 app.config["JSON_SORT_KEYS"] = False
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 connection = mysql.connector.connect(
   host='127.0.0.1',
@@ -22,7 +25,12 @@ def top_ten():
         cursor.execute(sql)
         result = cursor.fetchall()
         cursor.close()
-        return json.dumps(result)
+
+        #print(result)
+
+        json_response = json.dumps(result)
+        http_response = Response(response=json_response, mimetype="application/json")
+        return http_response
 
     except ValueError:
         response = {
