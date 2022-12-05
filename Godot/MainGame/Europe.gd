@@ -125,7 +125,6 @@ func _on_Player_pressed():
 		current_success=$Player.set_success_rate()
 	else:
 		init_interpol()
-#		$GameOverTimer.start()
 
 func _on_InterpolArea_area_entered(area):
 	print("AREA", area)
