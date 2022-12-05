@@ -28,7 +28,7 @@ def delete_user():
 
     except ValueError:
         response = {
-            "message": "Invalid number as addend",
+            "message": "Invalid request",
             "status": 400
         }
         json_response = json.dumps(response)

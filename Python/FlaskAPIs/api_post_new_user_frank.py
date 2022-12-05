@@ -22,14 +22,13 @@ def post_new_user():
         sql = f"INSERT INTO users (username, passwordhash, score) VALUES (\"{username}\",\"{passwordhash}\", 0);"
         cursor = connection.cursor()
         cursor.execute(sql)
-        result = cursor.fetchall()
         connection.commit()
         cursor.close()
         return "database updated"
 
     except ValueError:
         response = {
-            "message": "Invalid number as addend",
+            "message": "Invalid request",
             "status": 400
         }
         json_response = json.dumps(response)

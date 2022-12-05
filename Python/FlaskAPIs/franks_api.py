@@ -38,16 +38,15 @@ def top_ten():
     if request.method == 'POST':
         try:
             """for adding a new user to our database"""
-            args = request.args
-            username = str(args.get("username"))
-            passwordhash = str(args.get("passwordhash"))
+            new_user = request.get_json()
+            username = new_user['username']
+            passwordhash = new_user['passwordhash']
             sql = f"INSERT INTO users (username, passwordhash, score) VALUES (\"{username}\",\"{passwordhash}\", 0);"
             cursor = connection.cursor()
             cursor.execute(sql)
-            result = cursor.fetchall()
-            cursor.close()
             connection.commit()
-            return json.dumps(result)
+            cursor.close()
+            return "database updated"
         except ValueError:
             response = {
                 "message": "could not connect to input new player",
@@ -60,9 +59,9 @@ def top_ten():
     if request.method == 'PATCH':
         try:
             """for checking if new score is higher than previous and if higher adding to our database"""
-            args = request.args
-            username = str(args.get("username"))
-            new_score = str(args.get("new_score"))
+            user = request.get_json()
+            username = user['username']
+            new_score = user['score']
             sql1 = f"SELECT score FROM users WHERE username = \"{username}\";"
             sql2 = f"UPDATE users SET score = \"{new_score}\" WHERE username = \"{username}\";"
             cursor = connection.cursor()
@@ -71,10 +70,10 @@ def top_ten():
             if int(new_score) > int(result_score[0][0]):
                 cursor.execute(sql2)
                 connection.commit()
-                # print(f"you beat your previous high score: {result_score[0][0]}")
+                print(f"you beat your previous high score: {result_score[0][0]}")
                 cursor.close()
             else:
-                # print(f"you did not beat your previous high score: {result_score[0][0]}")
+                print(f"you did not beat your previous high score: {result_score[0][0]}")
                 cursor.close()
             return f"your score: {new_score}"
         except ValueError:
@@ -89,14 +88,14 @@ def top_ten():
     if request.method == 'DELETE':
         try:
             """for removing a user from our database"""
-            args = request.args
-            username = str(args.get("username"))
+            user = request.get_json()
+            username = user['username']
             sql = f"DELETE FROM users WHERE username = \"{username}\";"
             cursor = connection.cursor()
             cursor.execute(sql)
-            result = cursor.fetchall()
+            connection.commit()
             cursor.close()
-            return json.dumps(result)
+            return "removed user from database"
         except ValueError:
             response = {
                 "message": "could not connect to delete user information",
