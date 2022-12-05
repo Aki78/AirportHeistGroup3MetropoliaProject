@@ -120,6 +120,16 @@ ul {
     animation: fadeIn 0.5s forwards;
 }
 
+#ldb_username {
+    margin-left: 5%;
+}
+
+#ldb_score {
+    position: absolute;
+    right: 30px;
+    color: rgb(255, 255, 255);
+}
+
 @keyframes fadeIn {
     0% {
         position: static;

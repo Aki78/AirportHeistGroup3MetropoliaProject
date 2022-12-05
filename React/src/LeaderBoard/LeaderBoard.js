@@ -1,12 +1,37 @@
 import './leadbrd.css'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const LeaderBoard = () => {
+    const [userInfo, setUserInfo] = useState([]);
+    const request = "http://127.0.0.1:5000/top_ten";
 
-    const my_list = Array.from(Array(10).keys());
+    useEffect(() => {
+        async function get_topten_info() {
+            fetch(request)
+                .then(response => response.json())
+                .then(response => {
+                    console.log("Got from DB ", response);
+                    setUserInfo(response);
+                })
+                .catch(err => console.error(err));
+            return "Data retrieved";
+        }
+        get_topten_info();
+    }, [request]);
+    
+    //console.log(userInfo[0]);
 
-    const makeList = () => (my_list.map(e => {
-        return <li className='fade-in-list' style={{ opacity: "0", animationDelay: `${0.05 * e}s` }}></li>
+    
+    //const my_list = userInfo.map();
+
+    const makeList = () => (userInfo.map(userInfo => {
+
+        return  (
+            <li className='fade-in-list' style={{ opacity: "0", animationDelay: `${0.05 * userInfo.length}s` }}>
+                <a id="ldb_username">{userInfo[0]}</a>
+                <a id="ldb_score">{userInfo[1]}</a>
+            </li>
+        )
     }))
 
     return (
