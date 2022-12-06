@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Images/pngegg.png" type="Texture" id=1]
+[ext_resource path="res://MainGame/Interpol.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -8,9 +9,17 @@
 position = Vector2( 604.69, 427.107 )
 scale = Vector2( 0.574588, 0.574588 )
 texture = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="InterpolArea" type="Area2D" parent="."]
 
 [node name="InterpolShape" type="CollisionShape2D" parent="InterpolArea"]
 scale = Vector2( -6.50902, -6.50902 )
 shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="InterpolTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="InterpolTimer" to="." method="_on_InterpolTimer_timeout"]
