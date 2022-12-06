@@ -8,6 +8,8 @@
 
 https://Aki78.github.io/airport-heist.github.io
 
+https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit#slide=id.g166b1584af2_14_1
+
 ## Contents
 
 [Introduction](#introduction)
