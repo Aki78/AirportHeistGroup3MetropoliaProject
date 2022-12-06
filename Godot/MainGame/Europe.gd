@@ -28,7 +28,7 @@ func _ready():
 	first_interpol.init(paris_airport, airports.get_children())
 	current_success = $Player.set_success_rate()
 	camera.current = true
-	Sound.play_smuggler_voice()
+#	Sound.play_smuggler_voice()
 	
 func init_interpol():
 	var new_interpol = Interpol.instance()
