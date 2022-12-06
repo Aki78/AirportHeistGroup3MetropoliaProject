@@ -28,6 +28,7 @@ func _ready():
 	first_interpol.init(paris_airport, airports.get_children())
 	current_success = $Player.set_success_rate()
 	camera.current = true
+	Sound.play_smuggler_voice()
 	
 func init_interpol():
 	var new_interpol = Interpol.instance()
@@ -138,7 +139,6 @@ func _on_InterpolArea_area_entered(area):
 		$InterpolTimer.stop()
 		$GameOverTimer.start()
 
-
 func _input(e):
 	if Input.is_action_pressed("zoomin") and camera.zoom.x > 0.5:
 		camera.zoom *= 0.9
@@ -148,7 +148,6 @@ func _input(e):
 		mouse_down = true
 	else:
 		mouse_down = false
-
 
 func _process(delta):
 	var mouse_position_now = get_global_mouse_position()
