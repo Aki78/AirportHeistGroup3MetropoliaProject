@@ -62,7 +62,7 @@ They have no idea of your true genius though and neglect to watch over you prope
 You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run!
 You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice.
 
-Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport.
+Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport and commandeer a small plane.
 The police, however, have been alerted of your activities and are hot on your tail.
 Make it to the extraction point in portugal before you interpol finds you!
 
@@ -86,9 +86,9 @@ are captured, their stamina runs out or money runs out.
 
 #### Travel
 
-The main character starts in Helsinki, Finland and must end up in Portugal. Flights are limited to 800km. 
-Players are shown the airports, with-in their 800km travel range, on a map. They must decide their flight path 
-themselves.
+The main character starts in Helsinki, Finland and must end up in Portugal. Due to the size of your plane flights are 
+limited to 800km. Players are shown the airports, with-in their 800km travel range, on a map. They must decide their 
+flight path themselves.
 
 #### Evading Capture
 
