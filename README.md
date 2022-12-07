@@ -118,7 +118,7 @@ The decision tree below show all possible decisions the player can make and the 
 
 
 <p align="center">
-    <img src="./Poster/block_diagram1.png">
+    <img src="./Poster/tree_diagrams/block_diagram_1.png">
 </p>
 
 [Back to top](#airport-heist)
@@ -129,7 +129,7 @@ This diagram shows how our different python files interact with each other. At t
 engine, but in the future we will create our user interface through javascript.
 
 <p align="center">
-    <img src="./Poster/project_diagram_2.png">
+    <img src="./Poster/tree_diagrams/project_diagram_2.png">
 </p>
 
 [Back to top](#airport-heist)
