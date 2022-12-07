@@ -129,7 +129,7 @@ This diagram shows how our different python files interact with each other. At t
 engine, but in the future we will create our user interface through javascript.
 
 <p align="center">
-    <img src="./Poster/project_diagram.png">
+    <img src="./Poster/project_diagram_2.png">
 </p>
 
 [Back to top](#airport-heist)
