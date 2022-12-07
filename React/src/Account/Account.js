@@ -1,7 +1,8 @@
 import './account.css'
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha"; 
 
 
 const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
@@ -71,7 +72,17 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
 
 
     ///////////////Sign up///////////////
+    const captchaRef = useRef(null);
     const [passwordConfirm, setPasswordConfirm] = useState("");
+
+    async function checkToken(token) {
+        await fetch("https://www.google.com/recaptcha/api/siteverify?secret=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI&response=" + token)
+            .then(response => response.json())
+            .then(response => {
+                console.log("Received from google", response)                
+            })
+            .catch(err => console.error(err)); 
+    }
 
     function checkMatchSignUpInfo(accPassword, passwordConfirm) {
         if (accPassword === passwordConfirm) {
@@ -123,7 +134,14 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         console.log(accUsername);
         console.log(accPassword);
         console.log(passwordConfirm);
-        
+
+
+        //Recaptcha token
+        const token = captchaRef.current.getValue();
+        captchaRef.current.reset();
+        console.log(token);
+        const humanConfirm = checkToken(token);
+
         const matchInfo = checkMatchSignUpInfo(accPassword, passwordConfirm);
 
         if (matchInfo) {
@@ -184,33 +202,38 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             <h4>Don't have an account?</h4>
             <h2>Sign up</h2>
 
-            <div className="sign-up-form">
-                <div className="username">
-                    <input 
-                        placeholder='Username'
-                        onChange={e => setAccUsername(e.target.value)}
-                    />
-                </div>
-                
-                <div className="password">
-                    <input
-                        type="password"
-                        placeholder='Password'
-                        onChange={e => setAccPassword(e.target.value)}
-                    />
-                </div>
+            <form>
+                <div className="sign-up-form">
+                    <div className="username">
+                        <input 
+                            placeholder='Username'
+                            onChange={e => setAccUsername(e.target.value)}
+                        />
+                    </div>
+                    
+                    <div className="password">
+                        <input
+                            type="password"
+                            placeholder='Password'
+                            onChange={e => setAccPassword(e.target.value)}
+                        />
+                    </div>
 
-                <div className="password-confirm">
-                    <input
-                        type="password"
-                        placeholder='Confirm password'
-                        onChange={e => setPasswordConfirm(e.target.value)}
+                    <div className="password-confirm">
+                        <input
+                            type="password"
+                            placeholder='Confirm password'
+                            onChange={e => setPasswordConfirm(e.target.value)}
+                        />
+                    </div>
+                    <ReCAPTCHA 
+                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
+                        //sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
+                        ref={captchaRef}
                     />
+                    <button onClick={handleSignUpEvent}>Sign up</button>
                 </div>
-
-                <button onClick={handleSignUpEvent}>Sign up</button>
-            </div>
-
+            </form>
         </>
 
     )

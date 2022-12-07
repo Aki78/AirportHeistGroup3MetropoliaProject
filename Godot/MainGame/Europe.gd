@@ -6,6 +6,7 @@ onready var airports = $Airports
 onready var destination = $Airports/AirportNode10
 onready var state = {"current_airport":first_airport, "neighbors":[], "cash":5000, "interpol_airport":$Airports/AirportNode14}
 onready var paris_airport = $Airports/AirportNode14
+onready var camera = $Camera2D
 
 var min_dist = 700
 
@@ -13,6 +14,9 @@ onready var is_close = false
 onready var current_success = true
 onready var first_interpol = $Interpols/Interpol
 onready var Interpol = preload("res://MainGame/Interpol.tscn")
+onready var mouse_down = false
+
+var mouse_position_before
 
 func _ready():
 	Sound.play_panic()
@@ -22,7 +26,9 @@ func _ready():
 	first_interpol.position = $Airports/AirportNode14.rect_position
 	first_interpol.get_node("InterpolArea").connect("area_entered",self,"_on_InterpolArea_area_entered")
 	first_interpol.init(paris_airport, airports.get_children())
-	current_success=$Player.set_success_rate()
+	current_success = $Player.set_success_rate()
+	camera.current = true
+	Sound.play_smuggler_voice()
 	
 func init_interpol():
 	var new_interpol = Interpol.instance()
@@ -132,3 +138,19 @@ func _on_InterpolArea_area_entered(area):
 		Sound.stop_spy()
 		$InterpolTimer.stop()
 		$GameOverTimer.start()
+
+func _input(e):
+	if Input.is_action_pressed("zoomin") and camera.zoom.x > 0.5:
+		camera.zoom *= 0.9
+	if Input.is_action_pressed("zoomout") and camera.zoom.x < 2:
+		camera.zoom *= 1.1
+	if Input.is_action_pressed("mouse_left"):
+		mouse_down = true
+	else:
+		mouse_down = false
+
+func _process(delta):
+	var mouse_position_now = get_global_mouse_position()
+	if mouse_down:
+		camera.offset += 50*delta*(-mouse_position_now + mouse_position_before)
+	mouse_position_before = mouse_position_now
