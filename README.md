@@ -50,8 +50,8 @@ the requirements in software2. Airport Heist is suitable for all ages.
 
 ## Current State
 
-Our game and website are currently fully functional. Our website allows users to create a profile and compete with 
-other users for highest score. Users can also find a tutorial on how to play and view current weather data in the 
+Our game and website are currently fully functional. Our website allows users to create a profile and compete with
+other users for highest score. Users can also find a tutorial on how to play and view current weather data in the
 cities they will be flying to with-in the game. When users wish to play Airport Heist they will be redirected
 to our game's website. This is due to GitHub having a megabyte size limit per file.
 
@@ -64,7 +64,7 @@ They have no idea of your true genius though and neglect to watch over you prope
 You make a daring, yet surprisingly easy escape from Jokela Prison and are now on the run!
 You need to get out of Finland A.S.A.P though as the finnish authorities will stop at nothing to bring you to justice.
 
-Due to your expert skills you are able to steal 10,000€ from the Alepa at Helsinki Airport and commandeer a small plane.
+Due to your expert skills you are able to steal 5,000€ from the Alepa at Helsinki Airport and commandeer a small plane.
 The police, however, have been alerted of your activities and are hot on your tail.
 Make it to the extraction point in portugal before you interpol finds you!
 
@@ -88,20 +88,14 @@ are captured, their stamina runs out or money runs out.
 
 #### Travel
 
-The main character starts in Helsinki, Finland and must end up in Portugal. Due to the size of your plane flights are 
-limited to 800km. Players are shown the airports, with-in their 800km travel range, on a map. They must decide their 
-flight path themselves.
+The main character starts in Helsinki, Finland and must end up in Portugal. Due to the size of your plane's fuel tank
+flights are limited to 800km. Players are shown the airports, with-in their 800km travel range, on a map. They must
+decide their flight path themselves.
 
 #### Evading Capture
 
-Players can see in which city interpol is and must avoid flying to the same airport. Interpol moves from airport 
-to airport at random, in real time. players must make their decisions quickly.
-
-#### Stamina
-
-Stamina is a set amount of energy that the main character has for travelling. Each time the main character travels they
-use up stamina. Stamina does not regenerate, so you must make it to your final destination before it runs out
-completely.
+Players can see in which city interpol is and must avoid flying to the same airport. Interpol moves from airport
+to airport at random and in real time. Players must make their decisions quickly.
 
 #### Stealing
 
@@ -125,8 +119,8 @@ The decision tree below show all possible decisions the player can make and the 
 
 ### Project Diagram
 
-This diagram shows how our different python files interact with each other. At the moment we are using Godot, a game
-engine, but in the future we will create our user interface through javascript.
+This diagram shows how our different files interact with each other. At the moment we are using Godot, a game
+engine to run our game, python to run our backend, react for our website and SQL to store the game's data.
 
 <p align="center">
     <img src="./Poster/tree_diagrams/project_diagram_2.png">
