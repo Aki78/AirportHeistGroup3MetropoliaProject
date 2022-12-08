@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/orbit.tres" type="DynamicFont" id=1]
+[ext_resource path="res://MainGame/Airports.gd" type="Script" id=2]
+[ext_resource path="res://MainGame/Airplain.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Images/pngegg.png" type="Texture" id=4]
+[ext_resource path="res://Images/europe.png" type="Texture" id=5]
+[ext_resource path="res://ML/MainGameML/EuropeML.gd" type="Script" id=6]
+[ext_resource path="res://MainGame/Airport.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MainGame/IngameGobackButton.gd" type="Script" id=8]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Europe" type="Sprite"]
+position = Vector2( 960, 539 )
+scale = Vector2( 0.658189, 0.472949 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = -1446.0
+margin_top = -1121.0
+margin_right = -1203.0
+margin_bottom = -939.0
+custom_fonts/font = ExtResource( 1 )
+text = "Back"
+script = ExtResource( 8 )
+
+[node name="GameScreen" type="Node2D" parent="."]
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Airports" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="AirportNode" parent="Airports" instance=ExtResource( 7 )]
+margin_left = -3.03857
+margin_top = -116.292
+margin_right = 954.961
+margin_bottom = 841.708
+
+[node name="AirportNode2" parent="Airports" instance=ExtResource( 7 )]
+margin_left = 530.243
+margin_top = 353.104
+margin_right = 1488.24
+margin_bottom = 1311.1
+
+[node name="AirportNode5" parent="Airports" instance=ExtResource( 7 )]
+margin_left = 504.414
+margin_top = -594.145
+margin_right = 1462.41
+margin_bottom = 363.855
+airport_name = "Finland"
+
+[node name="AirportNode7" parent="Airports" instance=ExtResource( 7 )]
+margin_left = -3.03906
+margin_top = 566.657
+margin_right = 954.961
+margin_bottom = 1524.66
+
+[node name="AirportNode8" parent="Airports" instance=ExtResource( 7 )]
+margin_left = 518.088
+margin_top = -224.125
+margin_right = 1476.09
+margin_bottom = 733.875
+
+[node name="AirportNode9" parent="Airports" instance=ExtResource( 7 )]
+margin_left = 132.181
+margin_top = 200.868
+margin_right = 1090.18
+margin_bottom = 1158.87
+
+[node name="AirportNode10" parent="Airports" instance=ExtResource( 7 )]
+margin_left = -966.288
+margin_top = 524.37
+margin_right = -8.28809
+margin_bottom = 1482.37
+
+[node name="AirportNode13" parent="Airports" instance=ExtResource( 7 )]
+margin_left = -679.137
+margin_top = 482.082
+margin_right = 278.863
+margin_bottom = 1440.08
+
+[node name="AirportNode14" parent="Airports" instance=ExtResource( 7 )]
+margin_left = -350.963
+margin_top = 192.41
+margin_right = 607.037
+margin_bottom = 1150.41
+
+[node name="Interpol" type="Sprite" parent="."]
+position = Vector2( 604.69, 427.107 )
+scale = Vector2( 0.574588, 0.574588 )
+texture = ExtResource( 4 )
+
+[node name="InterpolArea" type="Area2D" parent="Interpol"]
+
+[node name="InterpolShape" type="CollisionShape2D" parent="Interpol/InterpolArea"]
+scale = Vector2( -6.50902, -6.50902 )
+shape = SubResource( 1 )
+
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="WonTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="InterpolTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="tree_exiting" from="." to="." method="_on_Europe_tree_exiting"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="GameScreen" method="_on_Button_pressed"]
+[connection signal="area_entered" from="Interpol/InterpolArea" to="." method="_on_InterpolArea_area_entered"]
+[connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
+[connection signal="timeout" from="WonTimer" to="." method="_on_WonTimer_timeout"]
+[connection signal="pressed" from="Player" to="." method="_on_Player_pressed"]
+[connection signal="timeout" from="InterpolTimer" to="." method="_on_InterpolMove_timeout"]

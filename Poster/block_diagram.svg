@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="block_diagram.svg"
+   inkscape:export-filename="block_diagram1.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0192238"
+     inkscape:cx="413.05943"
+     inkscape:cy="343.39857"
+     inkscape:window-width="1920"
+     inkscape:window-height="974"
+     inkscape:window-x="2869"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="165.81246"
+       y="110.86868"
+       width="29.434164"
+       height="49.05694"
+       id="rect11178" />
+    <rect
+       x="48.075801"
+       y="106.94413"
+       width="147.17082"
+       height="73.585409"
+       id="rect10653" />
+    <rect
+       x="22.566192"
+       y="58.868327"
+       width="151.09537"
+       height="154.03879"
+       id="rect10599" />
+    <linearGradient
+       id="linearGradient7000"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#f10505;stop-opacity:1;"
+         offset="0"
+         id="stop6998" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="marker4852"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path4850"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2463">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2459" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop2461" />
+    </linearGradient>
+    <rect
+       x="901.66655"
+       y="132.45374"
+       width="8.8302491"
+       height="100.07616"
+       id="rect1439" />
+    <rect
+       x="904.60996"
+       y="74.566548"
+       width="1.9622776"
+       height="38.264413"
+       id="rect1433" />
+    <rect
+       x="899.70427"
+       y="70.641993"
+       width="5.8868327"
+       height="68.679715"
+       id="rect1427" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2463"
+       id="linearGradient3906"
+       gradientUnits="userSpaceOnUse"
+       x1="80.733412"
+       y1="58.797807"
+       x2="95.789804"
+       y2="58.797807"
+       gradientTransform="translate(-34.785458,59.965977)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2463"
+       id="linearGradient3960"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(90.078761,59.965977)"
+       x1="80.733412"
+       y1="58.797807"
+       x2="95.789804"
+       y2="58.797807" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2463"
+       id="linearGradient3998"
+       gradientUnits="userSpaceOnUse"
+       x1="80.733412"
+       y1="58.797807"
+       x2="95.789804"
+       y2="58.797807"
+       gradientTransform="matrix(-1,0,0,1,275.15086,0.25959278)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2463"
+       id="linearGradient4782"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1,0,0,1,299.5526,59.965976)"
+       x1="80.733412"
+       y1="58.797807"
+       x2="95.789804"
+       y2="58.797807" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2463"
+       id="linearGradient4798"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1,0,0,1,169.75612,60.485162)"
+       x1="80.733412"
+       y1="58.797807"
+       x2="95.789804"
+       y2="58.797807" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;stroke-width:0.349577"
+       id="rect111"
+       width="110.87021"
+       height="26.065514"
+       x="83.703339"
+       y="16.520397" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="115.67799"
+       y="34.224373"
+       id="text167"><tspan
+         sodipodi:role="line"
+         id="tspan165"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="115.67799"
+         y="34.224373">Menu</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect327"
+       width="63.511742"
+       height="26.065514"
+       x="44.421509"
+       y="76.728058" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="48.475304"
+       y="93.912842"
+       id="text331"><tspan
+         sodipodi:role="line"
+         id="tspan329"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="48.475304"
+         y="93.912842">Escape</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect333"
+       width="63.511742"
+       height="26.065514"
+       x="161.89987"
+       y="76.728058" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="173.29607"
+       y="95.014214"
+       id="text337"><tspan
+         sodipodi:role="line"
+         id="tspan335"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="173.29607"
+         y="95.014214">Heist</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect339"
+       width="63.511742"
+       height="26.065514"
+       x="1.9431272"
+       y="136.98792" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="8.933876"
+       y="155.64117"
+       id="text343"><tspan
+         sodipodi:role="line"
+         id="tspan341"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="8.933876"
+         y="155.64117">Travel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="48.475304"
+       y="93.912842"
+       id="text1211"><tspan
+         sodipodi:role="line"
+         id="tspan1209"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="48.475304"
+         y="93.912842">Escape</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect1213"
+       width="63.511742"
+       height="26.065514"
+       x="135.57477"
+       y="136.62079" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect1219"
+       width="63.511742"
+       height="26.065514"
+       x="68.758949"
+       y="136.9879" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="82.724976"
+       y="154.17268"
+       id="text1223"><tspan
+         sodipodi:role="line"
+         id="tspan1221"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="82.724976"
+         y="154.17268">Stay</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect1225"
+       width="63.511742"
+       height="26.065514"
+       x="203.12482"
+       y="136.62079" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="207.1786"
+       y="153.80557"
+       id="text1229"><tspan
+         sodipodi:role="line"
+         id="tspan1227"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="207.1786"
+         y="153.80557">Escape</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect1231"
+       width="63.511742"
+       height="26.065514"
+       x="203.12482"
+       y="136.62079" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="215.98949"
+       y="154.90694"
+       id="text1235"><tspan
+         sodipodi:role="line"
+         id="tspan1233"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="215.98949"
+         y="154.90694">Wait</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.9754px;fill:#ffffff;stroke-width:1.33128"
+       x="146.60384"
+       y="154.90694"
+       id="text1239"><tspan
+         sodipodi:role="line"
+         id="tspan1237"
+         style="fill:#ffffff;stroke-width:1.33128"
+         x="146.60384"
+         y="154.90694">Steal</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.175444"
+       id="rect1293"
+       width="58.739182"
+       height="46.65086"
+       x="228.27794"
+       y="10.798543" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;white-space:pre;inline-size:54.1672;display:inline;fill:#ffffff;stroke-width:0.264583"
+       x="238.2608"
+       y="18.355995"
+       id="text1297"
+       transform="matrix(1.1669802,0,0,1.9627498,-47.053581,-15.349832)"><tspan
+         x="238.2608"
+         y="18.355995"
+         id="tspan570">Player State:
+</tspan><tspan
+         x="238.2608"
+         y="22.324745"
+         id="tspan572">    -distance from interpol
+</tspan><tspan
+         x="238.2608"
+         y="26.293495"
+         id="tspan574">    -stamina level
+</tspan><tspan
+         x="238.2608"
+         y="30.262245"
+         id="tspan576">    -money 
+</tspan><tspan
+         x="238.2608"
+         y="34.230995"
+         id="tspan578">    -odds of a successful heist
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text1425"
+       style="white-space:pre;shape-inside:url(#rect1427);display:inline;fill:#ffffff" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text1431"
+       style="white-space:pre;shape-inside:url(#rect1433);display:inline;fill:#ffffff" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text1437"
+       style="white-space:pre;shape-inside:url(#rect1439);display:inline;fill:#ffffff" />
+    <path
+       style="fill:none;stroke-width:1.4;fill-opacity:1;stroke-dasharray:none;stroke:#0000ce;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="M 95.789804,45.42877 C 80.733412,72.166844 80.733412,72.166844 80.733412,72.166844"
+       id="path2434" />
+    <path
+       style="fill:url(#linearGradient3906);fill-opacity:1;stroke:#0000fe;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="M 61.004346,105.39474 C 45.947954,132.13282 45.947954,132.13282 45.947954,132.13282"
+       id="path3902" />
+    <path
+       style="fill:url(#linearGradient3960);fill-opacity:1;stroke:#0000ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="m 185.86856,105.39475 c -15.05639,26.73808 -15.05639,26.73808 -15.05639,26.73808"
+       id="path3956" />
+    <path
+       style="fill:url(#linearGradient3998);fill-opacity:1;stroke:#0100cc;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="m 179.36106,45.688363 c 15.05639,26.738074 15.05639,26.738074 15.05639,26.738074"
+       id="path3994" />
+    <path
+       style="fill:url(#linearGradient4782);fill-opacity:1;stroke:#0303ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="m 203.7628,105.39474 c 15.05639,26.73808 15.05639,26.73808 15.05639,26.73808"
+       id="path4778" />
+    <path
+       style="fill:url(#linearGradient4798);fill-opacity:1;stroke:#0101ff;stroke-width:1.4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="M 73.966315,105.91392 C 89.022707,132.652 89.022707,132.652 89.022707,132.652"
+       id="path4794" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.87;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
+       d="M 120.44128,46.958737 C 104.81586,133.75045 104.81586,133.75045 104.81586,133.75045"
+       id="path9436" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.81015;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
+       d="M 68.146013,34.789766 C 0.55172562,48.473415 30.010125,90.485647 37.701589,133.64095"
+       id="path10417"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text10597"
+       style="white-space:pre;shape-inside:url(#rect10599);display:inline;fill:#000000;fill-opacity:1;stroke:#d80000;stroke-width:5.76;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text10651"
+       style="white-space:pre;shape-inside:url(#rect10653);display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.76;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#000000;stroke-width:0.0813504"
+       id="rect11158"
+       width="49.653427"
+       height="11.865401"
+       x="3.2108328"
+       y="28.191273" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;white-space:pre;inline-size:54.1672;display:inline;fill:#ffffff;stroke-width:0.264583"
+       x="238.2608"
+       y="18.355995"
+       id="text11174"
+       transform="matrix(1.1902895,0,0,2.2537669,-278.98955,-5.4028325)"><tspan
+         x="238.2608"
+         y="18.355995"
+         id="tspan580">Reward = avoid interpol
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text11176"
+       style="white-space:pre;shape-inside:url(#rect11178);display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.76;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#000000;stroke-width:0.08028"
+       id="rect11194"
+       width="48.355461"
+       height="11.865401"
+       x="107.30762"
+       y="122.94273" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;white-space:pre;inline-size:54.1672;display:inline;fill:#ffffff;stroke-width:0.264583"
+       x="238.2608"
+       y="18.355995"
+       id="text11198"
+       transform="matrix(1.1637497,0,0,2.2537669,-168.04192,89.348599)"><tspan
+         x="238.2608"
+         y="18.355995"
+         id="tspan582">Reward = keep stamina
+</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.0778736"
+       id="rect11200"
+       width="45.499939"
+       height="11.865401"
+       x="236.3253"
+       y="100.09851" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;white-space:pre;inline-size:54.1672;display:inline;fill:#ffffff;stroke-width:0.264583"
+       x="238.2608"
+       y="18.355995"
+       id="text11204"
+       transform="matrix(1.1796992,0,0,2.2537669,-42.829333,66.50442)"><tspan
+         x="238.2608"
+         y="18.355995"
+         id="tspan584">Reward = better odds
+</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:0.0811374"
+       id="rect11206"
+       width="49.393833"
+       height="11.865401"
+       x="112.49949"
+       y="109.44389" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;white-space:pre;inline-size:54.1672;display:inline;fill:#ffffff;stroke-width:0.264583"
+       x="238.2608"
+       y="18.355995"
+       id="text11210"
+       transform="matrix(1.2235826,0,0,2.2537669,-177.12451,75.849769)"><tspan
+         x="238.2608"
+         y="18.355995"
+         id="tspan586">Reward = more money
+</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.81015;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
+       d="m 197.85313,34.27058 c 67.59429,13.683649 38.13589,55.695881 30.44442,98.85119"
+       id="path3330"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#d80000;stroke-width:1.87;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4852)"
+       d="m 150.02964,46.179958 c 15.62542,86.791712 15.62542,86.791712 15.62542,86.791712"
+       id="path380" />
+  </g>
+</svg>

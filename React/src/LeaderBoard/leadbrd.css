@@ -9,72 +9,13 @@ ul {
     text-align: center;
 }
 
-.leadbrd_h1 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 70px;
-    color: transparent;
-    background: conic-gradient(#1B273F 12%, #282A3F 12%,
-            #342E3E 33%, #41313E 33%,
-            #4E343D 55%, #5A383D 55%,
-            #673B3C 71%, #743E3C 71%,
-            #82403B 88%, #8F443B 88%);
-    background-size: 70%;
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    animation: expand-reverse 500ms ease forwards;
-}
-
-.leadbrd_h1:hover {
-    animation: expand 0.5s ease forwards;
-}
-
-@keyframes expand {
-    0% {
-        background-size: 50%;
-        background-position: 0 0;
-    }
-
-    20% {
-        background-size: 55%;
-        background-position: 0 1em;
-    }
-
-    100% {
-        background-size: 325%;
-        background-position: -10em -4em;
-    }
-}
-
-@keyframes expand-reverse {
-    0% {
-        background-size: 325%;
-        background-position: -10em -4em;
-    }
-
-    20% {
-        background-size: 55%;
-        background-position: 0 1em;
-    }
-
-    100% {
-        background-size: 50%;
-        background-position: 0 0;
-    }
-}
-
-.section {
-    border-top: 5px solid #252F55;
-}
-
 .leadbrd {
-    margin-top: 50px;
+    margin-top: 200px;
     margin-bottom: 150px;
-    background: linear-gradient(to bottom, #3a404d, #181c26);
-
-    width: 800px;
+    background: linear-gradient(to bottom, #e1dddd, #e1d9da, #b0b3aa);
+    width: 950px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 40px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
@@ -86,10 +27,10 @@ ul {
 
 .leadbrd .top {
     padding: 20px 18px;
-    color: snow;
+    color: rgb(22, 22, 22);
     font-size: 22px;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inconsolata', monospace;
 }
 
 .leadbrd .top h1 {
@@ -98,7 +39,8 @@ ul {
 }
 
 .leadbrd .ppl {
-    color: rgb(197, 193, 193);
+    color: rgb(22, 22, 22);
+    /*rgb(197, 193, 193);*/
     font-size: 20px;
 }
 
@@ -109,56 +51,131 @@ ul {
 .leadbrd li {
     padding: 16px;
     display: flex;
+    border-radius: 15px;
 }
 
 .leadbrd li mark {
     flex-grow: 2;
-    color: snow;
+    color: rgb(22, 22, 22);
     background-color: transparent;
 }
 
 .leadbrd li:before {
     counter-increment: number;
-    content: counter(number) ".";
+    content: "#" "" counter(number);
     margin-right: 4px;
 }
 
 .leadbrd li:nth-child(1) {
-    background: #fa6855;
+    background: linear-gradient(to right, #FF843E, #160F0F);
 }
 
 .leadbrd li:nth-child(2) {
-    background: #F36353;
+    background: linear-gradient(to right, #FD813B, #160F0F);
 }
 
 .leadbrd li:nth-child(3) {
-    background: #EC5F51;
+    background: linear-gradient(to right, #FB7F39, #160F0F);
 }
 
 .leadbrd li:nth-child(4) {
-    background: #E55A4F;
+    background: linear-gradient(to right, #F97C36, #160F0F);
 }
 
 .leadbrd li:nth-child(5) {
-    background: #DE564D;
+    background: linear-gradient(to right, #F77934, #160F0F);
 }
 
 .leadbrd li:nth-child(6) {
-    background: #D6514B;
+    background: linear-gradient(to right, #F47731, #160F0F);
 }
 
 .leadbrd li:nth-child(7) {
-    background: #CF4D49;
+    background: linear-gradient(to right, #F2742F, #160F0F);
 }
 
 .leadbrd li:nth-child(8) {
-    background: #C84847;
+    background: linear-gradient(to right, #F0712C, #160F0F);
 }
 
 .leadbrd li:nth-child(9) {
-    background: #C14445;
+    background: linear-gradient(to right, #EE6F2A, #160F0F);
 }
 
 .leadbrd li:nth-child(10) {
-    background: #BA3F43;
+    background: linear-gradient(to right, #EC6C27, #160F0F);
+}
+
+.you {
+    color: rgb(22, 22, 22);
+    font-family: 'Inconsolata', monospace;
+}
+
+.one {
+    display: flex;
+    margin-left: 34px;
+}
+
+.fade-in-list {
+    animation: fadeIn 0.5s forwards;
+}
+
+#ldb_username {
+    margin-left: 5%;
+}
+
+#ldb_score {
+    position: absolute;
+    right: 30px;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes fadeIn {
+    0% {
+        position: static;
+        left: -10px;
+        opacity: 0;
+    }
+
+    59% {
+        position: static;
+        left: -10px;
+        opacity: 20%;
+    }
+
+    60% {
+        position: relative;
+        left: -10px;
+        opacity: 0;
+    }
+
+    70% {
+        position: relative;
+        left: -10%;
+        opacity: 0;
+    }
+
+    80% {
+        position: relative;
+        left: 20%;
+        opacity: 0;
+    }
+
+    100% {
+        position: static;
+        left: 10%;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 270px) and (max-width: 2000px) {
+    .section {
+        width: 100%;
+        display: block;
+    }
+
+    .leadbrd {
+        width: 100%;
+        display: block;
+    }
 }

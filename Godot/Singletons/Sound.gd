@@ -10,12 +10,16 @@ onready var pink =AudioStreamPlayer.new()
 onready var panic =AudioStreamPlayer.new()
 onready var victory =AudioStreamPlayer.new()
 onready var deep =AudioStreamPlayer.new()
+
 onready var game_over_music =AudioStreamPlayer.new()
+
+
+onready var voice_smuggler = AudioStreamPlayer.new()
 
 onready var tween_out_node = Tween
 onready var tween_out
 
-var transition_duration = 3.00
+var transition_duration = 1.00
 var transition_type = 1 # TRANS_SINE
 #possible use if music doesn't connect well
 var current_music
@@ -50,6 +54,8 @@ func add_sounds():
 	var sound_deep :AudioStream = preload("res://Sounds/deep_echo.mp3") 
 	var sound_game_over_music :AudioStream = preload("res://Sounds/game_over_music.mp3") 
 
+	var sound_voice_smuggler :AudioStream = preload("res://Voices/frank_smuggler.mp3") 
+
 	spy.set_stream(sound_spy)
 	hud.set_stream(sound_hud)
 	pink.set_stream(sound_pink)
@@ -59,6 +65,8 @@ func add_sounds():
 	deep.set_stream(sound_deep)
 	game_over_music.set_stream(sound_game_over_music)
 
+	voice_smuggler.set_stream(sound_voice_smuggler)
+
 	add_child(spy)
 	add_child(hud)
 	add_child(pink)
@@ -67,6 +75,8 @@ func add_sounds():
 	add_child(victory)
 	add_child(deep)
 	add_child(game_over_music)
+
+	add_child(voice_smuggler)
 
 func play_spy():
 	spy.play()
@@ -117,4 +127,8 @@ func play_game_over_music():
 func stop_game_over_music():
 	fade_out(game_over_music)
 	#game_over_music.stop()
+
+func play_smuggler_voice():
+	voice_smuggler.stream.loop = false
+	voice_smuggler.play()
 

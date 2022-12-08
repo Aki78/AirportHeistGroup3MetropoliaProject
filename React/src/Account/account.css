@@ -1,0 +1,121 @@
+.sign-in-form {
+    padding: 20px 20px 20px 20px;
+}
+
+.username + .password + .password-confirm {
+    display: flex;
+    justify-content: center;
+}
+
+.username input {
+    justify-content: center;
+    text-align: center;
+
+    border: none;
+    border-radius: 7px;
+}
+
+.password input {
+    justify-content: center;
+    text-align: center;
+
+    border: none;
+    border-radius: 7px;
+}
+
+.password-confirm input {
+    justify-content: center;
+    text-align: center;
+
+    border: none;
+    border-radius: 7px;
+}
+
+.username input::placeholder {
+    text-align: center;
+}
+
+.password input::placeholder {
+    text-align: center;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+    margin: 10px 0 10px 0;
+}
+
+.sign-in-form > button {
+    width: 150px;
+    height: 35px;
+    
+    color: rgb(241, 238, 233);
+    background-color: rgb(22, 22, 22);
+    
+    
+    border-radius: 7px;
+}
+
+.sign-in-form > button:hover {
+    background-color: rgb(77, 77, 77);
+    color: rgb(241, 238, 233);
+}
+
+
+
+
+.sign-up-form > button {
+    width: 100px;
+    height: 25px;
+    
+    background-color: rgb(22, 22, 22);
+    color: rgb(241, 238, 233);
+
+    border-radius: 7px;
+}
+
+.sign-up-form > button {
+    width: 150px;
+    height: 35px;
+    
+    color: rgb(241, 238, 233);
+    background-color: rgb(22, 22, 22);
+    
+    
+    border-radius: 7px;
+}
+
+.sign-up-form > button:hover {
+    background-color: rgb(77, 77, 77);
+    color: rgb(241, 238, 233);
+}
+
+.line {
+    height: 3px;
+    background: black;
+}
+
+h4 {
+    margin: 20px 0 0 0;
+}
+
+h2 {
+    margin: 10px 0 10px 0;
+}
+
+
+
+/* responsive part */
+
+@media only screen and (min-width: 280px) and (max-width: 1180px) {
+    .sign-in-form {
+        width: 100%;
+        display: block;
+    }
+
+    .sign-up-form {
+        width: 100%;
+        display: block;
+    }
+
+}
