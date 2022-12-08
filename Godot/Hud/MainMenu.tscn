@@ -320,11 +320,7 @@ script = ExtResource( 13 )
 position = Vector2( 206, 174 )
 scale = Vector2( 1.05348, 1.2055 )
 frames = SubResource( 5 )
-<<<<<<< HEAD
-frame = 223
-=======
-frame = 48
->>>>>>> 035e89cc73b332c8c954daef1fb80809549f0e9c
+frame = 104
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
