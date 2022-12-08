@@ -44,9 +44,9 @@ https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3
 ## Introduction
 
 This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai cao,
-Kiana Aghajani and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive game, that
-satisfies the guidelines provided by software1. As well as producing an attractive and intuitive website that satisfies
-the requirements in software2. Airport Heist is suitable for all ages.
+Kiana Aghajani, Jenni Hallikas and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive
+game, that satisfies the guidelines provided by software1. As well as producing an attractive and intuitive website that
+satisfies the requirements in software2. Airport Heist is suitable for all ages.
 
 ## Current State
 
@@ -66,7 +66,7 @@ You need to get out of Finland A.S.A.P though as the finnish authorities will st
 
 Due to your expert skills you are able to steal 5,000€ from the Alepa at Helsinki Airport and commandeer a small plane.
 The police, however, have been alerted of your activities and are hot on your tail.
-Make it to the extraction point in portugal before you interpol finds you!
+Make it to the extraction point in portugal before interpol finds you!
 
 #### Setting
 
@@ -84,25 +84,26 @@ the EU.
 ### How the game works
 
 Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they
-are captured, their stamina runs out or money runs out.
+are captured or their money runs out.
 
 #### Travel
 
-The main character starts in Helsinki, Finland and must end up in Portugal. Due to the size of your plane's fuel tank
+The main character starts in Helsinki, Finland and must end up in Portugal. Due to the size of the plane's fuel tank
 flights are limited to 800km. Players are shown the airports, with-in their 800km travel range, on a map. They must
 decide their flight path themselves.
 
 #### Evading Capture
 
 Players can see in which city interpol is and must avoid flying to the same airport. Interpol moves from airport
-to airport at random and in real time. Players must make their decisions quickly.
+to airport at random and in real time. Players must make their decisions quickly. The game is over if interpol lands 
+in the same airport as the player.
 
 #### Stealing
 
-The main character starts the game with a set amount of money. If the player requires more money they need to heist.
-There is, however, a chance of getting caught. Players are informed of the odds of capture before they attempt a heist
-and can abort if they feel the risks are too great. Players have 5 attempts to steal. If they use all 5 attempts before
-escaping, they will be caught and the game is over.
+The main character starts the game with 5000€. Each flight cost money based on how long the flight is. Money is equal 
+to points, so when the player reaches portugal their score is equal to how much money they have left. In order to 
+get more money, and therefore points, players may choose to steal. Stealing is done after a player arrives at an
+airport. 
 
 [Back to top](#airport-heist)
 
