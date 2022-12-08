@@ -3,6 +3,7 @@ from flask_cors import CORS
 import json
 import hashlib
 import mysql.connector
+import requests
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -17,6 +18,29 @@ connection = mysql.connector.connect(
   password='root'
 )
 
+
+@app.get('/Account/recaptcha')
+def get_google_recaptcha():
+    try:
+
+        args = request.args
+        key = args.get("skey")
+        token = args.get("token")
+        googleRequest = f"https://www.google.com/recaptcha/api/siteverify?secret={key}&response={token}"
+        response = requests.get(googleRequest).json()  
+
+        print("This", response)
+
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid number as addend",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
 
 @app.post('/Account/createAccount')
 def register_new_account_to_db():
