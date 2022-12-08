@@ -52,7 +52,6 @@ input {
     color: rgb(241, 238, 233);
     background-color: rgb(22, 22, 22);
     
-    
     border-radius: 7px;
 }
 
@@ -64,14 +63,8 @@ input {
 
 
 
-.sign-up-form > button {
-    width: 100px;
-    height: 25px;
-    
-    background-color: rgb(22, 22, 22);
-    color: rgb(241, 238, 233);
-
-    border-radius: 7px;
+.sign-up-form {
+    padding: 20px 20px 20px 20px;
 }
 
 .sign-up-form > button {
@@ -80,7 +73,6 @@ input {
     
     color: rgb(241, 238, 233);
     background-color: rgb(22, 22, 22);
-    
     
     border-radius: 7px;
 }
@@ -103,7 +95,11 @@ h2 {
     margin: 10px 0 10px 0;
 }
 
-
+.captcha {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
 
 /* responsive part */
 
