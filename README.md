@@ -66,7 +66,7 @@ You need to get out of Finland A.S.A.P though as the finnish authorities will st
 
 Due to your expert skills you are able to steal 5,000€ from the Alepa at Helsinki Airport and commandeer a small plane.
 The police, however, have been alerted of your activities and are hot on your tail.
-Make it to the extraction point in portugal before you interpol finds you!
+Make it to the extraction point in portugal before interpol finds you!
 
 #### Setting
 
