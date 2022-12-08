@@ -76,20 +76,26 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
     const [passwordConfirm, setPasswordConfirm] = useState("");
 
     async function checkToken(token) {
-        await fetch("https://www.google.com/recaptcha/api/siteverify?secret=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI&response=" + token)
+        let answer;
+        
+        await fetch("http://127.0.0.1:5000/Account/recaptcha?skey=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&token=" + token)
             .then(response => response.json())
             .then(response => {
-                console.log("Received from google", response)                
+                console.log("Received from API", response) 
+                answer = response        
             })
-            .catch(err => console.error(err)); 
-    }
+            .catch(err => console.error(err));
+        console.log("Answer: ", answer);
+        
+        return answer.success
+    }   
 
     function checkMatchSignUpInfo(accPassword, passwordConfirm) {
         if (accPassword === passwordConfirm) {
             return true;
         }
         else {
-            return false
+            return false;
         }
     }
 
@@ -140,11 +146,12 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         const token = captchaRef.current.getValue();
         captchaRef.current.reset();
         console.log(token);
-        const humanConfirm = checkToken(token);
-
+        const humanConfirm = await checkToken(token);
+        console.log("-------", humanConfirm)
+        
         const matchInfo = checkMatchSignUpInfo(accPassword, passwordConfirm);
 
-        if (matchInfo) {
+        if (matchInfo === true && humanConfirm === true) {
             handleUsername(accUsername);
             handleSignedIn(true);
 
@@ -202,38 +209,36 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             <h4>Don't have an account?</h4>
             <h2>Sign up</h2>
 
-            <form>
-                <div className="sign-up-form">
-                    <div className="username">
-                        <input 
-                            placeholder='Username'
-                            onChange={e => setAccUsername(e.target.value)}
-                        />
-                    </div>
-                    
-                    <div className="password">
-                        <input
-                            type="password"
-                            placeholder='Password'
-                            onChange={e => setAccPassword(e.target.value)}
-                        />
-                    </div>
-
-                    <div className="password-confirm">
-                        <input
-                            type="password"
-                            placeholder='Confirm password'
-                            onChange={e => setPasswordConfirm(e.target.value)}
-                        />
-                    </div>
-                    <ReCAPTCHA 
-                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
-                        //sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
-                        ref={captchaRef}
+            <div className="sign-up-form">
+                <div className="username">
+                    <input 
+                        placeholder='Username'
+                        onChange={e => setAccUsername(e.target.value)}
                     />
-                    <button onClick={handleSignUpEvent}>Sign up</button>
                 </div>
-            </form>
+                
+                <div className="password">
+                    <input
+                        type="password"
+                        placeholder='Password'
+                        onChange={e => setAccPassword(e.target.value)}
+                    />
+                </div>
+
+                <div className="password-confirm">
+                    <input
+                        type="password"
+                        placeholder='Confirm password'
+                        onChange={e => setPasswordConfirm(e.target.value)}
+                    />
+                </div>
+                <ReCAPTCHA 
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
+                    //sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
+                    ref={captchaRef}
+                />
+                <button onClick={handleSignUpEvent}>Sign up</button>
+            </div>
         </>
 
     )
