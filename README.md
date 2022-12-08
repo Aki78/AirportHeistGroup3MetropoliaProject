@@ -123,7 +123,7 @@ This diagram shows how our different files interact with each other. At the mome
 engine to run our game, python to run our backend, react for our website and SQL to store the game's data.
 
 <p align="center">
-    <img src="./Poster/tree_diagrams/project_diagram_2.png">
+    <img src="./Poster/tree_diagrams/Airport_Hiest_Project_Diagram.png">
 </p>
 
 [Back to top](#airport-heist)
