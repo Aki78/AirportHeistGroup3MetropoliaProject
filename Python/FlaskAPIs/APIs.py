@@ -102,10 +102,13 @@ def check_existing_account(username):
         http_response = Response(response=json_response, status=400, mimetype="application/json")
         return http_response
 
-@app.get('/Account/retrieve=<username>')
-def login_credential_check(username):
+@app.get('/Account/retrieve')
+def login_credential_check():
     try:
-        sql = f"select username from users where username = '{username}'"        
+        args = request.args
+        username = args.get("userin")
+        password = args.get("passin")
+        sql = f"select username, password from users where username = '{username}' and password = '{password}'"        
         
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -113,11 +116,14 @@ def login_credential_check(username):
         
         cursor.close()
 
-        #print(result[0][0])
-
-        response = {
-            "username": result[0][0]
-        }
+        if cursor.rowcount > 0:
+            response = {
+                "message": "Allow"
+            }
+        else:
+            response = {
+                "message": "Block"
+            }
 
         return response
 

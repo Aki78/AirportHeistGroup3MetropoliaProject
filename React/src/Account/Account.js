@@ -20,6 +20,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         callbackSignedIn(signedin);
     }
 
+/*
     function checkCredentials(accUsername, accPassword, response) {
         console.log("Log check", accUsername);
         console.log("Log check from DB", response);
@@ -37,24 +38,28 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             alert("Wrong username or password. Please try again.");
             return false;
         }
-    }
+    }*/
 
-    async function retrieveInfo(accUsername) {
-        await fetch("http://127.0.0.1:5000/Account/retrieve=" + accUsername)
+    async function retrieveInfo(accUsername, accPassword) {
+        let answer;
+        await fetch("http://127.0.0.1:5000/Account/retrieve?userin=" + accUsername + "&passin=" + accPassword)
             .then(response => response.json())
             .then(response => {
-                console.log("Got from DB ", response)
-                const res = checkCredentials(accUsername, accPassword, response);
-                return res;
+                console.log("Got", response)
+                //const res = checkCredentials(accUsername, accPassword, response);
+                answer = response.message;
             })
-            .catch(err => console.error(err));    
+            .catch(err => console.error(err));   
+        return answer;
     }
 
-    function handleSignInEvent() {
-        console.log(accUsername);
-        console.log(accPassword);
+    async function handleSignInEvent() {
+        //console.log(accUsername);
+        //console.log(accPassword);
 
-        if (retrieveInfo(accUsername) && accUsername !== "" && accPassword !== "") {
+        let dbAllowance = await retrieveInfo(accUsername, accPassword);
+
+        if (dbAllowance === "Allow" && accUsername !== "" && accPassword !== "") {
             handleUsername(accUsername);
             handleSignedIn(true);
 
@@ -73,6 +78,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             routeChange();
         }
         else {
+            alert("Incorrect username or password. Please try again");
             handleSignedIn(false);
         }
     }
@@ -95,7 +101,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 answer = response;
             })
             .catch(err => console.error(err));
-        console.log("Answer: ", answer);
+        //console.log("Answer: ", answer);
 
         return answer.success;
     }
@@ -114,7 +120,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         await fetch("http://127.0.0.1:5000/Account/checkExist=" + accUsername)
             .then(response => response.json())
             .then(response => {
-                console.log("Got from DB ", response);
+                console.log("Got", response);
                 //const res = checkCredentials(accUsername, accPassword, response);
                 if (response.message === "Exist") {
                     console.log("User existed");
@@ -126,19 +132,14 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 }
             })
             .catch(err => console.error(err)); 
-        if (res === true) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return res;
     }
 
     async function registerNewUser(accUsername, accPassword) {    
         await fetch("http://127.0.0.1:5000/Account/createAccount?username=" + accUsername + "&password=" + accPassword, {method: "POST"})
             .then(response => response.json())
             .then(response => {
-                console.log("Got from DB ", response);
+                console.log("Got", response);
                 //console.log(response.message);           
             })
             .catch(err => console.error(err)); 
@@ -247,7 +248,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                     />
                 </div>
                 <div className="captcha">
-                    <ReCAPTCHA 
+                    <ReCAPTCHA
                         sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
                         //sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
                         ref={captchaRef}
