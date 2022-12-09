@@ -82,14 +82,16 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
     ///////////////Sign up///////////////
     const captchaRef = useRef(null);
     const [passwordConfirm, setPasswordConfirm] = useState("");
+    var token;
+    var humanConfirm = false;
 
     async function checkToken(token) {
         let answer;
-        
+        //console.log("2 --- ", token);
         await fetch("http://127.0.0.1:5000/Account/recaptcha?skey=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&token=" + token)
             .then(response => response.json())
             .then(response => {
-                console.log("Received from API", response);
+                //console.log("Received from API", response);
                 answer = response;
             })
             .catch(err => console.error(err));
@@ -137,25 +139,28 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             .then(response => response.json())
             .then(response => {
                 console.log("Got from DB ", response);
-                console.log(response.message);           
+                //console.log(response.message);           
             })
             .catch(err => console.error(err)); 
         return "Account created";
     }
 
+    function handleCaptchaButton() {
+        token = captchaRef.current.getValue();
+        //console.log("1 --- ", token);
+    }
+
 
     async function handleSignUpEvent() {
-        console.log(accUsername);
-        console.log(accPassword);
-        console.log(passwordConfirm);
+        captchaRef.current.reset();
+        //console.log(accUsername);
+        //console.log(accPassword);
+        //console.log(passwordConfirm);
 
 
         //Recaptcha token
-        const token = captchaRef.current.getValue();
-        captchaRef.current.reset();
-        console.log(token);
-        const humanConfirm = await checkToken(token);
-        console.log("-------", humanConfirm);
+        humanConfirm = await checkToken(token);
+        //console.log("-------", humanConfirm);
         
         const matchInfo = checkMatchSignUpInfo(accPassword, passwordConfirm);
 
@@ -246,6 +251,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                         sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
                         //sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
                         ref={captchaRef}
+                        onChange={handleCaptchaButton}
                     />
                 </div>
                 <button onClick={handleSignUpEvent}>Sign up</button>

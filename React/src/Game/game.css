@@ -34,12 +34,13 @@ ul {
     padding: 18px 20px;
 }
 
-.porting {
+.game-screen .porting {
     animation: fadein 10s;
 }
 
-iframe {
+.game-screen {
     margin: 50px 0 50px 0;
+    justify-content: center;
 }
 
 @keyframes fadein {
