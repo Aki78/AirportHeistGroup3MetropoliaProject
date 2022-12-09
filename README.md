@@ -113,7 +113,7 @@ The decision tree below show all possible decisions the player can make and the 
 
 
 <p align="center">
-    <img src="./Poster/tree_diagrams/block_diagram_1.png">
+    <img src="./Poster/tree_diagrams/decisiontree.png">
 </p>
 
 [Back to top](#airport-heist)
