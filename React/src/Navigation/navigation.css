@@ -18,7 +18,7 @@
 .nav_bar ul li a {
     text-decoration: none;
     color: rgb(241, 238, 233);
-
+    cursor: progress;
 }
 
 .nav_bar ul li a:hover {
@@ -52,7 +52,57 @@
 
 
 
-/* the thing with dimentions */
+
+/* responsive */
+
+@media only screen and (max-width: 900px) {
+    .nav_bar {
+        width: 100%;
+        display: block;
+    }
+
+    .nav_bar li {
+        width: 270px;
+        display: flex;
+        padding: 6px;
+    }
+
+    .nav_bar li img {
+        margin-left: 130px;
+    }
+
+    .account {
+        display: block;
+        top: 10px;
+        left: 760px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .nav_bar {
+        width: 100%;
+        display: block;
+    }
+
+    .nav_bar li {
+        width: 270px;
+        display: flex;
+        padding: 6px;
+        font-size: 15px;
+    }
+
+    .nav_bar li img {
+        margin-left: 130px;
+    }
+
+    .account {
+        display: block;
+        top: 21px;
+        left: 550px;
+        font-size: 15px;
+        
+    }
+}
 
 @media only screen and (max-width: 540px) {
 
@@ -74,8 +124,6 @@
     }
 }
 
-
-
 @media only screen and (max-width: 600px) {
     .nav_bar {
         width: 100%;
@@ -86,7 +134,7 @@
         width: 270px;
         display: flex;
         padding: 6px;
-        
+
     }
 
     .nav_bar li img {
@@ -100,3 +148,6 @@
         font-size: 15px;
     }
 }
+
+
+
