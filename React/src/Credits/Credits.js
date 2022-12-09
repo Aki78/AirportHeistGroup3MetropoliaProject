@@ -31,10 +31,10 @@ const Credits = () => {
                     </div>
                 </section>
                 <div id='line'></div>
-                <h2 id='how'>Contact Information</h2>
+                <h2 id='how'>Our Contact Information</h2>
                 <article>
                     <div className='back'>
-                        <h4>First the backend team:</h4>
+                        <h4>The backend team:</h4>
                         <div className="frank">
                             <p>Frank</p>
                             <p>His e-mail:</p>
@@ -45,7 +45,7 @@ const Credits = () => {
                         </div>
                         <div className="aki">
                             <p>Aki</p>
-                            <p>You can reach him with:</p>
+                            <p>You can reach him at:</p>
                             <a href='mailto: eiakim@metropolia.fi'>eiakim@metropolia.fi</a>
                             <br></br> <br></br>
                         </div>
@@ -75,7 +75,7 @@ const Credits = () => {
                             <p>Kiana</p>
                             <p>E-mail address is:</p>
                             <a href='mailto: kiana.aghajani@metropolia.fi'>kiana.aghajani@metropolia.fi</a>
-                            <p>Contact her on Discord with:</p>
+                            <p>Contact on Discord with:</p>
                             <p>kiian#2547</p>
                         </div>
                     </div>
