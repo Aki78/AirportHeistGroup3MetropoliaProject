@@ -57,6 +57,15 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         if (retrieveInfo(accUsername)) {
             handleUsername(accUsername);
             handleSignedIn(true);
+
+            const userData = {
+                "user": accUsername,
+                "signedin": true
+            }
+            console.log("Adding to local storage", userData)
+            localStorage.setItem("user", userData.user);
+            localStorage.setItem("signed_in", userData.signedin);
+
             const routeChange = () => {
                 let path = "/airport-heist.github.io";
                 navigate(path);
@@ -88,7 +97,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         console.log("Answer: ", answer);
 
         return answer.success
-    }   
+    }
 
     function checkMatchSignUpInfo(accPassword, passwordConfirm) {
         if (accPassword === passwordConfirm) {

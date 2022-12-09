@@ -25,8 +25,11 @@ import { useState } from 'react';
 
 
 const App = () => {
-  const [username, setUsername] = useState("");
-  const [signedin, setSignedin] = useState(false);
+  const signInUser = localStorage.getItem("user");
+  const signInBool = localStorage.getItem("signed_in");
+
+  const [username, setUsername] = useState(signInUser);
+  const [signedin, setSignedin] = useState(signInBool);
 
 
   const callbackUsernameFunction = (username) => {
@@ -36,6 +39,7 @@ const App = () => {
   const callbackSignedInFunction = (signedin) => {
     setSignedin(signedin);
   }
+
 
 
   return (
@@ -52,7 +56,7 @@ const App = () => {
                 <Route path="Download" element={<Download />} />
                 <Route path="Weather" element={<Weather />} />
                 {/* <Route path="Account" element={signedin ? <Account /> :  username }/> */}
-                <Route path="Account"  element={signedin ? <AccountManagement username={username} /> : <Account callbackUsername={callbackUsernameFunction} callbackSignedIn={callbackSignedInFunction}/> } />
+                <Route path="Account"  element={signedin ? <AccountManagement username={username} callbackUsername={callbackUsernameFunction} callbackSignedIn={callbackSignedInFunction}/> : <Account callbackUsername={callbackUsernameFunction} callbackSignedIn={callbackSignedInFunction}/> } />
             </Routes>
         </div>
       {/*<CookieConsent
