@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "https://hostinger-react-app.com/static/css/main.7bcba36a.css",
-    "main.js": "https://hostinger-react-app.com/static/js/main.700b2e19.js",
-    "static/media/hud.gif": "https://hostinger-react-app.com/static/media/hud.7216c62d444efd29ba14.gif",
-    "static/media/title.png": "https://hostinger-react-app.com/static/media/title.e6905f0f53dee34e832d.png",
-    "index.html": "https://hostinger-react-app.com/index.html",
-    "main.7bcba36a.css.map": "https://hostinger-react-app.com/static/css/main.7bcba36a.css.map",
-    "main.700b2e19.js.map": "https://hostinger-react-app.com/static/js/main.700b2e19.js.map"
+    "main.css": "./static/css/main.bf0129f1.css",
+    "main.js": "./static/js/main.26aebf97.js",
+    "static/media/title.png": "./static/media/title.e6905f0f53dee34e832d.png",
+    "static/media/compass-icon-13573_inner.png": "./static/media/compass-icon-13573_inner.361d2e76b88267281bd7.png",
+    "static/media/compass-icon-13573_outer.png": "./static/media/compass-icon-13573_outer.a26f46082c71776bb021.png",
+    "static/media/airplane-icon-png-2515.png": "./static/media/airplane-icon-png-2515.2cca99a1f8efac606c43.png",
+    "index.html": "./index.html",
+    "main.bf0129f1.css.map": "./static/css/main.bf0129f1.css.map",
+    "main.26aebf97.js.map": "./static/js/main.26aebf97.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bcba36a.css",
-    "static/js/main.700b2e19.js"
+    "static/css/main.bf0129f1.css",
+    "static/js/main.26aebf97.js"
   ]
 }

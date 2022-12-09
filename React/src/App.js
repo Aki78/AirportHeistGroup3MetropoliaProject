@@ -47,7 +47,7 @@ const App = () => {
         {/*<p>{signedin.toString()}</p>*/}
         <div className="container">
             <Routes>
-                <Route path="airport-heist.github.io" element={<Home />} />
+                <Route path="home" element={<Home />} />
                 <Route path="LeaderBoard" element={<LeaderBoard />} />
                 <Route path="Game" element={<Game />} />
                 <Route path="Tutorial" element={<Tutorial />} />

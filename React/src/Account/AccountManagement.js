@@ -12,7 +12,7 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
         localStorage.clear();
 
         const routeChange = () => {
-            let path = "/airport-heist.github.io";
+            let path = "/home";
             navigate(path);
         }
         routeChange();

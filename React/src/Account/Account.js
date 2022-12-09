@@ -67,7 +67,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             localStorage.setItem("signed_in", userData.signedin);
 
             const routeChange = () => {
-                let path = "/airport-heist.github.io";
+                let path = "/home";
                 navigate(path);
             }
             routeChange();
@@ -174,7 +174,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 console.log(res);
 
                 const routeChange = () => {
-                    let path = '/airport-heist.github.io';
+                    let path = '/home';
                     navigate(path);
                 }
                 routeChange();
