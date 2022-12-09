@@ -86,7 +86,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             })
             .catch(err => console.error(err));
         console.log("Answer: ", answer);
-        
+
         return answer.success
     }   
 
@@ -232,11 +232,13 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                         onChange={e => setPasswordConfirm(e.target.value)}
                     />
                 </div>
-                <ReCAPTCHA 
-                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
-                    //sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
-                    ref={captchaRef}
-                />
+                <div className="captcha">
+                    <ReCAPTCHA 
+                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
+                        //sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
+                        ref={captchaRef}
+                    />
+                </div>
                 <button onClick={handleSignUpEvent}>Sign up</button>
             </div>
         </>
