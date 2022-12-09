@@ -1,64 +1,172 @@
-from flask import Flask, request
+from flask import Flask, Response, request
+from flask_cors import CORS
 import json
+import hashlib
 import mysql.connector
-
-connection = mysql.connector.connect(
-         host='127.0.0.1', #Change
-         port= 3306, #Change
-         database='flight_game',
-         user='root', #Change
-         password='root', #Change
-         autocommit=True
-     )
-
-def recieve_all_scores_and_players():
-    sql = 'select * from top_players ORDER BY score desc LIMIT 10'
-    sql += ''
-    # print(sql)
-    cursor = connection.cursor()
-    cursor.execute(sql)
-    result = cursor.fetchall()
-    result = [[]] # Just a buffer. Erase
-
-    print(result)
-    return result[0]
-
-def chop_10(players, scores):
-    """Get top 10 players and scores in order"""
-    return players, scores
+import requests
 
 app = Flask(__name__)
-@app.route('/topten', methods = ['GET', 'POST', 'DELETE', 'PATCH'])
-def topten():
-    if request.method == 'GET':
-        try:
+cors = CORS(app)
+app.config["JSON_SORT_KEYS"] = False
+app.config['CORS_HEADERS'] = 'Content-Type'
 
-            players, scores = recieve_all_scores_and_players()
-            players_10, scores_10 = chop_10(players, scores)
+connection = mysql.connector.connect(
+  host='127.0.0.1',
+  port=3306,
+  database='eu_flight_game',
+  user='root',
+  password='root'
+)
 
+
+@app.get('/Account/recaptcha')
+def get_google_recaptcha():
+    try:
+
+        args = request.args
+        key = args.get("skey")
+        token = args.get("token")
+        googleRequest = f"https://www.google.com/recaptcha/api/siteverify?secret={key}&response={token}"
+        response = requests.get(googleRequest).json()  
+
+        print("This", response)
+
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid number as addend",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
+
+@app.post('/Account/createAccount')
+def register_new_account_to_db():
+    try:
+        args = request.args
+        username = args.get("username")
+        password = args.get("password")
+        
+
+        sql = f"insert into users(username, password, score) VALUES(\"{username}\",\"{password}\", 0);"
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        connection.commit()
+        cursor.close()
+
+        response = {
+            "message": "New user added"
+        }
+
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid number as addend",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
+
+
+@app.get('/Account/checkExist=<username>')
+def check_existing_account(username):
+    try:
+        sql = f"select username from users where username = '{username}'"        
+        
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        cursor.close()
+
+        if cursor.rowcount > 0:
             response = {
-                "players" : players_10,
-                "scores" : scores_10,
+                "message": "Exist"
+            }
+        else:
+            response = {
+                "message": "Nonexist"
             }
 
-            return response
-        except:
-            return "Connection Failed, can't get top 10 players"
-    if request.method == 'POST':
-        """Post new score to Database"""
-        """INSERT INTO top_players (player_id, score) VALUES ('player_name', player_score);"""
-        pass
-    if request.method == 'DELETE':
-        """Delete User and score"""
-        """DELETE FROM top_players WHERE player_id = 'player-name';"""
-        pass
-    if request.method == 'PATCH':
-        """get player's current highest score"""
-        """SELECT score FROM top_players WHERE player_id = 'jenni2'"""
-        """Change score"""
-        """UPDATE top_players SET score = new_score WHERE player_id = 'player_name';"""
-        pass
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid number as addend",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
+
+@app.get('/Account/retrieve=<username>')
+def login_credential_check(username):
+    try:
+        sql = f"select username from users where username = '{username}'"        
+        
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        
+        cursor.close()
+
+        #print(result[0][0])
+
+        response = {
+            "username": result[0][0]
+        }
+
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid number as addend",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
+
+
+@app.route('/top_ten')
+def top_ten():
+    try:
+        sql = 'SELECT username, score FROM users ORDER BY score DESC LIMIT 10;'
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        cursor.close()
+
+        #print(result)
+
+        json_response = json.dumps(result)
+        http_response = Response(response=json_response, mimetype="application/json")
+        return http_response
+
+    except ValueError:
+        response = {
+            "message": "Invalid request",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
+
+
+@app.errorhandler(404)
+def page_not_found(error_code):
+    response = {
+        "message": "Invalid endpoint",
+        "status": 404
+    }
+    json_response = json.dumps(response)
+    http_response = Response(response=json_response, status=404, mimetype="application/json")
+    return http_response
+
 
 if __name__ == '__main__':
-    """Test the functions. Print out expected values. If you have time, also use pytest"""
     app.run(use_reloader=True, host='127.0.0.1', port=5000)
+

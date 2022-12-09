@@ -54,7 +54,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         console.log(accUsername);
         console.log(accPassword);
 
-        if (retrieveInfo(accUsername) && accUsername != "" && accPassword != "") {
+        if (retrieveInfo(accUsername) && accUsername !== "" && accPassword !== "") {
             handleUsername(accUsername);
             handleSignedIn(true);
 
