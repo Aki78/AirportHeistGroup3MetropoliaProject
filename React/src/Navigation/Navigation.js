@@ -8,7 +8,6 @@ import Logo from '../Images/title.png'
 
 const Navigation = ({ checkSignedIn, usernameSignedin }) => {
 
-
     return (
 
         <nav className="nav_bar">
