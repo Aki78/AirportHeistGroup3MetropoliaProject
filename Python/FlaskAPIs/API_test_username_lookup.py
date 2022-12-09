@@ -114,10 +114,9 @@ def login_credential_check(username):
         cursor.execute(sql)
         result = cursor.fetchall()
         
-
         cursor.close()
 
-        print(result[0][0])
+        #print(result[0][0])
 
         response = {
             "username": result[0][0]

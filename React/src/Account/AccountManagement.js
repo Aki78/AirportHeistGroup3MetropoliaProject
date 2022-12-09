@@ -1,7 +1,6 @@
 import './account_management.css'
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => {
     let navigate = useNavigate();
@@ -9,7 +8,7 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
     function handleSignOutEvent() {
         callbackUsername("")        
         callbackSignedIn(false);
-        
+
         localStorage.clear();
 
         const routeChange = () => {
@@ -18,7 +17,6 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
         }
         routeChange();
 
-        
     }
     
 

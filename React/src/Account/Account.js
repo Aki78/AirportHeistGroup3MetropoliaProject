@@ -1,8 +1,8 @@
-import './account.css'
+import './account.css';
 import React from 'react';
 import { useState, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
-import ReCAPTCHA from "react-google-recaptcha"; 
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
@@ -13,16 +13,16 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
     let navigate = useNavigate();   //for navigating to home page
 
     function handleUsername(accUsername) {
-        callbackUsername(accUsername)
+        callbackUsername(accUsername);
     }
 
     function handleSignedIn(signedin) {
-        callbackSignedIn(signedin)
+        callbackSignedIn(signedin);
     }
 
     function checkCredentials(accUsername, accPassword, response) {
-        console.log("Log check", accUsername)   
-        console.log("Log check from DB", response)     
+        console.log("Log check", accUsername);
+        console.log("Log check from DB", response);
         
         let checkUser = response.username;
         //let checkPass = info[1];    
@@ -54,7 +54,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         console.log(accUsername);
         console.log(accPassword);
 
-        if (retrieveInfo(accUsername)) {
+        if (retrieveInfo(accUsername) && accUsername != "" && accPassword != "") {
             handleUsername(accUsername);
             handleSignedIn(true);
 
@@ -62,7 +62,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 "user": accUsername,
                 "signedin": true
             }
-            console.log("Adding to local storage", userData)
+            console.log("Adding to local storage", userData);
             localStorage.setItem("user", userData.user);
             localStorage.setItem("signed_in", userData.signedin);
 
@@ -71,13 +71,12 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 navigate(path);
             }
             routeChange();
-
         }
         else {
             handleSignedIn(false);
         }
-
     }
+
 
 
     ///////////////Sign up///////////////
@@ -90,13 +89,13 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         await fetch("http://127.0.0.1:5000/Account/recaptcha?skey=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&token=" + token)
             .then(response => response.json())
             .then(response => {
-                console.log("Received from API", response) 
-                answer = response        
+                console.log("Received from API", response);
+                answer = response;
             })
             .catch(err => console.error(err));
         console.log("Answer: ", answer);
 
-        return answer.success
+        return answer.success;
     }
 
     function checkMatchSignUpInfo(accPassword, passwordConfirm) {
@@ -113,14 +112,14 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         await fetch("http://127.0.0.1:5000/Account/checkExist=" + accUsername)
             .then(response => response.json())
             .then(response => {
-                console.log("Got from DB ", response)
+                console.log("Got from DB ", response);
                 //const res = checkCredentials(accUsername, accPassword, response);
                 if (response.message === "Exist") {
-                    console.log("User existed")
+                    console.log("User existed");
                     res = true;
                 }
                 else if (response.message === "Nonexist") {
-                    console.log("No user with same username")
+                    console.log("No user with same username");
                     res = false;
                 }
             })
@@ -137,11 +136,11 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         await fetch("http://127.0.0.1:5000/Account/createAccount?username=" + accUsername + "&password=" + accPassword, {method: "POST"})
             .then(response => response.json())
             .then(response => {
-                console.log("Got from DB ", response) 
-                console.log(response.message)               
+                console.log("Got from DB ", response);
+                console.log(response.message);           
             })
             .catch(err => console.error(err)); 
-        return "Account created"
+        return "Account created";
     }
 
 
@@ -156,7 +155,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         captchaRef.current.reset();
         console.log(token);
         const humanConfirm = await checkToken(token);
-        console.log("-------", humanConfirm)
+        console.log("-------", humanConfirm);
         
         const matchInfo = checkMatchSignUpInfo(accPassword, passwordConfirm);
 
@@ -172,7 +171,8 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
             else {
                 console.log("About to create new acc");
                 const res = registerNewUser(accUsername, accPassword);
-                console.log(res)
+                console.log(res);
+
                 const routeChange = () => {
                     let path = '/airport-heist.github.io';
                     navigate(path);
@@ -251,7 +251,6 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 <button onClick={handleSignUpEvent}>Sign up</button>
             </div>
         </>
-
     )
 }
 

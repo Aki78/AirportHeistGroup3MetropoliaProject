@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom/client";
 import { 
   Routes,
   Route,
