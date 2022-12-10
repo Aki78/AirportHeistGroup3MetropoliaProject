@@ -6,8 +6,8 @@
 [ext_resource path="res://GameOver/GameOverScene.gd" type="Script" id=4]
 [ext_resource path="res://GameOver/GamveOberDialog.gd" type="Script" id=5]
 [ext_resource path="res://Shaders/impact_effect_script.gd" type="Script" id=6]
-[ext_resource path="res://Shaders/impact_effect_mat.tres" type="Material" id=7]
 [ext_resource path="res://Shaders/RadialGradient.png" type="Texture" id=8]
+[ext_resource path="res://Shaders/impact_effect_mat2.tres" type="Material" id=9]
 
 [node name="GameOverScene" type="Sprite"]
 position = Vector2( 1150, 563 )
@@ -49,7 +49,7 @@ script = ExtResource( 3 )
 one_shot = true
 
 [node name="ImpactEffect1" type="Sprite" parent="."]
-material = ExtResource( 7 )
+material = ExtResource( 9 )
 position = Vector2( -180.731, -97.3169 )
 scale = Vector2( 0.3, 0.3 )
 z_index = 6
@@ -61,7 +61,7 @@ self_position = Vector2( -30, 100 )
 delay = 0.5
 
 [node name="ImpactEffect2" type="Sprite" parent="."]
-material = ExtResource( 7 )
+material = ExtResource( 9 )
 position = Vector2( 227.652, -182.904 )
 scale = Vector2( 0.3, 0.3 )
 z_index = 6
@@ -72,7 +72,7 @@ maxOffsetStrength = 0.278
 self_position = Vector2( -300, -100 )
 
 [node name="ImpactEffect3" type="Sprite" parent="."]
-material = ExtResource( 7 )
+material = ExtResource( 9 )
 position = Vector2( -303.681, 111.654 )
 scale = Vector2( 0.3, 0.3 )
 z_index = 6
