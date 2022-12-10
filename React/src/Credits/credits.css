@@ -74,6 +74,7 @@ section {
     margin-top: 75px;
     font-family: 'DM Sans', sans-serif;
     color: rgb(22, 22, 22);
+    border: none;
 }
 
 .backend {
