@@ -34,3 +34,34 @@ ul {
     padding: 18px 20px;
 }
 
+
+
+main {
+    height: auto;
+    width: 900px;
+}
+
+#how {
+    margin-top: 65px;
+    color: #0B0518;
+    margin-bottom: 200px;
+
+}
+
+section {
+    text-align: start;
+    display: flex;
+    padding-bottom: 150px;
+    border-top: 6px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-top: 70px;
+}
+
+section li {
+    line-height: 1.6;
+}
