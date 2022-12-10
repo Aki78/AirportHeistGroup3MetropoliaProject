@@ -19,7 +19,7 @@ func _ready():
 
 func init(speed):
 	randomize()
-	$ArrowAlpha.position.y += rand_range(-1300,100)
+	$ArrowAlpha.position.y = rand_range(-1300,100)
 	$ArrowAlpha.show()
 	$ArrowAlpha.speed = speed
 func rotate_children(deg):
@@ -36,7 +36,7 @@ func _input(e):
 	if Input.is_action_pressed(invar) and get_dist() < 1000:
 		print(n,"win")
 		$WhiteColor.start()
-		$ArrowAlpha.position.y -= 1000
+		$ArrowAlpha.position.y = 0
 		$ArrowGoal.modulate = Color(255,255,255)
 		$ArrowAlpha.hide()
 		emit_signal("success")

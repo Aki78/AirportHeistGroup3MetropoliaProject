@@ -12,7 +12,6 @@ var min_dist = 700
 var arrow_speed = 500
 
 onready var is_close = false
-onready var current_success = true
 onready var first_interpol = $Interpols/Interpol
 onready var Interpol = preload("res://MainGame/Interpol.tscn")
 onready var mouse_down = false
@@ -27,7 +26,6 @@ func _ready():
 	first_interpol.position = $Airports/AirportNode14.rect_position
 	first_interpol.get_node("InterpolArea").connect("area_entered",self,"_on_InterpolArea_area_entered")
 	first_interpol.init(paris_airport, airports.get_children())
-	current_success = $Player.set_success_rate()
 	camera.current = true
 	stop_minigame()
 #	Sound.play_smuggler_voice()
@@ -85,14 +83,11 @@ func get_pos_dist(a,b):
 
 func start_tween(airport1, airport2):
 	var tween = get_node("Tween")
-	$Player.hide_success_rate()
 	tween.interpolate_property($Player, "rect_position",
 			airport1.rect_position, airport2.rect_position, 1,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	yield(tween,"tween_all_completed")
-	current_success=$Player.set_success_rate()
-	$Player.show_success_rate()
 
 func erase_far():
 	for _i in airports.get_children():
@@ -137,8 +132,9 @@ func _on_GameOverTimer_timeout():
 func minus_cash(new_airport):
 	state["cash"] -= new_airport.price
 
-func plus_cash(player):
-	state["cash"] += player.prize
+func plus_cash(amount, player):
+	state["cash"] += amount
+	print(amount," ", player.cash, "" ,state["cash"])
 	player.set_cash(state["cash"])
 
 func update_ui():
@@ -182,5 +178,6 @@ func _on_caught():
 	
 func _on_heist_success():
 	print("SUCCESSSSSS")
+	arrow_speed *= 1.1
 	stop_minigame()
-	state.cash += 500
+	plus_cash(500, $Player)

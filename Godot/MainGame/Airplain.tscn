@@ -27,6 +27,7 @@ text = "1000"
 script = ExtResource( 5 )
 
 [node name="SuccessRate" type="Label" parent="."]
+visible = false
 margin_left = -1462.99
 margin_top = 1088.5
 margin_right = 2060.01
@@ -36,6 +37,7 @@ text = "50%"
 script = ExtResource( 5 )
 
 [node name="Prize" type="Label" parent="."]
+visible = false
 margin_left = 1378.1
 margin_top = 1123.46
 margin_right = 4901.1
