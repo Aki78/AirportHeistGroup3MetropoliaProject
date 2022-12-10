@@ -177,6 +177,10 @@ func _on_caught():
 	init_interpol()
 	
 func _on_heist_success():
+	$HeistSuccessSequence.start()
+
+
+func _on_HeistSuccessSequence_timeout():
 	print("SUCCESSSSSS")
 	arrow_speed *= 1.1
 	stop_minigame()

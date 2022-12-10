@@ -40,6 +40,7 @@ func _input(e):
 		$ArrowGoal.modulate = Color(255,255,255)
 		$ArrowAlpha.hide()
 		emit_signal("success")
+		$Particles2D.emitting = true
 		
 		
 func _physics_process(delta):

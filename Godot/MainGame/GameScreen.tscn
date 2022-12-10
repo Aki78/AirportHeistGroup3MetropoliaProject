@@ -148,6 +148,9 @@ direction = "down"
 [node name="ArrorGame4" parent="MiniGame" instance=ExtResource( 11 )]
 position = Vector2( -1043.77, -412.307 )
 
+[node name="HeistSuccessSequence" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="tree_exiting" from="." to="." method="_on_Europe_tree_exiting"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
@@ -157,3 +160,4 @@ position = Vector2( -1043.77, -412.307 )
 [connection signal="timeout" from="InterpolTimer" to="." method="_on_InterpolMove_timeout"]
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
 [connection signal="timeout" from="SmugglerDialog/SpeakingTime" to="SmugglerDialog" method="_on_SpeakingTime_timeout"]
+[connection signal="timeout" from="HeistSuccessSequence" to="." method="_on_HeistSuccessSequence_timeout"]
