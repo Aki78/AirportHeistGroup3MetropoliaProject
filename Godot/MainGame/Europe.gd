@@ -9,6 +9,7 @@ onready var paris_airport = $Airports/AirportNode14
 onready var camera = $Camera2D
 
 var min_dist = 700
+var arrow_speed = 500
 
 onready var is_close = false
 onready var current_success = true
@@ -28,8 +29,31 @@ func _ready():
 	first_interpol.init(paris_airport, airports.get_children())
 	current_success = $Player.set_success_rate()
 	camera.current = true
-	Sound.play_smuggler_voice()
+	stop_minigame()
+#	Sound.play_smuggler_voice()
 	
+func connect_minigame():
+	$MiniGame.connect("heist_success", self, "_on_heist_success")
+	for _i in $MiniGame.get_children():
+		_i.connect("lost", self, "_on_caught")
+func disconnect_minigame():
+	for _i in $MiniGame.get_children():
+		_i.disconnect("lost", self, "_on_caught")
+		
+func start_minigame(speed):
+	$MiniGame.show()
+	$MiniGame.init(speed)
+
+
+	connect_minigame()
+
+
+func stop_minigame():
+	$MiniGame.hide()
+	disconnect_minigame()
+
+	
+
 func init_interpol():
 	var new_interpol = Interpol.instance()
 	new_interpol.init(paris_airport, airports.get_children())
@@ -126,11 +150,7 @@ func _on_WonTimer_timeout():
 	get_tree().change_scene("res://Won/WonScene.tscn")
 
 func _on_Player_pressed():
-	if current_success:
-		plus_cash($Player)
-		current_success=$Player.set_success_rate()
-	else:
-		init_interpol()
+	start_minigame(arrow_speed)
 
 func _on_InterpolArea_area_entered(area):
 	print("AREA", area)
@@ -154,3 +174,13 @@ func _process(delta):
 	if mouse_down:
 		camera.offset += 50*delta*(-mouse_position_now + mouse_position_before)
 	mouse_position_before = mouse_position_now
+
+func _on_caught():
+	print("lost signal")
+	stop_minigame()
+	init_interpol()
+	
+func _on_heist_success():
+	print("SUCCESSSSSS")
+	stop_minigame()
+	state.cash += 500

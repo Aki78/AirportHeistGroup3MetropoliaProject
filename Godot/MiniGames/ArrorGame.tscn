@@ -6,15 +6,16 @@
 [ext_resource path="res://MiniGames/ArrowGoal.gd" type="Script" id=4]
 
 [node name="ArrorGame" type="Node2D"]
+scale = Vector2( 0.740077, 0.740077 )
 script = ExtResource( 1 )
 
 [node name="ArrowAlpha" type="Sprite" parent="."]
-position = Vector2( 915, 330 )
+position = Vector2( 0, -604 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="ArrowGoal" type="Sprite" parent="."]
-position = Vector2( 915, 818 )
+position = Vector2( 0, 1041 )
 texture = ExtResource( 2 )
 script = ExtResource( 4 )
 
