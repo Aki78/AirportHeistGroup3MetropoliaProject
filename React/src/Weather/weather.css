@@ -2,7 +2,7 @@
     margin: 0 auto;
     width: 900px;
     text-align: center;
-  }
+}
 
 .nav__bar {
     overflow: hidden;
@@ -32,4 +32,9 @@ ul {
     color: #AD685C;
     background-color: #0B0518;
     padding: 18px 20px;
+}
+
+p {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
