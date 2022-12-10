@@ -40,6 +40,7 @@ func disconnect_minigame():
 		
 func start_minigame(speed):
 	$Player.expand()
+	Sound.play_deep()
 	$MiniGame.show()
 	$MiniGame.init(speed)
 

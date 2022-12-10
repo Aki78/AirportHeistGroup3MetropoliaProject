@@ -19,7 +19,7 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 damping = 10.0
 scale = 0.8
-color = Color( 0, 0.0156863, 1, 1 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="ArrorGame" type="Node2D"]
 scale = Vector2( 0.740077, 0.740077 )
