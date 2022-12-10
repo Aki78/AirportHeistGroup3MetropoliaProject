@@ -1,9 +1,3 @@
-.container {
-    margin: 0 auto;
-    width: 900px;
-    text-align: center;
-}
-
 .nav__bar {
     overflow: hidden;
     background-color: #91453B;
@@ -34,7 +28,7 @@ ul {
     padding: 18px 20px;
 }
 
-p {
-    margin-top: 50px;
-    margin-bottom: 50px;
+.weather-screen > iframe {
+    justify-content: center;
+
 }

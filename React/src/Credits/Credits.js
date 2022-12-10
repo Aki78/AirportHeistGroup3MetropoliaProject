@@ -66,9 +66,7 @@ const Credits = () => {
                         <div className="khai">
                             <p>Khai</p>
                             <p>His e-mail is:</p>
-                            <a href='mailto: khai.caho@metropolia.fi'>khai.caho@metropolia.fi</a>
-                            <p>His github link is:</p>
-                            <a href='x'>https://github.com/khai2003</a>
+                            <a href='mailto: khai.caho@metropolia.fi'>khai.cao@metropolia.fi</a>
                             <br></br> <br></br>
                         </div>
                         <div className="kia">

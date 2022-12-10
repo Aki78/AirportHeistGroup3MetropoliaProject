@@ -39,11 +39,8 @@ ul {
 }
 
 .game-screen {
-    margin: 100px 0 50px 0px;
-    justify-content: center;
-    
-    
-    
+    margin: 50px 0 50px 0px;
+    justify-content: center;    
 }
 
 @keyframes fadein {
