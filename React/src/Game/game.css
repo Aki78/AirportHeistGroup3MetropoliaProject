@@ -2,7 +2,7 @@
     margin: 0 auto;
     width: 900px;
     text-align: center;
-  }
+}
 
 .nav__bar {
     overflow: hidden;
@@ -39,11 +39,19 @@ ul {
 }
 
 .game-screen {
-    margin: 50px 0 50px 0;
+    margin: 100px 0 50px 0px;
     justify-content: center;
+    
+    
+    
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
