@@ -2,7 +2,7 @@ extends Node2D
 
 
 export(float) var power = 0.1;
-export(float) var maxSize = 10;
+export(float) var maxSize = 100;
 export(float) var offsetDecreaseSpeed = 0.1;
 export(float) var maxOffsetStrength = 0.178;
 export(Vector2) var self_position = Vector2(0,0);
