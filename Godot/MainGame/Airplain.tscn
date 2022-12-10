@@ -1,13 +1,33 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://MainGame/Airplain.gd" type="Script" id=1]
 [ext_resource path="res://Images/euro_icon_white.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/big_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://MainGame/PlayerImage.gd" type="Script" id=4]
 [ext_resource path="res://MainGame/Cash.gd" type="Script" id=5]
+[ext_resource path="res://MainGame/HeistStart.gd" type="Script" id=6]
+[ext_resource path="res://Shaders/RadialGradient.png" type="Texture" id=7]
+[ext_resource path="res://Shaders/impact_effect_mat.tres" type="Material" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.25541
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 2
+emission_box_extents = Vector3( 10, 10, 1 )
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1000.0
+initial_velocity_random = 1.0
+angular_velocity = 10.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 10.0
+scale = 0.8
+color = Color( 0, 0.0156863, 1, 1 )
 
 [node name="Player" type="Button"]
 margin_left = 824.0
@@ -58,3 +78,21 @@ script = ExtResource( 4 )
 position = Vector2( 404.443, 469.354 )
 scale = Vector2( 49.894, 49.894 )
 shape = SubResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 349.519, -309.574 )
+emitting = false
+amount = 10
+speed_scale = 2.0
+explosiveness = 1.0
+process_material = SubResource( 2 )
+texture = ExtResource( 2 )
+
+[node name="Wave" type="Sprite" parent="."]
+material = ExtResource( 8 )
+position = Vector2( 404.444, 474.348 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 6
+texture = ExtResource( 7 )
+script = ExtResource( 6 )

@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Images/pngegg.png" type="Texture" id=1]
 [ext_resource path="res://MainGame/Interpol.gd" type="Script" id=2]
+[ext_resource path="res://MainGame/HeistStart.gd" type="Script" id=3]
+[ext_resource path="res://Shaders/RadialGradient.png" type="Texture" id=4]
+[ext_resource path="res://Shaders/impact_effect_mat.tres" type="Material" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -14,6 +17,7 @@ script = ExtResource( 2 )
 [node name="InterpolArea" type="Area2D" parent="."]
 
 [node name="InterpolShape" type="CollisionShape2D" parent="InterpolArea"]
+position = Vector2( -2.94104, 5.03497 )
 scale = Vector2( -6.50902, -6.50902 )
 shape = SubResource( 1 )
 
@@ -21,5 +25,13 @@ shape = SubResource( 1 )
 
 [node name="InterpolTimer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="Wave" type="Sprite" parent="."]
+material = ExtResource( 5 )
+position = Vector2( -18.6045, 31.1406 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 6
+texture = ExtResource( 4 )
+script = ExtResource( 3 )
 
 [connection signal="timeout" from="InterpolTimer" to="." method="_on_InterpolTimer_timeout"]

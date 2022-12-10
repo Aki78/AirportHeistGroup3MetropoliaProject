@@ -41,6 +41,7 @@ func _input(e):
 		$ArrowAlpha.hide()
 		emit_signal("success")
 		$Particles2D.emitting = true
+		Sound.play_money()
 		
 		
 func _physics_process(delta):

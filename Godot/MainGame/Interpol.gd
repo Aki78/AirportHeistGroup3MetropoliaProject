@@ -10,6 +10,7 @@ func init(init_airport, init_airports):
 	position = init_airport.rect_position
 	current_airport = init_airport
 	airports = init_airports
+	$Wave.expand_player()
 
 func get_dist(a,b):
 	return (a.rect_position-b.rect_position).length()
