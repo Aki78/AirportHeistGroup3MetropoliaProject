@@ -1,5 +1,5 @@
 extends VBoxContainer
-#
+
 func _ready():
 	for _i in get_children():
 		_i.modulate.a = 0
@@ -15,5 +15,3 @@ func dissapear():
 func add_info(name, coordinate, distance, price, co2):
 	$AirportName.text = name
 	$Price.text = str(price)
-
-

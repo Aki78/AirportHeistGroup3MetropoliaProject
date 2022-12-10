@@ -39,12 +39,12 @@ func disconnect_minigame():
 		_i.disconnect("lost", self, "_on_caught")
 		
 func start_minigame(speed):
+	$Player.expand()
+	Sound.play_deep()
 	$MiniGame.show()
 	$MiniGame.init(speed)
 
-
 	connect_minigame()
-
 
 func stop_minigame():
 	$MiniGame.hide()
@@ -146,7 +146,8 @@ func _on_WonTimer_timeout():
 	get_tree().change_scene("res://Won/WonScene.tscn")
 
 func _on_Player_pressed():
-	start_minigame(arrow_speed)
+	if state.current_airport != first_airport:
+		start_minigame(arrow_speed)
 
 func _on_InterpolArea_area_entered(area):
 	print("AREA", area)
@@ -177,6 +178,7 @@ func _on_caught():
 	init_interpol()
 	
 func _on_heist_success():
+	$Player.expand()
 	$HeistSuccessSequence.start()
 
 

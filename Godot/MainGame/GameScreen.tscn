@@ -149,6 +149,7 @@ direction = "down"
 position = Vector2( -1043.77, -412.307 )
 
 [node name="HeistSuccessSequence" type="Timer" parent="."]
+wait_time = 0.5
 one_shot = true
 
 [connection signal="tree_exiting" from="." to="." method="_on_Europe_tree_exiting"]

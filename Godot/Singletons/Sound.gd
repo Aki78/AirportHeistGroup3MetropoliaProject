@@ -10,9 +10,9 @@ onready var pink =AudioStreamPlayer.new()
 onready var panic =AudioStreamPlayer.new()
 onready var victory =AudioStreamPlayer.new()
 onready var deep =AudioStreamPlayer.new()
+onready var money =AudioStreamPlayer.new()
 
 onready var game_over_music =AudioStreamPlayer.new()
-
 
 onready var voice_smuggler = AudioStreamPlayer.new()
 
@@ -53,6 +53,7 @@ func add_sounds():
 	var sound_victory :AudioStream = preload("res://Sounds/victory.mp3") 
 	var sound_deep :AudioStream = preload("res://Sounds/deep_echo.mp3") 
 	var sound_game_over_music :AudioStream = preload("res://Sounds/game_over_music.mp3") 
+	var sound_money :AudioStream = preload("res://Sounds/impact_money.mp3") 
 
 	var sound_voice_smuggler :AudioStream = preload("res://Voices/frank_smuggler.mp3") 
 
@@ -64,6 +65,7 @@ func add_sounds():
 	victory.set_stream(sound_victory)
 	deep.set_stream(sound_deep)
 	game_over_music.set_stream(sound_game_over_music)
+	money.set_stream(sound_money)
 
 	voice_smuggler.set_stream(sound_voice_smuggler)
 
@@ -75,6 +77,7 @@ func add_sounds():
 	add_child(victory)
 	add_child(deep)
 	add_child(game_over_music)
+	add_child(money)
 
 	add_child(voice_smuggler)
 
@@ -120,7 +123,6 @@ func play_deep():
 func stop_deep():
 	deep.stop()
 
-
 func play_game_over_music():
 	game_over_music.stream.loop = false
 	game_over_music.play()
@@ -132,3 +134,6 @@ func play_smuggler_voice():
 	voice_smuggler.stream.loop = false
 	voice_smuggler.play()
 
+func play_money():
+	money.stream.loop = false
+	money.play()

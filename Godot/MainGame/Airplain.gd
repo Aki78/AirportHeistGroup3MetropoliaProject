@@ -12,6 +12,9 @@ func _ready():
 func set_cash(price):
 	$Cash.text = str(price)
 
+func expand():
+	$Wave.expand_player()
+
 #func hide_success_rate():
 #	$SuccessRate.hide()
 #	$Prize.hide()
