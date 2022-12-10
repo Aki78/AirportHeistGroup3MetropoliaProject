@@ -1,4 +1,52 @@
-button {
+.cpw-old-password + .cpw-new-password + .cpw-cfn-password {
+    display: flex;
+    justify-content: center;
+}
+
+.cpw-old-password input {
+    justify-content: center;
+    text-align: center;
+
+    border: none;
+    border-radius: 7px;
+}
+
+.cpw-new-password input {
+    justify-content: center;
+    text-align: center;
+
+    border: none;
+    border-radius: 7px;
+}
+
+.cpw-cfn-password input {
+    justify-content: center;
+    text-align: center;
+
+    border: none;
+    border-radius: 7px;
+}
+
+.change-password button {
+    width: 150px;
+    height: 35px;
+    
+    color: rgb(241, 238, 233);
+    background-color: rgb(22, 22, 22);
+    
+    border-radius: 7px;
+}
+
+.change-password button:hover {
+    background-color: rgb(77, 77, 77);
+    color: rgb(241, 238, 233);
+}
+
+
+
+
+
+.sign-out button {
     width: 150px;
     height: 35px;
     
