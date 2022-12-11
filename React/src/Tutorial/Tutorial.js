@@ -22,7 +22,7 @@ const Tutorial = () => {
                                 Click on the start button.
                             </li>
                             <li>
-                                You are given the chance to heist, or travel. Choose wisely.
+                                You are given the chance to heist, or to travel. Choose wisely.
                             </li>
                             <li>
                                 Now you can see the map, your location and the interpole's location.
