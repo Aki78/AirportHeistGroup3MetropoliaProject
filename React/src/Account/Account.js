@@ -181,6 +181,9 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 const res = registerNewUser(accUsername, accPassword);
                 console.log(res);
 
+                localStorage.setItem("user", accUsername);
+                localStorage.setItem("signed_in", true);
+
                 const routeChange = () => {
                     let path = '/Home';
                     navigate(path);

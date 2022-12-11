@@ -28,7 +28,7 @@ func _ready():
 	first_interpol.init(paris_airport, airports.get_children())
 	camera.current = true
 	stop_minigame()
-#	Sound.play_smuggler_voice()
+	Sound.play_smuggler_voice()
 	
 func connect_minigame():
 	$MiniGame.connect("heist_success", self, "_on_heist_success")
