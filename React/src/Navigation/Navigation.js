@@ -13,7 +13,7 @@ const Navigation = ({ checkSignedIn, usernameSignedin }) => {
         <nav className="nav_bar">
             <ul>
                 <li><img src={Logo} alt="logo"></img></li>
-                <li><Link to="home" >Home</Link></li>
+                <li><Link to="Home" >Home</Link></li>
                 <li><Link to="Game" >Game</Link></li>
                 <li><Link to="LeaderBoard" >Leaderboard</Link></li>
                 <li><Link to="Tutorial">Tutorial</Link></li>

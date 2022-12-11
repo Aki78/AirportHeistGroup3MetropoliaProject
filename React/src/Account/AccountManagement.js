@@ -1,8 +1,10 @@
 import './account_management.css'
 import React from 'react'
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => {
+    //////////////////////////////Sign out//////////////////////////////
     let navigate = useNavigate();
     
     function handleSignOutEvent() {
@@ -18,19 +20,96 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
         routeChange();
 
     }
+
+
+    //////////////////////////////Change password//////////////////////////////
+    const [oldPass, setOldPass] = useState("");
+    const [newPass, setNewPass] = useState("");
+    const [confPass, setConfPass] = useState("");
+
+    async function changePassword() {
+        await fetch("http://127.0.0.1:5000/Account/changepass?username=" + username + "&newpass=" + newPass, {method: "POST"})
+            .then(response => response.json())
+            .then(response => {
+                console.log("Message", response);
+            })
+            .catch(err => console.error(err));
+    }
+
+    async function checkOldPassword() {
+        let answer;
+        await fetch("http://127.0.0.1:5000/Account/checkOldPass?username=" + username + "&oldpass=" + oldPass)
+            .then(response => response.json())
+            .then(response => {
+                console.log("Got", response);
+                answer = response;
+            })
+            .catch(err => console.error(err));
+        if (answer.message === "Exist") {
+            return true;
+        }
+        else if (answer.message === "Nonexist") {
+            return false;
+        }
+    }
+
+    async function handleChangePasswordEvent() {
+        //console.log(oldPass);
+        //console.log(newPass);
+        //console.log(confPass);
+
+        if (oldPass === newPass) {
+            alert("New password can't be the same as old password");
+        }
+        else if (newPass !== confPass) {
+            alert("Wrong confirm password. Please check again.");
+        }
+        else if (oldPass !== newPass && newPass === confPass) {
+            let localUser = localStorage.getItem("user");
+            
+            if (localUser === username) {
+                const oldPassMatch = await checkOldPassword();
+
+                if (oldPassMatch === true) {
+                    await changePassword();
+                    console.log("Password changed");
+                }
+                else {
+                    alert("Old password incorrect. Please try again");
+                }
+            }
+            else {
+                alert("Something went wrong. Please sign out and sign in again.\nIf the error still occurs please contact the developers");
+            }
+
+        }
+        
+    }
     
+
+    //////////////////////////////Delete account//////////////////////////////
+    function handleDeleteAccountEvent() {
+
+    }
 
     return (
         <>
             <h1>Profile</h1>
             <p>Username: <strong>{username}</strong></p>
 
+            <div className="sign-out">
+                <button onClick={handleSignOutEvent}>Sign out</button>
+            </div>
+
+            <div className="line"></div>
+
+            <h4>Change password</h4>
             <div className="change-password">
                 <div className="cpw-old-password">
                     <input
                         type="password"
                         placeholder='Old password'
-                        //onChange={e => setAccPassword(e.target.value)}
+                        onChange={e => setOldPass(e.target.value)}
                     />
                 </div>
 
@@ -38,7 +117,7 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
                     <input
                         type="password"
                         placeholder='New password'
-                        //onChange={e => setAccPassword(e.target.value)}
+                        onChange={e => setNewPass(e.target.value)}
                     />
                 </div>
 
@@ -46,17 +125,42 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
                     <input
                         type="password"
                         placeholder='Confirm password'
-                        //onChange={e => setPasswordConfirm(e.target.value)}
+                        onChange={e => setConfPass(e.target.value)}
                     />
                 </div>
 
-                <button>Change password</button>
+                <button onClick={handleChangePasswordEvent}>Change password</button>
             </div>
 
             <div className="line"></div>
 
-            <div className="sign-out">
-                <button onClick={handleSignOutEvent}>Sign out</button>
+            <h4>Delete account</h4>
+
+            <div className="delete-account">
+                <div className="del-username">
+                    <input
+                        placeholder='Username'
+                        //onChange={e => setAccPassword(e.target.value)}
+                    />
+                </div>
+
+                <div className="del-password">
+                    <input
+                        type="password"
+                        placeholder='Password'
+                        //onChange={e => setAccPassword(e.target.value)}
+                    />
+                </div>
+
+                <div className="del-cf-password">
+                    <input
+                        type="password"
+                        placeholder='Confirm password'
+                        //onChange={e => setPasswordConfirm(e.target.value)}
+                    />
+                </div>
+
+                <button onClick={handleDeleteAccountEvent}>Delete account</button>
             </div>
         </>
 

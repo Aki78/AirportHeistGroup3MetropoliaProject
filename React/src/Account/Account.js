@@ -40,7 +40,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         }
     }*/
 
-    async function retrieveInfo(accUsername, accPassword) {
+    async function dbPermission(accUsername, accPassword) {
         let answer;
         await fetch("http://127.0.0.1:5000/Account/retrieve?userin=" + accUsername + "&passin=" + accPassword)
             .then(response => response.json())
@@ -57,7 +57,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
         //console.log(accUsername);
         //console.log(accPassword);
 
-        let dbAllowance = await retrieveInfo(accUsername, accPassword);
+        let dbAllowance = await dbPermission(accUsername, accPassword);
 
         if (dbAllowance === "Allow" && accUsername !== "" && accPassword !== "") {
             handleUsername(accUsername);
