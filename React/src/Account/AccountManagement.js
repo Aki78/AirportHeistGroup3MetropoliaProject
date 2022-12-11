@@ -28,7 +28,7 @@ const AccountManagement = ({ username , callbackUsername ,  callbackSignedIn }) 
     const [confPass, setConfPass]   = useState("");
 
     async function changePassword() {
-        await fetch("http://127.0.0.1:5000/Account/changePass?username=" + username + "&newpass=" + newPass, {method: "POST"})
+        await fetch("https://aki78.pythonanywhere.com/Account/changePass?username=" + username + "&newpass=" + newPass, {method: "POST"})
             .then(response => response.json())
             .then(response => {
                 console.log("Message", response);
@@ -38,7 +38,7 @@ const AccountManagement = ({ username , callbackUsername ,  callbackSignedIn }) 
 
     async function checkOldPassword() {
         let answer;
-        await fetch("http://127.0.0.1:5000/Account/checkOldPass?username=" + username + "&oldpass=" + oldPass)
+        await fetch("https://aki78.pythonanywhere.com/Account/checkOldPass?username=" + username + "&oldpass=" + oldPass)
             .then(response => response.json())
             .then(response => {
                 console.log("Got", response);
@@ -93,7 +93,7 @@ const AccountManagement = ({ username , callbackUsername ,  callbackSignedIn }) 
     const [delCFPassword, setDelCFPassword] = useState("");
 
     async function deleteAccount() {
-        await fetch("http://127.0.0.1:5000/Account/deleteAccount?username=" + delUsername + "&password=" + delPassword, {method: "POST"})
+        await fetch("https://aki78.pythonanywhere.com/Account/deleteAccount?username=" + delUsername + "&password=" + delPassword, {method: "POST"})
             .then(response => response.json())
             .then(response => {
                 console.log("Message", response);
@@ -103,7 +103,7 @@ const AccountManagement = ({ username , callbackUsername ,  callbackSignedIn }) 
 
     async function passCheck() {
         let res;
-        await fetch("http://127.0.0.1:5000/Account/retrieve?userin=" + delUsername + "&passin=" + delPassword)
+        await fetch("https://aki78.pythonanywhere.com/Account/retrieve?userin=" + delUsername + "&passin=" + delPassword)
             .then(response => response.json())
             .then(response => {
                 console.log("Got", response);
