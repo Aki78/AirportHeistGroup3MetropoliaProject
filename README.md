@@ -6,7 +6,7 @@
 
 # Page
 
-https://Aki78.github.io/airport-heist.github.io
+https://Aki78.pythonanywhere.io/home
 
 https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit#slide=id.g166b1584af2_14_1
 
@@ -40,6 +40,15 @@ https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3
 - [Useful bash commands](#useful-bash-commands)
 - [To Do List](#to-do-list)
 - [Project information](#project-info)
+
+## Abstract
+
+This is a first semester group project held in 2022, IT engineering at Metropolia University of Applied Sciences,
+by group 3. The goal is to practice groupwork in IT projects by making an online game using git, and 
+various full-stack technologies such as python, javascript, sql and related technologies. Our group goal was also to maximise the
+learning experience by including extended technologies such as using a game engine and many other useful software to make the game
+fun to play and visually pleasing.
+
 
 ## Introduction
 
@@ -153,58 +162,6 @@ The database was cut down, to remove a lot of unnecessary information and to mak
 
 ## Learning Tools And information
 
-### Useful Git Commands
-
-```bash
-git pull (saves from github)
-
-git add . (all files)
-git commit -m "discription of changes" (add your changes to local git history)
-git push (pushs to the repository)
-
-git rm file_name (removes file_name)
-
-git stash (restore everythiing to last commit)
-
-git status (shows your current git state)
-
-git clone repo_name (when you want to copy a repo and add it your computer)
-
-./run_git.sh 'comment'(franks special command)
-```
-
-### Useful Bash Commands
-
-```bash
-pwd                               shows you to curent directory
-cd [name of directory]            change directory
-cd ~ 		                  takes you home
-ls 			          list directory and files in the directory
-mkdir [name of directory]         makes a directory
-touch [name of file]	          creates a file in the current directory 
-mv file.txt mouseless	          move file to somewhere
-mv file.txt file.py	          renames file from txt to py
-cd ..			          .. means back one directory
-
-DANGER COMMANDS
-rm file.py		          removes file named (only for files not directory)
-rmdir			          removes empty directory only
-rm -r [name of directory]         removes directory and everything in it
-rm -rf name		          remove recurssive force name of directoty, must use force to delete git directory
-rm *				  this will delete all files only! so make sure youre in the right directory
-rm -r * 			  deletes everything in directory including other directories
-rm -r *4*			  deletes everything that has a 4 in it
-find . -name "*3*.py"	          find files with 3 and .py in it
-find . -name "*3*.py" -delete	  find files with 3 and .py in it and then deletes it
-cat main.py			  will print out whats inside the file
-
-control-c			  stop command
-py -3 filename.py		  runs python program that is in the file in your terminal (windows only)
-python3 filename.py		  runs python program that is in the file in your terminal (linux/Mac)
-
-grep -r [expression]              finds the file where the expression exists
-```
-
 [Back to top](#airport-heist)
 
 ## To-Do-List
@@ -215,13 +172,12 @@ grep -r [expression]              finds the file where the expression exists
 - [x] js user login
 - [x] js create user account
 - [ ] flask user login with password
-- [ ] js unit test (optional)
-- [ ] js embedding Web Assembly (optional)
+- [x] js embedding Web Assembly (optional)
 
 ### Kiana
 
 - [x] html/css leader board
-- [ ] html/css tutorial page
+- [x] html/css tutorial page
 - [x] html/css make mobile friendly
 - [ ] html/css/js add night-mode option (optional)
 - [ ] html/css/js progress graph (optional)
@@ -232,27 +188,23 @@ grep -r [expression]              finds the file where the expression exists
 - [x] flask create user account
 - [x] flask fetching weather
 - [ ] flask document API's (optional)
-- [x] flask API unit testing (done with insomnia)
 
 ### Jenni
 
 - [x] SQL leaderboard
 - [x] SQL users
 - [x] SQL update airport DB
-- [ ] SQL set up DB could
+- [x] SQL set up DB could
 - [ ] SQL user settings DB (optional)
 - [ ] SQL play history (optional)
 
 ### Aki
 
 - [x] godot game logic / dialog
-- [ ] godot call game init from API's
 - [x] godot make real time strategy
-- [ ] flask API's for game init
 - [x] flask set up python cloud
 - [ ] godot better map (optional)
 - [ ] godot machine learn AI (optional)
-- [ ] godot add to google playstore (optional)
 
 ### All
 
