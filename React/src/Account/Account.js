@@ -123,11 +123,11 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 console.log("Got", response);
                 //const res = checkCredentials(accUsername, accPassword, response);
                 if (response.message === "Exist") {
-                    console.log("User existed");
+                    //console.log("User existed");
                     res = true;
                 }
                 else if (response.message === "Nonexist") {
-                    console.log("No user with same username");
+                    //console.log("No user with same username");
                     res = false;
                 }
             })
@@ -180,7 +180,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 console.log(res);
 
                 const routeChange = () => {
-                    let path = '/home';
+                    let path = '/Home';
                     navigate(path);
                 }
                 routeChange();
