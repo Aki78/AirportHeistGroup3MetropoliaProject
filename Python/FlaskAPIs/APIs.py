@@ -277,8 +277,8 @@ def patch_new_score():
         username = args.get("username")
         new_score = args.get("score")
 
-        sql1 = f"SELECT score FROM users WHERE username = \"{username}\";"
-        sql2 = f"UPDATE users SET score = \"{new_score}\" WHERE username = \"{username}\";"
+        sql1 = f"SELECT score FROM users WHERE username = '{username}';"
+        sql2 = f"UPDATE users SET score = '{new_score}' WHERE username = '{username}';"
         
         cursor = connection.cursor()
         cursor.execute(sql1)
