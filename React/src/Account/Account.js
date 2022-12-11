@@ -42,7 +42,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
 
     async function dbPermission(accUsername, accPassword) {
         let answer;
-        await fetch("http://127.0.0.1:5000/Account/retrieve?userin=" + accUsername + "&passin=" + accPassword)
+        await fetch("https://aki78.pythonanywhere.com/Account/retrieve?userin=" + accUsername + "&passin=" + accPassword)
             .then(response => response.json())
             .then(response => {
                 console.log("Got", response)
@@ -93,8 +93,10 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
 
     async function checkToken(token) {
         let answer;
+        //let skey = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";    //Development
+        let skey = "6LcUh2AjAAAAAPxnpmQuUltyjvl2WutOVX7BcRM2";      //Official
         //console.log("2 --- ", token);
-        await fetch("http://127.0.0.1:5000/Account/recaptcha?skey=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&token=" + token)
+        await fetch("https://aki78.pythonanywhere.com/Account/recaptcha?skey=" + skey + "&token=" + token)
             .then(response => response.json())
             .then(response => {
                 //console.log("Received from API", response);
@@ -117,7 +119,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
 
     async function checkExistingAccount(accUsername) {
         let res;
-        await fetch("http://127.0.0.1:5000/Account/checkExist=" + accUsername)
+        await fetch("https://aki78.pythonanywhere.com/Account/checkExist=" + accUsername)
             .then(response => response.json())
             .then(response => {
                 console.log("Got", response);
@@ -136,7 +138,7 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
     }
 
     async function registerNewUser(accUsername, accPassword) {    
-        await fetch("http://127.0.0.1:5000/Account/createAccount?username=" + accUsername + "&password=" + accPassword, {method: "POST"})
+        await fetch("https://aki78.pythonanywhere.com/Account/createAccount?username=" + accUsername + "&password=" + accPassword, {method: "POST"})
             .then(response => response.json())
             .then(response => {
                 console.log("Got", response);
@@ -249,8 +251,8 @@ const Account = ({ callbackUsername ,  callbackSignedIn} ) => {
                 </div>
                 <div className="captcha">
                     <ReCAPTCHA
-                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
-                        //sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
+                        //sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"      //Development
+                        sitekey="6LcUh2AjAAAAAN_Rn3CfWhN9Vpl1H__2gjjwDHHS"    //Official
                         ref={captchaRef}
                         onChange={handleCaptchaButton}
                     />
