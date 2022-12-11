@@ -55,12 +55,12 @@ fun to play and visually pleasing.
 This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai cao,
 Kiana Aghajani, Jenni Hallikas and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive
 game, that satisfies the guidelines provided by software1. As well as producing an attractive and intuitive website that
-satisfies the requirements in software2. Airport Heist is suitable for all ages.
+satisfies the requirements of software2. Airport Heist is suitable for all ages.
 
 ## Current State
 
 Our game and website are currently fully functional. Our website allows users to create a profile and compete with
-other users for highest score. Users can also find a tutorial on how to play and view current weather data in the
+other users for the highest score. There is also a tutorial on how to play. As an added bonus and a requirement of software2 users can view current weather data in the
 cities they will be flying to with-in the game. When users wish to play Airport Heist they will be redirected
 to our game's website. This is due to GitHub having a megabyte size limit per file.
 
@@ -133,7 +133,7 @@ This diagram shows how our different files interact with each other. At the mome
 engine to run our game, python to run our backend, react for our website and SQL to store the game's data.
 
 <p align="center">
-    <img src="./Poster/tree_diagrams/project_diagram_2.png">
+    <img src="./Poster/tree_diagrams/project_diagram_readme.png">
 </p>
 
 [Back to top](#airport-heist)
@@ -145,18 +145,11 @@ engine to run our game, python to run our backend, react for our website and SQL
 All helper functions created were ran through pytest to ensure proper working order.
 The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
-#### Final Requirements and Goals
+#### Further Development Ideas/Visions
 
-    -create scoring system
-    -save top 10 players in a database
-    -visually pleasing user interface
-    -smooth animated motion
-    -short start-up time
-    -30fps
-    -no freezing
-    -the game will be in real time, instead of turn-based
-    -interpol will be trained with machine learning
-    -server will be set up remotely so the game will be playable online for anyone, anywhere 
+    -Interpol  will be trained with machine learning.
+    -Improve the user experience.
+    -Enhance the aesthetic of the site.
 
 [Back to top](#airport-heist)
 

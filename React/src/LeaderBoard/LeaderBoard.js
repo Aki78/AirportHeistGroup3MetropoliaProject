@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 
 const LeaderBoard = () => {
     const [userInfo, setUserInfo] = useState(Array.from(Array(10).keys()));
-    const request = "http://127.0.0.1:5000/top_ten";
+    const request = "https://aki78.pythonanywhere.com/top_ten";
 
     useEffect(() => {
         async function get_topten_info() {
