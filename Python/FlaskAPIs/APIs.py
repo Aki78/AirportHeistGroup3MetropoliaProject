@@ -30,13 +30,13 @@ def get_google_recaptcha():
         
         response = requests.get(googleRequest).json()  
 
-        print("This", response)
+        #print("This", response)
 
         return response
 
     except ValueError:
         response = {
-            "message": "Invalid number as addend",
+            "message": "Invalid request",
             "status": 400
         }
         
@@ -67,7 +67,7 @@ def register_new_account_to_db():
 
     except ValueError:
         response = {
-            "message": "Invalid number as addend",
+            "message": "Invalid request",
             "status": 400
         }
         
@@ -83,7 +83,7 @@ def check_old_password():
         username = args.get("username")
         oldpass = args.get("oldpass")
 
-        sql = f"select username, password from users where username = '{username}' and password = '{oldpass}'"
+        sql = f"select username, password from users where username = '{username}' and password = '{oldpass}';"
         
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -103,7 +103,7 @@ def check_old_password():
 
     except ValueError:
         response = {
-            "message": "Invalid number as addend",
+            "message": "Invalid request",
             "status": 400
         }
         
@@ -112,14 +112,14 @@ def check_old_password():
         
         return http_response
 
-@app.post('/Account/changepass')
+@app.post('/Account/changePass')
 def change_password():
     try:
         args = request.args
         username = args.get("username")
         newpass = args.get("newpass")
 
-        sql = f"update users set password = '{newpass}' where username = '{username}'"
+        sql = f"update users set password = '{newpass}' where username = '{username}';"
         
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -134,7 +134,38 @@ def change_password():
 
     except ValueError:
         response = {
-            "message": "Invalid number as addend",
+            "message": "Invalid request",
+            "status": 400
+        }
+        
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        
+        return http_response
+
+@app.post('/Account/deleteAccount')
+def delete_account():
+    try:
+        args = request.args
+        username = args.get("username")
+        password = args.get("password")
+
+        sql = f"delete from users where username = '{username}' and password = '{password}';"
+        
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        connection.commit()
+        cursor.close()
+
+        response = {
+            "message": "Account deleted"
+        }
+        
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid request",
             "status": 400
         }
         
@@ -146,7 +177,7 @@ def change_password():
 @app.get('/Account/checkExist=<username>')
 def check_existing_account(username):
     try:
-        sql = f"select username from users where username = '{username}'"        
+        sql = f"select username from users where username = '{username}';"        
         
         cursor = connection.cursor()
         cursor.execute(sql)

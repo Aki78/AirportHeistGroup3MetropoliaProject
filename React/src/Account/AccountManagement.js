@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => {
+const AccountManagement = ({ username , callbackUsername ,  callbackSignedIn }) => {
     //////////////////////////////Sign out//////////////////////////////
     let navigate = useNavigate();
     
@@ -14,7 +14,7 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
         localStorage.clear();
 
         const routeChange = () => {
-            let path = "/home";
+            let path = "/Home";
             navigate(path);
         }
         routeChange();
@@ -23,12 +23,12 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
 
 
     //////////////////////////////Change password//////////////////////////////
-    const [oldPass, setOldPass] = useState("");
-    const [newPass, setNewPass] = useState("");
-    const [confPass, setConfPass] = useState("");
+    const [oldPass, setOldPass]     = useState("");
+    const [newPass, setNewPass]     = useState("");
+    const [confPass, setConfPass]   = useState("");
 
     async function changePassword() {
-        await fetch("http://127.0.0.1:5000/Account/changepass?username=" + username + "&newpass=" + newPass, {method: "POST"})
+        await fetch("http://127.0.0.1:5000/Account/changePass?username=" + username + "&newpass=" + newPass, {method: "POST"})
             .then(response => response.json())
             .then(response => {
                 console.log("Message", response);
@@ -54,10 +54,6 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
     }
 
     async function handleChangePasswordEvent() {
-        //console.log(oldPass);
-        //console.log(newPass);
-        //console.log(confPass);
-
         if (oldPass === newPass) {
             alert("New password can't be the same as old password");
         }
@@ -73,6 +69,12 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
                 if (oldPassMatch === true) {
                     await changePassword();
                     console.log("Password changed");
+                    
+                    const routeChange = () => {
+                        let path = "/Home";
+                        navigate(path);
+                    }
+                    routeChange();
                 }
                 else {
                     alert("Old password incorrect. Please try again");
@@ -81,15 +83,75 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
             else {
                 alert("Something went wrong. Please sign out and sign in again.\nIf the error still occurs please contact the developers");
             }
-
-        }
-        
+        }  
     }
     
 
     //////////////////////////////Delete account//////////////////////////////
-    function handleDeleteAccountEvent() {
+    const [delUsername, setDelUsername]     = useState("");
+    const [delPassword, setDelPassword]     = useState("");
+    const [delCFPassword, setDelCFPassword] = useState("");
 
+    async function deleteAccount() {
+        await fetch("http://127.0.0.1:5000/Account/deleteAccount?username=" + delUsername + "&password=" + delPassword, {method: "POST"})
+            .then(response => response.json())
+            .then(response => {
+                console.log("Message", response);
+            })
+            .catch(err => console.error(err));
+    }
+
+    async function passCheck() {
+        let res;
+        await fetch("http://127.0.0.1:5000/Account/retrieve?userin=" + delUsername + "&passin=" + delPassword)
+            .then(response => response.json())
+            .then(response => {
+                console.log("Got", response);
+                //const res = checkCredentials(accUsername, accPassword, response);
+                if (response.message === "Allow") {
+                    //console.log("User existed");
+                    res = true;
+                }
+                else if (response.message === "Block") {
+                    //console.log("No user with same username");
+                    res = false;
+                }
+            })
+            .catch(err => console.error(err)); 
+        return res;
+    }
+
+    async function handleDeleteAccountEvent() {
+        let userConfirmDelete = window.confirm("Are you sure you want to delete your account?");
+        if (userConfirmDelete) {
+            if (delUsername === username && username === localStorage.getItem("user")) {
+                if (delPassword === delCFPassword) {
+                    const delPassCheck = await passCheck();
+                    if (delPassCheck) {
+                        deleteAccount();
+
+                        localStorage.clear();
+
+                        const routeChange = () => {
+                            let path = "/Home";
+                            navigate(path);
+                        }
+                        routeChange();
+                    }
+                    else {
+                        alert("Wrong password. Please try again.");
+                    }
+                }
+                else {
+                    alert("Wrong confirm password. Please check again.");
+                }
+            }
+            else {
+                alert("Wrong username. Please try again.")
+            }
+        }
+        
+        
     }
 
     return (
@@ -140,7 +202,7 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
                 <div className="del-username">
                     <input
                         placeholder='Username'
-                        //onChange={e => setAccPassword(e.target.value)}
+                        onChange={e => setDelUsername(e.target.value)}
                     />
                 </div>
 
@@ -148,7 +210,7 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
                     <input
                         type="password"
                         placeholder='Password'
-                        //onChange={e => setAccPassword(e.target.value)}
+                        onChange={e => setDelPassword(e.target.value)}
                     />
                 </div>
 
@@ -156,7 +218,7 @@ const AccountManagement = ({username, callbackUsername ,  callbackSignedIn}) => 
                     <input
                         type="password"
                         placeholder='Confirm password'
-                        //onChange={e => setPasswordConfirm(e.target.value)}
+                        onChange={e => setDelCFPassword(e.target.value)}
                     />
                 </div>
 
