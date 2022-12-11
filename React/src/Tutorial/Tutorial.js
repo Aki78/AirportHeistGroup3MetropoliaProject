@@ -13,7 +13,7 @@ const Tutorial = () => {
                                 Go to our website: <a href='https://aki78.pythonanywhere.com/home'>https://aki78.pythonanywhere.com/home</a>
                             </li>
                             <li>
-                                Then click on the game!
+                                Then click on the game from the top of the page.
                             </li>
                             <li>
                                 Wit for it to load...
@@ -22,10 +22,13 @@ const Tutorial = () => {
                                 Click on the start button.
                             </li>
                             <li>
-                                Now you can see the map, your lovation and the interpole's location.
+                                You are given the chance to heist, or travel. Choose wisely.
                             </li>
                             <li>
-                                The airports that you can select are in black. You choose your destniy. 
+                                Now you can see the map, your location and the interpole's location.
+                            </li>
+                            <li>
+                                The airports that you can select are in black. Choose your path. 
                             </li>
                             <li>Would you win? Or would the interpole get to you?</li>
                         </ol>

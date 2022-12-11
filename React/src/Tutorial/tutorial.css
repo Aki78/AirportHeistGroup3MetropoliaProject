@@ -57,6 +57,7 @@ main .steps {
     border-left: 3px solid black;
     border-bottom: 6px solid black;
     border-radius: 10px;
+    color: #0B0518;
 }
 
 main .steps li {
