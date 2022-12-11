@@ -19,8 +19,15 @@ const Tutorial = () => {
                                 Wit for it to load...
                             </li>
                             <li>
-                                
+                                Click on the start button.
                             </li>
+                            <li>
+                                Now you can see the map, your lovation and the interpole's location.
+                            </li>
+                            <li>
+                                The airports that you can select are in black. You choose your destniy. 
+                            </li>
+                            <li>Would you win? Or would the interpole get to you?</li>
                         </ol>
                     </div>
                 </main>

@@ -48,6 +48,22 @@ main {
 
 }
 
+main .steps {
+    text-align: left;
+    display: flex;
+    padding-bottom: 150px;
+    border-top: 6px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 6px solid black;
+    border-radius: 10px;
+}
+
+main .steps li {
+    margin-top: 25px;
+    line-height: 5;
+}
+
 .brd section {
     text-align: left;
     display: flex;
