@@ -51,7 +51,7 @@ def register_new_account_to_db():
         username = args.get("username")
         password = args.get("password")
         
-        sql = f"insert into users(username, password, score) VALUES(\"{username}\",\"{password}\", 0);"
+        sql = f"insert into users(username, password, score) VALUES('{username}','{password}', 0);"
         
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -212,7 +212,7 @@ def login_credential_check():
         username = args.get("userin")
         password = args.get("passin")
         
-        sql = f"select username, password from users where username = '{username}' and password = '{password}'"        
+        sql = f"select username, password from users where username = '{username}' and password = '{password}';"        
         
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -245,7 +245,7 @@ def login_credential_check():
 @app.route('/top_ten')
 def top_ten():
     try:
-        sql = 'SELECT username, score FROM users ORDER BY score DESC LIMIT 10;'
+        sql = "SELECT username, score FROM users ORDER BY score DESC LIMIT 10;"
         
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -258,6 +258,50 @@ def top_ten():
         http_response = Response(response=json_response, mimetype="application/json")
         
         return http_response
+
+    except ValueError:
+        response = {
+            "message": "Invalid request",
+            "status": 400
+        }
+        
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        
+        return http_response
+
+@app.route('/updatescore', methods=["PATCH"])
+def patch_new_score():
+    try:
+        args = request.args
+        username = args.get("username")
+        new_score = args.get("score")
+
+        sql1 = f"SELECT score FROM users WHERE username = \"{username}\";"
+        sql2 = f"UPDATE users SET score = \"{new_score}\" WHERE username = \"{username}\";"
+        
+        cursor = connection.cursor()
+        cursor.execute(sql1)
+        result_score = cursor.fetchall()
+        
+        if int(new_score) > int(result_score[0][0]):
+            cursor.execute(sql2)
+            connection.commit()
+            print(f"you beat your previous high score: {result_score[0][0]}")
+            cursor.close()
+
+            response = {
+                "message": "New high score"
+            }
+        else:
+            print(f"you did not beat your previous high score: {result_score[0][0]}")
+            cursor.close()
+
+            response = {
+                "message": "Same score"
+
+            }
+        return response
 
     except ValueError:
         response = {
