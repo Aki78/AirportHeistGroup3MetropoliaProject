@@ -8,7 +8,7 @@ const AccountManagement = ({ username , callbackUsername ,  callbackSignedIn }) 
     let navigate = useNavigate();
     
     function handleSignOutEvent() {
-        callbackUsername("")        
+        callbackUsername("");
         callbackSignedIn(false);
 
         localStorage.clear();
@@ -129,6 +129,9 @@ const AccountManagement = ({ username , callbackUsername ,  callbackSignedIn }) 
                     const delPassCheck = await passCheck();
                     if (delPassCheck) {
                         deleteAccount();
+
+                        callbackUsername("");
+                        callbackSignedIn(false);
 
                         localStorage.clear();
 
