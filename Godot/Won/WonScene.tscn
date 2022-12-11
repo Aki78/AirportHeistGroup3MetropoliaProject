@@ -40,6 +40,15 @@ rect_scale = Vector2( 0.0974947, 0.0974947 )
 custom_fonts/font = ExtResource( 1 )
 text = "Best Score"
 
+[node name="Best2" type="Label" parent="."]
+margin_left = -429.167
+margin_top = 137.963
+margin_right = 3087.83
+margin_bottom = 1167.96
+rect_scale = Vector2( 0.0430747, 0.0430747 )
+custom_fonts/font = ExtResource( 1 )
+text = "User Names"
+
 [node name="BackToMainMenu" type="Button" parent="."]
 margin_left = 74.0742
 margin_top = 48.611
@@ -50,5 +59,24 @@ custom_fonts/font = ExtResource( 1 )
 text = "Main Menu"
 script = ExtResource( 2 )
 
+[node name="LineEdit" type="LineEdit" parent="."]
+visible = false
+margin_left = -439.815
+margin_top = 172.685
+margin_right = -267.815
+margin_bottom = 219.685
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_left = -243.519
+margin_top = 173.148
+margin_right = -174.519
+margin_bottom = 217.148
+text = "Push Score"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
 [connection signal="tree_exiting" from="." to="." method="_on_WonScene_tree_exiting"]
 [connection signal="pressed" from="BackToMainMenu" to="BackToMainMenu" method="_on_BackToMainMenu_pressed"]
+[connection signal="text_changed" from="LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

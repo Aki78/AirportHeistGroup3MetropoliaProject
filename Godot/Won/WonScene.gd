@@ -11,3 +11,15 @@ func _ready():
 func _on_WonScene_tree_exiting():
 	Sound.stop_victory()
 
+
+
+func _on_Button_pressed():
+	$HTTPRequest.request('https://Aki78.pythonanywhere.com/updatescore?username=bbb&score=1000',
+	[],
+	true,
+	 8,
+	JSON.print("{}"))
+
+
+func _on_LineEdit_text_changed(new_text):
+	pass # Replace with function body.
