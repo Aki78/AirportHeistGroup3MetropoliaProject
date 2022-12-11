@@ -145,18 +145,11 @@ engine to run our game, python to run our backend, react for our website and SQL
 All helper functions created were ran through pytest to ensure proper working order.
 The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
-#### Final Requirements and Goals
+#### Further Development Ideas/Visions
 
-    -create scoring system
-    -save top 10 players in a database
-    -visually pleasing user interface
-    -smooth animated motion
-    -short start-up time
-    -30fps
-    -no freezing
-    -the game will be in real time, instead of turn-based
-    -interpol will be trained with machine learning
-    -server will be set up remotely so the game will be playable online for anyone, anywhere 
+    -Interpol  will be trained with machine learning.
+    -Improve the user experience.
+    -Enhance the aesthetic of the site.
 
 [Back to top](#airport-heist)
 
