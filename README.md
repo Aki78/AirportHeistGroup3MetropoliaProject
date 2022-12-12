@@ -52,17 +52,17 @@ fun to play and visually pleasing.
 
 ## Introduction
 
-This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai cao,
+This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai Cao,
 Kiana Aghajani, Jenni Hallikas and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive
 game, that satisfies the guidelines provided by software1. As well as producing an attractive and intuitive website that
 satisfies the requirements of software2. Airport Heist is suitable for all ages.
 
 ## Current State
 
-Our game and website are currently fully functional. Our website allows users to create a profile and compete with
-other users for the highest score. There is also a tutorial on how to play. As an added bonus and a requirement of software2 users can view current weather data in the
-cities they will be flying to with-in the game. When users wish to play Airport Heist they will be redirected
-to our game's website. This is due to GitHub having a megabyte size limit per file.
+Our game and website are currently fully functional. 
+Our website allows users to create a profile and compete with other users for the highest score. 
+There is also a tutorial on how to play. 
+As an added bonus and a requirement of software 2 users can view current weather data in the cities they will be flying to with-in the game.
 
 ## Vision
 
