@@ -6,7 +6,7 @@ const Tutorial = () => {
         <>
             <div className='container'>
                 <main>
-                    <h2 id='how'>How To Play Aairport Heist</h2>
+                    <h2 id='how'>How To Play Airport Heist</h2>
                     <div className='steps'>
                         <ol>
                             <li>
