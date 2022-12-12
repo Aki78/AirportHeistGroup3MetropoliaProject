@@ -58,9 +58,14 @@ satisfies the requirements of software2. Airport Heist is suitable for all ages.
 ## Current State
 
 Our game and website are currently fully functional. 
-Our website allows users to create a profile and compete with other users for the highest score. 
-There is also a tutorial on how to play. 
-As an added bonus and a requirement of software 2 users can view current weather data in the cities they will be flying to with-in the game.
+Our website allows users to:
+    -create a profile(stores user data in database)
+    -log in and out of their profile(calls upon database)
+    -compete with other users for the highest score(update players info in the database)
+    -view top ten highest scores(calls on database)
+    -view a tutorial on how to play
+    -view live weather in cities they may be flying to in the game
+    -view details about development team and contact info
 
 ## Vision
 
