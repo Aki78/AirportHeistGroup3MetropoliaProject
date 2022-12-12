@@ -12,6 +12,8 @@
 
 ## Contents
 
+[Abstract](#abstract)
+
 [Introduction](#introduction)
 
 [Current State](#current-state)
@@ -35,7 +37,6 @@
 
 [Learning Tools And Information](#learning-tools-and-information)
 
-- [Run](#run)
 - [To Do List](#to-do-list)
 - [Project information](#project-info)
 
