@@ -58,7 +58,7 @@ satisfies the requirements of software2. Airport Heist is suitable for all ages.
 ## Current State
 
 Our game and website are currently fully functional. 
-Our website allows users to:
+Website features:
 
 * create a profile(stores user data in database)
 * log in and out of their profile(calls upon database)
@@ -96,8 +96,11 @@ the EU.
 
 ### How the game works
 
-Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they
-are captured or their money runs out.
+Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they are captured or their money runs out.
+
+The main character starts the game with 5000€. Each flight cost money based on how long the flight is. Money is equal 
+to points, so when the player reaches portugal their score is equal to how much money they have left. In order to 
+get more money, and therefore points, players may choose to steal.
 
 #### Travel
 
@@ -111,12 +114,13 @@ Players can see in which city interpol is and must avoid flying to the same airp
 to airport at random and in real time. Players must make their decisions quickly. The game is over if interpol lands 
 in the same airport as the player.
 
-#### Stealing
+#### Stealing 
 
-The main character starts the game with 5000€. Each flight cost money based on how long the flight is. Money is equal 
-to points, so when the player reaches portugal their score is equal to how much money they have left. In order to 
-get more money, and therefore points, players may choose to steal. Stealing is done after a player arrives at an
-airport. 
+Stealing is done after a player arrives at a new airport. By clicking on the current airport after arriving at it, the player starts a mini-game. 
+
+By winning the mini game the player will win extra money. Interpol is still moving live as the user plays, so keep an eye on them.
+
+If the player loses the mini game, there will be no reward, but instead an extra interpol will appear. Each time the player loses a mini game, a new interpol will spawn. The more interpol moving around the hard it will be to get to your extraction point in portugal.
 
 [Back to top](#airport-heist)
 
