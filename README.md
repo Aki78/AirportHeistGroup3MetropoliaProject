@@ -158,10 +158,7 @@ The database was cut down, to remove a lot of unnecessary information and to mak
 * Interpol  will be trained with machine learning.
 * Improve the user experience.
 * Enhance the aesthetic of the site.
-
-[Back to top](#airport-heist)
-
-## Learning Tools And information
+* mobile freindly version
 
 [Back to top](#airport-heist)
 
