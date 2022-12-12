@@ -28,12 +28,13 @@
 
 - [How the game works](#how-the-game-works)
 - [Decision Tree](#decision-tree)
-- [Project diagram](#project-diagram)
+- [Project Diagram](#project-diagram)
 
 [Quality Requirements](#quality-requirements)
 
-- [Preliminary requirements](#preliminary-requirements)
-- [Final requirements](#final-requirements-and-goals)
+- [Preliminary Requirements](#software-1-preliminary-requirements)
+- [Final Requirements](#software-2-final-requirements)
+- [Further Development Ideas](#further-development-ideas)
 
 [Learning Tools And Information](#learning-tools-and-information)
 
@@ -96,10 +97,6 @@ Your mission is to get to your extraction team, who are waiting for you in portu
 
 [Back to top](#airport-heist)
 
-
-
-[Back to top](#airport-heist)
-
 ## Functional Requirements
 
 ### How the game works
@@ -155,12 +152,14 @@ engine to run our game, python to run our backend, react for our website and SQL
 
 ## Quality Requirements
 
-#### Preliminary Requirements
+#### Software 1 Preliminary Requirements
 
 All helper functions created were ran through pytest to ensure proper working order.
 The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
-#### Further Development Ideas/Visions
+#### Software 2 Final Requirements
+
+#### Further Development Ideas
 
 * Interpol  will be trained with machine learning.
 * Improve the user experience.
