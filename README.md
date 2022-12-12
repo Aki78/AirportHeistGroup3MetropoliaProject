@@ -155,9 +155,9 @@ The database was cut down, to remove a lot of unnecessary information and to mak
 
 #### Further Development Ideas/Visions
 
-    -Interpol  will be trained with machine learning.
-    -Improve the user experience.
-    -Enhance the aesthetic of the site.
+* Interpol  will be trained with machine learning.
+* Improve the user experience.
+* Enhance the aesthetic of the site.
 
 [Back to top](#airport-heist)
 
