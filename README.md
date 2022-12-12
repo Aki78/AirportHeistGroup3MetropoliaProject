@@ -71,7 +71,7 @@ Website features:
 
 ## Vision
 
-#### Backstory
+### Backstory
 
 You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
 They have no idea of your true genius though and neglect to watch over you properly.
@@ -82,11 +82,11 @@ Due to your expert skills you are able to steal 5,000€ from the Alepa at Helsi
 The police, however, have been alerted of your activities and are hot on your tail.
 Make it to the extraction point in portugal before interpol finds you!
 
-#### Setting
+### Setting
 
 Airport Heist is set in present-day Europe.
 
-#### Objective
+### Objective
 
 Your mission is to get to your extraction team, who are waiting for you in portugal, so they can smuggle you out of
 the EU.
