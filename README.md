@@ -91,10 +91,6 @@ Airport Heist is set in present-day Europe.
 Your mission is to get to your extraction team, who are waiting for you in portugal, so they can smuggle you out of
 the EU.
 
-[Back to top](#airport-heist)
-
-## Functional Requirements
-
 ### How the game works
 
 Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they are captured or their money runs out.
@@ -129,10 +125,14 @@ If the player loses the mini game, there will be no reward, but instead an extra
 
 The decision tree below show all possible decisions the player can make and the benefits of each.
 
-
 <p align="center">
     <img src="./Poster/tree_diagrams/decisiontree.png">
 </p>
+
+[Back to top](#airport-heist)
+
+## Functional Requirements
+
 
 [Back to top](#airport-heist)
 
