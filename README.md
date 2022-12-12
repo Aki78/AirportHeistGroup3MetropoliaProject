@@ -56,6 +56,8 @@ Kiana Aghajani, Jenni Hallikas and Francesco Natanni. The Purpose of Airport Hei
 game, that satisfies the guidelines provided by software1. As well as producing an attractive and intuitive website that
 satisfies the requirements of software2. Airport Heist is suitable for all ages.
 
+[Back to top](#airport-heist)
+
 ## Current State
 
 Our game and website are currently fully functional. 
@@ -68,6 +70,8 @@ Website features:
 * view a tutorial on how to play
 * view live weather in cities they may be flying to in the game
 * view details about development team and contact
+
+[Back to top](#airport-heist)
 
 ## Vision
 
@@ -88,8 +92,15 @@ Airport Heist is set in present-day Europe.
 
 ### Objective
 
-Your mission is to get to your extraction team, who are waiting for you in portugal, so they can smuggle you out of
-the EU.
+Your mission is to get to your extraction team, who are waiting for you in portugal, so they can smuggle you out of the EU.
+
+[Back to top](#airport-heist)
+
+
+
+[Back to top](#airport-heist)
+
+## Functional Requirements
 
 ### How the game works
 
@@ -128,11 +139,6 @@ The decision tree below show all possible decisions the player can make and the 
 <p align="center">
     <img src="./Poster/tree_diagrams/decisiontree.png">
 </p>
-
-[Back to top](#airport-heist)
-
-## Functional Requirements
-
 
 [Back to top](#airport-heist)
 
