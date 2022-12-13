@@ -36,10 +36,7 @@
 - [Final Requirements](#software-2-final-requirements)
 - [Further Development Ideas](#further-development-ideas)
 
-[Learning Tools And Information](#learning-tools-and-information)
-
-- [To Do List](#to-do-list)
-- [Project information](#project-info)
+[Project information](#project-info)
 
 ## Abstract
 
@@ -168,58 +165,6 @@ The database was cut down, to remove a lot of unnecessary information and to mak
 
 [Back to top](#airport-heist)
 
-## To-Do-List
-
-### Khai
-
-- [x] js react
-- [x] js user login
-- [x] js create user account
-- [ ] flask user login with password
-- [x] js embedding Web Assembly (optional)
-
-### Kiana
-
-- [x] html/css leader board
-- [x] html/css tutorial page
-- [x] html/css make mobile friendly
-- [ ] html/css/js add night-mode option (optional)
-- [ ] html/css/js progress graph (optional)
-
-### Frank
-
-- [x] flask API's leader board
-- [x] flask create user account
-- [x] flask fetching weather
-- [ ] flask document API's (optional)
-
-### Jenni
-
-- [x] SQL leaderboard
-- [x] SQL users
-- [x] SQL update airport DB
-- [x] SQL set up DB could
-- [ ] SQL user settings DB (optional)
-- [ ] SQL play history (optional)
-
-### Aki
-
-- [x] godot game logic / dialog
-- [x] godot make real time strategy
-- [x] flask set up python cloud
-- [ ] godot better map (optional)
-- [ ] godot machine learn AI (optional)
-
-### All
-
-- [x] set up server
-- [ ] make presentation
-- [ ] make charts
-- [ ] update documentation
-- [ ] test final game
-
-[Back to top](#airport-heist)
-
-### Project Info
+## Project Info
 
 [Project Requirements GitHub](https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project)
