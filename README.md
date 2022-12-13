@@ -169,7 +169,8 @@ All components of the game are uploaded to Python Anywhere server. This means ou
 * Interpol  will be trained with machine learning.
 * Improve the user experience.
 * Enhance the aesthetic of the site.
-* mobile freindly version
+* Mobile freindly version
+* Better graphics
 
 [Back to top](#airport-heist)
 
