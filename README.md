@@ -4,15 +4,17 @@
     <img src="./Poster/hud.gif">
 </p>
 
-# Page
+# Pages
 
-https://Aki78.pythonanywhere.com/Home
+[Airport Heist Webpage](https://Aki78.pythonanywhere.com/Home)
 
-https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit#slide=id.g166b1584af2_14_1
+[Presentation slides](https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit#slide=id.g166b1584af2_14_1)
 
 ## Contents
-
 [Introduction](#introduction)
+
+- [Abstract](#abstract)
+- [Introduction](#introduction)
 
 [Current State](#current-state)
 
@@ -26,22 +28,19 @@ https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3
 
 - [How the game works](#how-the-game-works)
 - [Decision Tree](#decision-tree)
-- [Project diagram](#project-diagram)
+- [Project Diagram](#project-diagram)
 
 [Quality Requirements](#quality-requirements)
 
-- [Preliminary requirements](#preliminary-requirements)
-- [Final requirements](#final-requirements-and-goals)
+- [Preliminary Requirements](#software-1-preliminary-requirements)
+- [Final Requirements](#software-2-final-requirements)
+- [Further Development Ideas](#further-development-ideas)
 
-[Learning Tools And Information](#learning-tools-and-information)
+[Project information](#project-info)
 
-- [Run](#run)
-- [Useful git commands](#useful-git-commands)
-- [Useful bash commands](#useful-bash-commands)
-- [To Do List](#to-do-list)
-- [Project information](#project-info)
+## Introduction
 
-## Abstract
+### Abstract
 
 This is a first semester group project held in 2022, IT engineering at Metropolia University of Applied Sciences,
 by group 3. The goal is to practice groupwork in IT projects by making an online game using git, and 
@@ -50,23 +49,33 @@ learning experience by including extended technologies such as using a game engi
 fun to play and visually pleasing.
 
 
-## Introduction
+### Introduction
 
 This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai Cao,
 Kiana Aghajani, Jenni Hallikas and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive
 game, that satisfies the guidelines provided by software1. As well as producing an attractive and intuitive website that
 satisfies the requirements of software2. Airport Heist is suitable for all ages.
 
+[Back to top](#airport-heist)
+
 ## Current State
 
 Our game and website are currently fully functional. 
-Our website allows users to create a profile and compete with other users for the highest score. 
-There is also a tutorial on how to play. 
-As an added bonus and a requirement of software 2 users can view current weather data in the cities they will be flying to with-in the game.
+Website features:
+
+* create a profile(stores user data in database)
+* log in and out of their profile(calls upon database)
+* compete against other users for the highest score(update player's info in the database)
+* view top ten highest scores(calls on database)
+* view a tutorial on how to play
+* view live weather in cities they may be flying to in the game
+* view details about development team and contact
+
+[Back to top](#airport-heist)
 
 ## Vision
 
-#### Backstory
+### Backstory
 
 You are a master thief, captured by the Finnish authorities on the minor charge of jaywalking.
 They have no idea of your true genius though and neglect to watch over you properly.
@@ -77,14 +86,13 @@ Due to your expert skills you are able to steal 5,000€ from the Alepa at Helsi
 The police, however, have been alerted of your activities and are hot on your tail.
 Make it to the extraction point in portugal before interpol finds you!
 
-#### Setting
+### Setting
 
 Airport Heist is set in present-day Europe.
 
-#### Objective
+### Objective
 
-Your mission is to get to your extraction team, who are waiting for you in portugal, so they can smuggle you out of
-the EU.
+Your mission is to get to your extraction team, who are waiting for you in portugal, so they can smuggle you out of the EU.
 
 [Back to top](#airport-heist)
 
@@ -92,8 +100,11 @@ the EU.
 
 ### How the game works
 
-Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they
-are captured or their money runs out.
+Airport Heist is a single player game, where the main character aims to make it to the destination airport, before they are captured or their money runs out.
+
+The main character starts the game with 5000€. Each flight cost money based on how long the flight is. Money is equal 
+to points, so when the player reaches portugal their score is equal to how much money they have left. In order to 
+get more money, and therefore points, players may choose to steal.
 
 #### Travel
 
@@ -107,19 +118,19 @@ Players can see in which city interpol is and must avoid flying to the same airp
 to airport at random and in real time. Players must make their decisions quickly. The game is over if interpol lands 
 in the same airport as the player.
 
-#### Stealing
+#### Stealing 
 
-The main character starts the game with 5000€. Each flight cost money based on how long the flight is. Money is equal 
-to points, so when the player reaches portugal their score is equal to how much money they have left. In order to 
-get more money, and therefore points, players may choose to steal. Stealing is done after a player arrives at an
-airport. 
+Stealing is done after a player arrives at a new airport. By clicking on the current airport after arriving at it, the player starts a mini-game. 
+
+By winning the mini game the player will win extra money. Interpol is still moving live as the user plays, so keep an eye on them.
+
+If the player loses the mini game, there will be no reward, but instead an extra interpol will appear. Each time the player loses a mini game, a new interpol will spawn. The more interpol moving around the hard it will be to get to your extraction point in portugal.
 
 [Back to top](#airport-heist)
 
 ### Decision Tree
 
 The decision tree below show all possible decisions the player can make and the benefits of each.
-
 
 <p align="center">
     <img src="./Poster/tree_diagrams/decisiontree.png">
@@ -140,81 +151,29 @@ engine to run our game, python to run our backend, react for our website and SQL
 
 ## Quality Requirements
 
-#### Preliminary Requirements
+#### Software 1 Preliminary Requirements
 
 All helper functions created were ran through pytest to ensure proper working order.
 The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
-#### Further Development Ideas/Visions
+#### Software 2 Final Requirements
+All API endpoints were tested with insomnia to insure proper working order. This means we learnt new software and got an idea of industry standard tecniques. React was used to improve future development options for our website. This was not a requirement but was something our team felt would be a great learning oppertunity. 
 
-    -Interpol  will be trained with machine learning.
-    -Improve the user experience.
-    -Enhance the aesthetic of the site.
+The biggest coding challenge we faced this period was getting our user login details working. This required coding from Python, React and SQL. And then connecting all this programs together. This challenge was again not a requirement but one we set for ourselves. 
 
-[Back to top](#airport-heist)
+All components of the game are uploaded to Python Anywhere server. This means our game is accessible to anyone anywhere. This also gave us a great understanding of how different systems interact with each other and what is possible with different servers. Many servers were tested, but failed due to compatibility issues.
 
-## Learning Tools And information
 
-[Back to top](#airport-heist)
+#### Further Development Ideas
 
-## To-Do-List
-
-### Khai
-
-- [x] js react
-- [x] js user login
-- [x] js create user account
-- [ ] flask user login with password
-- [x] js embedding Web Assembly (optional)
-
-### Kiana
-
-- [x] html/css leader board
-- [x] html/css tutorial page
-- [x] html/css make mobile friendly
-- [ ] html/css/js add night-mode option (optional)
-- [ ] html/css/js progress graph (optional)
-
-### Frank
-
-- [x] flask API's leader board
-- [x] flask create user account
-- [x] flask fetching weather
-- [ ] flask document API's (optional)
-
-### Jenni
-
-- [x] SQL leaderboard
-- [x] SQL users
-- [x] SQL update airport DB
-- [x] SQL set up DB could
-- [ ] SQL user settings DB (optional)
-- [ ] SQL play history (optional)
-
-### Aki
-
-- [x] godot game logic / dialog
-- [x] godot make real time strategy
-- [x] flask set up python cloud
-- [ ] godot better map (optional)
-- [ ] godot machine learn AI (optional)
-
-### All
-
-- [x] set up server
-- [ ] make presentation
-- [ ] make charts
-- [ ] update documentation
-- [ ] test final game
+* Interpol  will be trained with machine learning.
+* Improve the user experience.
+* Enhance the aesthetic of the site.
+* Mobile freindly version
+* Better graphics
 
 [Back to top](#airport-heist)
 
-### Project Info
+## Project Info
 
-https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project
-
-https://github.com/ilkkamtk/html-css-assignment
-
-https://www.youtube.com/playlist?list=PLKenVLUxjmH-y89AiiI2xcXDy5QG83D4K
-
-https://github.com/ilkkamtk/JavaScript-english/blob/main/assignments.md
+[Project Requirements GitHub](https://github.com/vesavvo/Python_Ohjelmistoteema/tree/main/English/Project)
