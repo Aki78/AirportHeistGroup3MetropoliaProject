@@ -17,6 +17,14 @@ connection = mysql.connector.connect(
   password='root'
 )
 
+class Server:
+    def __init__(self, host, port):
+        self.host = host
+        self.port = port
+    def start(self):
+        print("Starting Server")
+        app.run(use_reloader=True, host=self.host, port=self.port)
+
 
 @app.get('/Account/recaptcha')
 def get_google_recaptcha():
@@ -328,4 +336,5 @@ def page_not_found(error_code):
 
 
 if __name__ == '__main__':
-    app.run(use_reloader=True, host='127.0.0.1', port=5000)
+    server = Server('127.0.0.1', '5000')
+    server.start()
