@@ -11,10 +11,10 @@
 [Presentation slides](https://docs.google.com/presentation/d/1KQzT6HgW3f3YZGUjU3Hmdlt3Ok5fKIw4FlIvdmF3t5Y/edit#slide=id.g166b1584af2_14_1)
 
 ## Contents
-
-[Abstract](#abstract)
-
 [Introduction](#introduction)
+
+- [Abstract](#abstract)
+- [Introduction](#introduction)
 
 [Current State](#current-state)
 
@@ -38,7 +38,9 @@
 
 [Project information](#project-info)
 
-## Abstract
+## Introduction
+
+### Abstract
 
 This is a first semester group project held in 2022, IT engineering at Metropolia University of Applied Sciences,
 by group 3. The goal is to practice groupwork in IT projects by making an online game using git, and 
@@ -47,7 +49,7 @@ learning experience by including extended technologies such as using a game engi
 fun to play and visually pleasing.
 
 
-## Introduction
+### Introduction
 
 This document specifies the design for the gameplay of Airport Heist. The key developers are Aki Morooka, Khai Cao,
 Kiana Aghajani, Jenni Hallikas and Francesco Natanni. The Purpose of Airport Heist is to produce a fun and interactive
