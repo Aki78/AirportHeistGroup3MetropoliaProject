@@ -157,6 +157,12 @@ All helper functions created were ran through pytest to ensure proper working or
 The database was cut down, to remove a lot of unnecessary information and to make calling upon the database faster.
 
 #### Software 2 Final Requirements
+All API endpoints were tested with insomnia to insure proper working order. This means we learnt new software and got an idea of industry standard tecniques. React was used to improve future development options for our website. This was not a requirement but was something our team felt would be a great learning oppertunity. 
+
+The biggest coding challenge we faced this period was getting our user login details working. This required coding from Python, React and SQL. And then connecting all this programs together. This challenge was again not a requirement but one we set for ourselves. 
+
+All components of the game are uploaded to Python Anywhere server. This means our game is accessible to anyone anywhere. This also gave us a great understanding of how different systems interact with each other and what is possible with different servers. Many servers were tested, but failed due to compatibility issues.
+
 
 #### Further Development Ideas
 
